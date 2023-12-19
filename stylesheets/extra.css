@@ -89,6 +89,10 @@ html {
 
 .md-header-nav__source a {
     text-decoration: none;
+}
+
+
+.md-header {
     background-image: url('assets/background.png');
     background-size: cover;
 }
