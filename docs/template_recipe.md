@@ -5,23 +5,24 @@ tags: [tag1, tag2, tag3]
 
 # Recipe Title
 
-## Recipe Image
-![Recipe Image](assets/background.png)
+## :frame_photo: Recipe Image
+![Recipe Image](assets/background.png){ loading=lazy }
 
-## Video Tutorial
-[Watch the Recipe Video](https://www.youtube.com/watch?v=eVuXwv1yxo0)
+## :play_pause: Video Tutorial
+![type:video](https://www.youtube.com/embed/eVuXwv1yxo0?si=r6VDQGxNIHXduujQ)
 
-## Total Time
-Total cooking and preparation time
+| :fork_and_knife_with_plate: Serves | :timer_clock: Total Time |
+|:----------------------------------:|:-----------------------: |
+| 4 portions | 10 minutes |
 
-## Ingredients
+## :salt: Ingredients
 - [ ] Ingredient 1
 - [ ] Ingredient 2
 - [ ] Ingredient 3
 - [ ] Ingredient 4
 - [ ] ... (continue as needed)
 
-## Instructions
+## :pencil: Instructions
 
 ### Step 1
 Description of step 1
@@ -37,5 +38,5 @@ Description of step 3
 ## Additional Notes
 Any additional notes or tips related to the recipe
 
-## Source
+## :link: Source
 [Original Recipe Source](source-link-url)

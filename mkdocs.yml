@@ -5,10 +5,14 @@ extra_css:
 
 nav:
   - Home: index.md
-  - Breakfast: breakfast/index.md
-  - Main Dish: main_dish/index.md
-  - Dessert: dessert/index.md
-  - Recipe Template: recipe_template.md
+  - Breakfast:
+    - breakfast/index.md
+  - Main Dish:
+    - main_dish/index.md
+    - Sloppy Joe: main_dish/sloppy_joe.md
+
+  - Dessert:
+    - dessert/index.md
   - Reference:
     - reference/index.md
     - reference/development.md
@@ -16,8 +20,9 @@ nav:
     - reference/measuring.md
     - reference/seasons.md
     - reference/temperatures.md
+  - Recipe Template: template_recipe.md
   - Tags: tags.md
-  
+
 
 plugins:
     - tags:
@@ -56,6 +61,8 @@ theme:
         name: Switch to light mode
   icon:
     annotation: material/information-variant-circle
+    repo: fontawesome/brands/github
+    logo: fontawesome/solid/pizza-slice
   features:
     - content.action.view
     - content.action.edit
@@ -77,8 +84,6 @@ theme:
     - search.highlight
     - search.share
     - search.suggest
-
-  logo: assets/logo.svg
   favicon: assets/favicon.ico
   theme:
   font:
