@@ -10,7 +10,7 @@
 [data-md-color-scheme="slate"] {
     --md-typeset-color: #EDF2F7;
     /* --md-code-bg-color: #modify in case default color of the code blocks is not ok; */
-    
+
 }
 [data-md-color-scheme="slate"] .md-typeset .admonition,
 [data-md-color-scheme="slate"] .md-typeset details {
@@ -18,12 +18,12 @@
 }
 
 a {
-    --md-typeset-a-color: #a000a8;
+    --md-typeset-a-color: #0c92ff;
 }
 
-html {
+/* html {
     font-size: 20px;
-}
+} */
 
 .md-grid {
     max-width: 80%; /* or 100%, if you want to stretch to full-width */
@@ -84,15 +84,28 @@ html {
 }
 
 .md-content a {
-    text-decoration: underline;
+    text-decoration: none;
 }
 
 .md-header-nav__source a {
     text-decoration: none;
 }
-
-
-.md-header {
-    background-image: url('assets/background.png');
+/*
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('background.png') no-repeat center center fixed;
     background-size: cover;
+    -webkit-filter: blur(5px);
+    filter: blur(5px);
+    opacity: 0.1;
+    z-index: -1;
+} */
+
+.md-content {
+    background-color: white;
 }
