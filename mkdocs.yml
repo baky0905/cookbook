@@ -1,11 +1,13 @@
-# ------------------ PLEASE MODIFY: START ------------------
 site_name: The Cookbook
 extra_css:
   - stylesheets/extra.css
   - stylesheets/grid.css
 
 nav:
-  - Landing Page: index.md
+  - Home: index.md
+  - Appetizers: appetizers.md
+  - Main Courses: main-courses.md
+  - Desserts: desserts.md
   
 
 plugins:
@@ -29,15 +31,15 @@ theme:
   palette:
     - media: "(prefers-color-scheme: light)"
       scheme: default
-      primary: custom
-      accent: custom
+      primary: 'red'
+      accent: 'amber'
       toggle:
         icon: material/lightbulb
         name: Switch to dark mode
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
-      primary: custom
-      accent: custom
+      primary: 'red'
+      accent: 'amber'
       toggle:
         icon: material/lightbulb-outline
         name: Switch to light mode
@@ -67,8 +69,9 @@ theme:
 
   logo: assets/logo.svg
   favicon: assets/favicon.ico
+  theme:
   font:
-    text: Roboto
+    text: Nunito
     code: Roboto Mono
 copyright: Made by Kris
 extra:
