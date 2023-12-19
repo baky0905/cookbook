@@ -2,8 +2,8 @@ name: Deploy MkDocs to GitHub Pages
 
 on:
   push:
-    branches:
-      - main  # Set this to your default branch
+    branches: [ main ]
+  workflow_dispatch:
 
 jobs:
   deploy:
