@@ -1,0 +1,117 @@
+# ------------------ PLEASE MODIFY: START ------------------
+site_name: The Cookbook
+extra_css:
+  - stylesheets/extra.css
+  - stylesheets/grid.css
+
+nav:
+  - Landing Page: index.md
+  
+
+plugins:
+    - search
+    - drawio_file
+    - git-revision-date-localized:
+        strict: false
+    - glightbox
+
+repo_url: https://github.com/baky0905/cookbook
+repo_name: cookbook
+edit_uri: edit/main/docs/
+
+validation:
+  omitted_files: warn
+  absolute_links: warn
+  unrecognized_links: warn
+
+theme:
+  name: material
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/lightbulb
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/lightbulb-outline
+        name: Switch to light mode
+  icon:
+    annotation: material/information-variant-circle
+  features:
+    - content.action.view
+    - content.action.edit
+    - content.tabs.link
+    - content.code.copy
+    - content.code.annotate
+    - content.code.select
+    - navigation.footer
+    - navigation.indexes
+    - navigation.instant
+    - navigation.instant.progress
+    - navigation.path
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.tracking
+    # - navigation.sections
+    - navigation.top
+    - toc.follow
+    - search.highlight
+    - search.share
+    - search.suggest
+
+  logo: assets/logo.svg
+  favicon: assets/favicon.ico
+  font:
+    text: Roboto
+    code: Roboto Mono
+copyright: Made by Kris
+extra:
+  search:
+    language: en
+  status:
+    wip: Work In Progress
+
+markdown_extensions:
+  - abbr
+  - toc:
+      permalink: True
+      toc_depth: 3
+  - admonition
+  - pymdownx.details
+  - pymdownx.caret
+  - pymdownx.tilde
+  - pymdownx.superfences:
+      preserve_tabs: true
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.highlight:
+      use_pygments: true
+      linenums: false
+      auto_title: true
+      linenums_style: pymdownx-inline
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets:
+      auto_append:
+        - includes/abbreviations.md
+  - pymdownx.tasklist
+  - pymdownx.smartsymbols
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - def_list
+  - attr_list
+  - footnotes
+  - md_in_html
+  - pymdownx.tasklist:
+      custom_checkbox: true

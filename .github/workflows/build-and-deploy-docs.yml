@@ -9,9 +9,14 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16'
+
       - uses: actions/checkout@v2
         with:
-          persist-credentials: false  # This is necessary for GitHub Pages
+          persist-credentials: false
 
       - name: Set up Python
         uses: actions/setup-python@v2
