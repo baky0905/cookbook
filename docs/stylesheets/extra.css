@@ -109,3 +109,28 @@ body::before {
 .md-content {
     background-color: white;
 }
+
+
+/* Basic table styling */
+.md-typeset table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.md-typeset table th,
+.md-typeset table td {
+    border: 1px solid #ddd; /* Light grey border */
+    padding: 8px;
+    text-align: left;
+}
+
+/* Zebra striping for rows */
+.md-typeset table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* Style for table header */
+.md-typeset table th {
+    background-color: #EF5552;
+    color: white;
+}
