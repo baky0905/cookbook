@@ -123,6 +123,7 @@ markdown_extensions:
         - includes/abbreviations.md
   - pymdownx.tasklist:
       clickable_checkbox: true
+      custom_checkbox: true
   - pymdownx.smartsymbols
   - pymdownx.tabbed:
       alternate_style: true
