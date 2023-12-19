@@ -4,3 +4,4 @@ mkdocs-drawio-file==1.5.2
 mkdocs-git-revision-date-localized-plugin==1.2.1
 mkdocs-glightbox==0.3.5
 autolink-references-mkdocs-plugin==0.2.1
+mkdocs-video==1.5.0

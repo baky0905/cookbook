@@ -5,17 +5,28 @@ extra_css:
 
 nav:
   - Home: index.md
-  - Appetizers: appetizers.md
-  - Main Courses: main-courses.md
-  - Desserts: desserts.md
+  - Breakfast: breakfast/index.md
+  - Main Dish: main_dish/index.md
+  - Dessert: dessert/index.md
+  - Recipe Template: recipe_template.md
+  - Reference:
+    - reference/index.md
+    - reference/development.md
+    - reference/equivalents_and_substitutes.md
+    - reference/measuring.md
+    - reference/seasons.md
+    - reference/temperatures.md
+  - Tags: tags.md
   
 
 plugins:
+    - tags:
+        tags_file: tags.md
     - search
-    - drawio_file
     - git-revision-date-localized:
         strict: false
     - glightbox
+    - mkdocs-video
 
 repo_url: https://github.com/baky0905/cookbook
 repo_name: cookbook
