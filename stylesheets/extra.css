@@ -1,10 +1,10 @@
-:root {
+/* :root {
     --md-primary-fg-color: #720048;
     --md-primary-fg-color--light: #faaddf;
     --md-primary-fg-color--dark: #720048;
     --md-accent-fg-color: #720048;
 }
-
+ */
 
 /* Styles for slate color scheme */
 [data-md-color-scheme="slate"] {
@@ -18,7 +18,7 @@
 }
 
 a {
-    --md-typeset-a-color: #0c92ff;
+    --md-typeset-a-color: teal;
 }
 
 /* html {
@@ -26,7 +26,7 @@ a {
 } */
 
 .md-grid {
-    max-width: 80%; /* or 100%, if you want to stretch to full-width */
+    max-width: 90%; /* or 100%, if you want to stretch to full-width */
 }
 
 
@@ -39,7 +39,7 @@ a {
 
 /* https://github.com/squidfunk/mkdocs-material/issues/4832#issuecomment-1374891676 */
 .md-nav__link[for] {
-    color: var(--md-default-fg-color) !important;
+    color: teal;
 }
 
 /* Reset alignment for table cells */
