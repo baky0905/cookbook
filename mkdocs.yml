@@ -33,7 +33,12 @@ plugins:
   - git-revision-date-localized:
       strict: false
   - glightbox
-  - mkdocs-video
+  - mkdocs-video:
+      video_muted: True
+      video_controls: True
+      css_style:
+        width: 80%;
+        height: 25.172vw;
   - awesome-pages
 
 repo_url: https://github.com/baky0905/cookbook

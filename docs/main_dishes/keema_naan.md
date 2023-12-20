@@ -1,6 +1,6 @@
 ---
 title: Keema Naan
-tags: [bread]
+tags: [dough, beef]
 ---
 
 # Pasta Bolognese
