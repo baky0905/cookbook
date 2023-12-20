@@ -13,15 +13,15 @@ tags: [pasta]
 | 4-6 portions | 45 minutes |
 
 ## :salt: Ingredients
-- [] 2 small leeks, cleans and sliced thin– but just the white & light green parts
-- [] 2 tablespoons Finlandia butter*
-- [] 5 cups fish stock, chicken or vegetable stock will work but try to find fish stock if you can
-- [] 1 pound fingerling potatoes, sliced crosswise into ¼ inch slices
-- [] 3 small carrots, sliced crosswise into1/4 inch slices
-- [] 1 pound fresh salmon, no skin and bones removed cut into bite size pieces
-- [] 1 cup whipping cream
-- [] ¾ cup finely chopped fresh dill
-- [] Kosher salt & fresh ground pepper to taste
+- [ ] 2 small leeks, cleans and sliced thin– but just the white & light green parts
+- [ ] 2 tablespoons Finlandia butter*
+- [ ] 5 cups fish stock, chicken or vegetable stock will work but try to find fish stock if you can
+- [ ] 1 pound fingerling potatoes, sliced crosswise into ¼ inch slices
+- [ ] 3 small carrots, sliced crosswise into1/4 inch slices
+- [ ] 1 pound fresh salmon, no skin and bones removed cut into bite size pieces
+- [ ] 1 cup whipping cream
+- [ ] ¾ cup finely chopped fresh dill
+- [ ] Kosher salt & fresh ground pepper to taste
 
 ## :pencil: Instructions
 
