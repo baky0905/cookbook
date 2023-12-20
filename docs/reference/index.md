@@ -3,6 +3,8 @@
 
 <div class="grid cards" markdown>
 
+- #:material-calculator:{ .lg .middle } [Calculator](./calculator.md)
+
 - #:scales:{ .lg .middle } [Equivalents and Substitutes](./equivalents_and_substitutes.md)
 
 - #:triangular_ruler:{ .lg .middle } [Measuring](./measuring.md)

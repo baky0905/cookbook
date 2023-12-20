@@ -16,6 +16,7 @@ nav:
   #   - desserts/index.md
   - Reference:
     - reference/index.md
+    - reference/calculator.md
     - reference/development.md
     - reference/equivalents_and_substitutes.md
     - reference/measuring.md
