@@ -1,6 +1,42 @@
 # :triangular_ruler: Measuring
 
+## Abbreviations
+
+| teaspoon   | tsp      |
+| ---------- | -------- |
+| tablespoon | tbsp/tbs |
+| oz         | oz       |
+| gram       | g        |
+| fluid oz   | fl oz    |
+| pound      | 1lb      |
+| kilogram   | kg       |
+| milliter   | ml       |
+| litre      | l        |
+| cup        | c        |
+| quart      | qt       |
+| gallon     | gl       |
+| pint       | pt       |
+
+## Metric to Measuring Spoons
+
+| Metric | Measuring Spoons            |
+| ------ | --------------------------- |
+| 1.25ml | ¼ teaspoon                  |
+| 2.5ml  | ½ teaspoon                  |
+| 5ml    | 1 teaspoon                  |
+| 15ml   | 1 tablespoon or 3 teaspoons |
+
+## Metric to Measuring Cups
+
+| Metric | Measuring Cups          |
+| ------ | ----------------------- |
+| 60ml   | ¼ cup or 4 tablespoons  |
+| 80ml   | ⅓ cup                   |
+| 120ml  | ½ cup or 8 tablespoons  |
+| 240ml  | 1 cup or 16 tablespoons |
+
 ## :scales: [Ingredient Weight Chart][5][^2]
+
 
 | Ingredient                                            | Volume            | Grams       | Ounces      |
 |-------------------------------------------------------|-------------------|-------------|-------------|
@@ -238,18 +274,16 @@
 | Zucchini (shredded)                                   | 1 cup             | 142 to 170  | 5 to 6      |
 
 
-## :book: Using Cookbooks From Outside The United States[^2]
+## Oven Temperatures
 
-| Fahrenheit  | Celsius or Gas Mark   |
-|-------------|-----------------------|
-| 225°F       | 100°C or Gas Mark 1/4 |
-| 250°F       | 130°C or Gas Mark 1/2 |
-| 275°F       | 140°C or Gas Mark 1   |
-| 300°F       | 150°C or Gas Mark 2   |
-| 325°F       | 170°C or Gas Mark 3   |
-| 350°F       | 180°C or Gas Mark 4   |
-| 375°F       | 190°C or Gas Mark 5   |
-| 400°F       | 200°C or Gas Mark 6   |
-| 425°F       | 220°C or Gas Mark 7   |
-| 450°F       | 230°C or Gas Mark 8   |
-| 475°F       | 240°C or Gas Mark 9   |
+| Fan Celsus | Celsius | Fahrenheit | Gas Mark |
+| ---------- | ------- | ---------- | -------- |
+| 120 ° C    | 140 ° C | 275 ° F    | 1        |
+| 130 ° C    | 150 ° C | 300 ° F    | 2        |
+| 150 ° C    | 170 ° C | 325 ° F    | 3        |
+| 160 ° C    | 180 ° C | 350 ° F    | 4        |
+| 170 ° C    | 190 ° C | 375 ° F    | 5        |
+| 180 ° C    | 200 ° C | 400 ° F    | 6        |
+| 200 ° C    | 220 ° C | 425 ° F    | 7        |
+| 210 ° C    | 230 ° C | 450 ° F    | 8        |
+| 220 ° C    | 240 ° C | 475 ° F    | 9        |
