@@ -1,6 +1,6 @@
 ---
 title: Pasta Bologneze
-tags: [pasta]
+tags: [pasta, beef]
 ---
 
 # Pasta Bolognese

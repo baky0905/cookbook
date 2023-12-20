@@ -1,6 +1,6 @@
 ---
 title: Lohikeitto
-tags: [pasta]
+tags: [soup, fish]
 ---
 
 # Lohikeitto
