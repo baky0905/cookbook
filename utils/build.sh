@@ -1,4 +1,4 @@
 #!/bin/bash
 
-python3 generate_index.py
-mkdocs build
+python3 utils/generate_index.py
+#mkdocs build
