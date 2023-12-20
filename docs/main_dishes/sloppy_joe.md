@@ -1,6 +1,6 @@
 ---
 title: Sloppy Joe
-tags: [tag1, tag2, tag3]
+tags: [burger]
 ---
 
 # Eggs and bacon

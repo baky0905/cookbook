@@ -4,15 +4,16 @@ extra_css:
   - stylesheets/grid.css
 
 nav:
-  - Home: index.md
-  - Breakfast:
-    - breakfast/index.md
-  - Main Dish:
-    - main_dish/index.md
-    - Sloppy Joe: main_dish/sloppy_joe.md
-
-  - Dessert:
-    - dessert/index.md
+  - ...
+  # - Home: index.md
+  # - Breakfast:
+  #   - breakfasts/index.md
+  # - Main Dishes:
+  #   - main_dishes/index.md
+  # - Snacks:
+  #   - snacks/index.md
+  # - Dessert:
+  #   - desserts/index.md
   - Reference:
     - reference/index.md
     - reference/development.md
@@ -25,13 +26,14 @@ nav:
 
 
 plugins:
-    - tags:
-        tags_file: tags.md
-    - search
-    - git-revision-date-localized:
-        strict: false
-    - glightbox
-    - mkdocs-video
+  - tags:
+      tags_file: tags.md
+  - search
+  - git-revision-date-localized:
+      strict: false
+  - glightbox
+  - mkdocs-video
+  - awesome-pages
 
 repo_url: https://github.com/baky0905/cookbook
 repo_name: cookbook
@@ -78,7 +80,7 @@ theme:
     - navigation.tabs
     - navigation.tabs.sticky
     - navigation.tracking
-    # - navigation.sections
+    - navigation.sections
     - navigation.top
     - toc.follow
     - search.highlight
