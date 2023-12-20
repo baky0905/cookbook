@@ -4,13 +4,13 @@ tags: [tag1, tag2, tag3]
 ---
 
 # Recipe Title
-
-## :frame_photo: Recipe Image
 ![Recipe Image](assets/background.png){ loading=lazy }
 
 ## :play_pause: Video Tutorial
 ![type:video](https://www.youtube.com/embed/eVuXwv1yxo0?si=r6VDQGxNIHXduujQ)
 
+
+## Timing and Quantity
 | :fork_and_knife_with_plate: Serves | :timer_clock: Total Time |
 |:----------------------------------:|:-----------------------: |
 | 4 portions | 10 minutes |

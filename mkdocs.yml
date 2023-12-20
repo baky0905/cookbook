@@ -121,9 +121,7 @@ markdown_extensions:
   - pymdownx.snippets:
       auto_append:
         - includes/abbreviations.md
-  - pymdownx.tasklist:
-      clickable_checkbox: true
-      custom_checkbox: true
+  - def_list
   - pymdownx.smartsymbols
   - pymdownx.tabbed:
       alternate_style: true
@@ -136,3 +134,4 @@ markdown_extensions:
   - md_in_html
   - pymdownx.tasklist:
       custom_checkbox: true
+      clickable_checkbox: true

@@ -13,26 +13,26 @@ tags: [tag1, tag2, tag3]
 | ? portions | ? minutes |
 
 ## :salt: Ingredients
-- 1lb/.5kg 80/20 ground beef
-- 1g or 1/4tsp  baking soda
-- 100g or 1 large or 2 small poblano peppers small diced
-- 150g or 1 large yellow or white onion, small diced
-- Olive oil
-- 5g or 1tsp salt
-- 5g or 1 1/2tsp onion powder
-- 5g or 1tsp garlic powder
-- 2g or 1tsp black pepper
-- 5g or 1 3/4tsp paprika
-- Pinch of Chile flakes
-- 10g or 1 1/2Tbsp flour (all purpose or gluten free blend)
-- 50g or 3Tbsp tomato paste
-- 50g or 3Tbsp ketchup
-- 15g or 2Tbsp yellow mustard
-- 15g or 2 1/2-3tsp brown sugar
-- 50g or 3 1/2Tbsp  worcestershire
-- 20g or 1 1/2Tbsp red wine vinegar
-- 10g or 1 ½tsp better than bouillon beef paste
-- 350g or 1 1/2c stock (chicken or beef)
+- [ ] 1lb/.5kg 80/20 ground beef
+- [ ] 1g or 1/4tsp  baking soda
+- [ ] 100g or 1 large or 2 small poblano peppers small diced
+- [ ] 150g or 1 large yellow or white onion, small diced
+- [ ] Olive oil
+- [ ] 5g or 1tsp salt
+- [ ] 5g or 1 1/2tsp onion powder
+- [ ] 5g or 1tsp garlic powder
+- [ ] 2g or 1tsp black pepper
+- [ ] 5g or 1 3/4tsp paprika
+- [ ] Pinch of Chile flakes
+- [ ] 10g or 1 1/2Tbsp flour (all purpose or gluten free blend)
+- [ ] 50g or 3Tbsp tomato paste
+- [ ] 50g or 3Tbsp ketchup
+- [ ] 15g or 2Tbsp yellow mustard
+- [ ] 15g or 2 1/2-3tsp brown sugar
+- [ ] 50g or 3 1/2Tbsp  worcestershire
+- [ ] 20g or 1 1/2Tbsp red wine vinegar
+- [ ] 10g or 1 ½tsp better than bouillon beef paste
+- [ ] 350g or 1 1/2c stock (chicken or beef)
 
 ## :pencil: Instructions
 
