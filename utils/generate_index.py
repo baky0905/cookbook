@@ -22,3 +22,4 @@ def generate_index():
 
 if __name__ == "__main__":
     generate_index()
+    print("Index.md generation completed.")

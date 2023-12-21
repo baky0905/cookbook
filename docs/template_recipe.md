@@ -13,7 +13,7 @@ tags: [tag1, tag2]
 ## Timing and Quantity
 | :fork_and_knife_with_plate: Serves | :timer_clock: Total Time |
 |:----------------------------------:|:-----------------------: |
-| 4 portions | 10 minutes |
+| x portions | x minutes |
 
 ## :salt: Ingredients
 - [ ] Ingredient 1
