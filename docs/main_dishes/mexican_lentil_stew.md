@@ -54,4 +54,4 @@ Arrange the lentil stew in deep plates. Garnish with grated mozzarella, tomato s
 
 
 ## :link: Source
-[Original Recipe Source](https://www.hellofresh.no/recipes/honning-og-soyamarinert-kylling-6167fddd3bf706481e16ca7b)
+[Original Recipe Source](https://www.hellofresh.no/recipes/meksikansk-linsegryte-62224145fe157f240467d865)
