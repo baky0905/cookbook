@@ -6,6 +6,8 @@
 
 - #:fork_and_knife_with_plate:{ .lg .middle } [Main Dish](./main_dish/index.md)
 
+- #:fork_and_knife_with_plate:{ .lg .middle } [Main Dish](./snacks/index.md)
+
 - #:cake:{ .lg .middle } [Dessert](./dessert/index.md)
 
 - #:bookmark:{ .lg .middle } [Reference](./reference/index.md)
