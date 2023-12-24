@@ -18,9 +18,6 @@ tags: [tag1, tag2]
 ## :salt: Ingredients
 - [ ] Ingredient 1
 - [ ] Ingredient 2
-- [ ] Ingredient 3
-- [ ] Ingredient 4
-- [ ] ... (continue as needed)
 
 ## :pencil: Instructions
 
@@ -29,9 +26,6 @@ Description of step 1
 
 ### Step 2
 Description of step 2
-
-### Step 3
-Description of step 3
 
 ### ... (continue as needed)
 
