@@ -2,16 +2,16 @@
 
 <div class="grid cards" markdown>
 
-- #:egg:{ .lg .middle } [Breakfast](./breakfast/index.md)
+- #:egg:{ .lg .middle } [Breakfast](breakfasts)
 
-- #:fork_and_knife_with_plate:{ .lg .middle } [Main Dish](./main_dish/index.md)
+- #:fork_and_knife_with_plate:{ .lg .middle } [Main Dish](main_dishes)
 
-- #:fork_and_knife_with_plate:{ .lg .middle } [Main Dish](./snacks/index.md)
+- #:fork_and_knife_with_plate:{ .lg .middle } [Snacks](snacks)
 
-- #:cake:{ .lg .middle } [Dessert](./dessert/index.md)
+- #:cake:{ .lg .middle } [Dessert](desserts)
 
-- #:bookmark:{ .lg .middle } [Reference](./reference/index.md)
+- #:bookmark:{ .lg .middle } [Reference](reference)
 
-- #:octicons-repo-template-24:{ .lg .middle } [Template Recipe](./template_recipe.md)
+- #:octicons-repo-template-24:{ .lg .middle } [Template Recipe](template_recipe.md)
 
 </div>
