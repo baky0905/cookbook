@@ -19,12 +19,12 @@ tags: [soup, dough]
 
 ### Bread bowl
 
-- [ ] 360g or 1 1/2c warm water (86F/30C) 
-- [ ] 3g or 1tsp instant yeast
-- [ ] 15g or 1Tbsp white distilled vinegar 
-- [ ] 110g ripe poolish (Stir together 55g or 1/4c warm water, small pinch instant yeast, 55g or 1/2c bread flour, cover and allow to rise at room temp for 12-24hrs)
-- [ ] 550g or 4 3/8c bread flour  
-- [ ] 11g or 2tsp salt
+- [ ] 360g warm water 30C
+- [ ] 3g instant yeast
+- [ ] 15g white distilled vinegar 
+- [ ] 110g ripe poolish (Stir together 55g warm water, small pinch instant yeast, 55g bread flour, cover and allow to rise at room temp for 12-24hrs)
+- [ ] 550g bread flour  
+- [ ] 11g  salt
 
 ### Soup
 - [ ] 350g white onion, small diced
