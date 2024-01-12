@@ -13,26 +13,26 @@ tags: [pasta, beef]
 | ? portions | ? minutes |
 
 ## :salt: Ingredients
-- [ ] 1.5 lb GROUND BEEF (80/20)
-- [ ] 1.5 lb GROUND PORK (preferably ground from shoulder)
+- [ ] 680g GROUND BEEF (80/20)
+- [ ] 680g GROUND PORK (preferably ground from shoulder)
 - [ ] 1 MEDIUM RED ONION
 - [ ] 2 MED-LRG CARROTS
 - [ ] 2 STALK CELERY (trimmed of stem)
 - [ ] 1 SMALL BULB FENNEL (cored)
 - [ ] 3 TBSP EVOO
-- [ ] 4oz PANCETTA, CHOPPED
-- [ ] 50g or about 3 TBSP TOMATO PASTE
-- [ ] 200g or about 3/4C. WHITE WINE
-- [ ] 1 28 oz. can CRUSHED TOMATOES
-- [ ] 150g or 1/2-3/4C WHOLE MILK
-- [ ] 400g or about 1.5C. CHICKEN STOCK
+- [ ] 115g PANCETTA, CHOPPED
+- [ ] 50g TBSP TOMATO PASTE
+- [ ] 200g  WHITE WINE
+- [ ] 800g can CRUSHED TOMATOES
+- [ ] 150g WHOLE MILK
+- [ ] 400g CHICKEN STOCK
 - [ ] 2 PINCHES SALT
 - [ ] 4-5 GARLIC CLOVES
 
 To season/finish bolo sauce:
-- [ ] 10g or about 2 TSP SUGAR
-- [ ] 20g balsamic or about 1.5 TSP BALSAMIC VIN
-- [ ] 5-8 g salt (to taste) about 1 TSP
+- [ ] 10g SUGAR
+- [ ] 20g balsamic BALSAMIC VIN
+- [ ] 5-8 g salt (to taste)
 
 ## :pencil: Instructions
 
@@ -57,9 +57,9 @@ Crumble roasted meats by hand till very small and well broken down, add to tomat
 ### Step 10
 Add in stock and bring to simmer, add 2 pinches salt
 ### Step 11
-Cook in 300 degree oven partially covered for 1 hour
+Cook in 150C oven partially covered for 1 hour
 ### Step 12
-Remove lid and cook at 325 degrees additional 45 minutes, stirring once or twice.
+Remove lid and cook at 162 degrees additional 45 minutes, stirring once or twice.
 ### Step 13
 Remove from oven, skim fat off if there is a gratuitous amount and then add in balsamic, sugar, and salt
 ### Step 14

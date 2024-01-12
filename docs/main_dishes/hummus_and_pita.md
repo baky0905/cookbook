@@ -48,10 +48,10 @@ Add ingredients to stand mixer with dough hook attachment. Mix on low for 2 mins
 Separate dough into 6 even (130ish gram) pieces, shaping and rounding each into a ball as shown in video @1:02. Transfer all shaped dough balls to a lightly oiled sheet tray and wrap tightly. Refrigerate to cold ferment for 4 to 24 hours. 
 
 ### Step 2
-To roll out pitas, lightly flour work surface and dough ball then press with your hand to spread into a 10cm circle. Use a rolling pin roll out until dough is about 3mm thick and about 9”/23cm in diameter, making sure to keep work surface and dough well dusted while rolling. 
+To roll out pitas, lightly flour work surface and dough ball then press with your hand to spread into a 10cm circle. Use a rolling pin roll out until dough is about 3mm thick and about 23cm in diameter, making sure to keep work surface and dough well dusted while rolling. 
 
 ### Step 2
-Brush off excess flour, then load dough onto a pizza peel then onto a 425F/220C preheated pizza steel/stone to bake for 3-4 minutes, flipping over halfway through. Roll out the next pita while pita 1 is baking. Place in a towel lined bowl or basket and cover with a towel to keep baked pitas warm while you finish the rest.  
+Brush off excess flour, then load dough onto a pizza peel then onto a 220C preheated pizza steel/stone to bake for 3-4 minutes, flipping over halfway through. Roll out the next pita while pita 1 is baking. Place in a towel lined bowl or basket and cover with a towel to keep baked pitas warm while you finish the rest.  
 
 ### Hummus
 
