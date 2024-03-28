@@ -15,7 +15,7 @@ tags: [pasta]
 | 2 portions | 15 minutes |
 
 ## :salt: Ingredients
-- [ ] 225g/8oz very thick cut bacon, diced into small batons
+- [ ] 225g very thick cut bacon, diced into small batons
 - [ ] Olive oil
 - [ ] 340g spaghetti 
 - [ ] 50g aged parmesan, feather shredded
