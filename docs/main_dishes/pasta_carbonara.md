@@ -6,7 +6,7 @@ tags: [pasta]
 # Pasta Carbonara
 
 ## :play_pause: Video Tutorial
-![type:video](https://youtu.be/4nAfxzE02Gw?si=3zfIofnmUVg74M4M)
+![type:video](https://www.youtube.com/embed/4nAfxzE02Gw?si=Dd_drt56RqN6-B0X)
 
 
 ## Timing and Quantity
@@ -27,7 +27,7 @@ tags: [pasta]
 ## :pencil: Instructions
 
 ### Step 1
-To cook the pasta, bring water to a boil. I’m  using a 30cm saute for this for faster boiling. Salt water then add spaghetti. Simmer on  high for about 8min. When done, noodles should have just a bit of crunch in the middle. 
+To cook the pasta, bring water to a boil. I’m   using a 30cm saute for this for faster boiling. Salt water then add spaghetti. Simmer on  high for about 8min. When done, noodles should have just a bit of crunch in the middle. 
 
 ### Step 2
 To cook the bacon and prepare the sauce, preheat a large heavy-bottomed pot over low. Add a bit of olive oil to the pot followed by bacon. Allow to render and brown for around 8 min, stirring occasionally. 
