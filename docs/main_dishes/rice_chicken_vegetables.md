@@ -13,22 +13,22 @@ tags: [rice, chicken]
 | 4 portions | x minutes |
 
 ## :salt: Ingredients
-- [] 2-6 chicken drumsticks (depending on the place in the ovenproof dish and the size of the drumsticks)
-- [] 200 g of long grain rice
-- [] 500 ml of water
-- [] 3 small potatoes
-- [] 150 g mixed vegetables or just peas (frozen)
-- [] 1 small red onion
-- [] 2-3 cloves of garlic
-- [] 1 glass of sweet cream
+- [ ] 2-6 chicken drumsticks (depending on the place in the ovenproof dish and the size of the drumsticks)
+- [ ] 200 g of long grain rice
+- [ ] 500 ml of water
+- [ ] 3 small potatoes
+- [ ] 150 g mixed vegetables or just peas (frozen)
+- [ ] 1 small red onion
+- [ ] 2-3 cloves of garlic
+- [ ] 1 glass of sweet cream
 
 For the marinade:
 
-- [] 2-3 tablespoons of olive oil
-- [] 2 teaspoons of salt
-- [] 1 teaspoon of vegeta (optional)
-- [] 1-2 teaspoons of sweet paprika
-- [] 1/2 teaspoon of pepper
+- [ ] 2-3 tablespoons of olive oil
+- [ ] 2 teaspoons of salt
+- [ ] 1 teaspoon of vegeta (optional)
+- [ ] 1-2 teaspoons of sweet paprika
+- [ ] 1/2 teaspoon of pepper
 
 If you wish, you can also add:
 

@@ -40,10 +40,5 @@ Transfer potatoes to a large rimmed baking sheet and separate them, spreading th
 ### Step 5
 Transfer potatoes to a large bowl and add garlic/rosemary mixture and minced parsley. Toss to coat and season with more salt and pepper to taste. Serve immediately.
 
-### ... (continue as needed)
-
-## Additional Notes
-Any additional notes or tips related to the recipe
-
 ## :link: Source
 [Original Recipe Source](https://www.seriouseats.com/the-best-roast-potatoes-ever-recipe)
