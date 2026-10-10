@@ -65,7 +65,7 @@ export const recipeSchema = z.object({
   }
 });
 
-const date = z.string().regex(/^\d{4}-\d{2}-\d{2}$/, 'use YYYY-MM-DD');
+const date = z.iso.date();
 export const extraSchema = z.object({
   ingredient: opt(id), name: opt(z.string()), quantity: opt(positive), max: opt(positive),
   unit: z.preprocess(v => v ?? '', z.enum(units)), note: opt(z.string()),
@@ -78,6 +78,22 @@ export const planSchema = z.object({
     servings: opt(positive), batches: opt(positive), leftoversFrom: opt(id), note: opt(z.string()),
   }).strict())),
   extras: z.preprocess(v => v ?? [], z.array(extraSchema)),
+}).superRefine((plan, ctx) => {
+  if (plan.start && !date.safeParse(plan.start).success) return;
+  const issue = (path, message) => ctx.addIssue({ code: 'custom', path, message });
+  if (plan.start && new Date(plan.start + 'T12:00:00Z').getUTCDay() !== 1)
+    issue(['start'], 'A week must start on Monday');
+  const end = plan.start ? new Date(Date.parse(plan.start + 'T12:00:00Z') + 6 * 864e5).toISOString().slice(0, 10) : null;
+  const seen = new Set();
+  for (const [index, meal] of plan.meals.entries()) {
+    if (seen.has(meal.id)) issue(['meals', index, 'id'], 'Duplicate meal: use another meal slot or a unique ID');
+    seen.add(meal.id);
+    if (plan.start && (meal.date < plan.start || meal.date > end))
+      issue(['meals', index, 'date'], 'Choose a date within this week');
+    if (!meal.recipe && !meal.title?.trim() && !meal.leftoversFrom)
+      issue(['meals', index], 'Choose a recipe or enter a meal title');
+    if (meal.servings && meal.batches) issue(['meals', index], 'Use portions or batches, not both');
+  }
 });
 export const pantrySchema = z.object({
   updated: z.preprocess(blank, z.string().nullable().default(null)),

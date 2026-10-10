@@ -7,7 +7,7 @@ Personal recipes, weekly plans and shopping lists, published as a static site on
 | Task | Where | How |
 |---|---|---|
 | Add a recipe | PC, with the AI assistant | "Add this recipe: [link / photos / notes]". It uses the `recipe-import` skill and creates a draft. |
-| Plan the week, extra shopping items | Phone or PC, editor | `/cookbook/admin/` → Weekly plans |
+| Plan the week, extra shopping items | Phone or tablet, family editor | Cookbook → Family editor → choose a prepared week |
 | Add photos, notes, change status | Phone or PC, editor | `/cookbook/admin/` → Recipes |
 | Cook, shop | Phone | The site: recipe pages, Shopping, Reference |
 
@@ -16,8 +16,8 @@ Every saved change goes to GitHub, which checks the content and republishes the 
 ## Content
 
 - `content/recipes/*.md`: one recipe per file (YAML frontmatter + personal notes). Drafts are not published.
-- `content/plans/*.yaml`: weekly plans with meals, notes and extra shopping items. The newest is "This week".
-- `content/history/*.json`: frozen past weeks (meals, amounts, calories, shopping list), saved automatically when a new week starts. Download them all from `/history.json` or `/history-meals.csv`.
+- `content/plans/*.yaml`: weekly plans with meals, notes and extra shopping items. “This week” follows the current calendar week in Europe/Oslo, even without a new deploy. Both Week and Shopping have a week selector and shareable `?week=<id>` links.
+- `content/history/*.json`: frozen past weeks (meals, amounts, calories, shopping list), saved after the week ends, on a subsequent deploy or the Monday scheduled run. Preparing future plans never archives them early. Download them all from `/history.json` or `/history-meals.csv`.
 - `content/ingredients.yaml`: every ingredient once, with shopping name, aisle, staple flag and calorie data.
 - `content/taxonomy.yaml`: categories, tags, aisles, units and meal slots. Validation rejects anything not listed.
 - `content/pantry.yaml`: pantry snapshot, subtracted from shopping lists.
@@ -42,6 +42,18 @@ Free and open source, running in the browser from `/cookbook/admin/`; it commits
 
 Dropdowns (recipes, ingredients, tags) come from the content and update after the next deploy. If a save breaks a rule, the Actions run fails, nothing is published, and the error says what to fix.
 
+
+## Family planning
+
+- `/cookbook/edit/` explains the workflow and opens `/cookbook/family/`, a smaller Sveltia editor showing only prepared weeks, meals and shopping extras.
+- Prepare a Monday with `npm run week:new -- 2026-10-19`, then commit and push. Family members choose the week, add dated meals and save. Leaving portions and batches blank uses the recipe’s original amount; use batches for recipes without an exact yield.
+- Extras accept plain text (e.g. bin bags) with optional amounts. Selecting a catalogue ingredient combines compatible quantities with recipe shopping items.
+- `/cookbook/admin/` remains the full owner editor. The family view hides technical metadata and disables creating/deleting weeks; it is **not an access-control boundary**. Editors have repository write access.
+- Invite each editor’s GitHub account as a collaborator. On their device, use the token sign-in option and its token creation link. Fine-grained tokens have limitations for outside collaborators/personal repositories; do not share the owner’s token. See [Sveltia GitHub sign-in](https://sveltiacms.app/en/docs/backends/github#authentication).
+- Saves trigger the normal build, typically taking about two minutes. Avoid editing the same week simultaneously. If publishing fails, inspect GitHub Actions; the previous site stays available.
+- Shopping ticks remain per-device. Plans and shopping extras are public repository/site content.
+- Monday archival is scheduled in GitHub Actions. GitHub may delay scheduled runs or disable them on inactive repositories; manual publishing also archives finished weeks. Browser week selection does not depend on this schedule.
+
 ## Commands
 
 ```sh
@@ -51,7 +63,7 @@ npm test                         # scaling, shopping, calories, history and sche
 npm run build                    # validate, then build dist/
 npm run recipe:fetch -- <url>    # recipe data from a site or YouTube, for the import skill
 npm run recipe:new -- <id> "Title"
-npm run week:new [-- 2026-10-19] # start next week's plan; archives the previous one
+npm run week:new [-- 2026-10-19] # start next week's plan; archives only finished weeks
 npm run history:snapshot         # archive finished weeks (CI does this on every push)
 npm run media:optimize           # shrink photos to WebP
 ```

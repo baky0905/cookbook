@@ -281,3 +281,11 @@ details.year{margin-top:28px}
 .guide ol{margin:0 0 8px;padding-left:18px;font-size:14px}
 .guide li{margin-bottom:3px}
 .guide a{font-size:12px;color:var(--muted)}
+
+/* Shared week selection on phones and tablets. */
+.week-picker{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin:20px 0}
+.week-picker label{font-weight:650;font-size:14px}
+.week-picker select{flex:1;min-width:0;max-width:100%;padding:11px;border:1px solid #bbc7bc;border-radius:6px;background:#fff}
+.editor-help{padding-left:22px}.editor-help li{margin:12px 0}
+@media(max-width:640px){.week-picker label{flex-basis:100%}.week-picker select{width:100%;flex-basis:65%}.btn{min-height:44px}}
+@media print{.week-picker,[data-shopping]>.caption,[data-shopping]>p:has(.btn){display:none!important}}

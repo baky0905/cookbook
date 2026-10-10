@@ -1,49 +1,13 @@
 ---
 import Base from '../../layouts/Base.astro';
-import { publishedRecipes, readPlans, currentPlan, readCatalog } from '../../lib/content.mjs';
-import { url } from '../../lib/urls.mjs';
-
-const recipes = publishedRecipes();
+import WeekPicker from '../../components/WeekPicker.astro';
+import WeekPlan from '../../components/WeekPlan.astro';
+import { readPlans, currentPlan } from '../../lib/content.mjs';
 const plans = readPlans();
-const plan = currentPlan(plans);
-const catalog = new Map(readCatalog().map(c => [c.id, c]));
-const day = (date: string) => new Date(date + 'T12:00:00Z').toLocaleDateString('en-GB', { weekday: 'long', day: 'numeric', month: 'short', timeZone: 'UTC' });
-const recipeOf = (id?: string) => recipes.find(r => r.id === id);
-const portions = (meal: any) => meal.servings ? `${meal.servings} servings` : meal.batches ? `${meal.batches} × original batch (${recipeOf(meal.recipe)?.data.yield.label})` : '';
+const current = currentPlan(plans);
 ---
 <Base title="This week" active="week" crumbs={[{ label: 'This week' }]}>
   <h1>This week</h1>
-  {!plan && <p class="subtitle">No plan published yet. Ask the assistant to plan a few meals, then publish.</p>}
-  {plan && (
-    <>
-      <p class="subtitle">{plan.title}</p>
-      {plan.example && <p class="notice">This is an example plan. It disappears from here as soon as a real weekly plan is published.</p>}
-      {plan.notes && <p class="notice plan-notes">{plan.notes}</p>}
-      <ul class="plan">
-        {[...plan.meals].sort((a, b) => a.date.localeCompare(b.date)).map(meal => {
-          const recipe = recipeOf(meal.recipe);
-          const source = meal.leftoversFrom && plan.meals.find(m => m.id === meal.leftoversFrom);
-          return (
-            <li>
-              <span class="when">{day(meal.date)} · {meal.meal}</span>
-              <span>
-                {source
-                  ? <>Leftovers: <a href={url(`recipes/${source.recipe}/`)}>{recipeOf(source.recipe)?.data.title}</a></>
-                  : recipe ? <a href={url(`recipes/${recipe.id}/${meal.servings ? `?servings=${meal.servings}` : meal.batches ? `?batch=${meal.batches}` : ''}`)}>{meal.title || recipe.data.title}</a> : meal.title}
-                {!source && portions(meal) && <small>{portions(meal)}</small>}
-                {meal.note && <small>{meal.note}</small>}
-              </span>
-            </li>
-          );
-        })}
-      </ul>
-      {plan.extras.length > 0 && (
-        <>
-          <h2>Extra shopping this week</h2>
-          <ul>{plan.extras.map(e => <li>{e.quantity ? `${e.quantity}${e.unit && e.unit !== 'piece' ? ' ' + e.unit : ''} ` : ''}{e.name || catalog.get(e.ingredient!)?.name}{e.note && ` · ${e.note}`}</li>)}</ul>
-        </>
-      )}
-      <p><a class="btn primary" href={url('shopping/')}>Shopping list</a> <a class="btn" href={url('history/')}>Past weeks</a></p>
-    </>
-  )}
+  <WeekPicker plans={plans} />
+  {[null, ...plans].map(plan => <div data-plan-view={plan?.id || ''} hidden={(plan?.id || '') !== (current?.id || '')}><WeekPlan plan={plan} /></div>)}
 </Base>

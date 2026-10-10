@@ -1,0 +1,25 @@
+---
+import Base from '../layouts/Base.astro';
+import { url } from '../lib/urls.mjs';
+---
+<Base title="Family editor" crumbs={[{ label: 'Family editor' }]}>
+  <h1>Plan together</h1>
+  <p class="subtitle">Choose meals and add the little things we need from the shop.</p>
+  <p><a class="btn primary" href={url('family/')}>Open family editor</a></p>
+  <ol class="editor-help">
+    <li>Choose one of the prepared weeks.</li>
+    <li>Under <strong>Meals</strong>, add a date and choose a recipe. Leave portions and batches empty to use the original recipe amount. For leftovers or eating out, use the meal title instead.</li>
+    <li>Under <strong>Extra shopping items</strong>, type an item such as milk or bin bags. Quantity is optional.</li>
+    <li>Save your changes, then return to the cookbook after about two minutes.</li>
+  </ol>
+  <p>Need another week? Ask the cookbook owner to prepare it. Changes to meals and extras are shared; shopping ticks stay on each device.</p>
+  <details><summary>First-time sign-in and help</summary>
+    <p>The owner needs to give your GitHub account write access to the cookbook repository. Choose “Sign In Using Access Token” and follow the token creation link in the editor. Use your own token and keep it private. The owner can use a fine-grained token limited to this repository with Contents: Read and write.</p>
+    <p>GitHub fine-grained tokens do not support every collaborator setup. If this repository is not available, use the editor’s token creation link or ask the owner for help. Never share the owner’s token.</p>
+    <p>Finish saving before the other person edits the same week. If the website has not updated after a few minutes, ask the owner to check publishing.</p>
+  </details>
+  <details><summary>Cookbook owner</summary>
+    <p><a href={url('admin/')}>Open full editor</a> for recipes, pantry and ingredient lists. Prepare weeks on your Mac with <code>npm run week:new -- YYYY-MM-DD</code>, then publish.</p>
+    <p>The family editor is a simpler view, not a separate permission level. Everyone with repository write access can change its contents. Plans and extras are public on this cookbook.</p>
+  </details>
+</Base>

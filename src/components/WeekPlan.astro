@@ -1,0 +1,50 @@
+---
+
+import { publishedRecipes, readCatalog } from '../lib/content.mjs';
+import { url } from '../lib/urls.mjs';
+
+const recipes = publishedRecipes();
+const { plan } = Astro.props;
+const catalog = new Map(readCatalog().map(c => [c.id, c]));
+const day = (date: string) => new Date(date + 'T12:00:00Z').toLocaleDateString('en-GB', { weekday: 'long', day: 'numeric', month: 'short', timeZone: 'UTC' });
+const recipeOf = (id?: string) => recipes.find(r => r.id === id);
+const portions = (meal: any) => meal.servings ? `${meal.servings} servings` : meal.batches ? `${meal.batches} × original batch (${recipeOf(meal.recipe)?.data.yield.label})` : '';
+---
+<section>
+  
+  {!plan && <p class="subtitle">No meals planned for this week yet. Choose a prepared week above, or ask the cookbook owner to prepare one.</p>}
+  {plan && (
+    <>
+      <h2>{plan.title}</h2>
+      {plan.example && <p class="notice">This is an example plan. It disappears from here as soon as a real weekly plan is published.</p>}
+      {plan.notes && <p class="notice plan-notes">{plan.notes}</p>}
+      <p><a class="btn primary" href={url('family/')}>Edit week / add meals</a></p>
+      {plan.meals.length === 0 && <p class="empty">This week is ready to plan. Open the family editor and choose this week to add meals.</p>}
+      <ul class="plan">
+        {[...plan.meals].sort((a, b) => a.date.localeCompare(b.date)).map(meal => {
+          const recipe = recipeOf(meal.recipe);
+          const source = meal.leftoversFrom && plan.meals.find(m => m.id === meal.leftoversFrom);
+          return (
+            <li>
+              <span class="when">{day(meal.date)} · {meal.meal}</span>
+              <span>
+                {source
+                  ? <>Leftovers: <a href={url(`recipes/${source.recipe}/`)}>{recipeOf(source.recipe)?.data.title}</a></>
+                  : recipe ? <a href={url(`recipes/${recipe.id}/${meal.servings ? `?servings=${meal.servings}` : meal.batches ? `?batch=${meal.batches}` : ''}`)}>{meal.title || recipe.data.title}</a> : meal.title}
+                {!source && portions(meal) && <small>{portions(meal)}</small>}
+                {meal.note && <small>{meal.note}</small>}
+              </span>
+            </li>
+          );
+        })}
+      </ul>
+      {plan.extras.length > 0 && (
+        <>
+          <h2>Extra shopping this week</h2>
+          <ul>{plan.extras.map(e => <li>{e.quantity ? `${e.quantity}${e.unit && e.unit !== 'piece' ? ' ' + e.unit : ''} ` : ''}{e.name || catalog.get(e.ingredient!)?.name}{e.note && ` · ${e.note}`}</li>)}</ul>
+        </>
+      )}
+      <p><a class="btn primary" href={url(`shopping/?week=${encodeURIComponent(plan.id)}`)}>Shopping list</a> <a class="btn" href={url('history/')}>Past weeks</a></p>
+    </>
+  )}
+</section>

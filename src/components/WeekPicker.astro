@@ -1,0 +1,46 @@
+---
+import { planStart, currentPlan } from '../lib/weeks.mjs';
+const { plans } = Astro.props;
+const current = currentPlan(plans);
+const ordered = [...plans].sort((a, b) => planStart(a).localeCompare(planStart(b)));
+const metadata = plans.map(p => ({ id: p.id, start: planStart(p), example: p.example, meals: [] }));
+---
+<div class="week-picker" data-weeks={JSON.stringify(metadata)}>
+  <label for="choose-week">Choose a week</label>
+  <select id="choose-week">
+    <option value="">This week · no plan</option>
+    {ordered.map(plan => <option value={plan.id} selected={plan.id === current?.id}>{planStart(plan)} · {plan.title}{plan.example ? ' (example)' : ''}</option>)}
+  </select>
+  <button type="button" class="btn" data-this-week>This week</button>
+</div>
+<p class="notice" data-week-missing hidden>The requested week could not be found. Showing this week instead.</p>
+<noscript><p>Enable JavaScript to switch weeks and keep the current week up to date.</p></noscript>
+<script>
+  import { currentPlan } from '../lib/weeks.mjs';
+  const picker = document.querySelector<HTMLElement>('[data-weeks]')!;
+  const plans = JSON.parse(picker.dataset.weeks!);
+  const select = picker.querySelector<HTMLSelectElement>('select')!;
+  function show(id: string, updateUrl = false) {
+    select.value = id;
+    document.querySelectorAll<HTMLElement>('[data-plan-view]').forEach(panel => { panel.hidden = panel.dataset.planView !== id; });
+    if (updateUrl) {
+      const next = new URL(location.href);
+      if (id) next.searchParams.set('week', id); else next.searchParams.delete('week');
+      history.replaceState(null, '', next);
+      document.querySelector<HTMLElement>('[data-week-missing]')!.hidden = true;
+    }
+  }
+  function fromLocation() {
+    const requested = new URLSearchParams(location.search).get('week');
+    const valid = plans.some((p: { id: string }) => p.id === requested);
+    document.querySelector<HTMLElement>('[data-week-missing]')!.hidden = !requested || valid;
+    show(valid ? requested! : currentPlan(plans)?.id || '');
+  }
+  select.addEventListener('change', () => show(select.value, true));
+  picker.querySelector('[data-this-week]')!.addEventListener('click', () => {
+    const next = new URL(location.href); next.searchParams.delete('week'); history.replaceState(null, '', next); fromLocation();
+  });
+  window.addEventListener('popstate', fromLocation);
+  document.addEventListener('visibilitychange', () => { if (!document.hidden) fromLocation(); });
+  fromLocation();
+</script>

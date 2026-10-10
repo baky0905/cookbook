@@ -19,12 +19,7 @@ export function readPlans() {
 export function readPantry() { return pantrySchema.parse(YAML.parse(fs.readFileSync(path.join(root,'content/pantry.yaml'),'utf8'))); }
 export const isPublished = recipe => recipe.data.status !== 'draft';
 export const publishedRecipes = () => readRecipes().filter(isPublished).sort((a,b)=>a.data.title.localeCompare(b.data.title));
-// The newest real plan is "this week"; the example is only shown until one exists.
-export const planStart = p => p.start || p.meals.map(m => m.date).sort()[0] || '';
-export function currentPlan(plans=readPlans()) {
-  const real = plans.filter(p=>!p.example).sort((a,b)=>planStart(b).localeCompare(planStart(a)));
-  return real[0] || plans.find(p=>p.example) || null;
-}
+export { planStart, currentPlan } from './weeks.mjs';
 // Frozen weeks from content/history, newest first.
 export function readHistory() {
   const dir = path.join(root,'content/history');

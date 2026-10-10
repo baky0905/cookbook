@@ -1,7 +1,7 @@
 ---
 import crypto from 'node:crypto';
 import Base from '../../layouts/Base.astro';
-import { publishedRecipes, readPlans, currentPlan, readCatalog } from '../../lib/content.mjs';
+import { publishedRecipes, readCatalog } from '../../lib/content.mjs';
 import { estimateCalories } from '../../lib/nutrition.mjs';
 import { amount } from '../../lib/quantities.mjs';
 import { stepHtml, quantityAttrs, markdown, escape, prepHtml } from '../../lib/render.mjs';
@@ -36,10 +36,6 @@ const kcal = r.nutrition?.kcalPerPortion
     ? { text: estimate.perPortion ? `≈ ${estimate.perPortion} kcal per portion` : `≈ ${estimate.kcal} kcal in total`,
         title: `Estimate from reference values${estimate.uncounted.length ? `; not counted: ${estimate.uncounted.join(', ')}` : ''}` }
     : null;
-// This week's plan: show when it's planned and open the scaler at the planned amount.
-const plan = currentPlan(readPlans());
-const planned = (plan?.meals || []).filter(m => m.recipe === recipe.id && !m.leftoversFrom);
-const day = (d: string) => new Date(d + 'T12:00:00Z').toLocaleDateString('en-GB', { weekday: 'long', timeZone: 'UTC' });
 // Portions when the yield is exact, otherwise whole batches.
 const portionStep = r.yield.amount ? (r.yield.amount <= 12 ? 1 : r.yield.amount / 4) : null;
 ---
@@ -62,18 +58,16 @@ const portionStep = r.yield.amount ? (r.yield.amount <= 12 ? 1 : r.yield.amount 
       {kcal && <span title={kcal.title}><strong>{kcal.text}</strong></span>}
       <span class={`status ${r.status}`}>{statusLabel}</span>
     </div>
-    {planned.length > 0 && (
-      <p class="notice planned">{planned.map(m => <span>Planned for {day(m.date)} {m.meal.toLowerCase()}{m.servings ? ` · ${m.servings} ${r.yield.unit}` : m.batches && m.batches !== 1 ? ` · ×${m.batches}` : ''}{m.note && ` · ${m.note}`} </span>)}</p>
-    )}
     {r.tags.length > 0 && <nav class="tags" aria-label="Tags">{r.tags.map(t => <a href={url(`?tag=${encodeURIComponent(t)}`)}>{t}</a>)}</nav>}
 
+    <p><a class="btn" href={url('family/')}>Plan a meal with this recipe</a></p>
     <div class="actions" hidden data-js>
       <button class="btn primary" type="button" id="cook" aria-pressed="false">Cooking view</button>
       <button class="btn" type="button" id="print">Print recipe</button>
       {hasPhotos && <label class="toggle"><input type="checkbox" id="print-photos"> Include step photos when printing</label>}
       <div class="servings" role="group" aria-label={r.yield.amount ? 'Portions' : 'Batch size'}>
         <button type="button" data-step="-1" aria-label={r.yield.amount ? 'Fewer' : 'Smaller batch'}>−</button>
-        <output id="servings" aria-live="polite" data-planned-servings={planned[0]?.servings} data-planned-batches={planned[0]?.batches}>{r.yield.amount ? `${r.yield.amount} ${r.yield.unit}` : 'Original batch'}</output>
+        <output id="servings" aria-live="polite">{r.yield.amount ? `${r.yield.amount} ${r.yield.unit}` : 'Original batch'}</output>
         <button type="button" data-step="1" aria-label={r.yield.amount ? 'More' : 'Larger batch'}>+</button>
       </div>
       <button class="reset scale-reset" type="button" id="scale-reset" hidden>Back to original</button>
@@ -206,9 +200,8 @@ const portionStep = r.yield.amount ? (r.yield.amount <= 12 ? 1 : r.yield.amount 
     });
     if (save) { const s = store.get(); s.factor = f; store.set(s); }
   }
-  const planned = base && output.dataset.plannedServings ? Number(output.dataset.plannedServings) / base : Number(output.dataset.plannedBatches) || 0;
   const fromUrl = base && params.get('servings') ? Number(params.get('servings')) / base : Number(params.get('batch')) || 0;
-  apply(fromUrl || state.factor || planned || 1, false);
+  apply(fromUrl || state.factor || 1, false);
   document.querySelectorAll<HTMLButtonElement>('.servings button').forEach(button => button.addEventListener('click', () => {
     const dir = Number(button.dataset.step);
     if (base) apply(Math.max(step, base * factor + dir * step) / base);

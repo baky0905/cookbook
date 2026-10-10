@@ -7,7 +7,7 @@ import { MEDIA_MAX_BYTES } from '../../lib/paths.mjs';
 // New recipes or ingredients appear in dropdowns after the next deploy.
 const opt = { required: false };
 const str = (name: string, label: string, extra = {}) => ({ name, label, widget: 'string', ...extra });
-const num = (name: string, label: string, extra = {}) => ({ name, label, widget: 'number', value_type: 'float', min: 0, ...opt, ...extra });
+const num = (name: string, label: string, extra = {}) => ({ name, label, widget: 'number', value_type: 'float', min: 0.01, ...opt, ...extra });
 const bool = (name: string, label: string, def: boolean) => ({ name, label, widget: 'boolean', default: def, ...opt });
 const sel = (name: string, label: string, options: unknown[], extra = {}) => ({ name, label, widget: 'select', options, ...extra });
 const strings = (name: string, label: string, extra = {}) => ({ name, label, widget: 'list', field: { name: 'item', label, widget: 'string' }, ...opt, ...extra });
@@ -17,7 +17,7 @@ const datePattern = ['^\\d{4}-\\d{2}-\\d{2}$', 'Use YYYY-MM-DD'];
 export function GET() {
   const catalog = readCatalog();
   const ingredientOptions = catalog.map(c => ({ label: `${c.name} (${c.id})`, value: c.id }));
-  const recipeOptions = readRecipes().filter(r => r.data.status !== 'draft').sort((a, b) => a.data.title.localeCompare(b.data.title)).map(r => ({ label: r.data.title, value: r.id }));
+  const recipeOptions = readRecipes().filter(r => r.data.status !== 'draft').sort((a, b) => a.data.title.localeCompare(b.data.title)).map(r => ({ label: `${r.data.title} — ${r.data.yield.label}${r.data.yield.amount ? '' : ' (use batches)'}`, value: r.id }));
   const unitOptions = units.map(u => ({ label: u || '(none)', value: u }));
   const tags = taxonomy.tagGroups.flatMap((g: any) => g.tags.map((t: string) => ({ label: `${t} · ${g.name}`, value: t })));
   const photo = (name: string, label: string, extra = {}) => ({ name, label, widget: 'object', ...opt, ...extra, fields: [
@@ -41,10 +41,10 @@ export function GET() {
           str('start', 'Starts on', { pattern: datePattern, hint: 'Monday, YYYY-MM-DD' }),
           { name: 'notes', label: 'Notes for the week', widget: 'text', ...opt },
           { name: 'meals', label: 'Meals', widget: 'list', ...opt, summary: '{{fields.date}} · {{fields.meal}} · {{fields.recipe}}{{fields.title}}', fields: [
-            str('date', 'Date', { pattern: datePattern }), sel('meal', 'Meal', taxonomy.meals, { default: 'Dinner' }),
+            { name: 'date', label: 'Date', widget: 'datetime', format: 'YYYY-MM-DD', date_format: 'YYYY-MM-DD', time_format: false, picker_utc: true }, sel('meal', 'Meal', taxonomy.meals, { default: 'Dinner' }),
             sel('recipe', 'Recipe', recipeOptions, { ...opt, hint: 'Or leave empty and write a title below' }),
-            str('title', 'Title (if not a recipe)', opt), num('servings', 'Portions', { hint: 'For recipes with an exact yield' }),
-            num('batches', 'Batches', { hint: 'Otherwise: 0.5, 1, 2…' }), str('leftoversFrom', 'Leftovers from (meal ID)', { ...opt, hint: 'e.g. 2026-10-12-dinner' }),
+            str('title', 'Title (if not a recipe)', opt), num('servings', 'Portions', { hint: 'Optional. Only for recipes with an exact yield; otherwise use batches. Leave both empty for the original amount.' }),
+            num('batches', 'Batches', { hint: 'Optional: 0.5, 1, 2… Leave portions empty when using batches.' }), str('leftoversFrom', 'Leftovers from (meal ID)', { ...opt, hint: 'e.g. 2026-10-12-dinner' }),
             str('note', 'Note', opt), str('id', 'Meal ID', { ...opt, hint: 'Leave empty; defaults to date-meal' }),
           ] },
           { name: 'extras', label: 'Extra shopping items', widget: 'list', ...opt, summary: '{{fields.quantity}} {{fields.unit}} {{fields.ingredient}}{{fields.name}}', fields: [

@@ -11,9 +11,9 @@ const date = (d: string) => d ? new Date(d + 'T12:00:00Z').toLocaleDateString('e
 ---
 <Base title="History" active="history" crumbs={[{ label: 'History' }]}>
   <h1>History</h1>
-  <p class="subtitle">Past weeks, frozen when the next week started. Later recipe changes don't alter them.</p>
+  <p class="subtitle">Past weeks, saved after the week ended. Later recipe changes don't alter them.</p>
   {weeks.length === 0
-    ? <p class="empty">No past weeks yet. A week is saved here automatically when the next one starts.</p>
+    ? <p class="empty">No past weeks yet. A week is saved here automatically after it ends.</p>
     : <>
         <ul class="results">
           {weeks.map(w => (

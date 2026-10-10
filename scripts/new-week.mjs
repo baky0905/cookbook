@@ -2,14 +2,16 @@
 // npm run week:new                       next Monday after the latest plan (or this coming Monday)
 // npm run week:new -- 2026-10-19         a specific start date
 import fs from 'node:fs';
+import { z } from 'zod';
 import { readPlans, planStart } from '../src/lib/content.mjs';
 import { snapshotFinishedWeeks } from './snapshot.mjs';
 
 const day = d => d.toISOString().slice(0, 10);
 const nextMonday = from => { const d = new Date(from + 'T12:00:00Z'); d.setUTCDate(d.getUTCDate() + ((8 - d.getUTCDay()) % 7 || 7)); return d; };
 const latest = readPlans().filter(p => !p.example).map(planStart).sort().at(-1);
+if (process.argv[2]) z.iso.date().parse(process.argv[2]);
 const start = process.argv[2] ? new Date(process.argv[2] + 'T12:00:00Z') : nextMonday(latest || day(new Date()));
-if (Number.isNaN(start.getTime())) throw new Error('Usage: npm run week:new -- [YYYY-MM-DD]');
+if (Number.isNaN(start.getTime()) || start.getUTCDay() !== 1) throw new Error('Usage: npm run week:new -- [YYYY-MM-DD]; choose a Monday');
 // ISO week number, so IDs sort and read naturally (2026-w43).
 const thursday = new Date(start); thursday.setUTCDate(start.getUTCDate() + 3 - ((start.getUTCDay() + 6) % 7));
 const week = Math.ceil(((thursday - Date.UTC(thursday.getUTCFullYear(), 0, 1)) / 864e5 + 1) / 7);

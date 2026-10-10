@@ -1,0 +1,8 @@
+id: 2026-w42
+title: Week 42
+start: '2026-10-12'
+notes: ''
+# Add meals: { date: '2026-10-12', meal: Dinner, recipe: lohikeitto, servings: 4 }
+meals: []
+# Extra shopping items: { ingredient: milk, quantity: 1, unit: l } or { name: dish soap }
+extras: []
