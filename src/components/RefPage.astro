@@ -1,0 +1,15 @@
+---
+import Base from '../layouts/Base.astro';
+import { url } from '../lib/urls.mjs';
+interface Props { data: { title: string; intro?: string; sources?: { title: string; url?: string }[] } }
+const { data } = Astro.props;
+---
+<Base title={data.title} active="reference">
+  <div class="crumb"><a href={url('reference/')}>Reference</a></div>
+  <h1>{data.title}</h1>
+  {data.intro && <p class="subtitle">{data.intro}</p>}
+  <div class="ref"><slot /></div>
+  {data.sources?.length && (
+    <p class="ref-sources">Source: {data.sources.map((s, i) => <>{i > 0 && '; '}{s.url ? <a href={s.url} rel="noopener">{s.title}</a> : s.title}</>)}</p>
+  )}
+</Base>

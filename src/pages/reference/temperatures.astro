@@ -1,0 +1,12 @@
+---
+import RefPage from '../../components/RefPage.astro';
+import { readReference } from '../../lib/reference.mjs';
+const data = readReference('temperatures');
+---
+<RefPage data={data}>
+  <h2>Safe minimum (core temperature)</h2>
+  <table><tbody>{data.safety.map(r => <tr><th scope="row">{r.food}</th><td class="num">{r.temp} °C</td><td>{r.note}</td></tr>)}</tbody></table>
+  <h2>Doneness</h2>
+  <p class="caption">{data.doneness.note}</p>
+  <table><tbody>{data.doneness.rows.map(r => <tr><th scope="row">{r.food}</th><td class="num">{r.temp} °C</td></tr>)}</tbody></table>
+</RefPage>

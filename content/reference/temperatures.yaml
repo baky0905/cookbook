@@ -1,0 +1,24 @@
+title: Meat temperatures
+intro: Measure in the thickest part, away from bone. Food-safety minimums first; doneness targets are for texture.
+sources:
+  - { title: "USDA FSIS — Safe minimum internal temperature chart", url: "https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/food-safety-basics/safe-temperature-chart" }
+  - { title: "Food Standards Agency (UK) — Cooking your food", url: "https://www.food.gov.uk/safety-hygiene/cooking-your-food" }
+safety:
+  - { food: "Poultry: whole, pieces, minced", temp: 74 }
+  - { food: "Minced meat: beef, pork, lamb, veal", temp: 71 }
+  - { food: "Beef, pork, lamb, veal: steaks, chops, roasts", temp: 63, note: Rest 3 minutes }
+  - { food: Fish and shellfish, temp: 63 }
+  - { food: "Fresh ham (raw)", temp: 63, note: Rest 3 minutes }
+  - { food: Egg dishes, temp: 71 }
+  - { food: "Leftovers and casseroles, reheated", temp: 74 }
+doneness:
+  note: "Whole cuts of beef and lamb are commonly served below 63 °C as long as the outside is seared (UK FSA). Take meat off the heat 3–5 °C early; it keeps rising while it rests."
+  rows:
+    - { food: "Beef and lamb, rare", temp: 50–52 }
+    - { food: "Beef and lamb, medium-rare", temp: 55–57 }
+    - { food: "Beef and lamb, medium", temp: 60–63 }
+    - { food: "Beef and lamb, well done", temp: 70+ }
+    - { food: "Pork chops and loin, juicy", temp: 63 }
+    - { food: "Chicken and turkey breast", temp: 74 }
+    - { food: "Chicken thighs and legs, tender", temp: 80–85 }
+    - { food: "Braised or pulled meat (chuck, shoulder)", temp: 90–95 }

@@ -1,0 +1,15 @@
+title: Cutting sizes
+intro: "Diagrams are drawn to scale (close to actual size on most screens). Add your own photo to any cut in the editor."
+sources:
+  - { title: "Culinary Institute of America — The Professional Chef (standard knife cuts)" }
+cuts:
+  - { id: mince, name: Minced, aka: "very finely chopped", size: under 3 mm, shape: dice, mm: 2 }
+  - { id: brunoise, name: Brunoise, aka: "finest dice", size: 3 × 3 × 3 mm, shape: dice, mm: 3 }
+  - { id: small-dice, name: Small dice, aka: "finely diced", size: 6 × 6 × 6 mm, shape: dice, mm: 6 }
+  - { id: medium-dice, name: Medium dice, aka: "diced", size: 12 × 12 × 12 mm, shape: dice, mm: 12 }
+  - { id: large-dice, name: Large dice, aka: "chunky dice, chunks", size: 20 × 20 × 20 mm, shape: dice, mm: 20 }
+  - { id: julienne, name: Julienne, aka: "matchsticks", size: 3 × 3 × 50 mm, shape: stick, mm: 3, length: 50 }
+  - { id: batonnet, name: Batonnet, aka: "sticks, batons", size: 6 × 6 × 60 mm, shape: stick, mm: 6, length: 60 }
+  - { id: slice, name: Slices, aka: "rounds; thinly sliced is about 2 mm", size: 6 mm thick, shape: slice, mm: 6 }
+  - { id: oblique, name: Oblique (roll cut), aka: "for carrots and parsnips", size: "Cut at 45°, roll a quarter turn, cut again", shape: oblique, mm: 20 }
+  - { id: chiffonade, name: Chiffonade, aka: "ribbons of leafy herbs", size: "Roll the leaves, slice 1–2 mm", shape: ribbon, mm: 2 }

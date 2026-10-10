@@ -1,0 +1,48 @@
+# Every controlled list in the cookbook. Validation rejects anything not listed here,
+# so adding a category, aisle, unit or tag is a one-line change in this file.
+
+# Recipe categories, by course, in the order they appear on the site.
+categories:
+  - { name: Breakfast, description: Morning dishes }
+  - { name: Soups & stews, description: "Soups, stews and braises eaten from a bowl" }
+  - { name: Mains, description: Main dishes for lunch or dinner }
+  - { name: Sides, description: Vegetables and starches served alongside }
+  - { name: Breads & doughs, description: "Breads, flatbreads, pizza and filled doughs" }
+  - { name: Desserts & baking, description: "Cakes, pastries and sweet dishes" }
+  - { name: Sauces & dips, description: "Sauces, dressings and dips" }
+  - { name: Snacks & starters, description: Small plates and things to share }
+
+# Shopping aisles, in the order you walk through the shop.
+aisles: [Produce, Meat & fish, Dairy & eggs, Bakery, Dry goods, Tins & jars, Oils & condiments, Herbs & spices, Frozen, Drinks, Other]
+
+# Measurement units. Metric only: no cups or spoons. Counts get a plural for display.
+units:
+  - { id: g }
+  - { id: kg }
+  - { id: ml }
+  - { id: l }
+  - { id: piece }
+  - { id: clove, plural: cloves }
+  - { id: sprig, plural: sprigs }
+  - { id: pinch, plural: pinches }
+  - { id: slice, plural: slices }
+  - { id: bunch, plural: bunches }
+  - { id: handful, plural: handfuls }
+  - { id: can, plural: cans }
+  - { id: package, plural: packages }
+
+# Meal slots used in weekly plans.
+meals: [Breakfast, Lunch, Dinner, Snack]
+
+# Recipe tags, by group. Reuse an existing tag before adding a new one (lowercase, hyphenated).
+tagGroups:
+  - name: Cuisine
+    tags: [american, austrian, croatian, finnish, french, hungarian, indian, italian, mexican, middle-eastern, turkish]
+  - name: Main ingredient
+    tags: [beef, pork, lamb, chicken, fish, seafood, sausage, cheese, potato, pasta, rice, grains, legumes, cabbage, squash, broccoli, mushrooms, apple, plum, lemon, walnut, coconut, chocolate]
+  - name: Diet
+    tags: [vegetarian]
+  - name: Technique
+    tags: [one-pot, oven-baked, slow-cooked, pan-fried, yeast-dough, no-knead, overnight, food-processor]
+  - name: Occasion
+    tags: [quick, weeknight, make-ahead, family-recipe, meal-kit]

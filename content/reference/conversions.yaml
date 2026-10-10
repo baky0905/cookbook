@@ -1,0 +1,56 @@
+title: Conversions
+intro: For reading recipes that use cups, spoons, ounces or °F. This cookbook itself is metric only.
+sources:
+  - { title: "King Arthur Baking — Ingredient weight chart", url: "https://www.kingarthurbaking.com/learn/ingredient-weight-chart" }
+tables:
+  - name: Volume
+    rows:
+      - [1 teaspoon, 5 ml]
+      - [1 tablespoon, 15 ml (Australia 20 ml)]
+      - [1 cup (US), 240 ml]
+      - [1 cup (UK, Australia), 250 ml]
+      - [1 fluid ounce, 30 ml]
+      - [1 pint (US / UK), 473 ml / 568 ml]
+  - name: Weight
+    rows:
+      - [1 ounce, 28 g]
+      - [1 pound, 454 g]
+      - [1 stick of butter (US), 113 g]
+  - name: Oven
+    note: For a fan oven, use about 20 °C less.
+    rows:
+      - [275 °F · gas 1, 140 °C]
+      - [300 °F · gas 2, 150 °C]
+      - [325 °F · gas 3, 160 °C]
+      - [350 °F · gas 4, 180 °C]
+      - [375 °F · gas 5, 190 °C]
+      - [400 °F · gas 6, 200 °C]
+      - [425 °F · gas 7, 220 °C]
+      - [450 °F · gas 8, 230 °C]
+      - [475 °F · gas 9, 240 °C]
+      - [500 °F, 260 °C]
+  - name: Length and pans
+    rows:
+      - [1 inch, 2.5 cm]
+      - [8-inch square pan, 20 × 20 cm]
+      - [9-inch round pan, 23 cm]
+      - [9 × 13-inch pan, 23 × 33 cm]
+  - name: One US cup weighs
+    note: Spoon-and-level method. Weights differ by ingredient, so never use one figure for everything.
+    rows:
+      - [Plain or bread flour, 120 g]
+      - [Wholemeal flour, 113 g]
+      - [Sugar, 198 g]
+      - [Brown sugar (packed), 213 g]
+      - [Icing sugar, 113 g]
+      - [Butter, 227 g (1 tablespoon 14 g)]
+      - [Milk, water or cream, 227 g]
+      - [Vegetable oil, 198 g]
+      - [Almond flour, 96 g]
+      - [Cocoa powder, 84 g]
+  - name: Small amounts
+    rows:
+      - [1 tablespoon honey, 21 g]
+      - [1 tablespoon table salt, 18 g]
+      - [1 tablespoon instant yeast, 9 g]
+      - [1 teaspoon baking powder, 4 g]

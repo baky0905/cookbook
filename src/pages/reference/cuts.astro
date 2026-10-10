@@ -1,0 +1,36 @@
+---
+import RefPage from '../../components/RefPage.astro';
+import { readReference } from '../../lib/reference.mjs';
+import { picture } from '../../lib/media.mjs';
+const data = readReference('cuts');
+const cuts = await Promise.all(data.cuts.map(async c => ({ ...c, img: c.photo ? await picture(c.photo, 400) : null })));
+// Diagrams use millimetres as SVG units and CSS mm as size, so they render close to actual size.
+function shape(c: any) {
+  const s = c.mm;
+  if (c.shape === 'dice') { const n = s <= 3 ? 6 : s <= 6 ? 4 : s <= 12 ? 3 : 2, gap = Math.max(1, s / 4), w = n * s + (n - 1) * gap;
+    return { w, h: s, body: Array.from({ length: n }, (_, i) => `<rect x="${i * (s + gap)}" y="0" width="${s}" height="${s}" rx="${s / 8}"/>`).join('') }; }
+  if (c.shape === 'stick') return { w: c.length, h: s * 3 + 4, body: [0, 1, 2].map(i => `<rect x="0" y="${i * (s + 2)}" width="${c.length}" height="${s}" rx="${s / 6}"/>`).join('') };
+  if (c.shape === 'slice') return { w: 64, h: 26, body: `<ellipse cx="13" cy="13" rx="12" ry="12"/><rect x="34" y="1" width="${s}" height="24" rx="1"/><rect x="${36 + s + 6}" y="1" width="${s}" height="24" rx="1"/>` };
+  if (c.shape === 'oblique') return { w: 62, h: 22, body: '<path d="M0 3 L14 1 L20 21 L3 19 Z"/><path d="M24 1 L40 2 L36 20 L28 21 Z"/><path d="M44 2 L60 4 L57 20 L48 19 Z"/>' };
+  return { w: 60, h: 16, body: [0, 4, 8, 12].map(y => `<path d="M0 ${y + 2} Q15 ${y} 30 ${y + 2} T60 ${y + 2}" fill="none" stroke-width="1.6"/>`).join('') };
+}
+---
+<RefPage data={data}>
+  <div class="ruler" aria-hidden="true">
+    <svg width="50mm" height="6mm" viewBox="0 0 50 6">{Array.from({ length: 51 }, (_, i) => <line x1={i} x2={i} y1="0" y2={i % 10 === 0 ? 6 : i % 5 === 0 ? 4 : 2.5} />)}</svg>
+    <span>5 cm: check against a real ruler to see how close your screen is.</span>
+  </div>
+  <div class="cuts">
+    {cuts.map(c => { const d = shape(c); return (
+      <section class="cut" id={c.id}>
+        <div class="cut-art">
+          {c.img ? <img src={c.img.src} width={c.img.width} height={c.img.height} alt={c.name} loading="lazy">
+            : <svg width={`${d.w}mm`} height={`${d.h}mm`} viewBox={`0 0 ${d.w} ${d.h}`} role="img" aria-label={`${c.name}, ${c.size}`} set:html={d.body} />}
+        </div>
+        <h2>{c.name}</h2>
+        <p><strong>{c.size}</strong></p>
+        <p class="caption">{c.aka}</p>
+      </section>
+    ); })}
+  </div>
+</RefPage>

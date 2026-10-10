@@ -1,0 +1,170 @@
+# Every ingredient a recipe can use, defined once.
+# id: shared shopping ID used by recipes (lowercase-hyphenated)
+# name: how it appears on the shopping list   aisle: shop aisle from taxonomy.yaml
+# kcal: per 100 g, approximate reference values (raw, as purchased); leave out for spices
+# density: g per ml, only to estimate calories for ml amounts
+# weights: typical grams per counted unit (piece, clove, can…), for calorie estimates
+# staple: usually in the cupboard, so the shopping list asks you to check
+# shop: false for things you never buy (water, ice)
+ingredients:
+  - { id: active-dry-yeast, name: active dry yeast, aisle: Dry goods, kcal: 325 }
+  - { id: aioli, name: aioli, aisle: "Oils & condiments", kcal: 680 }
+  - { id: apple, name: apple, aisle: Produce, kcal: 52, weights: { piece: 180 } }
+  - { id: avocado-oil, name: avocado oil, aisle: "Oils & condiments", kcal: 884, density: 0.92 }
+  - { id: baking-chocolate, name: baking chocolate, aisle: Dry goods, kcal: 500 }
+  - { id: baking-powder, name: baking powder, aisle: Dry goods, kcal: 53 }
+  - { id: baking-soda, name: baking soda, aisle: Dry goods, kcal: 0 }
+  - { id: balsamic-vinegar, name: balsamic vinegar, aisle: "Oils & condiments", kcal: 88, density: 1.06 }
+  - { id: bay-leaf, name: bay leaf, aisle: "Herbs & spices" }
+  - { id: beef-bouillon, name: beef bouillon, aisle: Dry goods, kcal: 200, weights: { piece: 10 } }
+  - { id: beef-chuck-roast, name: beef chuck roast, aisle: "Meat & fish", kcal: 250 }
+  - { id: beef-stock, name: beef stock, aisle: "Tins & jars", kcal: 7, density: 1 }
+  - { id: black-pepper, name: black pepper, aisle: "Herbs & spices", staple: true }
+  - { id: bread-flour, name: bread flour, aisle: Dry goods, kcal: 361, density: 0.53 }
+  - { id: brick-cheese, name: brick cheese, aisle: "Dairy & eggs", kcal: 371 }
+  - { id: brioche-buns, name: brioche buns, aisle: Bakery, kcal: 350, weights: { piece: 70 } }
+  - { id: broccoli, name: broccoli, aisle: Produce, kcal: 34 }
+  - { id: brown-sugar, name: brown sugar, aisle: Dry goods, kcal: 380, density: 0.9 }
+  - { id: butter, name: butter, aisle: "Dairy & eggs", kcal: 717, density: 0.91 }
+  - { id: cajun-spice, name: Cajun spice mix, aisle: "Herbs & spices" }
+  - { id: cake-flour, name: cake flour, aisle: Dry goods, kcal: 362, density: 0.53 }
+  - { id: campanelle, name: campanelle, aisle: Dry goods, kcal: 371 }
+  - { id: carrot, name: carrots, aisle: Produce, kcal: 41, weights: { piece: 60 } }
+  - { id: cayenne-pepper, name: cayenne pepper, aisle: "Herbs & spices" }
+  - { id: celery, name: celery, aisle: Produce, kcal: 16, weights: { piece: 40 } }
+  - { id: cheddar, name: cheddar, aisle: "Dairy & eggs", kcal: 403 }
+  - { id: chicken-breast, name: chicken breast, aisle: "Meat & fish", kcal: 120 }
+  - { id: chicken-drumsticks, name: chicken drumsticks, aisle: "Meat & fish", kcal: 120, weights: { piece: 110 } }
+  - { id: chicken-pieces, name: chicken pieces (bone-in), aisle: "Meat & fish", kcal: 160 }
+  - { id: chicken-seasoning, name: chicken seasoning, aisle: "Herbs & spices" }
+  - { id: chicken-stock, name: chicken stock, aisle: "Tins & jars", kcal: 5, density: 1 }
+  - { id: chilli-flakes, name: chilli flakes, aisle: "Herbs & spices" }
+  - { id: chilli-powder, name: chilli powder, aisle: "Herbs & spices" }
+  - { id: cinnamon, name: ground cinnamon, aisle: "Herbs & spices" }
+  - { id: citric-acid, name: citric acid, aisle: Dry goods, kcal: 0 }
+  - { id: clam-juice, name: clam juice, aisle: "Tins & jars", kcal: 2, density: 1 }
+  - { id: cod, name: cod, aisle: "Meat & fish", kcal: 82 }
+  - { id: cooked-chickpeas, name: cooked chickpeas, aisle: "Tins & jars", kcal: 164 }
+  - { id: cooked-green-lentils, name: cooked green lentils, aisle: "Tins & jars", kcal: 116 }
+  - { id: cooking-cream, name: cooking cream, aisle: "Dairy & eggs", kcal: 200, density: 1 }
+  - { id: coriander, name: fresh coriander, aisle: Produce, kcal: 23 }
+  - { id: coriander-seed, name: coriander seed, aisle: "Herbs & spices" }
+  - { id: cornstarch, name: cornflour, aisle: Dry goods, kcal: 381 }
+  - { id: cream-cheese, name: cream cheese, aisle: "Dairy & eggs", kcal: 342 }
+  - { id: crushed-tomatoes, name: canned crushed tomatoes, aisle: "Tins & jars", kcal: 32 }
+  - { id: crusty-bread, name: crusty bread, aisle: Bakery, kcal: 270 }
+  - { id: cumin-seed, name: cumin seed, aisle: "Herbs & spices" }
+  - { id: desiccated-coconut, name: desiccated coconut, aisle: Dry goods, kcal: 660 }
+  - { id: dijon-mustard, name: Dijon mustard, aisle: "Oils & condiments", kcal: 150, density: 1.05 }
+  - { id: dill, name: fresh dill, aisle: Produce, kcal: 43 }
+  - { id: dried-basil, name: dried basil, aisle: "Herbs & spices" }
+  - { id: dried-oregano, name: dried oregano, aisle: "Herbs & spices" }
+  - { id: egg, name: eggs, aisle: "Dairy & eggs", kcal: 143, weights: { piece: 50 } }
+  - { id: fennel, name: fennel, aisle: Produce, kcal: 31, weights: { piece: 250 } }
+  - { id: fish-stock, name: fish stock, aisle: "Tins & jars", kcal: 5, density: 1 }
+  - { id: flaky-salt, name: flaky salt, aisle: "Herbs & spices" }
+  - { id: food-colouring, name: food colouring, aisle: Dry goods, kcal: 0 }
+  - { id: fresh-chilli, name: fresh chilli, aisle: Produce, kcal: 40, weights: { piece: 15 } }
+  - { id: fresh-yeast, name: fresh yeast, aisle: "Dairy & eggs", kcal: 105, weights: { package: 42 } }
+  - { id: frozen-mixed-vegetables, name: frozen mixed vegetables, aisle: Frozen, kcal: 65 }
+  - { id: garam-masala, name: garam masala, aisle: "Herbs & spices" }
+  - { id: garlic, name: garlic, aisle: Produce, kcal: 149, weights: { clove: 5 } }
+  - { id: garlic-powder, name: garlic powder, aisle: "Herbs & spices" }
+  - { id: ginger, name: fresh ginger, aisle: Produce, kcal: 80, weights: { piece: 15 } }
+  - { id: grated-cheese, name: grated cheese, aisle: "Dairy & eggs", kcal: 380 }
+  - { id: ground-almonds, name: ground almonds, aisle: Dry goods, kcal: 579 }
+  - { id: ground-walnuts, name: ground walnuts, aisle: Dry goods, kcal: 654 }
+  - { id: heavy-cream, name: heavy cream, aisle: "Dairy & eggs", kcal: 340, density: 1 }
+  - { id: honey, name: honey, aisle: "Oils & condiments", kcal: 304, density: 1.42 }
+  - { id: hungarian-paprika, name: Hungarian paprika, aisle: "Herbs & spices" }
+  - { id: ice, name: ice, aisle: Other, kcal: 0, shop: false }
+  - { id: icing-sugar, name: icing sugar, aisle: Dry goods, kcal: 389 }
+  - { id: instant-yeast, name: instant yeast, aisle: Dry goods, kcal: 325 }
+  - { id: jam, name: jam, aisle: "Tins & jars", kcal: 250 }
+  - { id: ketchup, name: ketchup, aisle: "Oils & condiments", kcal: 112, density: 1.15 }
+  - { id: kranjska-sausage, name: Kranjska sausages, aisle: "Meat & fish", kcal: 300, weights: { piece: 180 } }
+  - { id: lard, name: lard, aisle: "Meat & fish", kcal: 902, density: 0.92 }
+  - { id: leek, name: leeks, aisle: Produce, kcal: 61, weights: { piece: 100 } }
+  - { id: lemon-juice, name: lemon juice, aisle: Produce, kcal: 22, density: 1.03 }
+  - { id: lime, name: limes, aisle: Produce, kcal: 30, weights: { piece: 65 } }
+  - { id: long-grain-rice, name: long-grain rice, aisle: Dry goods, kcal: 365 }
+  - { id: milk, name: milk, aisle: "Dairy & eggs", kcal: 64, density: 1.03 }
+  - { id: minced-beef, name: minced beef, aisle: "Meat & fish", kcal: 254 }
+  - { id: minced-lamb, name: minced lamb, aisle: "Meat & fish", kcal: 282 }
+  - { id: minced-pork, name: minced pork, aisle: "Meat & fish", kcal: 263 }
+  - { id: mozzarella, name: mozzarella, aisle: "Dairy & eggs", kcal: 280 }
+  - { id: mushrooms, name: mushrooms, aisle: Produce, kcal: 22 }
+  - { id: mussels, name: mussels (in shell), aisle: "Meat & fish", kcal: 35 }
+  - { id: mustard-seed, name: mustard seed, aisle: "Herbs & spices" }
+  - { id: neutral-oil, name: neutral oil, aisle: "Oils & condiments", kcal: 884, density: 0.92 }
+  - { id: nutmeg, name: nutmeg, aisle: "Herbs & spices" }
+  - { id: olive-oil, name: olive oil, aisle: "Oils & condiments", kcal: 884, density: 0.91 }
+  - { id: onion, name: onions, aisle: Produce, kcal: 40, weights: { piece: 150 } }
+  - { id: onion-powder, name: onion powder, aisle: "Herbs & spices" }
+  - { id: pancetta, name: pancetta, aisle: "Meat & fish", kcal: 450 }
+  - { id: parmesan, name: parmesan, aisle: "Dairy & eggs", kcal: 392 }
+  - { id: parsley, name: fresh parsley, aisle: Produce, kcal: 36, weights: { handful: 15 } }
+  - { id: peanuts, name: peanuts, aisle: Dry goods, kcal: 567 }
+  - { id: pearl-barley, name: pearl barley, aisle: Dry goods, kcal: 352 }
+  - { id: pecorino, name: pecorino romano, aisle: "Dairy & eggs", kcal: 387 }
+  - { id: plain-flour, name: plain flour, aisle: Dry goods, kcal: 364, density: 0.53, staple: true }
+  - { id: plain-yoghurt, name: plain yoghurt, aisle: "Dairy & eggs", kcal: 61, density: 1.03 }
+  - { id: plum-jam, name: plum jam, aisle: "Tins & jars", kcal: 250 }
+  - { id: poblano-pepper, name: poblano peppers, aisle: Produce, kcal: 20 }
+  - { id: poolish, name: poolish (made earlier), aisle: Other, kcal: 0, shop: false }
+  - { id: potato, name: potatoes, aisle: Produce, kcal: 77, weights: { piece: 170 } }
+  - { id: raw-sugar, name: raw sugar, aisle: Dry goods, kcal: 387 }
+  - { id: red-bell-pepper, name: red bell peppers, aisle: Produce, kcal: 31, weights: { piece: 150 } }
+  - { id: red-kidney-beans, name: red kidney beans (canned), aisle: "Tins & jars", kcal: 80, weights: { can: 400 } }
+  - { id: red-onion, name: red onions, aisle: Produce, kcal: 40, weights: { piece: 120 } }
+  - { id: red-wine, name: red wine, aisle: Drinks, kcal: 85 }
+  - { id: red-wine-vinegar, name: red wine vinegar, aisle: "Oils & condiments", kcal: 19 }
+  - { id: rosemary, name: fresh rosemary, aisle: Produce, kcal: 131, weights: { handful: 5 } }
+  - { id: salad-leaves, name: salad leaves, aisle: Produce, kcal: 17 }
+  - { id: salmon, name: salmon, aisle: "Meat & fish", kcal: 208 }
+  - { id: salt, name: salt, aisle: "Herbs & spices", staple: true }
+  - { id: sauerkraut, name: sauerkraut, aisle: "Tins & jars", kcal: 19 }
+  - { id: sausages, name: sausages, aisle: "Meat & fish", kcal: 300 }
+  - { id: sesame-oil, name: sesame oil, aisle: "Oils & condiments", kcal: 884, density: 0.92 }
+  - { id: sesame-seeds, name: sesame seeds, aisle: Dry goods, kcal: 573 }
+  - { id: shallot, name: shallots, aisle: Produce, kcal: 72, weights: { piece: 40 } }
+  - { id: shrimp, name: shell-on shrimp, aisle: "Meat & fish", kcal: 70 }
+  - { id: sirloin-steak, name: sirloin steak, aisle: "Meat & fish", kcal: 180 }
+  - { id: smoked-bacon, name: smoked bacon, aisle: "Meat & fish", kcal: 450 }
+  - { id: sour-cream, name: sour cream, aisle: "Dairy & eggs", kcal: 193 }
+  - { id: soy-sauce, name: soy sauce, aisle: "Oils & condiments", kcal: 53, density: 1.17 }
+  - { id: spaghetti, name: spaghetti, aisle: Dry goods, kcal: 371 }
+  - { id: squash, name: squash, aisle: Produce, kcal: 30 }
+  - { id: squid, name: squid, aisle: "Meat & fish", kcal: 92 }
+  - { id: sugar, name: sugar, aisle: Dry goods, kcal: 387, density: 0.85, staple: true }
+  - { id: sumac, name: sumac, aisle: "Herbs & spices" }
+  - { id: sunflower-oil, name: sunflower oil, aisle: "Oils & condiments", kcal: 884, density: 0.92 }
+  - { id: sweet-paprika, name: sweet paprika, aisle: "Herbs & spices" }
+  - { id: sweetcorn, name: canned sweetcorn, aisle: "Tins & jars", kcal: 80 }
+  - { id: tagliatelle, name: tagliatelle, aisle: Dry goods, kcal: 371 }
+  - { id: tahini, name: tahini, aisle: "Tins & jars", kcal: 595 }
+  - { id: tex-mex-spice, name: Tex-Mex spice mix, aisle: "Herbs & spices" }
+  - { id: thick-cut-bacon, name: thick-cut bacon, aisle: "Meat & fish", kcal: 420 }
+  - { id: thyme, name: fresh thyme, aisle: Produce, kcal: 101, weights: { sprig: 1 } }
+  - { id: tomato, name: tomatoes, aisle: Produce, kcal: 18, weights: { piece: 120 } }
+  - { id: tomato-paste, name: tomato paste, aisle: "Tins & jars", kcal: 82, density: 1.1 }
+  - { id: tomato-puree, name: tomato purée, aisle: "Tins & jars", kcal: 82 }
+  - { id: tortilla-chips, name: tortilla chips, aisle: Dry goods, kcal: 490 }
+  - { id: turmeric, name: turmeric, aisle: "Herbs & spices" }
+  - { id: unsalted-butter, name: unsalted butter, aisle: "Dairy & eggs", kcal: 717, density: 0.91 }
+  - { id: vanilla, name: vanilla, aisle: Dry goods, kcal: 0 }
+  - { id: vanilla-sugar, name: vanilla sugar, aisle: Dry goods, kcal: 390, weights: { package: 10 } }
+  - { id: vegeta, name: Vegeta seasoning, aisle: "Herbs & spices" }
+  - { id: vegetable-oil, name: vegetable oil, aisle: "Oils & condiments", kcal: 884, density: 0.92 }
+  - { id: vegetable-stock-powder, name: vegetable stock powder, aisle: Dry goods, kcal: 250 }
+  - { id: water, name: water, aisle: Other, kcal: 0, shop: false }
+  - { id: whipping-cream, name: whipping cream, aisle: "Dairy & eggs", kcal: 330, density: 1 }
+  - { id: white-chocolate, name: white chocolate, aisle: Dry goods, kcal: 539 }
+  - { id: white-vinegar, name: white vinegar, aisle: "Oils & condiments", kcal: 18, density: 1 }
+  - { id: white-wine, name: white wine, aisle: Drinks, kcal: 82 }
+  - { id: white-wine-vinegar, name: white wine vinegar, aisle: "Oils & condiments", kcal: 19, density: 1 }
+  - { id: whole-cloves, name: whole cloves, aisle: "Herbs & spices" }
+  - { id: whole-peeled-tomatoes, name: canned whole tomatoes, aisle: "Tins & jars", kcal: 21 }
+  - { id: wholegrain-mustard, name: wholegrain mustard, aisle: "Oils & condiments", kcal: 140, density: 1.05 }
+  - { id: worcestershire-sauce, name: Worcestershire sauce, aisle: "Oils & condiments", kcal: 78, density: 1.1 }
+  - { id: yellow-mustard, name: yellow mustard, aisle: "Oils & condiments", kcal: 60 }

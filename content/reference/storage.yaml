@@ -1,0 +1,29 @@
+title: Fridge and freezer
+intro: "Fridge at 4 °C or colder, freezer at −18 °C. Fridge times are for safety; freezer times are for quality (frozen food stays safe indefinitely). Don't leave perishables out for more than 2 hours."
+sources:
+  - { title: "FoodSafety.gov (USDA) — Cold food storage chart", url: "https://www.foodsafety.gov/food-safety-charts/cold-food-storage-charts" }
+groups:
+  - name: Raw meat and fish
+    rows:
+      - { food: "Minced meat and minced poultry", fridge: 1–2 days, freezer: 3–4 months }
+      - { food: "Chicken and turkey, whole or pieces", fridge: 1–2 days, freezer: 9–12 months }
+      - { food: "Steaks, chops and roasts", fridge: 3–5 days, freezer: 4–12 months }
+      - { food: "Fresh sausages", fridge: 1–2 days, freezer: 1–2 months }
+      - { food: Bacon, fridge: 7 days, freezer: 1 month }
+      - { food: "Lean fish (cod, pollock)", fridge: 1–2 days, freezer: 6–8 months }
+      - { food: "Fatty fish (salmon, mackerel)", fridge: 1–2 days, freezer: 2–3 months }
+      - { food: "Shrimp, squid, scallops", fridge: 1–2 days, freezer: 3–6 months }
+  - name: Cooked and ready
+    rows:
+      - { food: "Cooked meat and poultry", fridge: 3–4 days, freezer: 2–4 months }
+      - { food: "Soups and stews", fridge: 3–4 days, freezer: 2–3 months }
+      - { food: Cooked fish, fridge: 3–4 days, freezer: 4–6 months }
+      - { food: Pizza, fridge: 3–4 days, freezer: 1–2 months }
+      - { food: "Ham, cooked, sliced", fridge: 3–4 days, freezer: 1–2 months }
+      - { food: "Cold cuts, opened", fridge: 3–5 days, freezer: 1–2 months }
+      - { food: "Egg, chicken, pasta or potato salad", fridge: 3–5 days, freezer: Don't freeze }
+  - name: Eggs and dairy
+    rows:
+      - { food: "Eggs, raw in shell", fridge: 3–5 weeks, freezer: Don't freeze in shell }
+      - { food: "Eggs, hard-boiled", fridge: 1 week, freezer: Don't freeze }
+      - { food: "Mayonnaise, opened", fridge: 2 months, freezer: Don't freeze }

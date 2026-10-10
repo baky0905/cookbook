@@ -1,0 +1,40 @@
+---
+import RefPage from '../../components/RefPage.astro';
+import { readReference } from '../../lib/reference.mjs';
+const data = readReference('seasons');
+const months = ['J', 'F', 'M', 'A', 'M', 'J', 'J', 'A', 'S', 'O', 'N', 'D'];
+const names = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+const items = data.groups.flatMap(g => g.items);
+---
+<RefPage data={data}>
+  <section class="season-now" data-items={JSON.stringify(items.map(i => [i.name, i.fresh || [], i.stored || []]))}>
+    <h2 id="now-title">In season now</h2>
+    <p class="caption" hidden data-js>Fresh: <span id="now-fresh"></span></p>
+    <p class="caption" hidden data-js>From storage: <span id="now-stored"></span></p>
+  </section>
+  <p class="legend"><span class="cell fresh"></span> fresh <span class="cell stored"></span> from storage</p>
+  {data.groups.map(g => (
+    <>
+      <h2>{g.name}</h2>
+      <table class="season">
+        <thead><tr><th scope="col"></th>{months.map((m, i) => <th scope="col" data-month={i + 1} title={names[i]}>{m}</th>)}</tr></thead>
+        <tbody>{g.items.map(item => (
+          <tr><th scope="row">{item.name} <small>{item.no}</small></th>
+            {months.map((_, i) => <td data-month={i + 1} class={item.fresh?.includes(i + 1) ? 'cell fresh' : item.stored?.includes(i + 1) ? 'cell stored' : 'cell'}><span class="visually-hidden">{item.fresh?.includes(i + 1) ? 'fresh' : item.stored?.includes(i + 1) ? 'stored' : ''}</span></td>)}
+          </tr>
+        ))}</tbody>
+      </table>
+    </>
+  ))}
+</RefPage>
+<script>
+  // Highlight the viewer's current month; the static page shows the whole year.
+  const month = new Date().getMonth() + 1;
+  const now = document.querySelector<HTMLElement>('.season-now')!;
+  const items: [string, number[], number[]][] = JSON.parse(now.dataset.items!);
+  document.getElementById('now-title')!.textContent = `In season now · ${new Date().toLocaleDateString('en-GB', { month: 'long' })}`;
+  document.getElementById('now-fresh')!.textContent = items.filter(i => i[1].includes(month)).map(i => i[0]).join(', ') || 'nothing fresh this month';
+  document.getElementById('now-stored')!.textContent = items.filter(i => i[2].includes(month)).map(i => i[0]).join(', ') || '–';
+  document.querySelectorAll<HTMLElement>('[data-js]').forEach(el => (el.hidden = false));
+  document.querySelectorAll<HTMLElement>(`[data-month="${month}"]`).forEach(el => el.classList.add('now'));
+</script>

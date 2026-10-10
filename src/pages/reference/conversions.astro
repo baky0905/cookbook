@@ -1,0 +1,16 @@
+---
+import RefPage from '../../components/RefPage.astro';
+import { readReference } from '../../lib/reference.mjs';
+const data = readReference('conversions');
+---
+<RefPage data={data}>
+  <div class="ref-grid">
+    {data.tables.map(t => (
+      <section>
+        <h2>{t.name}</h2>
+        {t.note && <p class="caption">{t.note}</p>}
+        <table><tbody>{t.rows.map(([from, to]) => <tr><th scope="row">{from}</th><td class="num">{to}</td></tr>)}</tbody></table>
+      </section>
+    ))}
+  </div>
+</RefPage>

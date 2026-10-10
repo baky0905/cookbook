@@ -4,7 +4,7 @@ import { recipeSchema, planSchema, pantrySchema } from '../src/lib/schema.mjs';
 import { shoppingList } from '../src/lib/quantities.mjs';
 
 const item = (id, ingredient, quantity, unit, extra = {}) => ({ id, ingredient, name: ingredient, quantity, unit, ...extra });
-const recipe = (id, data) => ({ id, data: recipeSchema.parse({ category: 'Test', status: 'reviewed', steps: [{ id: 'cook', text: 'Cook.' }], ...data }) });
+const recipe = (id, data) => ({ id, data: recipeSchema.parse({ category: 'Mains', status: 'reviewed', steps: [{ id: 'cook', text: 'Cook.' }], ...data }) });
 const soup = recipe('soup', {
   title: 'Soup', yield: { label: '4 portions', amount: 4, scalable: true },
   groups: [{ name: 'Ingredients', items: [
@@ -91,4 +91,14 @@ test('invalid plans are rejected', () => {
   assert.throws(() => shoppingList(plan([{ id: 'a', date: '2026-10-12', recipe: 'draft' }]), [draft], p), /Draft recipe/);
   assert.throws(() => shoppingList(plan([{ id: 'a', date: '2026-10-12', recipe: 'bake', servings: 3 }]), [bake], p), /Exact scaling unavailable/);
   assert.throws(() => shoppingList(plan([{ id: 'a', date: '2026-10-12', leftoversFrom: 'b' }, { id: 'b', date: '2026-10-13', recipe: 'soup' }]), [soup], p), /Invalid leftovers/);
+});
+test('items marked shopping: false are left off and aisles follow shop order', () => {
+  const r = recipe('r', { title: 'R', yield: { label: 'x', scalable: false }, groups: [{ name: 'I', items: [
+    item('water', 'water', 500, 'ml', { shopping: false }),
+    item('salt', 'salt', 5, 'g', { category: 'Herbs & spices' }),
+    item('leek', 'leek', 1, 'piece', { category: 'Produce' }),
+    item('milk', 'milk', 100, 'ml', { category: 'Dairy & eggs' }),
+  ] }] });
+  const { rows } = shoppingList(plan([{ id: 'a', date: '2026-10-12', recipe: 'r' }]), [r], pantry([]));
+  assert.deepEqual(rows.map(x => x.ingredient), ['leek', 'milk', 'salt']);
 });

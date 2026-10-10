@@ -1,0 +1,14 @@
+---
+import RefPage from '../../components/RefPage.astro';
+import { readReference } from '../../lib/reference.mjs';
+const data = readReference('storage');
+---
+<RefPage data={data}>
+  {data.groups.map(g => (
+    <>
+      <h2>{g.name}</h2>
+      <table><thead><tr><th scope="col"></th><th scope="col">Fridge</th><th scope="col">Freezer</th></tr></thead>
+        <tbody>{g.rows.map(r => <tr><th scope="row">{r.food}</th><td>{r.fridge}</td><td>{r.freezer}</td></tr>)}</tbody></table>
+    </>
+  ))}
+</RefPage>
