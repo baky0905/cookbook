@@ -3,7 +3,7 @@ title: Pizza Rossa
 description: Olive-oily, dimpled sheet pizza with a thick layer of salted crushed tomato and a drizzle of chilli oil.
 category: Breads & doughs
 tags: [italian, yeast-dough, overnight, oven-baked, vegetarian]
-status: draft
+status: reviewed
 yield: { label: 1 sheet pizza, amount: 1, unit: pizzas, scalable: false }
 time: { rest: "45 min, 6–24 h in the fridge, then 90 min", cook: 14–18 min }
 cover: { src: pizza-rossa/cover.webp, alt: "A long dimpled pizza rossa with charred spots, cooling on a wire rack", credit: Brian Lagerstrom (video still), source: "https://www.youtube.com/watch?v=QZksuLWRYOY" }

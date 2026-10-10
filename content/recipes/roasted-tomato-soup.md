@@ -3,7 +3,7 @@ title: Roasted Tomato Soup
 description: Cherry tomatoes, peppers, onion and garlic roasted until caramelised, then simmered with stock and basil and blended.
 category: Soups & stews
 tags: [oven-baked, make-ahead]
-status: draft
+status: needs-review
 yield: { label: 1 pot (servings not stated), scalable: false }
 time: { total: about 1 h 20 min, cook: about 1 h 10 min }
 groups:

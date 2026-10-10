@@ -3,7 +3,7 @@ title: Hand-Stretched Pizza
 description: New York/Neapolitan-style round pizzas with a simple raw tomato sauce, two kinds of mozzarella and basil.
 category: Breads & doughs
 tags: [italian, cheese, yeast-dough, overnight, oven-baked, vegetarian]
-status: draft
+status: reviewed
 yield: { label: 2 pizzas, amount: 2, unit: pizzas, scalable: false }
 time: { rest: "45 min, 6–24 h in the fridge, then 90 min", cook: 7–8 min per pizza }
 cover: { src: hand-stretched-pizza/cover.webp, alt: A round margherita-style pizza with fresh mozzarella and basil on a wire rack, credit: Brian Lagerstrom (video still), source: "https://www.youtube.com/watch?v=QZksuLWRYOY" }

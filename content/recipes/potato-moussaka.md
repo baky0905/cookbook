@@ -3,7 +3,7 @@ title: Potato Moussaka
 description: Croatian layered bake of sliced potatoes and herby minced beef under an egg and sour cream topping.
 category: Mains
 tags: [croatian, beef, potato, oven-baked]
-status: draft
+status: reviewed
 yield: { label: 4 portions, amount: 4, unit: portions, scalable: false }
 time: { total: about 1 h 50 min, cook: 35 min boiling + 45–50 min baking }
 groups:

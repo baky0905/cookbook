@@ -3,7 +3,7 @@ title: Chicken Paprikash
 description: Međimurje-style bone-in chicken braised on onions with sweet paprika and sour cream, served with wide egg noodles.
 category: Mains
 tags: [croatian, chicken, pasta, one-pot]
-status: draft
+status: needs-review
 yield: { label: 4 portions, amount: 4, unit: portions, scalable: false }
 time: { total: about 50 min, cook: about 45 min }
 groups:

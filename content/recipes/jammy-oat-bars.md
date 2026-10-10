@@ -3,7 +3,7 @@ title: Jammy Oat Bars
 description: Brown sugar oat crumble baked around a layer of blueberry jam and whole blueberries.
 category: Desserts & baking
 tags: [american, oven-baked, make-ahead]
-status: draft
+status: reviewed
 yield: { label: 12 bars, amount: 12, unit: bars, scalable: false }
 cover: { src: jammy-oat-bars/cover.webp, alt: Stacked oat bars with a blueberry jam layer and crumbly oat topping, credit: Preppy Kitchen (video still), source: "https://www.youtube.com/watch?v=0ncd10YZeEs" }
 time: { total: about 3 h 30 min, active: 15 min, cook: 65 min, rest: "cool completely, then 2 h chilling" }

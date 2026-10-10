@@ -3,7 +3,7 @@ title: Skillet Pan Pizza
 description: Thick, crisp-bottomed pan pizza baked in a cast-iron skillet with a quick cooked tomato sauce.
 category: Breads & doughs
 tags: [american, cheese, yeast-dough, overnight, oven-baked]
-status: draft
+status: reviewed
 yield: { label: "1 pizza (30 cm skillet)", amount: 1, unit: pizzas, scalable: false }
 time: { rest: "45 min, 6–24 h in the fridge, then 90 min", cook: 20–23 min }
 cover: { src: skillet-pan-pizza/cover.webp, alt: A thick pan pizza with pepperoni and pepperoncini and a charred crust on a metal tray, credit: Brian Lagerstrom (video still), source: "https://www.youtube.com/watch?v=QZksuLWRYOY" }

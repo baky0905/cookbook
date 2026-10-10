@@ -3,7 +3,7 @@ title: Homemade Egg Pasta
 description: Hand-kneaded, hand-cut wide egg noodles (široki rezanci) made with weighed eggs and yolks.
 category: Breads & doughs
 tags: [croatian, pasta]
-status: draft
+status: reviewed
 yield: { label: 4 portions, amount: 4, unit: portions, scalable: false }
 time: { total: about 2 h, active: about 45 min, rest: 1 h + 15 min drying, cook: 3–4 min }
 groups:
