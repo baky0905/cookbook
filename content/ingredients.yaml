@@ -64,6 +64,7 @@ ingredients:
   - { id: dijon-mustard, name: Dijon mustard, aisle: "Oils & condiments", kcal: 150, density: 1.05 }
   - { id: dill, name: fresh dill, aisle: Produce, kcal: 43 }
   - { id: dried-basil, name: dried basil, aisle: "Herbs & spices" }
+  - { id: dried-mediterranean-herbs, name: dried Mediterranean herbs, aisle: "Herbs & spices" }
   - { id: dried-oregano, name: dried oregano, aisle: "Herbs & spices" }
   - { id: egg, name: eggs, aisle: "Dairy & eggs", kcal: 143, weights: { piece: 50 } }
   - { id: fennel, name: fennel, aisle: Produce, kcal: 31, weights: { piece: 250 } }
@@ -71,6 +72,7 @@ ingredients:
   - { id: flaky-salt, name: flaky salt, aisle: "Herbs & spices" }
   - { id: food-colouring, name: food colouring, aisle: Dry goods, kcal: 0 }
   - { id: fresh-chilli, name: fresh chilli, aisle: Produce, kcal: 40, weights: { piece: 15 } }
+  - { id: fresh-egg-pasta, name: fresh egg pasta, aisle: "Dairy & eggs", kcal: 288 }
   - { id: fresh-mozzarella, name: fresh mozzarella, aisle: "Dairy & eggs", kcal: 254 }
   - { id: fresh-yeast, name: fresh yeast, aisle: "Dairy & eggs", kcal: 105, weights: { package: 42 } }
   - { id: frozen-mixed-vegetables, name: frozen mixed vegetables, aisle: Frozen, kcal: 65 }
@@ -112,6 +114,7 @@ ingredients:
   - { id: pancetta, name: pancetta, aisle: "Meat & fish", kcal: 450 }
   - { id: parmesan, name: parmesan, aisle: "Dairy & eggs", kcal: 392 }
   - { id: parsley, name: fresh parsley, aisle: Produce, kcal: 36, weights: { handful: 15 } }
+  - { id: pasta-flour, name: "\"00\" pasta flour", aisle: Dry goods, kcal: 350, density: 0.53 }
   - { id: peanuts, name: peanuts, aisle: Dry goods, kcal: 567 }
   - { id: pearl-barley, name: pearl barley, aisle: Dry goods, kcal: 352 }
   - { id: pecorino, name: pecorino romano, aisle: "Dairy & eggs", kcal: 387 }
