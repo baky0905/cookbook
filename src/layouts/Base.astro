@@ -35,7 +35,10 @@ const nav = [
           <a href={url(path)} class={active === key ? 'active' : undefined} aria-current={active === key ? 'page' : undefined}>{label} {count && <span>{count}</span>}</a>
         ))}
       </nav>
-      <p><a class="btn" href={url('edit/')}>Family editor</a></p>
+      <div class="actions">
+        <a class="btn" href={url('edit/')}>Family editor</a>
+        <a class="btn" href="https://github.com/baky0905/cookbook" target="_blank" rel="noopener noreferrer" aria-label="GitHub source (opens in a new tab)">GitHub source ↗</a>
+      </div>
       <p class="side-note">Choose meals together.<br>Make room for something delicious.</p>
     </aside>
     <main id="main">
