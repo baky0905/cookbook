@@ -11,14 +11,14 @@ const recipeOf = (id?: string) => recipes.find(r => r.id === id);
 const portions = (meal: any) => meal.servings ? `${meal.servings} servings` : meal.batches ? `${meal.batches} × original batch (${recipeOf(meal.recipe)?.data.yield.label})` : '';
 ---
 <section>
-  
+
   {!plan && <p class="subtitle">No meals planned for this week yet. Choose a prepared week above, or ask the cookbook owner to prepare one.</p>}
   {plan && (
     <>
       <h2>{plan.title}</h2>
       {plan.example && <p class="notice">This is an example plan. It disappears from here as soon as a real weekly plan is published.</p>}
       {plan.notes && <p class="notice plan-notes">{plan.notes}</p>}
-      <p><a class="btn primary" href={url('family/')}>Edit week / add meals</a></p>
+      <p><a class="btn primary" href={url(`family/#/collections/plans/entries/${encodeURIComponent(plan.editorSlug)}`)}>Edit week / add meals</a></p>
       {plan.meals.length === 0 && <p class="empty">This week is ready to plan. Open the family editor and choose this week to add meals.</p>}
       <ul class="plan">
         {[...plan.meals].sort((a, b) => a.date.localeCompare(b.date)).map(meal => {

@@ -14,7 +14,7 @@ export function readRecipes() {
   return fs.readdirSync(path.join(root,'content/recipes')).filter(f=>f.endsWith('.md')).map(file=>({id:file.slice(0,-3),...parseRecipe(fs.readFileSync(path.join(root,'content/recipes',file),'utf8'))}));
 }
 export function readPlans() {
-  return fs.readdirSync(path.join(root,'content/plans')).filter(f=>f.endsWith('.yaml')).map(file=>planSchema.parse(YAML.parse(fs.readFileSync(path.join(root,'content/plans',file),'utf8'))));
+  return fs.readdirSync(path.join(root,'content/plans')).filter(f=>f.endsWith('.yaml')).map(file=>({ ...planSchema.parse(YAML.parse(fs.readFileSync(path.join(root,'content/plans',file),'utf8'))), editorSlug: file.slice(0, -5) }));
 }
 export function readPantry() { return pantrySchema.parse(YAML.parse(fs.readFileSync(path.join(root,'content/pantry.yaml'),'utf8'))); }
 export const isPublished = recipe => recipe.data.status !== 'draft';

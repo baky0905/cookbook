@@ -7,7 +7,7 @@ import { MEDIA_MAX_BYTES } from '../../lib/paths.mjs';
 // New recipes or ingredients appear in dropdowns after the next deploy.
 const opt = { required: false };
 const str = (name: string, label: string, extra = {}) => ({ name, label, widget: 'string', ...extra });
-const num = (name: string, label: string, extra = {}) => ({ name, label, widget: 'number', value_type: 'float', min: 0.01, ...opt, ...extra });
+const num = (name: string, label: string, extra = {}) => ({ name, label, widget: 'number', value_type: 'float', min: 0, ...opt, ...extra });
 const bool = (name: string, label: string, def: boolean) => ({ name, label, widget: 'boolean', default: def, ...opt });
 const sel = (name: string, label: string, options: unknown[], extra = {}) => ({ name, label, widget: 'select', options, ...extra });
 const strings = (name: string, label: string, extra = {}) => ({ name, label, widget: 'list', field: { name: 'item', label, widget: 'string' }, ...opt, ...extra });

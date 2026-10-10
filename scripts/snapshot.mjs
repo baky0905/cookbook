@@ -12,7 +12,7 @@ export function snapshotFinishedWeeks(only) {
   fs.mkdirSync('content/history', { recursive: true });
   const written = [];
   for (const plan of plans) {
-    if (plan.example || (only ? plan.id !== only : !isFinishedPlan(plan)) || !plan.meals.length) continue;
+    if (plan.example || (only ? plan.id !== only : !isFinishedPlan(plan)) || (!plan.meals.length && !plan.extras.length)) continue;
     const file = `content/history/${plan.id}.json`;
     if (fs.existsSync(file)) continue;
     fs.writeFileSync(file, JSON.stringify(snapshotPlan(plan, recipes, pantry, catalog), null, 2) + '\n');
