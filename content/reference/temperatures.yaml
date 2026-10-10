@@ -1,24 +1,42 @@
 title: Meat temperatures
-intro: Measure in the thickest part, away from bone. Food-safety minimums first; doneness targets are for texture.
+intro: Measure in the thickest part, away from bone. Norwegian food-safety rules first, then thermometer targets.
 sources:
-  - { title: "USDA FSIS — Safe minimum internal temperature chart", url: "https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/food-safety-basics/safe-temperature-chart" }
-  - { title: "Food Standards Agency (UK) — Cooking your food", url: "https://www.food.gov.uk/safety-hygiene/cooking-your-food" }
-safety:
-  - { food: "Poultry: whole, pieces, minced", temp: 74 }
-  - { food: "Minced meat: beef, pork, lamb, veal", temp: 71 }
-  - { food: "Beef, pork, lamb, veal: steaks, chops, roasts", temp: 63, note: Rest 3 minutes }
-  - { food: Fish and shellfish, temp: 63 }
-  - { food: "Fresh ham (raw)", temp: 63, note: Rest 3 minutes }
-  - { food: Egg dishes, temp: 71 }
-  - { food: "Leftovers and casseroles, reheated", temp: 74 }
-doneness:
-  note: "Whole cuts of beef and lamb are commonly served below 63 °C as long as the outside is seared (UK FSA). Take meat off the heat 3–5 °C early; it keeps rising while it rests."
-  rows:
-    - { food: "Beef and lamb, rare", temp: 50–52 }
-    - { food: "Beef and lamb, medium-rare", temp: 55–57 }
-    - { food: "Beef and lamb, medium", temp: 60–63 }
-    - { food: "Beef and lamb, well done", temp: 70+ }
-    - { food: "Pork chops and loin, juicy", temp: 63 }
-    - { food: "Chicken and turkey breast", temp: 74 }
-    - { food: "Chicken thighs and legs, tender", temp: 80–85 }
-    - { food: "Braised or pulled meat (chuck, shoulder)", temp: 90–95 }
+  - { title: "Mattilsynet — Varm mat skal være rykende varm", url: "https://www.mattilsynet.no/mat-og-drikke/matservering/mathandtering-hygiene/varm-mat-skal-vaere-rykende-varm" }
+  - { title: "Mattilsynet — Råd for oppbevaring av mat og drikke", url: "https://mattilsynet.no/mat-og-drikke/forbrukere/rad-for-oppbevaring-av-mat" }
+  - { title: "USDA FSIS — Safe minimum internal temperatures (thermometer figures)", url: "https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/food-safety-basics/safe-temperature-chart" }
+rules:
+  - { icon: "🐔", title: "Poultry and minced meat: cook through", text: "Bacteria can be throughout, so no pink in the middle. 75 °C in the core is the Norwegian reference temperature." }
+  - { icon: "🥩", title: "Whole cuts: sear the outside", text: "For steaks, chops and roasts it is enough that the surface is well browned; the inside may be pink." }
+  - { icon: "🔥", title: "Keep hot food above 60 °C", text: "Reheat leftovers until steaming hot, 75 °C in the core." }
+  - { icon: "🧊", title: "Cool leftovers fast", text: "From 60 °C to 10 °C within 2 hours, then into the fridge." }
+targets:
+  - icon: "🐄"
+    food: Beef and lamb (whole cuts)
+    rows:
+      - { label: Rare, temp: 50–52, tone: rare }
+      - { label: Medium-rare, temp: 55–57, tone: medrare }
+      - { label: Medium, temp: 60–63, tone: medium }
+      - { label: Well done, temp: 70+, tone: well }
+  - icon: "🐖"
+    food: Pork (chops, loin, roasts)
+    rows:
+      - { label: "Juicy, slightly pink", temp: 63, tone: medium }
+      - { label: Well done, temp: 70, tone: well }
+  - icon: "🐔"
+    food: Chicken and turkey
+    rows:
+      - { label: Breast, temp: 74–75, tone: safe }
+      - { label: Thighs and legs (tender), temp: 80–85, tone: safe }
+  - icon: "🍔"
+    food: Minced meat, burgers, meatballs
+    rows:
+      - { label: Cooked through, temp: 71–75, tone: safe }
+  - icon: "🐟"
+    food: Fish and shellfish
+    rows:
+      - { label: Opaque and flaking, temp: 63, tone: safe }
+  - icon: "🍲"
+    food: Braised and pulled meat
+    rows:
+      - { label: "Falls apart (chuck, shoulder)", temp: 90–95, tone: well }
+note: "Take meat off the heat 3–5 °C before the target; it keeps rising while it rests."

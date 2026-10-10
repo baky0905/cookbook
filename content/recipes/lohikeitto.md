@@ -1,129 +1,37 @@
 ---
 title: Lohikeitto
-description: ""
-category: Main dishes
-tags:
-  - soup
-  - fish
-language: en
+description: Finnish salmon soup with leeks, potatoes, cream and dill.
+category: Soups & stews
+tags: [finnish, fish, potato, one-pot, weeknight]
 status: needs-review
-yield:
-  label: 4-6 portions
-  scalable: false
-time:
-  total: 45 minutes
+yield: { label: 4–6 portions, scalable: false }
+time: { total: 45 min }
 groups:
   - name: Ingredients
     items:
-      - id: i-1
-        ingredient: leeks
-        name: small leeks, cleans and sliced thin– but just the white & light green parts
-        quantity: 2
-        unit: piece
-        original: 2 small leeks, cleans and sliced thin– but just the white & light green parts
-        category: Produce
-        optional: false
-      - id: i-2
-        ingredient: butter
-        name: Finlandia butter*
-        quantity: 2
-        unit: tbsp
-        original: 2 tablespoons Finlandia butter*
-        category: Dairy & eggs
-        optional: false
-      - id: i-3
-        ingredient: lohikeitto-fish-stock-chicken-or-vegetable-stock-will-work-but-try-to-find-fish-stock-if-you-can
-        name: fish stock, chicken or vegetable stock will work but try to find fish stock if you can
-        quantity: 1200
-        unit: ml
-        original: 1200ml fish stock, chicken or vegetable stock will work but try to find fish stock if you can
-        category: Other
-        optional: false
-      - id: i-4
-        ingredient: potatoes
-        name: fingerling potatoes, sliced crosswise into 0.6cm inch slices
-        quantity: 450
-        unit: g
-        original: 450g fingerling potatoes, sliced crosswise into 0.6cm inch slices
-        category: Produce
-        optional: false
-      - id: i-5
-        ingredient: carrots
-        name: small carrots, sliced crosswise into 0.6cm slices
-        quantity: 3
-        unit: piece
-        original: 3 small carrots, sliced crosswise into 0.6cm slices
-        category: Produce
-        optional: false
-      - id: i-6
-        ingredient: salmon
-        name: fresh salmon, no skin and bones removed cut into bite size pieces
-        quantity: 450
-        unit: g
-        original: 450g fresh salmon, no skin and bones removed cut into bite size pieces
-        category: Meat & fish
-        optional: false
-      - id: i-7
-        ingredient: whipping-cream
-        name: whipping cream
-        quantity: 200
-        unit: g
-        original: 200g whipping cream
-        category: Dairy & eggs
-        optional: false
-      - id: i-8
-        ingredient: lohikeitto-fresh-dill
-        name: Fresh dill
-        quantity: null
-        unit: ""
-        note: "Quantity unresolved in the saved recipe: 150g (??) cup finely chopped fresh dill"
-        original: 150g (??) cup finely chopped fresh dill
-        category: Other
-        optional: false
-      - id: i-9
-        ingredient: lohikeitto-kosher-salt-fresh-ground-pepper-to-taste
-        name: Kosher salt & fresh ground pepper to taste
-        quantity: null
-        unit: ""
-        original: Kosher salt & fresh ground pepper to taste
-        category: Other
-        optional: false
+      - { id: leeks, ingredient: leek, name: small leeks, quantity: 2, unit: piece, prep: "White and light green parts only, cleaned and thinly sliced" }
+      - { id: butter, ingredient: butter, name: butter, quantity: 28, unit: g, note: "The original uses Finlandia butter" }
+      - { id: stock, ingredient: fish-stock, name: fish stock, quantity: 1.2, unit: l, note: "Chicken or vegetable stock also works" }
+      - { id: potatoes, ingredient: potato, name: fingerling potatoes, quantity: 450, unit: g, prep: "Sliced crosswise, 6 mm thick" }
+      - { id: carrots, ingredient: carrot, name: small carrots, quantity: 3, unit: piece, prep: "Sliced crosswise, 6 mm thick" }
+      - { id: salmon, ingredient: salmon, name: fresh salmon, quantity: 450, unit: g, prep: "Skinless and boneless, in bite-size pieces" }
+      - { id: cream, ingredient: whipping-cream, name: whipping cream, quantity: 200, unit: g }
+      - { id: dill, ingredient: dill, name: fresh dill, prep: Finely chopped, note: "Amount unresolved: the saved recipe says “150 g (??)”" }
+      - { id: salt, ingredient: salt, name: salt, note: To taste }
+      - { id: pepper, ingredient: black-pepper, name: freshly ground black pepper, note: To taste }
 steps:
-  - id: step-1
-    title: ""
-    text: Cook the leeks in butter over medium heat in a pot until just softened – about 5 minutes
-    images: []
-  - id: step-2
-    title: ""
-    text: Add the stock, potatoes, carrots and bring to a boil
-    images: []
-  - id: step-3
-    title: ""
-    text: Let cook 10-12 minutes or until vegetables have softened
-    images: []
-  - id: step-4
-    title: ""
-    text: Then add the cream and salmon and cook about 5 minutes more or until salmon is firm – try not to let it boil
-    images: []
-  - id: step-5
-    title: ""
-    text: Turn off the heat, add the dill, stir well and season to taste with salt and pepper
-    images: []
-  - id: step-6
-    title: ""
-    text: Cover with a lid and let sit 5 or so more minutes and serve (with some delicious dark bread like they would in Finland).
-    images: []
+  - { id: leeks, title: Soften the leeks, duration: 5 min, text: Cook the leeks in the butter in a pot over medium heat until just softened. }
+  - { id: boil, title: Add stock and vegetables, text: "Add the stock, potatoes and carrots and bring to a boil." }
+  - { id: simmer, title: Cook until tender, duration: 10–12 min, text: Simmer until the vegetables have softened. }
+  - { id: salmon, title: Add cream and salmon, duration: about 5 min, text: Add the cream and salmon and cook until the salmon is firm. Try not to let it boil. }
+  - { id: dill, title: Finish with dill, text: "Turn off the heat, add the dill, stir well and season with salt and pepper." }
+  - { id: rest, title: Rest and serve, duration: about 5 min, text: "Cover with a lid and leave to stand. Serve with dark bread, as they would in Finland." }
 sources:
-  - title: Saved video
-    url: https://www.youtube.com/watch?v=MvwZ8x-k8Uk
-  - title: Original Recipe Source
-    url: https://www.thecookingguy.com/cookbook/2016/10/12/salmon-soup-finland-finlandia-butter-recipe
+  - { title: Saved video, url: "https://www.youtube.com/watch?v=MvwZ8x-k8Uk" }
+  - { title: The Cooking Guy, url: "https://www.thecookingguy.com/cookbook/2016/10/12/salmon-soup-finland-finlandia-butter-recipe" }
 issues:
-  - The saved dill quantity is marked “150g (??) cup”; verify it before cooking.
-  - Yield is a range (4–6 portions); automatic scaling is disabled.
+  - The saved dill amount is marked “150 g (??)”; verify it against the source before cooking.
 adaptations:
-  - Migrated from the saved cookbook. Original wording and source links preserved; external sources have not been reverified.
+  - "Converted to metric: butter given in grams (14 g per spoon); slice thickness in mm."
 legacyPath: main_dishes/lohikeitto/
 ---
-
-

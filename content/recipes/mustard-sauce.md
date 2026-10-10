@@ -1,151 +1,40 @@
 ---
-title: Mustard Sauce
-description: ""
-category: Sauces
-tags:
-  - sauce
-language: en
+title: Mustard sauce
+description: Béchamel-based mustard sauce for chicken, fish or toasted sandwiches; an easier alternative to the hollandaise version.
+category: Sauces & dips
+tags: [french, vegetarian]
 status: needs-review
-yield:
-  label: Yield not recorded
-  scalable: false
-time: {}
+yield: { label: Yield not recorded, scalable: false }
 groups:
   - name: Ingredients
     items:
-      - id: i-1
-        ingredient: butter
-        name: butter
-        quantity: 15
-        unit: g
-        original: 15 grams butter
-        category: Dairy & eggs
-        optional: false
-      - id: i-2
-        ingredient: flour
-        name: flour
-        quantity: 15
-        unit: g
-        original: 15 grams flour
-        category: Dry goods
-        optional: false
-      - id: i-3
-        ingredient: milk
-        name: milk
-        quantity: 250
-        unit: ml
-        original: 250 ml milk
-        category: Dairy & eggs
-        optional: false
-      - id: i-4
-        ingredient: mustard-sauce-small-shallot
-        name: small shallot
-        quantity: 1
-        unit: piece
-        original: 1 small shallot
-        category: Other
-        optional: false
-      - id: i-5
-        ingredient: mustard-sauce-bay-leaf
-        name: bay leaf
-        quantity: 1
-        unit: piece
-        original: 1 bay leaf
-        category: Other
-        optional: false
-      - id: i-6
-        ingredient: mustard-sauce-a-twig-of-thyme
-        name: A twig of thyme
-        quantity: null
-        unit: ""
-        original: A twig of thyme
-        category: Other
-        optional: false
-      - id: i-7
-        ingredient: mustard-sauce-cloves
-        name: cloves
-        quantity: 2
-        unit: piece
-        original: 2 cloves
-        category: Other
-        optional: false
-      - id: i-8
-        ingredient: mustard-sauce-salt-and-pepper
-        name: Salt and pepper
-        quantity: null
-        unit: ""
-        original: Salt and pepper
-        category: Other
-        optional: false
-      - id: i-9
-        ingredient: mustard-sauce-cream
-        name: cream
-        quantity: 3
-        max: 4
-        unit: tbsp
-        original: 3-4 tablespoons cream
-        category: Other
-        optional: false
-      - id: i-10
-        ingredient: mustard-sauce-grain-mustard
-        name: grain mustard
-        quantity: 1
-        unit: tbsp
-        original: 1 tablespoon grain mustard
-        category: Other
-        optional: false
-      - id: i-11
-        ingredient: mustard-sauce-dijon-mustard-at-the-end-optional
-        name: Dijon mustard at the end (optional)
-        quantity: 1
-        unit: tbsp
-        original: 1 tablespoon Dijon mustard at the end (optional)
-        category: Other
-        optional: true
-      - id: i-12
-        ingredient: mustard-sauce-white-vinegar
-        name: white vinegar
-        quantity: 1
-        unit: tsp
-        original: 1 teaspoon white vinegar
-        category: Other
-        optional: false
+      - { id: butter, ingredient: butter, name: butter, quantity: 15, unit: g }
+      - { id: flour, ingredient: plain-flour, name: plain flour, quantity: 15, unit: g }
+      - { id: milk, ingredient: milk, name: milk, quantity: 250, unit: ml }
+      - { id: shallot, ingredient: shallot, name: small shallot, quantity: 1, unit: piece }
+      - { id: bay, ingredient: bay-leaf, name: bay leaf, quantity: 1, unit: piece, scalable: false }
+      - { id: thyme, ingredient: thyme, name: fresh thyme, quantity: 1, unit: sprig }
+      - { id: cloves, ingredient: whole-cloves, name: whole cloves, quantity: 2, unit: piece }
+      - { id: salt, ingredient: salt, name: salt, note: To taste }
+      - { id: pepper, ingredient: black-pepper, name: black pepper, note: To taste }
+      - { id: cream, ingredient: cooking-cream, name: cream, quantity: 45, max: 60, unit: ml, note: Plus extra to adjust }
+      - { id: grain-mustard, ingredient: wholegrain-mustard, name: wholegrain mustard, quantity: 15, unit: ml }
+      - { id: dijon, ingredient: dijon-mustard, name: Dijon mustard, quantity: 15, unit: ml, note: At the end, optional: true }
+      - { id: vinegar, ingredient: white-vinegar, name: white vinegar, quantity: 5, unit: ml }
 steps:
-  - id: step-1
-    title: ""
-    text: This is an alternative to the hollandaise based mustard sauce you may know. This home cooking version is based on a béchamel and is much easier to do. It goes great with chicken, fish or toasted sandwiches.
-    images: []
-  - id: step-2
-    title: ""
+  - { id: roux, title: Make the roux, duration: 2 min, text: "Melt the butter in a pan, reduce the heat and stir in the flour to make a paste; cook for 2 minutes. Turn off the heat and let it cool completely (the fridge helps)." }
+  - { id: infuse, title: Infuse the milk, text: "Halve the shallot and push a clove into each half. Put the milk in a pan with the shallot, thyme, bay leaf, salt and pepper and bring to a simmer over medium heat. Take off the heat and strain half the milk into the pan with the roux." }
+  - id: thicken
+    title: Thicken and finish
     text: |-
-      Melt the butter in a pan, and, once melted, reduce the heat and stir the flour into the butter to make a paste and cook for 2 minutes
-      Turn off the heat and allow to completely cool (putting it in the fridge is a good idea).
-    images: []
-  - id: step-3
-    title: ""
-    text: |-
-      Halve the shallot and stand a clove into each half.
-      Put the milk into a pan and add the shallot halves, the thyme, the bay leaf and salt and pepper On a medium heat, bring the milk to a simmer.
-      Once simmering, remove from the heat and pass half of the milk through a sieve into the other pan containing the paste.
-    images: []
-  - id: step-4
-    title: ""
-    text: |-
-      Off the heat, whisk all together until all is incorporated then whisk in the remaining milk.
-      Turn the heat to medium low and start to thicken the roux, whisking all the time.
-      After it comes to a light boil, continue whisking for another minute or two then reduce the heat to very low and incorporate the cream.
-      Add the vinegar and the mustard and stir it in (from this point onward the sauce should never be boiled).  If necessary adjust the consistency by stirring in more cream, and if desired, add some extra in Dijon mustard for a more yellowish color and more a more prononce mustard taste.
-    images: []
+      Off the heat, whisk until smooth, then whisk in the rest of the milk. Thicken over medium-low heat, whisking constantly. After it comes to a light boil, keep whisking for a minute or two, then reduce the heat to very low and stir in the cream.
+      Stir in the vinegar and wholegrain mustard; from now on the sauce must not boil. Adjust the consistency with more cream, and add Dijon mustard for a yellower colour and stronger mustard flavour.
 sources:
-  - title: Saved video
-    url: https://www.youtube.com/watch?v=WdSzne_T9Uo
-  - title: Original Recipe Source
-    url: https://www.thefrenchcookingacademy.com/recipes/mustard-sauce
+  - { title: The French Cooking Academy, url: "https://www.thefrenchcookingacademy.com/recipes/mustard-sauce" }
+  - { title: Saved video, url: "https://www.youtube.com/watch?v=WdSzne_T9Uo" }
 issues:
   - Yield is not recorded.
 adaptations:
-  - Migrated from the saved cookbook. Original wording and source links preserved; external sources have not been reverified.
+  - "Volume measures converted to ml (15 ml and 5 ml per spoon)."
 legacyPath: sauces/mustard_sauce/
 ---
-
-

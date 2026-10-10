@@ -1,4 +1,4 @@
-// One-time, conservative migration. Never overwrites an edited recipe.
+// One-time, conservative migration (done; see content/migration.json). Kept for provenance.
 import fs from 'node:fs';
 import path from 'node:path';
 import crypto from 'node:crypto';
@@ -73,6 +73,8 @@ const known={
 };
 const manifest=[],writes=[];
 if(!process.argv.includes('--write')) throw new Error('Use --write for the one-time migration into an empty content directory');
+// Recipes have been curated by hand since the migration; never regenerate them.
+if(fs.existsSync('content/migration.json')) throw new Error('Migration already done (content/migration.json exists); recipes are now edited by hand.');
 for(const [dir,category] of Object.entries(categories)) {
   for(const file of fs.readdirSync('docs/'+dir).filter(f=>f.endsWith('.md')&&f!=='index.md')) {
     const originalPath=`docs/${dir}/${file}`,raw=fs.readFileSync(originalPath,'utf8');

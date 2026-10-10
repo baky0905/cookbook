@@ -5,49 +5,49 @@ sources:
 groups:
   - name: Berries
     items:
-      - { name: Strawberries, no: Jordbær, fresh: [6, 7, 8] }
-      - { name: Raspberries, no: Bringebær, fresh: [7, 8] }
-      - { name: Redcurrants, no: Rips, fresh: [7, 8] }
-      - { name: Gooseberries, no: Stikkelsbær, fresh: [7, 8] }
-      - { name: Blackcurrants, no: Solbær, fresh: [7, 8] }
+      - { name: Strawberries, icon: "🍓", no: Jordbær, fresh: [6, 7, 8] }
+      - { name: Raspberries, icon: "🫐", no: Bringebær, fresh: [7, 8] }
+      - { name: Redcurrants, icon: "🔴", no: Rips, fresh: [7, 8] }
+      - { name: Gooseberries, icon: "🟢", no: Stikkelsbær, fresh: [7, 8] }
+      - { name: Blackcurrants, icon: "🫐", no: Solbær, fresh: [7, 8] }
   - name: Fruit
     items:
-      - { name: Apples, no: Epler, fresh: [8, 9, 10], stored: [11, 12, 1] }
-      - { name: Sweet cherries, no: Moreller, fresh: [7, 8] }
-      - { name: Plums, no: Plommer, fresh: [8, 9] }
-      - { name: Pears, no: Pærer, fresh: [9, 10] }
+      - { name: Apples, icon: "🍎", no: Epler, fresh: [8, 9, 10], stored: [11, 12, 1] }
+      - { name: Sweet cherries, icon: "🍒", no: Moreller, fresh: [7, 8] }
+      - { name: Plums, icon: "🟣", no: Plommer, fresh: [8, 9] }
+      - { name: Pears, icon: "🍐", no: Pærer, fresh: [9, 10] }
   - name: Vegetables
     items:
-      - { name: Asparagus, no: Asparges, fresh: [5, 6] }
-      - { name: Rhubarb, no: Rabarbra, fresh: [5, 6] }
-      - { name: Radishes, no: Reddik, fresh: [5, 6, 7, 8] }
-      - { name: Rocket, no: Ruccola, fresh: [5, 6, 7, 8] }
-      - { name: Spinach, no: Spinat, fresh: [5, 6, 7, 8, 9, 10] }
-      - { name: Butterhead lettuce, no: Hjertesalat, fresh: [5, 6, 7, 8, 9, 10] }
-      - { name: Parsley, no: Persille, fresh: [5, 6, 7, 8, 9, 10] }
-      - { name: Flat-leaf parsley, no: Bladpersille, fresh: [5, 6, 7, 8, 9] }
-      - { name: Iceberg lettuce, no: Isbergsalat, fresh: [6, 7, 8, 9, 10] }
-      - { name: Cauliflower, no: Blomkål, fresh: [6, 7, 8, 9, 10] }
-      - { name: Broccoli, no: Brokkoli, fresh: [6, 7, 8, 9, 10] }
-      - { name: Squash, no: Squash, fresh: [6, 7, 8, 9, 10] }
-      - { name: Spring onions, no: Vårløk, fresh: [6, 7, 8, 9, 10] }
-      - { name: Chinese cabbage, no: Kinakål, fresh: [6, 7, 8, 9, 10], stored: [11, 12] }
-      - { name: White cabbage, no: Hodekål, fresh: [6, 7, 8, 9], stored: [11, 12, 1, 2, 3, 4] }
-      - { name: Potatoes, no: Potet, fresh: [6, 7, 8, 9, 10], stored: [11, 12, 1, 2, 3, 4, 5] }
-      - { name: Carrots, no: Gulrot, fresh: [7, 8, 9, 10], stored: [11, 12, 1, 2, 3, 4, 5, 6] }
-      - { name: Onions, no: Løk, fresh: [7, 8, 9], stored: [10, 11, 12, 1, 2, 3, 4, 5, 6] }
-      - { name: Leeks, no: Purre, fresh: [7, 8, 9], stored: [10, 11, 12, 1] }
-      - { name: Celery, no: Stangselleri, fresh: [7, 8, 9, 10], stored: [11] }
-      - { name: Sugar snap peas, no: Sukkererter, fresh: [7, 8, 9, 10] }
-      - { name: Brussels sprouts, no: Rosenkål, fresh: [7, 8, 9, 10, 11] }
-      - { name: Beans, no: Bønner, fresh: [8, 9, 10] }
-      - { name: Sweetcorn, no: Mais, fresh: [8, 9, 10] }
-      - { name: Pumpkin, no: Gresskar, fresh: [8, 9, 10], stored: [11] }
-      - { name: Kale, no: Grønnkål, fresh: [8, 9, 10], stored: [11, 12] }
-      - { name: Jerusalem artichoke, no: Jordskokk, fresh: [8, 9, 10], stored: [11, 12] }
-      - { name: Swede, no: Kålrot, fresh: [8, 9, 10], stored: [11, 12, 1, 2, 3, 4, 5] }
-      - { name: Parsnips, no: Pastinakk, fresh: [8, 9, 10], stored: [11, 12, 1, 2, 3, 4] }
-      - { name: Parsley root, no: Persillerot, fresh: [8, 9, 10], stored: [11, 12, 1, 2, 3, 4] }
-      - { name: Red cabbage, no: Rødkål, fresh: [8, 9, 10], stored: [11, 12, 1, 2, 3, 4] }
-      - { name: Celeriac, no: Sellerirot, fresh: [8, 9, 10], stored: [11, 12, 1, 2, 3, 4] }
-      - { name: Beetroot, no: Rødbeter, fresh: [9, 10], stored: [11, 12, 1, 2, 3, 4, 5, 6] }
+      - { name: Asparagus, icon: "🌱", no: Asparges, fresh: [5, 6] }
+      - { name: Rhubarb, icon: "🌱", no: Rabarbra, fresh: [5, 6] }
+      - { name: Radishes, icon: "🔴", no: Reddik, fresh: [5, 6, 7, 8] }
+      - { name: Rocket, icon: "🥬", no: Ruccola, fresh: [5, 6, 7, 8] }
+      - { name: Spinach, icon: "🥬", no: Spinat, fresh: [5, 6, 7, 8, 9, 10] }
+      - { name: Butterhead lettuce, icon: "🥬", no: Hjertesalat, fresh: [5, 6, 7, 8, 9, 10] }
+      - { name: Parsley, icon: "🌿", no: Persille, fresh: [5, 6, 7, 8, 9, 10] }
+      - { name: Flat-leaf parsley, icon: "🌿", no: Bladpersille, fresh: [5, 6, 7, 8, 9] }
+      - { name: Iceberg lettuce, icon: "🥬", no: Isbergsalat, fresh: [6, 7, 8, 9, 10] }
+      - { name: Cauliflower, icon: "🥦", no: Blomkål, fresh: [6, 7, 8, 9, 10] }
+      - { name: Broccoli, icon: "🥦", no: Brokkoli, fresh: [6, 7, 8, 9, 10] }
+      - { name: Squash, icon: "🥒", no: Squash, fresh: [6, 7, 8, 9, 10] }
+      - { name: Spring onions, icon: "🧅", no: Vårløk, fresh: [6, 7, 8, 9, 10] }
+      - { name: Chinese cabbage, icon: "🥬", no: Kinakål, fresh: [6, 7, 8, 9, 10], stored: [11, 12] }
+      - { name: White cabbage, icon: "🥬", no: Hodekål, fresh: [6, 7, 8, 9], stored: [11, 12, 1, 2, 3, 4] }
+      - { name: Potatoes, icon: "🥔", no: Potet, fresh: [6, 7, 8, 9, 10], stored: [11, 12, 1, 2, 3, 4, 5] }
+      - { name: Carrots, icon: "🥕", no: Gulrot, fresh: [7, 8, 9, 10], stored: [11, 12, 1, 2, 3, 4, 5, 6] }
+      - { name: Onions, icon: "🧅", no: Løk, fresh: [7, 8, 9], stored: [10, 11, 12, 1, 2, 3, 4, 5, 6] }
+      - { name: Leeks, icon: "🧅", no: Purre, fresh: [7, 8, 9], stored: [10, 11, 12, 1] }
+      - { name: Celery, icon: "🥬", no: Stangselleri, fresh: [7, 8, 9, 10], stored: [11] }
+      - { name: Sugar snap peas, icon: "🫛", no: Sukkererter, fresh: [7, 8, 9, 10] }
+      - { name: Brussels sprouts, icon: "🥬", no: Rosenkål, fresh: [7, 8, 9, 10, 11] }
+      - { name: Beans, icon: "🫛", no: Bønner, fresh: [8, 9, 10] }
+      - { name: Sweetcorn, icon: "🌽", no: Mais, fresh: [8, 9, 10] }
+      - { name: Pumpkin, icon: "🎃", no: Gresskar, fresh: [8, 9, 10], stored: [11] }
+      - { name: Kale, icon: "🥬", no: Grønnkål, fresh: [8, 9, 10], stored: [11, 12] }
+      - { name: Jerusalem artichoke, icon: "🥔", no: Jordskokk, fresh: [8, 9, 10], stored: [11, 12] }
+      - { name: Swede, icon: "🟤", no: Kålrot, fresh: [8, 9, 10], stored: [11, 12, 1, 2, 3, 4, 5] }
+      - { name: Parsnips, icon: "🥕", no: Pastinakk, fresh: [8, 9, 10], stored: [11, 12, 1, 2, 3, 4] }
+      - { name: Parsley root, icon: "🥕", no: Persillerot, fresh: [8, 9, 10], stored: [11, 12, 1, 2, 3, 4] }
+      - { name: Red cabbage, icon: "🟣", no: Rødkål, fresh: [8, 9, 10], stored: [11, 12, 1, 2, 3, 4] }
+      - { name: Celeriac, icon: "🥔", no: Sellerirot, fresh: [8, 9, 10], stored: [11, 12, 1, 2, 3, 4] }
+      - { name: Beetroot, icon: "🔴", no: Rødbeter, fresh: [9, 10], stored: [11, 12, 1, 2, 3, 4, 5, 6] }

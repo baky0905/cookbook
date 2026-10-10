@@ -1,116 +1,40 @@
 ---
-title: Honey and soya marinated chicken
-description: ""
-category: Main dishes
-tags:
-  - chicken
-language: en
+title: Honey and soy marinated chicken
+description: Quick honey-soy-garlic chicken with oven fries, tomato salad and aioli.
+category: Mains
+tags: [chicken, potato, quick, weeknight, meal-kit]
 status: needs-review
-yield:
-  label: 4 portions
-  scalable: false
-time:
-  total: 20 minutes
+yield: { label: 4 portions, amount: 4, unit: portions, scalable: true }
+time: { total: 20 min }
 groups:
   - name: Ingredients
     items:
-      - id: i-1
-        ingredient: honey-soya-marinated-chicken-salat-mix
-        name: salat mix
-        quantity: 100
-        unit: g
-        original: 100g salat mix
-        category: Other
-        optional: false
-      - id: i-2
-        ingredient: honey-soya-marinated-chicken-aioli
-        name: aioli
-        quantity: 80
-        unit: g
-        original: 80g aioli
-        category: Other
-        optional: false
-      - id: i-3
-        ingredient: honey-soya-marinated-chicken-soya-sauce
-        name: soya sauce
-        quantity: 50
-        unit: ml
-        original: 50 ml soya sauce
-        category: Other
-        optional: false
-      - id: i-4
-        ingredient: potatoes
-        name: potatoes
-        quantity: 1
-        unit: kg
-        original: 1kg potatoes
-        category: Produce
-        optional: false
-      - id: i-5
-        ingredient: honey-soya-marinated-chicken-cloves-of-garlic
-        name: cloves of garlic
-        quantity: 2
-        unit: piece
-        original: 2 cloves of garlic
-        category: Other
-        optional: false
-      - id: i-6
-        ingredient: honey-soya-marinated-chicken-honey
-        name: honey
-        quantity: 50
-        unit: g
-        original: 50g of honey
-        category: Other
-        optional: false
-      - id: i-7
-        ingredient: honey-soya-marinated-chicken-pieces-of-tomatoes
-        name: pieces of tomatoes
-        quantity: 3
-        unit: piece
-        original: 3 pieces of tomatoes
-        category: Other
-        optional: false
-      - id: i-8
-        ingredient: olive-oil
-        name: olive oil
-        quantity: 2
-        unit: tbsp
-        original: 2 tablespoons of olive oil
-        category: Dry goods
-        optional: false
+      - { id: chicken, ingredient: chicken-breast, name: chicken, note: "Amount not in the saved recipe" }
+      - { id: potatoes, ingredient: potato, name: potatoes, quantity: 1, unit: kg }
+      - { id: garlic, ingredient: garlic, name: garlic, quantity: 2, unit: clove }
+      - { id: soy, ingredient: soy-sauce, name: soy sauce, quantity: 50, unit: ml }
+      - { id: honey, ingredient: honey, name: honey, quantity: 50, unit: g }
+      - { id: sesame, ingredient: sesame-seeds, name: sesame seeds, note: "Used in the method; amount not saved" }
+      - { id: oil, ingredient: olive-oil, name: olive oil, quantity: 30, unit: ml, note: "For the marinade, plus a splash for the fries, frying and salad" }
+      - { id: salad, ingredient: salad-leaves, name: salad mix, quantity: 100, unit: g }
+      - { id: tomatoes, ingredient: tomato, name: tomatoes, quantity: 3, unit: piece }
+      - { id: peanuts, ingredient: peanuts, name: peanuts, note: "Used in the method; amount not saved" }
+      - { id: aioli, ingredient: aioli, name: aioli, quantity: 80, unit: g }
+      - { id: salt, ingredient: salt, name: salt, note: To taste }
+      - { id: pepper, ingredient: black-pepper, name: black pepper, note: To taste }
 steps:
-  - id: step-1
-    title: ""
-    text: Set the oven to 240°C/220°C fan. Cut potatoes (unpeeled) into 1 cm fries . Spread the fries on a baking tray lined with baking paper. Drizzle over a splash of olive oil* and season with salt* and pepper*. Mix well. Bake in the oven for 20-25 minutes, until golden.
-    images: []
-  - id: step-2
-    title: ""
-    text: Press or finely chop the garlic. Mix garlic, soy sauce, honey, sesame seeds and olive oil* [2 tbsp] in a bowl. Mix chicken in the marinade.
-    images: []
-  - id: step-3
-    title: ""
-    text: Rinse the salad mixture in a colander under cold water*. Cut the tomato into thin slices. Coarsely chop peanuts.
-    images: []
-  - id: step-4
-    title: ""
-    text: "Heat a splash of olive oil* in a frying pan over a medium-high heat when the French fries have 5 minutes left. Fry the chicken and marinade while stirring for 4-5 minutes, until cooked through. TIP: The chicken is ready when the meat is white and without hints of red."
-    images: []
-  - id: step-5
-    title: ""
-    text: Mix the tomato, peanuts and salad mixture in a bowl. Drizzle over a splash of olive oil* and season with a pinch of salt* and pepper*.
-    images: []
-  - id: step-6
-    title: ""
-    text: Arrange chicken, fries and salad on plates. Pour remaining marinade over chicken. Serve aioli on the side.
-    images: []
+  - { id: fries, title: Bake the fries, duration: 20–25 min, text: "Heat the oven to 240 °C (220 °C fan). Cut the unpeeled potatoes into 1 cm fries and spread them on a tray lined with baking paper. Drizzle with olive oil, season with salt and pepper, mix and bake until golden." }
+  - { id: marinade, title: Marinate the chicken, text: "Press or finely chop the garlic. Mix it with the soy sauce, honey, sesame seeds and 30 ml olive oil, then mix the chicken into the marinade." }
+  - { id: prep, title: Prepare the salad, text: "Rinse the salad mix under cold water and drain. Slice the tomatoes thinly. Coarsely chop the peanuts." }
+  - { id: fry, title: Fry the chicken, duration: 4–5 min, text: "When the fries have 5 minutes left, heat a splash of olive oil in a frying pan over medium-high heat. Fry the chicken with its marinade, stirring, until cooked through (white inside with no trace of pink)." }
+  - { id: salad, title: Toss the salad, text: "Mix the tomato, peanuts and salad leaves. Drizzle with olive oil and season with a pinch of salt and pepper." }
+  - { id: serve, title: Serve, text: "Plate the chicken, fries and salad. Pour the remaining marinade over the chicken and serve the aioli on the side." }
 sources:
-  - title: Original Recipe Source
-    url: https://www.hellofresh.no/recipes/honning-og-soyamarinert-kylling-6167fddd3bf706481e16ca7b
+  - { title: HelloFresh Norway, url: "https://www.hellofresh.no/recipes/honning-og-soyamarinert-kylling-6167fddd3bf706481e16ca7b" }
 issues:
-  - The ingredient list omits the chicken quantity.
+  - The chicken amount is missing; sesame seeds and peanuts are used in the method but not listed.
 adaptations:
-  - Migrated from the saved cookbook. Original wording and source links preserved; external sources have not been reverified.
+  - "Volume measures converted to ml (15 ml and 5 ml per spoon)."
+  - "Allergens (from the source): wheat, soy, gluten, mustard, egg."
 legacyPath: main_dishes/honey_soya_marinated_chicken/
 ---
-
-Alergies:Hvete•Soya•Gluten•Sennep•Egg

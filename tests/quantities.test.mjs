@@ -24,3 +24,9 @@ test('only metric pairs are normalised', () => {
   assert.deepEqual(normalise(1.2, 'l'), { quantity: 1200, unit: 'ml' });
   assert.deepEqual(normalise(2, 'tbsp'), { quantity: 2, unit: 'tbsp' });
 });
+test('count units are pluralised', () => {
+  assert.equal(amount({ quantity: 2, unit: 'package' }), '2 packages');
+  assert.equal(amount({ quantity: 1, unit: 'clove' }), '1 clove');
+  assert.equal(amount({ quantity: 3, max: 4, unit: 'sprig' }), '3–4 sprigs');
+  assert.equal(amount({ quantity: 1, unit: 'pinch' }, 2), '2 pinches');
+});

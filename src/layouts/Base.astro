@@ -1,14 +1,15 @@
 ---
 import '../styles/global.css';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
 import { url } from '../lib/urls.mjs';
-import { publishedRecipes, readPlans, readPantry, currentPlan } from '../lib/content.mjs';
+import { publishedRecipes, readPlans, readPantry, currentPlan, readCatalog } from '../lib/content.mjs';
 import { shoppingList } from '../lib/quantities.mjs';
 
-interface Props { title: string; active?: string; description?: string }
-const { title, active, description = 'Personal cookbook: recipes, this week’s meals and the shopping list.' } = Astro.props;
+interface Props { title: string; active?: string; description?: string; crumbs?: { label: string; href?: string }[] }
+const { title, active, crumbs, description = 'Personal cookbook: recipes, this week’s meals and the shopping list.' } = Astro.props;
 const recipes = publishedRecipes();
 const plan = currentPlan(readPlans());
-const shopping = plan ? shoppingList(plan, recipes, readPantry()).rows : [];
+const shopping = plan ? shoppingList(plan, recipes, readPantry(), readCatalog()).rows : [];
 const weekday = (date: string) => new Date(date + 'T12:00:00Z').toLocaleDateString('en-GB', { weekday: 'long', timeZone: 'UTC' });
 const mealTitle = (meal: any) => meal.title || recipes.find(r => r.id === meal.recipe)?.data.title || (meal.leftoversFrom ? 'Leftovers' : meal.recipe);
 const nav = [
@@ -16,6 +17,7 @@ const nav = [
   ['week', 'This week', 'week/', plan ? `${plan.meals.length} meals` : ''],
   ['shopping', 'Shopping', 'shopping/', shopping.length ? `${shopping.length} items` : ''],
   ['pantry', 'Pantry', 'pantry/', ''],
+  ['history', 'History', 'history/', ''],
   ['reference', 'Reference', 'reference/', ''],
 ];
 ---
@@ -50,6 +52,7 @@ const nav = [
       <p class="side-note">Plan on your PC.<br>Take your cookbook to the kitchen.</p>
     </aside>
     <main id="main">
+      {crumbs && <Breadcrumbs items={crumbs} />}
       <slot />
     </main>
   </div>

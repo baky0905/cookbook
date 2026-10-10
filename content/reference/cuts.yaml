@@ -1,15 +1,96 @@
-title: Cutting sizes
-intro: "Diagrams are drawn to scale (close to actual size on most screens). Add your own photo to any cut in the editor."
+title: Cutting
+intro: "Standard cut sizes with a real photo and a to-scale drawing, then how to cut common vegetables and meat."
 sources:
   - { title: "Culinary Institute of America — The Professional Chef (standard knife cuts)" }
+  - { title: "Photos: Wikimedia Commons (credits under each photo)", url: "https://commons.wikimedia.org" }
 cuts:
-  - { id: mince, name: Minced, aka: "very finely chopped", size: under 3 mm, shape: dice, mm: 2 }
-  - { id: brunoise, name: Brunoise, aka: "finest dice", size: 3 × 3 × 3 mm, shape: dice, mm: 3 }
-  - { id: small-dice, name: Small dice, aka: "finely diced", size: 6 × 6 × 6 mm, shape: dice, mm: 6 }
-  - { id: medium-dice, name: Medium dice, aka: "diced", size: 12 × 12 × 12 mm, shape: dice, mm: 12 }
-  - { id: large-dice, name: Large dice, aka: "chunky dice, chunks", size: 20 × 20 × 20 mm, shape: dice, mm: 20 }
-  - { id: julienne, name: Julienne, aka: "matchsticks", size: 3 × 3 × 50 mm, shape: stick, mm: 3, length: 50 }
-  - { id: batonnet, name: Batonnet, aka: "sticks, batons", size: 6 × 6 × 60 mm, shape: stick, mm: 6, length: 60 }
-  - { id: slice, name: Slices, aka: "rounds; thinly sliced is about 2 mm", size: 6 mm thick, shape: slice, mm: 6 }
-  - { id: oblique, name: Oblique (roll cut), aka: "for carrots and parsnips", size: "Cut at 45°, roll a quarter turn, cut again", shape: oblique, mm: 20 }
-  - { id: chiffonade, name: Chiffonade, aka: "ribbons of leafy herbs", size: "Roll the leaves, slice 1–2 mm", shape: ribbon, mm: 2 }
+  - { id: mince, icon: "🧄", name: Minced, aka: "very finely chopped", size: under 3 mm, shape: dice, mm: 2 }
+  - id: brunoise
+    icon: "🥕"
+    name: Brunoise
+    aka: finest dice
+    size: 3 × 3 × 3 mm
+    shape: dice
+    mm: 3
+    photo: { src: reference/cut-brunoise.webp, credit: "Martin.Tontsch", license: CC0, source: "https://commons.wikimedia.org/wiki/File:Karotten_brunoise.jpg" }
+  - id: small-dice
+    icon: "🥕"
+    name: Small dice
+    aka: finely diced
+    size: 6 × 6 × 6 mm
+    shape: dice
+    mm: 6
+    photo: { src: reference/cut-small-dice.webp, credit: "Halima Waziri", license: CC BY-SA 4.0, source: "https://commons.wikimedia.org/wiki/File:Dicing_carrots.jpg" }
+  - id: medium-dice
+    icon: "🧅"
+    name: Medium dice
+    aka: "diced; mirepoix for stocks and stews"
+    size: 12 × 12 × 12 mm
+    shape: dice
+    mm: 12
+    photo: { src: reference/cut-medium-dice.webp, credit: "Pigup", license: CC BY-SA 3.0, source: "https://commons.wikimedia.org/wiki/File:Mirepoix_on_cutting_board.jpg" }
+  - { id: large-dice, icon: "🥔", name: Large dice, aka: "chunky dice, chunks", size: 20 × 20 × 20 mm, shape: dice, mm: 20 }
+  - id: julienne
+    icon: "🥕"
+    name: Julienne
+    aka: matchsticks
+    size: 3 × 3 × 50 mm
+    shape: stick
+    mm: 3
+    length: 50
+    photo: { src: reference/cut-julienne.webp, credit: "frank wouters", license: CC BY 2.0, source: "https://commons.wikimedia.org/wiki/File:Carrots_Julienne.jpg" }
+  - id: batonnet
+    icon: "🥕"
+    name: Batonnet
+    aka: "sticks, batons"
+    size: 6 × 6 × 60 mm
+    shape: stick
+    mm: 6
+    length: 60
+    photo: { src: reference/cut-batonnet.webp, credit: "Simon P.W", license: Public domain, source: "https://commons.wikimedia.org/wiki/File:Car_sticks_lg.jpg" }
+  - id: slice
+    icon: "🔪"
+    name: Slices
+    aka: "rounds; thinly sliced is about 2 mm"
+    size: 6 mm thick
+    shape: slice
+    mm: 6
+    photo: { src: reference/cut-slice.webp, credit: "W.carter", license: CC0, source: "https://commons.wikimedia.org/wiki/File:Preparing_and_slicing_carrots_-_square.jpg" }
+  - id: oblique
+    icon: "🥕"
+    name: Oblique (roll cut)
+    aka: for carrots and parsnips
+    size: "Cut at 45°, roll a quarter turn, cut again"
+    shape: oblique
+    mm: 20
+    photo: { src: reference/cut-oblique.webp, credit: "ProjectManhattan", license: CC BY-SA 3.0, source: "https://commons.wikimedia.org/wiki/File:Diced_carrot.jpg" }
+  - id: chiffonade
+    icon: "🌿"
+    name: Chiffonade
+    aka: ribbons of leafy herbs
+    size: "Roll the leaves, slice 1–2 mm"
+    shape: ribbon
+    mm: 2
+    photo: { src: reference/cut-chiffonade.webp, credit: "Cesdeva", license: CC BY-SA 4.0, source: "https://commons.wikimedia.org/wiki/File:BasilChiffonade.jpg" }
+basics:
+  - "🔪 A sharp knife is safer: it doesn't slip."
+  - "✋ Claw grip: tuck your fingertips in and guide the blade with your knuckles."
+  - "🧻 A damp cloth under the board stops it sliding."
+  - "🟰 Same-size pieces cook evenly."
+guides:
+  - group: Vegetables
+    items:
+      - { icon: "🧅", name: Onion — dice, search: how to dice an onion, steps: ["Halve through the root and peel; leave the root on to hold the layers.", "Make vertical cuts towards the root, spaced at the dice size.", "Slice across those cuts; the onion falls into dice. Discard the root."] }
+      - { icon: "🧄", name: Garlic — mince or paste, search: how to mince garlic, steps: ["Crush the clove with the flat of the knife; the skin slips off.", "Slice thinly, then rock the knife back and forth over the pile.", "For paste, add a pinch of salt and scrape with the flat of the blade."] }
+      - { icon: "🥕", name: "Carrot — sticks, dice, roll cut", search: knife skills carrots, steps: ["Peel and cut into 5–6 cm lengths; square off one side so it lies flat.", "Cut planks, then sticks (julienne or batons); cut the sticks across for dice.", "Roll cut: cut at 45°, turn a quarter, cut again."] }
+      - { icon: "🫑", name: Bell pepper — strips and dice, search: how to cut a bell pepper, steps: ["Cut off top and bottom, slit one side and open it flat.", "Slice away the white ribs and seeds.", "Cut strips, then across into dice."] }
+      - { icon: "🥬", name: Leek — clean and slice, search: how to clean leeks, steps: ["Trim the root and the dark green tops.", "Halve lengthways and rinse between the layers to remove grit.", "Lay flat and slice into half-moons."] }
+      - { icon: "🌿", name: Herbs — chop or ribbon, search: how to chop herbs, steps: ["Wash and dry thoroughly; wet herbs turn to mush.", "Pick leaves off woody stems (parsley and coriander stems are fine).", "Bunch tightly and rock-chop; for basil, stack, roll and slice (chiffonade)."] }
+      - { icon: "🍅", name: Tomato — dice, search: how to dice a tomato, steps: ["Remove the core with the knife tip.", "Halve; scoop out the seeds if you want it less watery.", "Slice, cut strips, then dice. A very sharp or serrated knife helps."] }
+      - { icon: "🥔", name: Potato — even pieces, search: how to cut potatoes, steps: ["Peel if the recipe says so; cut into pieces of the same size.", "Quarters, sixths or eighths depending on size for roasting.", "Keep cut potatoes in cold water until cooking so they don't brown."] }
+  - group: Meat
+    items:
+      - { icon: "🥩", name: Slice against the grain, search: slice meat against the grain, steps: ["Find the lines of muscle fibre running through the meat.", "Turn the meat so you cut across them, not along.", "Slice thinly; angle the knife for flat cuts like flank or brisket."] }
+      - { icon: "🍖", name: Cubes for stew, search: how to cut stew meat, steps: ["Trim silverskin and large lumps of fat.", "Cut 3–4 cm cubes of the same size.", "Pat dry before browning so they sear instead of steaming."] }
+      - { icon: "🍗", name: Chicken breast — even thickness, search: how to butterfly chicken breast, steps: ["Lay flat; slice horizontally into two thin cutlets, or butterfly it open.", "Or cover with cling film and pound to an even 1.5–2 cm.", "Even thickness means no dry ends or raw middle."] }
+      - { icon: "🍽️", name: Rest and carve a roast, search: how to carve a roast, steps: ["Rest 10–15 minutes under loose foil so the juices settle.", "Carve across the grain with a long, sharp knife.", "Slice only what you serve; the rest stays juicier whole."] }

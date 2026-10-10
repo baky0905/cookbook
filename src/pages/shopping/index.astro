@@ -1,20 +1,21 @@
 ---
 import crypto from 'node:crypto';
 import Base from '../../layouts/Base.astro';
-import { publishedRecipes, readPlans, readPantry, currentPlan } from '../../lib/content.mjs';
+import { publishedRecipes, readPlans, readPantry, currentPlan, readCatalog } from '../../lib/content.mjs';
 import { shoppingList, number } from '../../lib/quantities.mjs';
+import { formatAmount } from '../../lib/format.mjs';
 
 const plan = currentPlan(readPlans());
 const pantry = readPantry();
-const list = plan ? shoppingList(plan, publishedRecipes(), pantry) : { rows: [], warnings: [] };
-const unit = (u: string) => (u && u !== 'piece' ? ' ' + u : '');
+const list = plan ? shoppingList(plan, publishedRecipes(), pantry, readCatalog()) : { rows: [], warnings: [] };
+const unit = (u: string, n = 1) => (u && u !== 'piece' ? ' ' + formatAmount({ qty: n, unit: u }).replace(/^\S+ /, '') : '');
 const range = (min: number, max: number | null) => `${number(min)}${max != null && max !== min ? '–' + number(max) : ''}`;
 const display = (n: number, u: string) => (u === 'g' && n >= 1000 ? [n / 1000, 'kg'] : u === 'ml' && n >= 1000 ? [n / 1000, 'l'] : [n, u]) as [number, string];
 function amountText(row: any) {
   if (row.needed == null) return '';
   const [min, u] = display(row.needed, row.unit);
   const [max] = display(row.neededMax, row.unit);
-  return range(min, max) + unit(u);
+  return range(min, max) + unit(u, max ?? min);
 }
 const toBuy = list.rows.filter(r => r.needed == null || r.neededMax > 0);
 const covered = list.rows.filter(r => r.needed != null && r.neededMax === 0);
@@ -22,12 +23,13 @@ const groups = [...new Set(toBuy.map(r => r.category))].map(category => ({ categ
 // A new plan or a changed list starts with clean ticks.
 const key = plan ? `cookbook:shopping:${plan.id}:${crypto.createHash('sha256').update(JSON.stringify(toBuy.map(r => [r.key, r.needed]))).digest('hex').slice(0, 10)}` : '';
 ---
-<Base title="Shopping" active="shopping">
+<Base title="Shopping" active="shopping" crumbs={[{ label: 'Shopping' }]}>
   <h1>Shopping</h1>
   {!plan && <p class="subtitle">Nothing planned yet.</p>}
   {plan && (
     <>
       <p class="subtitle">For {plan.title}{plan.example && ' (example plan)'}. Pantry snapshot: {pantry.updated ?? 'not recorded'}.</p>
+      {plan.notes && <p class="notice plan-notes">{plan.notes}</p>}
       {list.warnings.map(w => <p class="notice">{w}</p>)}
       <div class="actions" hidden data-js>
         <button class="btn" type="button" id="print">Print list</button>
@@ -44,8 +46,8 @@ const key = plan ? `cookbook:shopping:${plan.id}:${crypto.createHash('sha256').u
                   <span>
                     {row.needed != null && <b>{amountText(row)} </b>}{row.name}{row.optional && ' (optional)'}
                     {row.needed == null && <small>Amount not specified in the recipe; check it.</small>}
-                    {row.have > 0 && <small>Pantry covers {number(row.have)}{unit(row.unit)}.</small>}
-                    {row.usuallyStocked && <small>Usually stocked; check before buying.</small>}
+                    {row.have > 0 && <small>Pantry covers {number(row.have)}{unit(row.unit, row.have)}.</small>}
+                    {row.usuallyStocked && <small>Usually in the cupboard; check before buying.</small>}
                     <small>{row.recipes.join(', ')}{row.notes.length > 0 && ` · ${row.notes.join('; ')}`}</small>
                   </span>
                 </label></li>
@@ -56,7 +58,7 @@ const key = plan ? `cookbook:shopping:${plan.id}:${crypto.createHash('sha256').u
       </div>
       {covered.length > 0 && (
         <details open><summary>Already have ({covered.length})</summary>
-          <ul>{covered.map(row => <li>{row.name}: pantry covers {number(row.have)}{unit(row.unit)}</li>)}</ul>
+          <ul>{covered.map(row => <li>{row.name}: pantry covers {number(row.have)}{unit(row.unit, row.have)}</li>)}</ul>
         </details>
       )}
       <p class="caption">Only matching ingredients in compatible units are combined; different units stay as separate lines.</p>

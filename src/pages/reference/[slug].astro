@@ -1,19 +1,19 @@
 ---
 import Base from '../../layouts/Base.astro';
 import Redirect from '../../components/Redirect.astro';
-import { referencePages } from '../../lib/reference.mjs';
+import { legacyReferencePages } from '../../lib/reference.mjs';
 import { markdown } from '../../lib/render.mjs';
 import { url } from '../../lib/urls.mjs';
 
+// Substitutes keeps its original page; old pages that were replaced redirect to the new ones.
 export function getStaticPaths() {
-  return referencePages().map(page => ({ params: { slug: page.slug }, props: { page } }));
+  return legacyReferencePages().map(page => ({ params: { slug: page.slug }, props: { page } }));
 }
 const { page } = Astro.props;
 ---
-{page.external || page.empty
-  ? <Redirect to={page.external ?? url('reference/')} title={page.title} />
-  : <Base title={page.title} active="reference">
-      <div class="crumb"><a href={url('reference/')}>Reference</a></div>
+{page.redirect !== undefined
+  ? <Redirect to={url(`reference/${page.redirect ? page.redirect + '/' : ''}`)} title="Reference" />
+  : <Base title={page.title} active="reference" crumbs={[{ label: 'Reference', href: 'reference/' }, { label: page.title }]}>
       <h1>{page.title}</h1>
       <div class="prose table-wrap" set:html={markdown(page.body)} />
     </Base>}

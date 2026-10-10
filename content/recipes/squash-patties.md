@@ -1,40 +1,19 @@
 ---
 title: Squash patties
-description: ""
-category: Main dishes
-tags:
-  - squash
-language: en
+description: Not written up yet; only the video link was saved.
+category: Mains
+tags: [squash]
 status: needs-review
-yield:
-  label: Yield not recorded
-  scalable: false
-time: {}
+yield: { label: Yield not recorded, scalable: false }
 groups:
   - name: Ingredients
     items:
-      - id: i-1
-        ingredient: squash-patties-work-in-progress
-        name: Work in progress
-        quantity: null
-        unit: ""
-        original: Work in progress
-        category: Other
-        optional: false
+      - { id: squash, ingredient: squash, name: squash, note: "Ingredients not recorded yet; see the video" }
 steps:
-  - id: step-1
-    title: ""
-    text: Work in progress
-    images: []
+  - { id: method, title: Method not recorded, text: Watch the saved video and write up the ingredients and method before cooking. }
 sources:
-  - title: Saved video
-    url: https://www.youtube.com/watch?v=Ln2U2PPorCg
+  - { title: Saved video, url: "https://www.youtube.com/watch?v=Ln2U2PPorCg" }
 issues:
-  - Yield is not recorded.
-  - This is an unfinished recipe; the method needs completing.
-adaptations:
-  - Migrated from the saved cookbook. Original wording and source links preserved; external sources have not been reverified.
+  - This recipe is unfinished; only the video link was saved.
 legacyPath: main_dishes/squash_patties/
 ---
-
-

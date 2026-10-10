@@ -5,7 +5,7 @@ import { number } from '../../lib/quantities.mjs';
 const pantry = readPantry();
 const items = [...pantry.items].sort((a, b) => a.name.localeCompare(b.name));
 ---
-<Base title="Pantry" active="pantry">
+<Base title="Pantry" active="pantry" crumbs={[{ label: 'Pantry' }]}>
   <h1>Pantry</h1>
   <p class="subtitle">A published snapshot{pantry.updated ? `, updated ${pantry.updated}` : ''}. It is not live stock tracking.</p>
   {items.length === 0

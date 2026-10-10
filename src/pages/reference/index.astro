@@ -1,13 +1,12 @@
 ---
 import Base from '../../layouts/Base.astro';
-import { referencePages } from '../../lib/reference.mjs';
+import { referencePagesList } from '../../lib/reference.mjs';
 import { url } from '../../lib/urls.mjs';
-const pages = referencePages().filter(p => !p.empty);
 ---
-<Base title="Reference" active="reference">
+<Base title="Reference" active="reference" crumbs={[{ label: 'Reference' }]}>
   <h1>Reference</h1>
-  <p class="subtitle">Conversions, substitutes and seasonal produce.</p>
+  <p class="subtitle">Quick answers while you cook.</p>
   <ul class="results">
-    {pages.map(p => <li><a href={p.external ?? url(`reference/${p.slug}/`)} rel={p.external ? 'noopener' : undefined}><span class="name">{p.title}{p.external && ' ↗'}</span></a></li>)}
+    {referencePagesList.map(([slug, title, about]) => <li><a href={url(`reference/${slug}/`)}><span><span class="name">{title}</span><span class="info">{about}</span></span></a></li>)}
   </ul>
 </Base>

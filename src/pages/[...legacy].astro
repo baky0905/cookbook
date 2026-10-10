@@ -1,16 +1,25 @@
 ---
+import fs from 'node:fs';
 import Redirect from '../components/Redirect.astro';
 import { publishedRecipes } from '../lib/content.mjs';
 import { url } from '../lib/urls.mjs';
 
-// Old MkDocs URLs: /<category>/<recipe>/, category indexes, tags and the template page.
+// Old MkDocs URLs (/<category>/<recipe>/, category indexes, tags, template) and renamed recipe IDs.
+// Recipes that were removed or are drafts send old links to the homepage instead of a 404.
 export function getStaticPaths() {
-  const recipePaths = publishedRecipes().filter(r => r.data.legacyPath).map(r => ({
-    params: { legacy: r.data.legacyPath.replace(/\/$/, '') }, props: { to: `recipes/${r.id}/`, title: r.data.title },
-  }));
+  const recipes = publishedRecipes();
+  const byLegacy = new Map(recipes.filter(r => r.data.legacyPath).map(r => [r.data.legacyPath, r]));
+  const migrated = JSON.parse(fs.readFileSync('content/migration.json', 'utf8')) as { legacyPath: string }[];
+  const recipePaths = migrated.map(({ legacyPath }) => {
+    const r = byLegacy.get(legacyPath);
+    return { params: { legacy: legacyPath.replace(/\/$/, '') }, props: r ? { to: `recipes/${r.id}/`, title: r.data.title } : { to: '', title: 'Recipes' } };
+  });
   const home = ['main_dishes', 'side_dishes', 'snacks', 'sauces', 'desserts', 'breakfasts', 'tags', 'template_recipe']
     .map(legacy => ({ params: { legacy }, props: { to: '', title: 'Recipes' } }));
-  return [...recipePaths, ...home];
+  const aliasPaths = recipes.flatMap(r => r.data.aliases.map(alias => ({
+    params: { legacy: `recipes/${alias}` }, props: { to: `recipes/${r.id}/`, title: r.data.title },
+  })));
+  return [...recipePaths, ...home, ...aliasPaths];
 }
 const { to, title } = Astro.props;
 ---

@@ -2,6 +2,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import YAML from 'yaml';
 import { recipeSchema, planSchema, pantrySchema } from './schema.mjs';
+export { readCatalog } from './schema.mjs';
 
 export const root = process.cwd();
 export function parseRecipe(text) {
@@ -19,8 +20,15 @@ export function readPantry() { return pantrySchema.parse(YAML.parse(fs.readFileS
 export const isPublished = recipe => recipe.data.status !== 'draft';
 export const publishedRecipes = () => readRecipes().filter(isPublished).sort((a,b)=>a.data.title.localeCompare(b.data.title));
 // The newest real plan is "this week"; the example is only shown until one exists.
+export const planStart = p => p.start || p.meals.map(m => m.date).sort()[0] || '';
 export function currentPlan(plans=readPlans()) {
-  const latest = p => p.meals.map(m=>m.date).sort().at(-1) || '';
-  const real = plans.filter(p=>!p.example).sort((a,b)=>latest(b).localeCompare(latest(a)));
+  const real = plans.filter(p=>!p.example).sort((a,b)=>planStart(b).localeCompare(planStart(a)));
   return real[0] || plans.find(p=>p.example) || null;
+}
+// Frozen weeks from content/history, newest first.
+export function readHistory() {
+  const dir = path.join(root,'content/history');
+  if(!fs.existsSync(dir)) return [];
+  return fs.readdirSync(dir).filter(f=>f.endsWith('.json')).map(f=>JSON.parse(fs.readFileSync(path.join(dir,f),'utf8')))
+    .sort((a,b)=>(b.plan.start||'').localeCompare(a.plan.start||''));
 }

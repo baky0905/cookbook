@@ -1,14 +1,19 @@
 ---
 import RefPage from '../../components/RefPage.astro';
+import RuleCards from '../../components/RuleCards.astro';
 import { readReference } from '../../lib/reference.mjs';
 const data = readReference('storage');
 ---
 <RefPage data={data}>
-  {data.groups.map(g => (
+  <RuleCards rules={data.rules} />
+  {data.groups.map((g: any) => (
     <>
-      <h2>{g.name}</h2>
-      <table><thead><tr><th scope="col"></th><th scope="col">Fridge</th><th scope="col">Freezer</th></tr></thead>
-        <tbody>{g.rows.map(r => <tr><th scope="row">{r.food}</th><td>{r.fridge}</td><td>{r.freezer}</td></tr>)}</tbody></table>
+      <h2 class="ref-section">{g.name}</h2>
+      <div class="table-wrap"><table class="storage">
+        <thead><tr><th scope="col"></th><th scope="col"><span aria-hidden="true">🧊</span> Fridge</th><th scope="col"><span aria-hidden="true">❄️</span> Freezer</th></tr></thead>
+        <tbody>{g.rows.map((r: any) => <tr><th scope="row"><span aria-hidden="true">{r.icon}</span> {r.food}</th><td class="num">{r.fridge}</td><td class="num">{r.freezer}</td></tr>)}</tbody>
+      </table></div>
     </>
   ))}
+  <p class="caption">{data.note}</p>
 </RefPage>

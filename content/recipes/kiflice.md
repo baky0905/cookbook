@@ -1,145 +1,40 @@
 ---
 title: Kiflice
-description: ""
-category: Bread & snacks
-tags:
-  - bread
-language: en
+description: Soft yeasted crescent rolls brushed with egg and sprinkled with sesame.
+category: Breads & doughs
+tags: [croatian, yeast-dough, oven-baked, vegetarian]
 status: needs-review
-yield:
-  label: 4 portions
-  scalable: false
-time:
-  total: 10 minutes
+yield: { label: 4 portions, amount: 4, unit: portions, scalable: false }
+time: { rest: about 1½–2½ h, cook: about 20 min }
 groups:
-  - name: Ingredients
+  - name: Dough
     items:
-      - id: i-1
-        ingredient: flour
-        name: flour
-        quantity: 500
-        unit: g
-        original: 500g flour
-        category: Dry goods
-        optional: false
-      - id: i-2
-        ingredient: kiflice-baking-powder
-        name: baking powder
-        quantity: 5
-        unit: g
-        original: 5g of baking powder
-        category: Other
-        optional: false
-      - id: i-3
-        ingredient: kiflice-fresh-yeast
-        name: fresh yeast
-        quantity: 20
-        unit: g
-        original: 20g of fresh yeast
-        category: Other
-        optional: false
-      - id: i-4
-        ingredient: sunflower-oil
-        name: sunflower oil
-        quantity: 100
-        unit: ml
-        original: 100 ml sunflower oil
-        category: Dry goods
-        optional: false
-      - id: i-5
-        ingredient: milk
-        name: milk
-        quantity: 250
-        unit: ml
-        original: 250 ml milk
-        category: Dairy & eggs
-        optional: false
-      - id: i-6
-        ingredient: sugar
-        name: sugar
-        quantity: 10
-        unit: g
-        original: 10g of sugar
-        category: Dry goods
-        optional: false
-      - id: i-7
-        ingredient: salt
-        name: salt
-        quantity: 10
-        unit: g
-        original: 10g of salt
-        category: Herbs & spices
-        optional: false
-      - id: i-8
-        ingredient: kiflice-egg
-        name: egg
-        quantity: 1
-        unit: piece
-        original: 1 egg
-        category: Other
-        optional: false
-      - id: i-9
-        ingredient: kiflice-egg-wash
-        name: Egg wash
-        quantity: null
-        unit: ""
-        original: Egg wash
-        category: Other
-        optional: false
-      - id: i-10
-        ingredient: kiflice-egg-and-one-spoon-of-milk
-        name: egg and one spoon of milk
-        quantity: 1
-        unit: piece
-        original: 1 egg and one spoon of milk
-        category: Other
-        optional: false
-      - id: i-11
-        ingredient: kiflice-sesame-seeds
-        name: sesame seeds
-        quantity: null
-        unit: ""
-        original: sesame seeds
-        category: Other
-        optional: false
+      - { id: flour, ingredient: plain-flour, name: plain flour, quantity: 500, unit: g }
+      - { id: baking-powder, ingredient: baking-powder, name: baking powder, quantity: 5, unit: g }
+      - { id: yeast, ingredient: fresh-yeast, name: fresh yeast, quantity: 20, unit: g }
+      - { id: oil, ingredient: sunflower-oil, name: sunflower oil, quantity: 100, unit: ml }
+      - { id: milk, ingredient: milk, name: warm milk, quantity: 250, unit: ml }
+      - { id: sugar, ingredient: sugar, name: sugar, quantity: 10, unit: g }
+      - { id: salt, ingredient: salt, name: salt, quantity: 10, unit: g }
+      - { id: egg, ingredient: egg, name: egg, quantity: 1, unit: piece }
+  - name: Topping
+    items:
+      - { id: wash-egg, ingredient: egg, name: egg, quantity: 1, unit: piece, note: For the egg wash }
+      - { id: wash-milk, ingredient: milk, name: milk, quantity: 15, unit: ml, note: For the egg wash }
+      - { id: sesame, ingredient: sesame-seeds, name: sesame seeds, optional: true }
 steps:
-  - id: step-1
-    title: ""
-    text: Mix fresh yeast, sugar and warm milk and let it rest at room temperature for about 10 minutes.
-    images: []
-  - id: step-2
-    title: ""
-    text: |-
-      Mix flour, baking powder, salt, egg, oil with risen yeast.
-      Start kneading until you get fine dough.
-      Cover the dough with plastic foil and leave it to rest for about 10 minutes at room temperature.
-      Knead the dough now for about 2 minutes until you get fine and equal texture.
-    images: []
-  - id: step-3
-    title: ""
-    text: Leave to rest for another 30 minutes to one hour and start shaping it as on the video.
-    images: []
-  - id: step-4
-    title: ""
-    text: Leave kiflice to rise for about 30 minutes to an hour at room temperature.
-    images: []
-  - id: step-5
-    title: ""
-    text: Brush the top of kiflice with egg wash and sprinkle with sesame seed if desired.
-    images: []
-  - id: step-6
-    title: ""
-    text: Bake at 180 degrees C for about 20 minutes.
-    images: []
+  - { id: yeast, title: Activate the yeast, duration: 10 min, text: "Mix the fresh yeast, sugar and warm milk and leave at room temperature." }
+  - { id: dough, title: Make the dough, duration: about 15 min, text: "Mix the flour, baking powder, salt, egg and oil with the yeast mixture and knead into a smooth dough. Cover with cling film and rest 10 minutes at room temperature, then knead for about 2 minutes until smooth and even." }
+  - { id: shape, title: Rest and shape, duration: 30–60 min, text: "Rest the dough, then shape the crescents as shown in the video." }
+  - { id: rise, title: Rise, duration: 30–60 min, text: Leave the kiflice to rise at room temperature. }
+  - { id: wash, title: Egg wash, text: "Whisk the egg with the milk, brush over the tops and sprinkle with sesame seeds if you like." }
+  - { id: bake, title: Bake, duration: about 20 min, text: Bake at 180 °C. }
 sources:
-  - title: Saved video
-    url: https://www.youtube.com/watch?v=3gT8s6L_bro
+  - { title: Saved video, url: "https://www.youtube.com/watch?v=3gT8s6L_bro" }
 issues:
-  - The saved 10-minute total excludes resting, rising and baking.
   - Shaping is only described by reference to the video.
 adaptations:
-  - Migrated from the saved cookbook. Original wording and source links preserved; external sources have not been reverified.
+  - "Egg-wash milk converted from “one spoon” to 15 ml."
+  - "The saved 10-minute total excluded resting, rising and baking; times are now listed separately."
 legacyPath: snacks/kiflice/
 ---
-
-

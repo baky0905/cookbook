@@ -1,11 +1,9 @@
 ---
 import Base from '../layouts/Base.astro';
-import { url } from '../lib/urls.mjs';
 interface Props { data: { title: string; intro?: string; sources?: { title: string; url?: string }[] } }
 const { data } = Astro.props;
 ---
-<Base title={data.title} active="reference">
-  <div class="crumb"><a href={url('reference/')}>Reference</a></div>
+<Base title={data.title} active="reference" crumbs={[{ label: 'Reference', href: 'reference/' }, { label: data.title }]}>
   <h1>{data.title}</h1>
   {data.intro && <p class="subtitle">{data.intro}</p>}
   <div class="ref"><slot /></div>

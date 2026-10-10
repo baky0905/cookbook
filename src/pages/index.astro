@@ -3,6 +3,7 @@ import Base from '../layouts/Base.astro';
 import { publishedRecipes } from '../lib/content.mjs';
 import { picture } from '../lib/media.mjs';
 import { url } from '../lib/urls.mjs';
+import { recipeCategories, tagGroups as vocabulary } from '../lib/schema.mjs';
 
 const recipes = await Promise.all(publishedRecipes().map(async recipe => ({
   ...recipe,
@@ -10,8 +11,10 @@ const recipes = await Promise.all(publishedRecipes().map(async recipe => ({
   search: [recipe.data.title, recipe.data.description, recipe.data.category, ...recipe.data.tags,
     ...recipe.data.groups.flatMap(g => g.items.map(i => i.name))].join(' ').toLowerCase(),
 })));
-const categories = [...new Set(recipes.map(r => r.data.category))].sort();
-const tags = [...new Set(recipes.flatMap(r => r.data.tags))].sort();
+// Course order, then tag groups from content/taxonomy.yaml; only values in use are shown.
+const categories = recipeCategories.filter(c => recipes.some(r => r.data.category === c));
+const used = new Set(recipes.flatMap(r => r.data.tags));
+const tagGroups = vocabulary.map(({ name, tags }: { name: string; tags: string[] }) => ({ group: name, tags: tags.filter(t => used.has(t)).sort() })).filter(g => g.tags.length);
 const info = (r: any) => [r.time.total && `${r.time.total} total`, r.time.active && `${r.time.active} active`,
   !/not recorded/.test(r.yield.label) && r.yield.label, r.status === 'needs-review' && 'needs review'].filter(Boolean).join(' · ');
 ---
@@ -25,9 +28,17 @@ const info = (r: any) => [r.time.total && `${r.time.total} total`, r.time.active
       <button type="button" class="chip" data-category="" aria-pressed="true">All</button>
       {categories.map(c => <button type="button" class="chip" data-category={c} aria-pressed="false">{c}</button>)}
     </div>
-    <div class="filters" hidden data-js aria-label="Tags">
-      {tags.map(t => <button type="button" class="chip" data-tag={t} aria-pressed="false">#{t}</button>)}
-    </div>
+    <details class="tag-filter" hidden data-js>
+      <summary>Filter by tag</summary>
+      {tagGroups.map(({ group, tags }) => (
+        <div class="tag-group">
+          <span class="eyebrow">{group}</span>
+          <div class="filters" role="group" aria-label={group}>
+            {tags.map(t => <button type="button" class="chip" data-tag={t} aria-pressed="false">{t}</button>)}
+          </div>
+        </div>
+      ))}
+    </details>
   </form>
   <p class="count" aria-live="polite" id="count">{recipes.length} recipes</p>
   <ul class="results">
@@ -50,6 +61,7 @@ const info = (r: any) => [r.time.total && `${r.time.total} total`, r.time.active
   let category = params.get('category') || '';
   const tags = new Set(params.getAll('tag'));
   input.value = params.get('q') || '';
+  if (tags.size) (document.querySelector('.tag-filter') as HTMLDetailsElement).open = true;
   document.querySelectorAll<HTMLElement>('[data-js]').forEach(el => (el.hidden = false));
 
   function apply() {

@@ -1,8 +1,9 @@
 import { getImage } from 'astro:assets';
+import { mediaPath } from './paths.mjs';
 
 // Recipe media lives beside the content so it can move to another generator.
 const files = import.meta.glob('/content/media/**/*.{png,jpg,jpeg,webp,avif}', { eager: true, import: 'default' });
-export const mediaFile = src => files['/content/media/' + src];
+export const mediaFile = src => files['/content/media/' + mediaPath(src)];
 export async function picture(src, width) {
   const file = mediaFile(src);
   if (!file) throw new Error(`Missing recipe media: ${src}`);

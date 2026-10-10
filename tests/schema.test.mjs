@@ -4,7 +4,7 @@ import { recipeSchema, planSchema } from '../src/lib/schema.mjs';
 import { parseRecipe } from '../src/lib/content.mjs';
 
 const base = () => ({
-  title: 'Test', category: 'Main dishes', status: 'reviewed',
+  title: 'Test', category: 'Mains', status: 'reviewed',
   yield: { label: '4 portions', amount: 4, scalable: true },
   groups: [{ name: 'Ingredients', items: [{ id: 'flour', ingredient: 'plain-flour', name: 'flour', quantity: 200, unit: 'g' }] }],
   steps: [{ id: 'mix', text: 'Mix {{flour}}.' }],
@@ -16,9 +16,15 @@ test('a complete recipe is valid and fills defaults', () => {
   assert.equal(r.groups[0].items[0].scalable, true);
   assert.deepEqual(r.steps[0].images, []);
 });
-test('scaling requires an exact yield', () => {
+test('a yield without an exact amount is valid (it scales by batch instead of portions)', () => {
   const r = base(); delete r.yield.amount;
-  assert.ok(issues(r).includes('Scalable recipes need an exact yield'));
+  assert.deepEqual(issues(r), []);
+});
+test('blank optional fields from the editor are treated as unset', () => {
+  const r = base(); r.groups[0].items[0].max = null; r.groups[0].items[0].note = ''; r.cover = null; r.yield.amount = '';
+  const parsed = recipeSchema.parse(r);
+  assert.equal(parsed.groups[0].items[0].max, undefined);
+  assert.equal(parsed.cover, undefined);
 });
 test('ingredient and step IDs must be unique', () => {
   const r = base(); r.steps.push({ id: 'mix', text: 'Again.' });
@@ -45,4 +51,23 @@ test('plan dates use ISO format', () => {
 });
 test('recipe files need frontmatter', () => {
   assert.throws(() => parseRecipe('# Just markdown'), /frontmatter/);
+});
+test('category must come from the fixed list', () => {
+  const r = base(); r.category = 'Main dishes';
+  assert.equal(recipeSchema.safeParse(r).success, false);
+});
+test('recipes are written in English', () => {
+  const r = base(); r.language = 'hr';
+  assert.equal(recipeSchema.safeParse(r).success, false);
+  assert.equal(recipeSchema.safeParse({ ...base(), originalLanguage: 'hr' }).success, true);
+});
+test('spoon units are no longer accepted', () => {
+  for (const unit of ['tsp', 'tbsp']) {
+    const r = base(); r.groups[0].items[0].unit = unit;
+    assert.equal(recipeSchema.safeParse(r).success, false, unit);
+  }
+});
+test('an unknown key fails, catching text split by an unquoted comma', () => {
+  const r = base(); r.steps[0] = { id: 'mix', text: 'Serve with bread', 'as they would in Finland.': null };
+  assert.equal(recipeSchema.safeParse(r).success, false);
 });

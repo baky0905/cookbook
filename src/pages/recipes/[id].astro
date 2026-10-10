@@ -1,9 +1,10 @@
 ---
 import crypto from 'node:crypto';
 import Base from '../../layouts/Base.astro';
-import { publishedRecipes } from '../../lib/content.mjs';
+import { publishedRecipes, readPlans, currentPlan, readCatalog } from '../../lib/content.mjs';
+import { estimateCalories } from '../../lib/nutrition.mjs';
 import { amount } from '../../lib/quantities.mjs';
-import { stepHtml, quantityAttrs, markdown, escape } from '../../lib/render.mjs';
+import { stepHtml, quantityAttrs, markdown, escape, prepHtml } from '../../lib/render.mjs';
 import { picture } from '../../lib/media.mjs';
 import { url } from '../../lib/urls.mjs';
 
@@ -22,14 +23,28 @@ const steps = await Promise.all(r.steps.map(async step => ({
   photos: await Promise.all(step.images.map(async image => ({ ...image, ...(await picture(image.src, 440)) }))),
 })));
 const hasPhotos = steps.some(s => s.photos.length);
-const times = [['total', 'total'], ['active', 'active'], ['cook', 'cooking'], ['rest', 'resting']].filter(([k]) => r.time[k]);
+const times = [['total', 'Total'], ['active', 'Active'], ['cook', 'Cook'], ['rest', 'Rest']].filter(([k]) => r.time[k]);
 const statusLabel = { draft: 'Draft', 'needs-review': 'Needs review', reviewed: 'Checked against source', cooked: 'Cooked & tested' }[r.status];
 const archive = r.legacyPath ? url(`archive/${r.legacyPath.replace(/\/$/, '')}.md`) : null;
 const hostname = (u: string) => new URL(u).hostname.replace(/^www\./, '');
+const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
+// Calories: an entered value wins; otherwise a catalogue estimate, shown only when it covers most of the recipe.
+const estimate = estimateCalories(r, readCatalog());
+const kcal = r.nutrition?.kcalPerPortion
+  ? { text: `${r.nutrition.kcalPerPortion} kcal per portion`, title: r.nutrition.source ? `Source: ${r.nutrition.source}` : 'Entered value' }
+  : estimate.reliable && (estimate.perPortion || estimate.kcal)
+    ? { text: estimate.perPortion ? `≈ ${estimate.perPortion} kcal per portion` : `≈ ${estimate.kcal} kcal in total`,
+        title: `Estimate from reference values${estimate.uncounted.length ? `; not counted: ${estimate.uncounted.join(', ')}` : ''}` }
+    : null;
+// This week's plan: show when it's planned and open the scaler at the planned amount.
+const plan = currentPlan(readPlans());
+const planned = (plan?.meals || []).filter(m => m.recipe === recipe.id && !m.leftoversFrom);
+const day = (d: string) => new Date(d + 'T12:00:00Z').toLocaleDateString('en-GB', { weekday: 'long', timeZone: 'UTC' });
+// Portions when the yield is exact, otherwise whole batches.
+const portionStep = r.yield.amount ? (r.yield.amount <= 12 ? 1 : r.yield.amount / 4) : null;
 ---
-<Base title={r.title} active="recipes" description={r.description || `${r.title} recipe`}>
-  <article id="recipe" data-recipe={recipe.id} data-version={version} data-yield={r.yield.scalable ? r.yield.amount : undefined} data-yield-unit={r.yield.unit}>
-    <div class="crumb"><a href={url()}>Recipes</a> &nbsp;/&nbsp; <a href={url(`?category=${encodeURIComponent(r.category)}`)}>{r.category}</a></div>
+<Base title={r.title} active="recipes" description={r.description || `${r.title} recipe`} crumbs={[{ label: r.category, href: `?category=${encodeURIComponent(r.category)}` }, { label: r.title }]}>
+  <article id="recipe" data-recipe={recipe.id} data-version={version} data-yield={r.yield.amount} data-yield-unit={r.yield.unit} data-step={portionStep}>
     <div class="title-row">
       <div>
         <h1>{r.title}</h1>
@@ -42,36 +57,40 @@ const hostname = (u: string) => new URL(u).hostname.replace(/^www\./, '');
       )}
     </div>
     <div class="meta">
-      {times.map(([k, label]) => <span><strong>{r.time[k]}</strong> {label}</span>)}
+      {times.map(([k, label]) => <span>{label} <strong>{r.time[k]}</strong></span>)}
       <span><strong id="yield-label">{r.yield.label}</strong></span>
+      {kcal && <span title={kcal.title}><strong>{kcal.text}</strong></span>}
       <span class={`status ${r.status}`}>{statusLabel}</span>
     </div>
+    {planned.length > 0 && (
+      <p class="notice planned">{planned.map(m => <span>Planned for {day(m.date)} {m.meal.toLowerCase()}{m.servings ? ` · ${m.servings} ${r.yield.unit}` : m.batches && m.batches !== 1 ? ` · ×${m.batches}` : ''}{m.note && ` · ${m.note}`} </span>)}</p>
+    )}
+    {r.tags.length > 0 && <nav class="tags" aria-label="Tags">{r.tags.map(t => <a href={url(`?tag=${encodeURIComponent(t)}`)}>{t}</a>)}</nav>}
 
     <div class="actions" hidden data-js>
       <button class="btn primary" type="button" id="cook" aria-pressed="false">Cooking view</button>
       <button class="btn" type="button" id="print">Print recipe</button>
       {hasPhotos && <label class="toggle"><input type="checkbox" id="print-photos"> Include step photos when printing</label>}
-      {r.yield.scalable && (
-        <div class="servings" role="group" aria-label="Servings">
-          <button type="button" data-step="-1" aria-label="Fewer servings">−</button>
-          <output id="servings" aria-live="polite">{r.yield.amount} {r.yield.unit}</output>
-          <button type="button" data-step="1" aria-label="More servings">+</button>
-        </div>
-      )}
+      <div class="servings" role="group" aria-label={r.yield.amount ? 'Portions' : 'Batch size'}>
+        <button type="button" data-step="-1" aria-label={r.yield.amount ? 'Fewer' : 'Smaller batch'}>−</button>
+        <output id="servings" aria-live="polite" data-planned-servings={planned[0]?.servings} data-planned-batches={planned[0]?.batches}>{r.yield.amount ? `${r.yield.amount} ${r.yield.unit}` : 'Original batch'}</output>
+        <button type="button" data-step="1" aria-label={r.yield.amount ? 'More' : 'Larger batch'}>+</button>
+      </div>
+      <button class="reset scale-reset" type="button" id="scale-reset" hidden>Back to original</button>
     </div>
 
     <div class="recipe">
       <section class="ingredients" id="ingredients" aria-labelledby="ingredients-title">
         <h2 id="ingredients-title">Ingredients</h2>
         <p class="caption">Tick off as you prepare <a class="jump" href="#method">Method ↓</a></p>
-        {!r.yield.scalable && <p class="caption">Shown for the original batch ({r.yield.label}).</p>}
+        <p class="caption scale-note" id="scale-note" hidden>Scaled from the original ({r.yield.label}).{!r.yield.scalable && ' Pan size and baking or cooking times may need adjusting.'}</p>
         {r.groups.map(group => (
           <>
             {(r.groups.length > 1 || group.name !== 'Ingredients') && <h3>{group.name}</h3>}
             {group.items.map(item => (
               <label class="ingredient">
                 <input type="checkbox" data-check={`i:${item.id}`}>
-                <span set:html={`${item.quantity != null ? `<b class="qty"${quantityAttrs(item)}>${amount(item)}</b> ` : ''}${escape(item.name)}${item.optional ? ' <small>Optional</small>' : ''}${item.note ? `<small>${escape(item.note)}</small>` : ''}${item.quantity == null && !item.note ? '<small>Amount not specified</small>' : ''}`} />
+                <span set:html={`${item.quantity != null ? `<b class="qty"${quantityAttrs(item)}>${amount(item)}</b> ` : ''}${escape(item.name)}${item.prep ? `, <span class="prep">${prepHtml(item.prep[0].toLowerCase() + item.prep.slice(1), base)}</span>` : ''}${item.optional ? ' <small>Optional</small>' : ''}${item.note ? `<small>${escape(item.note)}</small>` : ''}${item.quantity == null && !item.note ? '<small>Amount not specified</small>' : ''}`} />
               </label>
             ))}
           </>
@@ -127,6 +146,7 @@ const hostname = (u: string) => new URL(u).hostname.replace(/^www\./, '');
       <details>
         <summary>Provenance</summary>
         <ul>{r.adaptations.map(a => <li>{a}</li>)}</ul>
+        {r.originalLanguage && <p>Original language: {new Intl.DisplayNames(['en'], { type: 'language' }).of(r.originalLanguage)}.</p>}
         {r.sources.some(s => s.accessed) && <p>Sources accessed: {r.sources.filter(s => s.accessed).map(s => `${s.title} (${s.accessed})`).join(', ')}</p>}
         {archive && <p><a href={archive}>Original saved version</a></p>}
       </details>
@@ -163,28 +183,38 @@ const hostname = (u: string) => new URL(u).hostname.replace(/^www\./, '');
     const s = store.get(); delete s.checked; store.set(s);
   });
 
-  // Servings
-  const base = Number(article.dataset.yield);
-  const yieldLabel = document.getElementById('yield-label')!.textContent;
-  const output = document.getElementById('servings');
-  function scale(servings: number) {
-    if (!output) return;
-    output.textContent = `${servings} ${article.dataset.yieldUnit}`;
-    document.getElementById('yield-label')!.textContent = servings === base ? yieldLabel : `${servings} ${article.dataset.yieldUnit} (scaled from ${yieldLabel})`;
+  // Scaling: by portions when the yield is exact, otherwise by batch; always from the original amounts.
+  const base = Number(article.dataset.yield) || 0;
+  const step = Number(article.dataset.step) || 0;
+  const unit = article.dataset.yieldUnit;
+  const output = document.getElementById('servings')!;
+  const yieldLabelEl = document.getElementById('yield-label')!;
+  const yieldLabel = yieldLabelEl.textContent;
+  const batches = [0.25, 0.5, 1, 1.5, 2, 3, 4];
+  const params = new URLSearchParams(location.search);
+  let factor = 1;
+  function apply(f: number, save = true) {
+    factor = f;
+    const scaled = f !== 1;
+    output.textContent = base ? `${+(base * f).toFixed(2)} ${unit}` : scaled ? `×${f} batch` : 'Original batch';
+    yieldLabelEl.textContent = scaled ? `${base ? `${+(base * f).toFixed(2)} ${unit}` : `×${f}`} (scaled from ${yieldLabel})` : yieldLabel;
+    document.getElementById('scale-note')!.hidden = !scaled;
+    document.getElementById('scale-reset')!.hidden = !scaled;
     document.querySelectorAll<HTMLElement>('[data-qty]').forEach(el => {
       const target = el.matches('.ref') ? el.querySelector('.qty')! : el;
-      target.textContent = formatAmount(el.dataset, servings / base);
+      target.textContent = formatAmount(el.dataset, f);
     });
+    if (save) { const s = store.get(); s.factor = f; store.set(s); }
   }
-  if (output && base) {
-    let servings = state.servings || base;
-    scale(servings);
-    document.querySelectorAll<HTMLButtonElement>('.servings button').forEach(button => button.addEventListener('click', () => {
-      servings = Math.max(1, servings + Number(button.dataset.step));
-      scale(servings);
-      const s = store.get(); s.servings = servings; store.set(s);
-    }));
-  }
+  const planned = base && output.dataset.plannedServings ? Number(output.dataset.plannedServings) / base : Number(output.dataset.plannedBatches) || 0;
+  const fromUrl = base && params.get('servings') ? Number(params.get('servings')) / base : Number(params.get('batch')) || 0;
+  apply(fromUrl || state.factor || planned || 1, false);
+  document.querySelectorAll<HTMLButtonElement>('.servings button').forEach(button => button.addEventListener('click', () => {
+    const dir = Number(button.dataset.step);
+    if (base) apply(Math.max(step, base * factor + dir * step) / base);
+    else { const i = batches.findIndex(b => b >= factor - 1e-9); apply(batches[Math.min(batches.length - 1, Math.max(0, (i < 0 ? batches.length - 1 : i) + dir))]); }
+  }));
+  document.getElementById('scale-reset')!.addEventListener('click', () => apply(1));
 
   // Cooking view and printing
   const cook = document.getElementById('cook')!;

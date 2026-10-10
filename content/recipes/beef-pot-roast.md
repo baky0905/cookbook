@@ -1,183 +1,49 @@
 ---
 title: Beef pot roast
-description: ""
-category: Main dishes
-tags:
-  - beef
-language: en
+description: Chuck roast seared, then braised low and slow in red wine and stock with vegetables.
+category: Mains
+tags: [american, beef, slow-cooked, oven-baked, one-pot]
 status: needs-review
-yield:
-  label: Yield not recorded
-  scalable: false
-time: {}
+yield: { label: Yield not recorded, scalable: false }
+time: { cook: 4–5 h, rest: 30 min }
 groups:
-  - name: Recipe
+  - name: Ingredients
     items:
-      - id: i-1
-        ingredient: beef-pot-roast-beef-chuck-roast
-        name: Beef chuck roast
-        quantity: 1.5
-        max: 2
-        unit: kg
-        original: 1.5-2kg Beef chuck roast
-        category: Other
-        optional: false
-      - id: i-2
-        ingredient: beef-pot-roast-5-large-shallot-or-onion-chunky-diced
-        name: (5 large) Shallot or onion, chunky diced
-        quantity: 225
-        unit: g
-        original: 225g (5 large) Shallot or onion, chunky diced
-        category: Other
-        optional: false
-      - id: i-3
-        ingredient: beef-pot-roast-3-large-carrots-cut-into-obliques
-        name: (3 large) Carrots, cut into obliques
-        quantity: 225
-        unit: g
-        original: 225g (3 large) Carrots, cut into obliques
-        category: Other
-        optional: false
-      - id: i-4
-        ingredient: beef-pot-roast-4-6-stalks-celery-cut-into-3-5cm-pieces
-        name: (4-6 stalks) Celery, cut into 3-5cm pieces
-        quantity: 225
-        unit: g
-        original: 225g (4-6 stalks) Celery, cut into 3-5cm pieces
-        category: Other
-        optional: false
-      - id: i-5
-        ingredient: beef-pot-roast-4-5-cloves-garlic-minced
-        name: (4-5 cloves) Garlic, minced
-        quantity: 20
-        unit: g
-        original: 20g (4-5 cloves) Garlic, minced
-        category: Other
-        optional: false
-      - id: i-6
-        ingredient: beef-pot-roast-neutral-high-smokepoint-oil-canola-vegetable-soy-avocado
-        name: Neutral, high smokepoint oil (canola, vegetable, soy, avocado)
-        quantity: null
-        unit: ""
-        original: Neutral, high smokepoint oil (canola, vegetable, soy, avocado)
-        category: Other
-        optional: false
-      - id: i-7
-        ingredient: unsalted-butter
-        name: unsalted butter
-        quantity: 50
-        unit: g
-        original: 50g unsalted butter
-        category: Dairy & eggs
-        optional: false
-      - id: i-8
-        ingredient: tomato-paste
-        name: tomato paste
-        quantity: 25
-        unit: g
-        original: 25g tomato paste
-        category: Dry goods
-        optional: false
-      - id: i-9
-        ingredient: plain-flour
-        name: flour all purpose flour blend.
-        quantity: 25
-        unit: g
-        original: 25g flour all purpose flour blend.
-        category: Dry goods
-        optional: false
-      - id: i-10
-        ingredient: beef-pot-roast-red-wine
-        name: red wine
-        quantity: 150
-        unit: g
-        original: 150g red wine
-        category: Other
-        optional: false
-      - id: i-11
-        ingredient: beef-pot-roast-worcestershire
-        name: worcestershire
-        quantity: 25
-        unit: g
-        original: 25g worcestershire
-        category: Other
-        optional: false
-      - id: i-12
-        ingredient: beef-pot-roast-beed-bouillon-cube
-        name: beed bouillon cube
-        quantity: 1
-        unit: piece
-        original: 1 beed bouillon cube
-        category: Other
-        optional: false
-      - id: i-13
-        ingredient: beef-pot-roast-beef-stock
-        name: beef stock
-        quantity: 750
-        unit: g
-        original: 750g  beef stock
-        category: Other
-        optional: false
-      - id: i-14
-        ingredient: beef-pot-roast-bay-leaves
-        name: bay leaves
-        quantity: 2
-        unit: piece
-        original: 2 bay leaves
-        category: Other
-        optional: false
-      - id: i-15
-        ingredient: beef-pot-roast-springs-fresh-thyme
-        name: springs fresh thyme
-        quantity: 3
-        max: 4
-        unit: piece
-        original: 3-4 springs fresh thyme
-        category: Other
-        optional: false
+      - { id: beef, ingredient: beef-chuck-roast, name: beef chuck roast, quantity: 1.5, max: 2, unit: kg }
+      - { id: salt, ingredient: salt, name: salt, note: "Generous, for the meat and to season" }
+      - { id: shallots, ingredient: shallot, name: shallots or onions, quantity: 225, unit: g, prep: Chunky diced, note: About 5 large }
+      - { id: carrots, ingredient: carrot, name: carrots, quantity: 225, unit: g, prep: Cut into obliques, note: About 3 large }
+      - { id: celery, ingredient: celery, name: celery, quantity: 225, unit: g, prep: In 3–5 cm pieces, note: 4–6 stalks }
+      - { id: garlic, ingredient: garlic, name: garlic, quantity: 20, unit: g, prep: Minced, note: 4–5 cloves }
+      - { id: oil, ingredient: neutral-oil, name: neutral high-smoke-point oil, note: "Canola, vegetable, soy or avocado" }
+      - { id: butter, ingredient: unsalted-butter, name: unsalted butter, quantity: 50, unit: g }
+      - { id: paste, ingredient: tomato-paste, name: tomato paste, quantity: 25, unit: g }
+      - { id: flour, ingredient: plain-flour, name: plain flour, quantity: 25, unit: g }
+      - { id: wine, ingredient: red-wine, name: red wine, quantity: 150, unit: g }
+      - { id: worcestershire, ingredient: worcestershire-sauce, name: Worcestershire sauce, quantity: 25, unit: g }
+      - { id: bouillon, ingredient: beef-bouillon, name: beef bouillon cube or paste, quantity: 1, unit: piece }
+      - { id: stock, ingredient: beef-stock, name: beef stock, quantity: 750, unit: g }
+      - { id: bay, ingredient: bay-leaf, name: bay leaves, quantity: 2, unit: piece, scalable: false }
+      - { id: thyme, ingredient: thyme, name: fresh thyme, quantity: 3, max: 4, unit: sprig }
 steps:
-  - id: step-1
-    title: ""
-    text: Liberally salt all sides of the chuck roast and allow it to sit at room temp for 20 minutes.
-    images: []
-  - id: step-2
-    title: ""
-    text: While the beef brines, prep the veggies. Cut shallot into a chunky dice. Cut celery into 3-5cm long planks. Cut carrots into obliques (see video @1:26) or a large chunky dice. Mince garlic.
-    images: []
-  - id: step-3
-    title: ""
+  - { id: salt, title: Salt the beef, duration: 20 min, text: Salt the roast generously on all sides and leave it at room temperature. }
+  - { id: prep, title: Prepare the vegetables, text: "Meanwhile, chunky dice the shallots, cut the celery into 3–5 cm pieces and the carrots into obliques (video at 1:26) or large chunks. Mince the garlic." }
+  - { id: sear, title: Sear, duration: 11–13 min, text: "Dry the beef very well. Heat a Dutch oven or large heavy pot over high heat, add a long squeeze of oil and press the roast into the pan. Sear 6–7 minutes until a brown crust forms, flip and sear 5–6 minutes more. Transfer to a plate." }
+  - { id: vegetables, title: Cook the vegetables, duration: about 6 min, text: "Return the pot to medium heat. Add the butter, vegetables, garlic and a large pinch of salt and cook for about 3 minutes to caramelise slightly. Add the tomato paste and fry for about 2 minutes until it turns a darker rust colour. Stir in the flour for 30–60 seconds." }
+  - { id: liquid, title: Deglaze and simmer, text: "Add the wine and Worcestershire and stir to lift the browned bits from the bottom. When slightly thickened, add the bouillon and stock and bring to a simmer. Nestle the beef into the pot so it touches the bottom, and add the bay and thyme." }
+  - id: braise
+    title: Braise in the oven
+    duration: 4–5 h
     text: |-
-      Before searing, dry beef very well on all sides with a towel. 
-
-      Preheat a dutch oven or large heavy-bottomed pot over high heat. Add a long squeeze of neutral oil. Drop in salted roast and press the meat down into the pan. Sear for 6-7 minutes until a brown crust has formed. Flip and sear on the second side for 5-6min. Transfer to a plate.
-    images: []
-  - id: step-4
-    title: ""
-    text: Return the pot to medium heat and add 50g of butter, followed by veggies, garlic, and a large pinch of salt. Stir and cook to caramelize and slightly soften for about 3 min. Add tomato paste. Stir and saute for about 2 minutes until it has taken on a darker rusty color. Stir in flour for 30-60 sec.
-    images: []
-  - id: step-5
-    title: ""
-    text: Add in wine, worcestershire and stir to deglaze solids on the bottom of the pot. When slightly thickened, add better than bouillon and stock. Bring to a simmer. When simmering, snuggle the seared beef into the pot so that it’s touching the bottom of the pot. Add bay and thyme.
-    images: []
-  - id: step-6
-    title: ""
-    text: Add a probe thermometer if you have one, set the temp to 90C. cover the pot  leaving the lid slightly ajar, and load into a 275F/135C oven to cook for 4-5 hours. Checking on the beef in about 2 hours. Check the meat at this point. It shouldn’t be shreddable yet. Return the lid to the pot, and return the pot to the oven to cook for about 2-3 more hours, checking the roast gain at the 4-4.5 hour mark. You’re now looking to maintain the temperature of about 90C for a few more hours until the meat is fork tender and shreddable, but does not totally fall apart. If internal temp rises above this temp, turn down the oven to maintain 90C. When done, you'll be able to easily pull the meat apart with forks. Taste sauce for seasoning and add salt if needed.
-    images: []
-  - id: step-7
-    title: ""
-    text: |-
-      Allow beef to rest in the cooking liquids for about 30 minutes while you finish your potatoes. 
-
-      Serve a chunk of beef on top of baked bashed potatoes along with a few of the roasted veggies and extra sauce.
-    images: []
+      Insert a probe thermometer if you have one, set to 90 °C. Cover the pot with the lid slightly ajar and braise in a 135 °C oven.
+      Check after about 2 hours: the meat should not be shreddable yet. Return to the oven and check again at 4–4½ hours. Keep the meat at about 90 °C until fork-tender and shreddable but not falling apart; turn the oven down if the internal temperature climbs higher.
+      Taste the sauce and add salt if needed.
+  - { id: rest, title: Rest and serve, duration: 30 min, text: "Let the beef rest in the cooking liquid. Serve chunks of beef over smashed baked potatoes with some of the vegetables and plenty of sauce." }
 sources:
-  - title: Saved video
-    url: https://www.youtube.com/watch?v=eVuXwv1yxo0
+  - { title: Saved video, url: "https://www.youtube.com/watch?v=eVuXwv1yxo0" }
 issues:
   - Yield is not recorded.
 adaptations:
-  - Migrated from the saved cookbook. Original wording and source links preserved; external sources have not been reverified.
+  - "Oven temperature given in °C only."
 legacyPath: main_dishes/beef_pot_roast/
 ---
-
-

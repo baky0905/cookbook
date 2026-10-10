@@ -3,7 +3,8 @@ import RefPage from '../../components/RefPage.astro';
 import { readReference } from '../../lib/reference.mjs';
 import { picture } from '../../lib/media.mjs';
 const data = readReference('cuts');
-const cuts = await Promise.all(data.cuts.map(async c => ({ ...c, img: c.photo ? await picture(c.photo, 400) : null })));
+const cuts = await Promise.all(data.cuts.map(async (c: any) => ({ ...c, img: c.photo?.src ? await picture(c.photo.src, 480) : null })));
+const search = (q: string) => `https://www.seriouseats.com/search?q=${encodeURIComponent(q)}`;
 // Diagrams use millimetres as SVG units and CSS mm as size, so they render close to actual size.
 function shape(c: any) {
   const s = c.mm;
@@ -23,14 +24,46 @@ function shape(c: any) {
   <div class="cuts">
     {cuts.map(c => { const d = shape(c); return (
       <section class="cut" id={c.id}>
-        <div class="cut-art">
-          {c.img ? <img src={c.img.src} width={c.img.width} height={c.img.height} alt={c.name} loading="lazy">
-            : <svg width={`${d.w}mm`} height={`${d.h}mm`} viewBox={`0 0 ${d.w} ${d.h}`} role="img" aria-label={`${c.name}, ${c.size}`} set:html={d.body} />}
+        {c.img && (
+          <figure class="cut-photo">
+            <button type="button" class="zoom" data-full={c.img.full} aria-label={`Enlarge photo: ${c.name}`}><img src={c.img.src} width={c.img.width} height={c.img.height} alt={`${c.name}: ${c.aka}`} loading="lazy"></button>
+            <figcaption>Photo: <a href={c.photo.source} rel="noopener">{c.photo.credit}</a>, {c.photo.license}</figcaption>
+          </figure>
+        )}
+        <h2><span aria-hidden="true">{c.icon}</span> {c.name}</h2>
+        <p><strong>{c.size}</strong> <span class="caption">· {c.aka}</span></p>
+        <div class="cut-art" title="Drawn to scale">
+          <svg width={`${d.w}mm`} height={`${d.h}mm`} viewBox={`0 0 ${d.w} ${d.h}`} role="img" aria-label={`${c.name}, ${c.size}, drawn to scale`} set:html={d.body} />
         </div>
-        <h2>{c.name}</h2>
-        <p><strong>{c.size}</strong></p>
-        <p class="caption">{c.aka}</p>
       </section>
     ); })}
   </div>
+
+  <h2 class="ref-section">Knife basics</h2>
+  <ul class="basics">{data.basics.map((b: string) => <li>{b}</li>)}</ul>
+
+  {data.guides.map((g: any) => (
+    <>
+      <h2 class="ref-section">How to cut: {g.group.toLowerCase()}</h2>
+      <div class="guides">
+        {g.items.map((it: any) => (
+          <section class="guide">
+            <h3><span aria-hidden="true">{it.icon}</span> {it.name}</h3>
+            <ol>{it.steps.map((st: string) => <li>{st}</li>)}</ol>
+            <a href={search(it.search)} rel="noopener">Step-by-step photos (Serious Eats) ↗</a>
+          </section>
+        ))}
+      </div>
+    </>
+  ))}
+  <dialog class="lightbox" aria-label="Enlarged photo"><button class="close" type="button">Close ✕</button><img alt=""><p></p></dialog>
 </RefPage>
+<script>
+  const dialog = document.querySelector<HTMLDialogElement>('dialog.lightbox')!;
+  document.querySelectorAll<HTMLButtonElement>('.zoom').forEach(b => b.addEventListener('click', () => {
+    dialog.querySelector('img')!.src = b.dataset.full!; dialog.querySelector('img')!.alt = b.querySelector('img')!.alt;
+    dialog.querySelector('p')!.textContent = b.querySelector('img')!.alt; dialog.showModal();
+  }));
+  dialog.querySelector('.close')!.addEventListener('click', () => dialog.close());
+  dialog.addEventListener('click', e => { if (e.target === dialog) dialog.close(); });
+</script>

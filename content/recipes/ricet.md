@@ -1,95 +1,43 @@
 ---
-title: Ricet
-description: ""
-category: Main dishes
-tags:
-  - beans
-  - sausage
-language: hr
+title: Ričet
+description: Grandma's thick barley and bean stew with smoked sausage and bacon.
+category: Soups & stews
+tags: [croatian, legumes, grains, sausage, slow-cooked, family-recipe]
+originalLanguage: hr
 status: needs-review
-yield:
-  label: 6 portions
-  scalable: false
-time: {}
+yield: { label: 6 portions, amount: 6, unit: portions, scalable: true }
+time: { cook: 1–1½ h }
+cover: { src: ricet/ricet.webp, alt: A bowl of ričet with beans and barley, credit: From the original cookbook }
 groups:
   - name: Ingredients
     items:
-      - id: i-1
-        ingredient: ricet-luka
-        name: luka
-        quantity: 2
-        unit: piece
-        original: 2 luka
-        category: Other
-        optional: false
-      - id: i-2
-        ingredient: ricet-jecmene-kase
-        name: ječmene kaše
-        quantity: 250
-        unit: g
-        original: 25 dag ječmene kaše
-        category: Other
-        optional: false
-      - id: i-3
-        ingredient: ricet-kranjske-kobasice-suho-meso-spek
-        name: kranjske kobasice(suho meso...), špek
-        quantity: 2
-        unit: piece
-        original: 2 kranjske kobasice(suho meso...), špek
-        category: Other
-        optional: false
-      - id: i-4
-        ingredient: ricet-limenka-crvenoga-graha
-        name: limenka crvenoga graha
-        quantity: 1
-        unit: piece
-        original: 1  limenka crvenoga graha
-        category: Other
-        optional: false
-      - id: i-5
-        ingredient: ricet-sol-papar-lovorov-list-vegeta-crvena-mljevena-paprika
-        name: sol,papar,lovorov list,vegeta,crvena mljevena paprika
-        quantity: null
-        unit: ""
-        original: sol,papar,lovorov list,vegeta,crvena mljevena paprika
-        category: Other
-        optional: false
-      - id: i-6
-        ingredient: ricet-kecapa
-        name: kečapa
-        quantity: 2
-        unit: tbsp
-        original: 2 žlice kečapa
-        category: Other
-        optional: false
+      - { id: onions, ingredient: onion, name: onions, quantity: 2, unit: piece, prep: Finely chopped }
+      - { id: barley, ingredient: pearl-barley, name: pearl barley, quantity: 250, unit: g }
+      - { id: sausage, ingredient: kranjska-sausage, name: Kranjska sausages, quantity: 2, unit: piece, note: Or other smoked meat }
+      - { id: bacon, ingredient: smoked-bacon, name: smoked bacon, note: Amount not recorded }
+      - { id: beans, ingredient: red-kidney-beans, name: red kidney beans, quantity: 1, unit: can }
+      - { id: garlic, ingredient: garlic, name: garlic, quantity: 2, unit: clove, prep: Finely chopped }
+      - { id: oil, ingredient: sunflower-oil, name: oil, note: For frying }
+      - { id: bay, ingredient: bay-leaf, name: bay leaves, quantity: 2, unit: piece, scalable: false }
+      - { id: water, ingredient: water, name: water, note: To cover the barley }
+      - { id: salt, ingredient: salt, name: salt, note: To taste }
+      - { id: pepper, ingredient: black-pepper, name: black pepper, note: To taste }
+      - { id: vegeta, ingredient: vegeta, name: Vegeta seasoning, note: To taste }
+      - { id: paprika, ingredient: sweet-paprika, name: ground sweet paprika, note: To taste }
+      - { id: ketchup, ingredient: ketchup, name: ketchup, quantity: 30, unit: ml, optional: true }
+      - { id: cayenne, ingredient: cayenne-pepper, name: cayenne pepper or hot paprika, note: "A little, if you like heat", optional: true }
 steps:
-  - id: step-1
-    title: ""
-    text: Jedan luk sitno nasjeckati  popržiti ga na ulju,kad postane staklast dodati    ječmenu kašu, dva lista lovora. Zaliti vodom i kuhati oko sat ( sat i pol ) na laganoj vatri (tj.dok se kaša ne skuha).
-    images: []
-  - id: step-2
-    title: ""
-    text: Pred kraj dodati  grah iz limenke
-    images: []
-  - id: step-3
-    title: ""
-    text: 3.  Drugi luk sitno nasjeckati pržiti na ulju dodati slaninu da se malo prepeće i na kraju dva češnja češnjaka sitno sjeckana.
-    images: []
-  - id: step-4
-    title: ""
-    text: "Dodati u grah i ječmenu kašu i dodati začine: sol, vegetu, crvenu mljevenu papriku i kečap ( može i bez ako ti smeta ), ja dodam kajenski papar i malo ljute paprike."
-    images: []
+  - { id: barley, title: Cook the barley, duration: 1–1½ h, text: "Fry one finely chopped onion in oil. When it turns translucent, add the barley and the bay leaves. Cover with water and simmer gently until the barley is cooked." }
+  - { id: beans, title: Add the beans, text: "Towards the end, add the beans from the can." }
+  - { id: fry, title: Fry the bacon, text: "Fry the second chopped onion in oil, add the bacon and let it crisp a little, then add the finely chopped garlic." }
+  - { id: season, title: Combine and season, text: "Stir the bacon mixture into the barley and beans. Season with salt, Vegeta, paprika and the ketchup (leave it out if you prefer). Grandma also adds cayenne pepper and a little hot paprika." }
 sources:
-  - title: Family recipe · grandma
+  - { title: Family recipe · grandma }
 issues:
-  - Garlic and frying oil are used in the steps but absent from the ingredient list; the sausage cooking step is unclear.
+  - The method does not say when or how to cook the sausages.
+  - The amounts of bacon and water are not recorded.
 adaptations:
-  - Migrated from the saved cookbook. Original wording and source links preserved; external sources have not been reverified.
+  - Translated from Croatian.
+  - "Converted to metric: barley 25 dag → 250 g; ketchup 30 ml (15 ml per spoon)."
 legacyPath: main_dishes/ricet/
-cover:
-  src: ricet/ricet.png
-  alt: Ricet
-  credit: Image from the existing cookbook; original attribution retained in the archive.
 ---
-
-

@@ -13,15 +13,18 @@
     "legacyPath": "main_dishes/beef_stroganoff_with_noodles/",
     "sha256": "29fe4135d307f64bff6e3c2da0f0e7aa25fd8920fd309a1076eba3dbc4a71529",
     "ingredientCount": 17,
-    "stepCount": 8
+    "stepCount": 8,
+    "removed": "2026-10-10"
   },
   {
-    "id": "brocolli-cheddar-soup-in-bread",
+    "id": "broccoli-cheddar-soup-in-bread",
     "original": "docs/main_dishes/brocolli_cheddar_soup_in_bread.md",
     "legacyPath": "main_dishes/brocolli_cheddar_soup_in_bread/",
     "sha256": "2e9b986307968ae974ac3eaa6c4c3505593d6ed67ca0f7f8e0a2405c2cded93f",
     "ingredientCount": 18,
-    "stepCount": 7
+    "stepCount": 7,
+    "migratedAs": "brocolli-cheddar-soup-in-bread",
+    "removed": "2026-10-10"
   },
   {
     "id": "chicken-paprikash",
@@ -29,15 +32,17 @@
     "legacyPath": "main_dishes/chicken_paprikash/",
     "sha256": "12508960369ff9be1c86cf9fbfbc4721cdc739804583f9135a5c578f181d74bf",
     "ingredientCount": 11,
-    "stepCount": 4
+    "stepCount": 4,
+    "removed": "2026-10-10"
   },
   {
-    "id": "ciopinno",
+    "id": "cioppino",
     "original": "docs/main_dishes/ciopinno.md",
     "legacyPath": "main_dishes/ciopinno/",
     "sha256": "cf3283e8c02e8f6090d48f90055e3068cb29e98e1d229c1e6e1372c264ec3928",
     "ingredientCount": 17,
-    "stepCount": 5
+    "stepCount": 5,
+    "migratedAs": "ciopinno"
   },
   {
     "id": "detroit-style-pan-pizza",
@@ -88,12 +93,13 @@
     "stepCount": 6
   },
   {
-    "id": "minced-meat-roles",
+    "id": "minced-meat-rolls",
     "original": "docs/main_dishes/minced_meat_roles.md",
     "legacyPath": "main_dishes/minced_meat_roles/",
     "sha256": "dfe1caef068b7ebb15e7ad3612658c899ab1a694e0b781e5cf2600bd313f7302",
     "ingredientCount": 13,
-    "stepCount": 2
+    "stepCount": 2,
+    "migratedAs": "minced-meat-roles"
   },
   {
     "id": "pasta-bolognese",
@@ -133,7 +139,8 @@
     "legacyPath": "main_dishes/sausage_and_sauerkraut/",
     "sha256": "4551736dac2dcb4a91cdc59340d7aed6aa2aeb5bd43c4e126a59771dc1189ee8",
     "ingredientCount": 5,
-    "stepCount": 3
+    "stepCount": 3,
+    "removed": "2026-10-10"
   },
   {
     "id": "sloppy-joe",
@@ -141,7 +148,8 @@
     "legacyPath": "main_dishes/sloppy_joe/",
     "sha256": "e1c1837ec0f49b31c39752efb9fa37c0ea89dc27caaa2028bd9655158c1d2d78",
     "ingredientCount": 20,
-    "stepCount": 1
+    "stepCount": 1,
+    "removed": "2026-10-10"
   },
   {
     "id": "squash-patties",
@@ -152,20 +160,22 @@
     "stepCount": 1
   },
   {
-    "id": "mashed-potatos",
+    "id": "mashed-potatoes",
     "original": "docs/side_dishes/mashed_potatos.md",
     "legacyPath": "side_dishes/mashed_potatos/",
     "sha256": "f3191358f29a611efc2be218f54e89f22b95631cf30994007ea0f33bcef2361b",
     "ingredientCount": 3,
-    "stepCount": 1
+    "stepCount": 1,
+    "migratedAs": "mashed-potatos"
   },
   {
-    "id": "roasted-potatos",
+    "id": "roasted-potatoes",
     "original": "docs/side_dishes/roasted_potatos.md",
     "legacyPath": "side_dishes/roasted_potatos/",
     "sha256": "0ab8ac760d5b2c6a7fdc9d5f4d613bb30508e68daf860ce9bb5d0fac698c910e",
     "ingredientCount": 8,
-    "stepCount": 5
+    "stepCount": 5,
+    "migratedAs": "roasted-potatos"
   },
   {
     "id": "bazlama",
@@ -173,7 +183,8 @@
     "legacyPath": "snacks/bazlama/",
     "sha256": "5e45d67af74f30f5483b26cace2bccad20c2a5f8c0b33c1e001dd130a7ca82d1",
     "ingredientCount": 7,
-    "stepCount": 1
+    "stepCount": 1,
+    "removed": "2026-10-10"
   },
   {
     "id": "easy-bread",
@@ -184,12 +195,13 @@
     "stepCount": 11
   },
   {
-    "id": "foccacia",
+    "id": "focaccia",
     "original": "docs/snacks/foccacia.md",
     "legacyPath": "snacks/foccacia/",
     "sha256": "29b31e7e31a5a0b341bfbcfb0e7c2e6a73a1b98e61dcaa56eeac800dabaf74f7",
     "ingredientCount": 5,
-    "stepCount": 4
+    "stepCount": 4,
+    "migratedAs": "foccacia"
   },
   {
     "id": "kiflice",
@@ -232,20 +244,23 @@
     "stepCount": 1
   },
   {
-    "id": "macaroon",
+    "id": "macarons",
     "original": "docs/desserts/macaroon.md",
     "legacyPath": "desserts/macaroon/",
     "sha256": "ff581e4c675010e85e947564662d39d37eb1c949d900dc2de86d868dad08f2d5",
     "ingredientCount": 13,
-    "stepCount": 1
+    "stepCount": 1,
+    "migratedAs": "macaroon",
+    "removed": "2026-10-10"
   },
   {
-    "id": "mini-strudle",
+    "id": "mini-strudel",
     "original": "docs/desserts/mini_strudle.md",
     "legacyPath": "desserts/mini_strudle/",
     "sha256": "6443d3631927e117e41e69acc199d5a6fcde811f0105842215dfe9dea6221038",
     "ingredientCount": 7,
-    "stepCount": 10
+    "stepCount": 10,
+    "migratedAs": "mini-strudle"
   },
   {
     "id": "orehnjaca",
@@ -256,11 +271,12 @@
     "stepCount": 7
   },
   {
-    "id": "tackrle-pekmez",
+    "id": "tackrle",
     "original": "docs/desserts/tackrle_pekmez.md",
     "legacyPath": "desserts/tackrle_pekmez/",
     "sha256": "73172f3f6d104c22681fed9c9b899cb0dd82d4d92d3036f44e26f36f32c3ca7d",
     "ingredientCount": 7,
-    "stepCount": 1
+    "stepCount": 1,
+    "migratedAs": "tackrle-pekmez"
   }
 ]

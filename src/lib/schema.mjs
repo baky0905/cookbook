@@ -1,45 +1,85 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import YAML from 'yaml';
 import { z } from 'zod';
 
-const id = z.string().regex(/^[a-z0-9]+(?:-[a-z0-9]+)*$/);
+// Controlled lists live in content/taxonomy.yaml so they can grow without code changes.
+const read = file => YAML.parse(fs.readFileSync(path.join(process.cwd(), 'content', file), 'utf8'));
+export const taxonomy = read('taxonomy.yaml');
+export const recipeCategories = taxonomy.categories.map(c => c.name);
+export const shoppingCategories = taxonomy.aisles;
+export const units = [...taxonomy.units.map(u => u.id), ''];
+export const plurals = Object.fromEntries(taxonomy.units.filter(u => u.plural).map(u => [u.id, u.plural]));
+export const tagGroups = taxonomy.tagGroups;
+export const allowedTags = new Set(tagGroups.flatMap(g => g.tags));
+
+export const id = z.string().regex(/^[a-z0-9]+(?:-[a-z0-9]+)*$/, 'use lowercase letters, digits and hyphens');
 const positive = z.number().positive();
+// Editors save empty fields as '' or null; treat both as "not set".
+const blank = v => (v === '' || v === null ? undefined : v);
+const opt = schema => z.preprocess(blank, schema.optional());
+
+export const ingredientCatalogSchema = z.object({
+  ingredients: z.array(z.object({
+    id, name: z.string().min(1), aisle: z.enum(shoppingCategories),
+    kcal: opt(z.number().nonnegative()), density: opt(positive),
+    weights: opt(z.record(z.string(), positive)), staple: z.boolean().default(false), shop: z.boolean().default(true),
+  })),
+});
+export const readCatalog = () => ingredientCatalogSchema.parse(read('ingredients.yaml')).ingredients;
+
 export const photoSchema = z.object({
-  src: z.string().min(1), alt: z.string().min(1), caption: z.string().optional(),
-  credit: z.string().optional(), source: z.string().url().optional(),
-});
+  src: z.string().min(1), alt: z.string().min(1), caption: opt(z.string()),
+  credit: opt(z.string()), source: opt(z.string().url()),
+}).strict();
 export const ingredientSchema = z.object({
-  id, ingredient: id, name: z.string().min(1), quantity: positive.nullable().default(null),
-  max: positive.optional(), unit: z.enum(['g','kg','ml','l','tsp','tbsp','piece','pinch','clove','can','package','sprig','']).default(''),
-  note: z.string().optional(), original: z.string().optional(),
+  id, ingredient: id, name: z.string().min(1),
+  quantity: z.preprocess(blank, positive.nullable().default(null)), max: opt(positive),
+  // prep: what to do before cooking ("finely chopped"); note: anything else. The ingredient list doubles as the prep list.
+  unit: z.preprocess(v => v ?? '', z.enum(units)), prep: opt(z.string()), note: opt(z.string()),
   optional: z.boolean().default(false), scalable: z.boolean().default(true),
-  category: z.enum(['Produce','Meat & fish','Dairy & eggs','Bakery','Dry goods','Herbs & spices','Other']).default('Other'),
-}).refine(v => v.max === undefined || (v.quantity !== null && v.max >= v.quantity), 'Invalid quantity range');
+}).strict().refine(v => v.max === undefined || (v.quantity !== null && v.max >= v.quantity), 'Invalid quantity range');
+
 export const recipeSchema = z.object({
-  title: z.string().min(1), description: z.string().default(''), category: z.string().min(1),
-  tags: z.array(z.string()).default([]), language: z.string().default('en'),
-  status: z.enum(['draft','needs-review','reviewed','cooked']).default('draft'),
-  yield: z.object({ label: z.string().min(1), amount: positive.optional(), unit: z.string().default('portions'), scalable: z.boolean().default(false) }),
-  time: z.object({ total: z.string().optional(), active: z.string().optional(), cook: z.string().optional(), rest: z.string().optional() }).default({}),
-  groups: z.array(z.object({ name: z.string(), items: z.array(ingredientSchema).min(1) })).min(1),
-  steps: z.array(z.object({ id, title: z.string().default(''), text: z.string().min(1), duration: z.string().optional(), images: z.array(photoSchema).default([]) })).min(1),
-  cover: photoSchema.optional(),
-  sources: z.array(z.object({ title: z.string(), url: z.string().url().optional(), accessed: z.string().optional(), timestamp: z.string().optional() })).default([]),
+  title: z.string().min(1), description: z.preprocess(v => v ?? '', z.string()), category: z.enum(recipeCategories),
+  tags: z.array(z.string()).default([]), language: z.literal('en').default('en'), originalLanguage: opt(z.string()),
+  aliases: z.array(id).default([]),
+  status: z.enum(['draft', 'needs-review', 'reviewed', 'cooked']).default('draft'),
+  // amount: what the original recipe makes, for scaling by portions. scalable: false warns that pan size or times may need adjusting.
+  yield: z.object({ label: z.string().min(1), amount: opt(positive), unit: z.preprocess(v => v || 'portions', z.string()), scalable: z.boolean().default(false) }).strict(),
+  time: z.object({ total: opt(z.string()), active: opt(z.string()), cook: opt(z.string()), rest: opt(z.string()) }).strict().default({}),
+  nutrition: opt(z.object({ kcalPerPortion: opt(positive), source: opt(z.string()) })),
+  groups: z.array(z.object({ name: z.string(), items: z.array(ingredientSchema).min(1) }).strict()).min(1),
+  steps: z.array(z.object({ id, title: z.preprocess(v => v ?? '', z.string()), text: z.string().min(1), duration: opt(z.string()), images: z.preprocess(v => v ?? [], z.array(photoSchema)) }).strict()).min(1),
+  cover: opt(photoSchema),
+  sources: z.array(z.object({ title: z.string(), url: opt(z.string().url()), accessed: opt(z.string()), timestamp: opt(z.string()) }).strict()).default([]),
   issues: z.array(z.string()).default([]), adaptations: z.array(z.string()).default([]),
-  legacyPath: z.string().regex(/^[a-z_]+\/[a-z_]+\/$/).optional(),
-}).superRefine((r,ctx)=>{
-  if(r.yield.scalable && !r.yield.amount) ctx.addIssue({code:'custom',message:'Scalable recipes need an exact yield'});
-  const items = r.groups.flatMap(g=>g.items);
-  for(const [kind,values] of [['ingredient',items.map(x=>x.id)],['step',r.steps.map(x=>x.id)]]) {
-    if(new Set(values).size !== values.length) ctx.addIssue({code:'custom',message:`Duplicate ${kind} ID`});
+  legacyPath: opt(z.string().regex(/^[a-z_]+\/[a-z_]+\/$/)),
+}).strict().superRefine((r, ctx) => {
+  const items = r.groups.flatMap(g => g.items);
+  for (const [kind, values] of [['ingredient', items.map(x => x.id)], ['step', r.steps.map(x => x.id)]]) {
+    if (new Set(values).size !== values.length) ctx.addIssue({ code: 'custom', message: `Duplicate ${kind} ID` });
   }
-  for(const step of r.steps) for(const match of step.text.matchAll(/\{\{([a-z0-9-]+)\}\}/g)) {
-    if(!items.some(i=>i.id===match[1])) ctx.addIssue({code:'custom',message:`Unknown ingredient reference ${match[1]}`});
+  for (const step of r.steps) for (const match of step.text.matchAll(/\{\{([a-z0-9-]+)\}\}/g)) {
+    if (!items.some(i => i.id === match[1])) ctx.addIssue({ code: 'custom', message: `Unknown ingredient reference ${match[1]}` });
   }
 });
+
+const date = z.string().regex(/^\d{4}-\d{2}-\d{2}$/, 'use YYYY-MM-DD');
+export const extraSchema = z.object({
+  ingredient: opt(id), name: opt(z.string()), quantity: opt(positive), max: opt(positive),
+  unit: z.preprocess(v => v ?? '', z.enum(units)), note: opt(z.string()),
+}).strict().refine(e => e.ingredient || e.name, 'An extra item needs an ingredient or a name');
 export const planSchema = z.object({
-  id, title: z.string(), example: z.boolean().default(false),
-  meals: z.array(z.object({ id, date: z.string().regex(/^\d{4}-\d{2}-\d{2}$/), meal: z.string().default('Dinner'), recipe: id.optional(), title: z.string().optional(), servings: positive.optional(), batches: positive.optional(), leftoversFrom: id.optional(), note: z.string().optional() })),
+  id, title: z.string(), example: z.boolean().default(false), start: opt(date), notes: opt(z.string()),
+  // A meal's id defaults to "<date>-<meal>", so planning on a phone needs no extra typing.
+  meals: z.preprocess(v => (v ?? []).map(m => m && typeof m === 'object' && !m.id && m.date ? { ...m, id: `${m.date}-${String(m.meal || 'dinner').toLowerCase()}` } : m), z.array(z.object({
+    id, date, meal: z.preprocess(v => v || 'Dinner', z.string()), recipe: opt(id), title: opt(z.string()),
+    servings: opt(positive), batches: opt(positive), leftoversFrom: opt(id), note: opt(z.string()),
+  }).strict())),
+  extras: z.preprocess(v => v ?? [], z.array(extraSchema)),
 });
 export const pantrySchema = z.object({
-  updated: z.string().nullable(),
-  items: z.array(z.object({ ingredient:id,name:z.string(),quantity:positive.optional(),unit:z.string().optional(),stocked:z.boolean().default(false) })),
+  updated: z.preprocess(blank, z.string().nullable().default(null)),
+  items: z.preprocess(v => v ?? [], z.array(z.object({ ingredient: id, name: z.string(), quantity: opt(positive), unit: opt(z.string()), stocked: z.boolean().default(false) }))),
 });

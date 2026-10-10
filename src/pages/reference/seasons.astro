@@ -2,39 +2,56 @@
 import RefPage from '../../components/RefPage.astro';
 import { readReference } from '../../lib/reference.mjs';
 const data = readReference('seasons');
-const months = ['J', 'F', 'M', 'A', 'M', 'J', 'J', 'A', 'S', 'O', 'N', 'D'];
+const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 const names = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
-const items = data.groups.flatMap(g => g.items);
+const items = data.groups.flatMap((g: any) => g.items);
+const at = (m: number, key: 'fresh' | 'stored') => items.filter((i: any) => i[key]?.includes(m));
+// The build month is the default; the browser switches to the viewer's current month.
+const buildMonth = new Date().getMonth() + 1;
 ---
 <RefPage data={data}>
-  <section class="season-now" data-items={JSON.stringify(items.map(i => [i.name, i.fresh || [], i.stored || []]))}>
-    <h2 id="now-title">In season now</h2>
-    <p class="caption" hidden data-js>Fresh: <span id="now-fresh"></span></p>
-    <p class="caption" hidden data-js>From storage: <span id="now-stored"></span></p>
-  </section>
-  <p class="legend"><span class="cell fresh"></span> fresh <span class="cell stored"></span> from storage</p>
-  {data.groups.map(g => (
-    <>
-      <h2>{g.name}</h2>
-      <table class="season">
-        <thead><tr><th scope="col"></th>{months.map((m, i) => <th scope="col" data-month={i + 1} title={names[i]}>{m}</th>)}</tr></thead>
-        <tbody>{g.items.map(item => (
-          <tr><th scope="row">{item.name} <small>{item.no}</small></th>
-            {months.map((_, i) => <td data-month={i + 1} class={item.fresh?.includes(i + 1) ? 'cell fresh' : item.stored?.includes(i + 1) ? 'cell stored' : 'cell'}><span class="visually-hidden">{item.fresh?.includes(i + 1) ? 'fresh' : item.stored?.includes(i + 1) ? 'stored' : ''}</span></td>)}
+  <div class="month-tabs" role="tablist" aria-label="Month">
+    {months.map((m, i) => <button type="button" role="tab" id={`tab-${i + 1}`} aria-controls={`month-${i + 1}`} aria-selected={String(i + 1 === buildMonth)} data-month={i + 1}><span>{i + 1}</span>{m}</button>)}
+  </div>
+  {months.map((_, i) => (
+    <section class="month-panel" role="tabpanel" id={`month-${i + 1}`} aria-labelledby={`tab-${i + 1}`} hidden={i + 1 !== buildMonth}>
+      <h2>{names[i]}</h2>
+      <h3 class="kind"><span class="dot fresh"></span> Fresh</h3>
+      {at(i + 1, 'fresh').length ? <ul class="produce">{at(i + 1, 'fresh').map((p: any) => <li><span aria-hidden="true">{p.icon}</span> {p.name} <small>{p.no}</small></li>)}</ul> : <p class="caption">Nothing fresh from Norwegian fields this month.</p>}
+      {at(i + 1, 'stored').length > 0 && (
+        <>
+          <h3 class="kind"><span class="dot stored"></span> From storage</h3>
+          <ul class="produce stored">{at(i + 1, 'stored').map((p: any) => <li><span aria-hidden="true">{p.icon}</span> {p.name} <small>{p.no}</small></li>)}</ul>
+        </>
+      )}
+    </section>
+  ))}
+
+  <details class="year">
+    <summary>Whole year</summary>
+    <p class="legend"><span class="dot fresh"></span> fresh <span class="dot stored"></span> from storage</p>
+    {data.groups.map((g: any) => (
+      <div class="table-wrap"><table class="season">
+        <caption>{g.name}</caption>
+        <thead><tr><th scope="col"></th>{months.map((m, i) => <th scope="col" data-month={i + 1} title={names[i]}><span>{i + 1}</span>{m}</th>)}</tr></thead>
+        <tbody>{g.items.map((item: any) => (
+          <tr><th scope="row"><span aria-hidden="true">{item.icon}</span> {item.name}</th>
+            {months.map((_, i) => { const k = item.fresh?.includes(i + 1) ? 'fresh' : item.stored?.includes(i + 1) ? 'stored' : ''; return <td data-month={i + 1}>{k && <span class={`dot ${k}`} title={k}></span>}<span class="visually-hidden">{k}</span></td>; })}
           </tr>
         ))}</tbody>
-      </table>
-    </>
-  ))}
+      </table></div>
+    ))}
+  </details>
 </RefPage>
 <script>
-  // Highlight the viewer's current month; the static page shows the whole year.
-  const month = new Date().getMonth() + 1;
-  const now = document.querySelector<HTMLElement>('.season-now')!;
-  const items: [string, number[], number[]][] = JSON.parse(now.dataset.items!);
-  document.getElementById('now-title')!.textContent = `In season now · ${new Date().toLocaleDateString('en-GB', { month: 'long' })}`;
-  document.getElementById('now-fresh')!.textContent = items.filter(i => i[1].includes(month)).map(i => i[0]).join(', ') || 'nothing fresh this month';
-  document.getElementById('now-stored')!.textContent = items.filter(i => i[2].includes(month)).map(i => i[0]).join(', ') || '–';
-  document.querySelectorAll<HTMLElement>('[data-js]').forEach(el => (el.hidden = false));
-  document.querySelectorAll<HTMLElement>(`[data-month="${month}"]`).forEach(el => el.classList.add('now'));
+  const tabs = [...document.querySelectorAll<HTMLButtonElement>('.month-tabs [role=tab]')];
+  function show(month: number) {
+    tabs.forEach(t => t.setAttribute('aria-selected', String(Number(t.dataset.month) === month)));
+    document.querySelectorAll<HTMLElement>('.month-panel').forEach(p => (p.hidden = p.id !== `month-${month}`));
+    document.querySelectorAll('.season .now').forEach(el => el.classList.remove('now'));
+    document.querySelectorAll(`.season [data-month="${month}"]`).forEach(el => el.classList.add('now'));
+  }
+  tabs.forEach(t => t.addEventListener('click', () => show(Number(t.dataset.month))));
+  show(new Date().getMonth() + 1);
+  document.querySelector(`.month-tabs [aria-selected="true"]`)?.scrollIntoView({ block: 'nearest', inline: 'center' });
 </script>

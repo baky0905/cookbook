@@ -1,154 +1,53 @@
 ---
-title: Easy bread
-description: ""
-category: Bread & snacks
-tags:
-  - dough
-language: en
+title: Easy no-knead bread
+description: Crusty artisan-style loaf from a wet no-knead dough, baked in a Dutch oven.
+category: Breads & doughs
+tags: [yeast-dough, no-knead, oven-baked, make-ahead, vegetarian]
 status: needs-review
-yield:
-  label: Yield not recorded
-  scalable: false
-time: {}
+yield: { label: 1 loaf, amount: 1, unit: loaves, scalable: false }
+time: { rest: "2–3 h (or up to 3 days in the fridge)", cook: 42 min }
 groups:
-  - name: Ingredients
+  - name: Dough
     items:
-      - id: i-1
-        ingredient: easy-bread-flour-bread-or-plain-all-purpose-note-1
-        name: flour bread or plain/all purpose (Note 1)
-        quantity: 450
-        unit: g
-        original: 450g flour bread or plain/all purpose (Note 1)
-        category: Other
-        optional: false
-      - id: i-2
-        ingredient: easy-bread-instant-yeast-note-2-for-normal-active-dry-yeast
-        name: instant yeast (Note 2 for normal / active dry yeast)
-        quantity: 6
-        unit: g
-        original: 6 grams of instant yeast (Note 2 for normal / active dry yeast)
-        category: Other
-        optional: false
-      - id: i-3
-        ingredient: salt
-        name: table salt
-        quantity: 7
-        unit: g
-        original: 7 grams of table salt
-        category: Herbs & spices
-        optional: false
-      - id: i-4
-        ingredient: easy-bread-very-warm-tap-water-up-to-55-c-note-4
-        name: very warm tap water up to 55°C (Note 4)
-        quantity: 375
-        unit: ml
-        original: 375 ml very warm tap water up to 55°C (Note 4)
-        category: Other
-        optional: false
-  - name: DOUGH SHAPING
+      - { id: flour, ingredient: bread-flour, name: bread flour or plain flour, quantity: 450, unit: g, note: See notes }
+      - { id: yeast, ingredient: instant-yeast, name: instant yeast, quantity: 6, unit: g, note: See notes for active dry yeast }
+      - { id: salt, ingredient: salt, name: table salt, quantity: 7, unit: g }
+      - { id: water, ingredient: water, name: very warm tap water (up to 55 °C), quantity: 375, unit: ml }
+  - name: Shaping
     items:
-      - id: i-5
-        ingredient: flour
-        name: flour, for dusting
-        quantity: 11
-        unit: g
-        original: 11g of flour, for dusting
-        category: Dry goods
-        optional: false
+      - { id: dusting, ingredient: plain-flour, name: flour, quantity: 12, unit: g, note: "For dusting: 8 g under, 4 g on top" }
 steps:
-  - id: step-1
-    title: ""
-    text: "Mix Dough: Mix flour, yeast and salt in a large bowl. Add water, then use the handle of a wooden spoon to mix until all the flour is incorporated. Dough will be wet and sloppy – not kneadable, but not runny like cake batter. Adjust with more water or flour if needed for right consistency (see video at 17 sec, Note 5)."
-    images: []
-  - id: step-2
-    title: ""
-    text: "Rise: Cover with cling wrap or plate, leave on counter for 2 – 3 hours until it doubles in volume, it’s wobbly like jelly and the top is bubbly (see video at 24 seconds). If after 1 hour it doesn’t seem to be rising, move it somewhere warmer (Note 6)."
-    images: []
-  - id: step-3
-    title: Step 3 - Optional
-    text: "refrigerate for flavour development (Note 9): At this stage, you can either bake immediately (move onto Step 5) or refrigerate for up to 3 days."
-    images: []
-  - id: step-4
-    title: Step 4 - Optional
-    text: Take chill out of refrigerated dough – if you refrigerated dough per above, leave the bowl on the counter for 45 – 60 minutes while the oven is preheating. Cold dough does not rise as well.
-    images: []
-  - id: step-5
-    title: ""
-    text: Preheat oven (Note 7) – Put dutch oven in oven with lid on (26cm or larger). Preheat to 230°C (220° fan) 30 minutes prior to baking. (Note 8 for no dutch oven)
-    images: []
-  - id: step-6
-    title: ""
-    text: "Shape dough: Sprinkle work surface with 8g flour, scrape dough out of bowl. Sprinkle top with 4g flour."
-    images: []
-  - id: step-7
-    title: ""
-    text: Using a dough scraper or anything of similar shape (cake server, large knife, spatula), fold the sides inwards (about 6 folds) to roughly form a roundish shape. Don’t be too meticulous here – you’re about to deform it, it’s more about deflating the bubbles in the dough and forming a shape you can move.
-    images: []
-  - id: step-8
-    title: ""
-    text: "Transfer to paper: Slide a large piece of parchment/baking paper (not wax paper) next to the dough, then flip the dough upside down onto the paper (ie seam side down, smooth side up). Slide/push it towards the middle, then reshape it into a round(ish) shape. Don't get too hung up about shape. In fact, lopsided = more ridges = more crunchy bits!"
-    images: []
-  - id: step-9
-    title: ""
-    text: "Dough in pot: Remove piping hot dutch oven from oven. Use paper to place dough into pot, place lid on."
-    images: []
-  - id: step-10
-    title: ""
-    text: Bake 30 minutes covered, then 12 minutes uncovered or until deep golden and crispy.
-    images: []
-  - id: step-11
-    title: ""
-    text: Cool on rack for 10 minutes before slicing.
-    images: []
+  - { id: mix, title: Mix the dough, text: "Mix the flour, yeast and salt in a large bowl. Add the water and stir with the handle of a wooden spoon until all the flour is incorporated. The dough should be wet and sloppy: not kneadable, but not runny like cake batter. Adjust with a little water or flour if needed (video at 17 seconds)." }
+  - { id: rise, title: Rise, duration: 2–3 h, text: "Cover and leave on the counter until doubled, wobbly like jelly and bubbly on top (video at 24 seconds). If it isn't rising after 1 hour, move it somewhere warmer." }
+  - { id: chill, title: Refrigerate (optional), text: "For more flavour, refrigerate the dough for up to 3 days at this stage, or bake straight away." }
+  - { id: warm, title: Take the chill off (if refrigerated), duration: 45–60 min, text: Leave refrigerated dough on the counter while the oven preheats; cold dough doesn't rise as well. }
+  - { id: preheat, title: Preheat, duration: 30 min, text: "Put a Dutch oven of 26 cm or larger, with its lid, in the oven and preheat to 230 °C (220 °C fan). No Dutch oven? See the notes." }
+  - { id: shape, title: Shape, text: "Dust the work surface with 8 g flour, scrape the dough out and dust the top with 4 g flour. With a dough scraper, fold the sides inwards (about 6 folds) into a roughly round shape; this is about deflating the bubbles, not neatness." }
+  - { id: paper, title: Transfer to paper, text: "Slide a large sheet of baking paper (not wax paper) next to the dough and flip the dough onto it, seam side down. Push it into the middle and reshape roughly; lopsided means more crunchy ridges." }
+  - { id: bake, title: Bake, duration: 42 min, text: "Take the hot Dutch oven out, lower the dough in using the paper and put the lid on. Bake 30 minutes covered, then about 12 minutes uncovered, until deep golden and crisp." }
+  - { id: cool, title: Cool, duration: 10 min, text: Cool on a rack before slicing. }
 sources:
-  - title: Saved video
-    url: https://www.youtube.com/watch?v=fhM0cGiH8R4
-  - title: Original Recipe Source
-    url: https://www.recipetineats.com/easy-yeast-bread-recipe-no-knead/
+  - { title: RecipeTin Eats, url: "https://www.recipetineats.com/easy-yeast-bread-recipe-no-knead/" }
+  - { title: Saved video, url: "https://www.youtube.com/watch?v=fhM0cGiH8R4" }
 issues:
-  - Dusting flour is listed as 11 g but the steps use 8 g + 4 g.
-  - No total time is provided; allow for the rise, optional refrigeration, preheating, baking and cooling.
-  - Yield is not recorded.
+  - "Dusting flour was listed as 11 g, but the method uses 8 g + 4 g = 12 g; 12 g is used here."
 adaptations:
-  - Migrated from the saved cookbook. Original wording and source links preserved; external sources have not been reverified.
+  - The source's notes are condensed below; non-metric alternatives were dropped.
 legacyPath: snacks/easy_bread/
 ---
 
-Recipe Notes:
-MAKE AHEAD/Storage:
-Fridge up to 3 days – Rise dough per recipe, then leave in bowl and refrigerate up to 3 days. Flavour gets better with time. Dough will stay bubbly for a day or two, then will deflate – that’s fine. Shape into round and place on paper per recipe, then leave for 45 – 60 minutes to take the chill out of it, then bake per recipe. Cold dough won’t rise as well.
-Bread in photos & video is 2 hr rise, immediate bake.
-Cooked bread – great fresh for 2 days, then after that, better warmed or toasted.  Keep in an airtight container or ziplock bag. This stays more fresh than usual homemade bread, especially if you use bread flour.
-Freeze cooked bread for up to 3 months.
+**Make ahead and storage.** After the rise, the dough keeps in the bowl in the fridge for up to 3 days and the flavour improves. It deflates after a day or two; that's fine. Shape it, leave it on the paper for 45–60 minutes, then bake. The bread is best within 2 days (then toast it) and freezes for up to 3 months.
 
-1. Flour – bread flour will give a more the crumb a more chewy, fluffy texture like bakery Artisan bread because it has higher protein, and bread stays fresher for longer. Plain / all purpose flour still works 100% perfectly, texture is just not quite the same.
-Wholemeal/wholewheat flour – start with 30g/ 1/4 cup less flour and just add more as needed to get the consistency shown in the video (because wholemeal flour is a bit more absorbent than white, I find).
+**Flour.** Bread flour gives a chewier, fluffier crumb and keeps longer; plain flour works perfectly too. With wholemeal flour, start with 30 g less and add more as needed, since it absorbs more water.
 
-2. Yeast – use yeast labelled “instant” or “rapid rise”. If you can only find normal yeast (can be labelled “active dry yeast”) then dissolve yeast in water first (no need to let it foam), then immediately add flour and salt and mix. Proceed with recipe as written.
+**Yeast.** Use instant or rapid-rise yeast. With active dry yeast, dissolve it in the water first (no need to wait for foam), then add the flour and salt.
 
-3. Salt – reduce to 1 ¼ tsp if using table salt (finer grains = less volume for same amount of salt) otherwise it will be too salty.
+**Water temperature.** Too hot to bathe in will kill the yeast; pleasant bath temperature is right.
 
-4. Water temperature – if it’s so scorching hot you wouldn’t bathe in it, it will kill the yeast. If it’s a lovely temp you could sit in for hours in a bubble bath, it’s the perfect temp.
+**Rising.** Timing varies with room temperature, humidity and flour; aim for the result (doubled, bubbly, wobbly), not the clock. In a kitchen at 22 °C or cooler, put the bowl somewhere warmer: in a sink of warm water on a ramekin, or in shade near a sunny window (not in direct sun). On hot days it can rise in 45 minutes; refrigerate it to pause while the oven heats.
 
-5. Dough consistency can be affected by factors like different brands of flour, humidity in air. If dough is too dry, add touch of water. Too wet, add a touch of flour. Compare to video at 17 seconds and photos above.
+**Preheating.** Start preheating when the dough is clearly rising (around 1½ hours). You can also shape the dough onto the paper and let it sit for 30 minutes while the oven heats.
 
-6. Dough rising – time will vary depending on room temperature, humidity, flour you use etc. It’s fine if it rises faster or slower – you just need to achieve the dough rise as specified (double volume, bubbly surface, wobbly consistency, per video at 24 seconds). I told you – this recipe is forgiving!
-If it’s coldish in your kitchen (22°C/70°F or less) OR it’s just not rising (check at 1 hour), then tuck the bowl somewhere warmer. Yeast loves warmth!
-Simple method I use: in sink with warm (not hot) water, with ramekin to elevate bowl above water level. Or run dryer for a few minutes then place bowl in there. Do not put bowl in direct sunlight indoors – too hot. But in shade near sunlight is good!
-If dough rises faster than 2 hours (eg super hot day), then put bowl in fridge to stop the rise while you preheat the oven. On super hot summer days, it can rise in 45 minutes!
+**Without a Dutch oven.** The pot only provides steam. Put a 20 cm square metal pan (not glass) on the shelf below, preheat, and bake the bread on a tray; as the bread goes in, fill the pan with boiling water and shut the door. Bake 40 minutes until deep golden. A heavy roasting pan with a tall lid also works; the loaf is 8–10 cm tall.
 
-7. Oven preheating – If baking immediately, start preheating oven when you can see dough is rising (at 1.5 hours) or if you refrigerated, while dough is resting to take chill out of it.
-
-It’s also fine to shape the dough into a round, place it on parchment paper and leave for 30 minutes while oven preheats (I told you this is a flexible recipe!!)
-8. Dutch oven (cast iron pot) creates a steamer effect, a home version of professional steamer ovens used by bakeries to make bread. 
-Pot size does not matter as long as it’s about 26cm/10″ or larger. Pot does not shape the bread, it’s to act as a steamer. Just need one large enough to give bread steaming space.
-No dutch oven method – use 20cm/8” square metal pan (or similar but NOT glass, may shatter). Place in oven on middle shelf where bread will bake (or shelf under if tray won’t fit on same shelf), preheat oven. Boil kettle. Place paper with shaped dough on a baking tray. When you put the bread in, work fast as follows – place bread in oven, fill pan with boiling water, shut oven door = makeshift dutch oven steamer effect! Bake for full 40 minutes until it’s a deep golden brown.
-Heavy roasting pan with high lid should also work – preheat per recipe. Bread is about 8-10cm/3.2-4″ tall. 
-
-9. Fridge = slows down yeast rising = time to let enzymes in the yeast to do their work, transforming starch into sugar which creates a more flavourful bread. See notes in post for more info.
-
-10. Different measures in different countries – cup sizes differ slightly between countries. The difference is not enough to affect the outcome of most recipes, but for baking recipes, it does matter. For this bread, as long as you use EITHER cups OR weights & mls for the flour and water, this recipe will work fine (I tested with US and Aus cups which have the greatest variance in size).
-
-12. Source: Adapted from this recipe from New York Times (halved the recipe to make one batch, and added useful tips and tricks after much trial and error over the years).
-
-12. Nutrition per slice
+**Why refrigerate.** Slower rising gives enzymes time to turn starch into sugars, for a more flavourful loaf.

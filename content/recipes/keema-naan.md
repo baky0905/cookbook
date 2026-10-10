@@ -1,205 +1,46 @@
 ---
-title: Keema Naan
-description: ""
-category: Main dishes
-tags:
-  - dough
-  - beef
-language: en
+title: Keema naan
+description: Yeasted naan stuffed with spiced minced lamb.
+category: Breads & doughs
+tags: [indian, lamb, yeast-dough]
 status: needs-review
-yield:
-  label: Yield not recorded
-  scalable: false
-time: {}
+yield: { label: Yield not recorded, scalable: false }
 groups:
   - name: Naan
     items:
-      - id: i-1
-        ingredient: active-dry-yeast
-        name: active dry yeast 7g
-        quantity: 2
-        unit: tsp
-        original: 2 tsp active dry yeast 7g
-        category: Dry goods
-        optional: false
-      - id: i-2
-        ingredient: sugar
-        name: sugar
-        quantity: 1
-        unit: tsp
-        original: 1 tsp sugar
-        category: Dry goods
-        optional: false
-      - id: i-3
-        ingredient: keema-naan-1-2-cup-lukewarm-water-120ml
-        name: 1/2 cup lukewarm water 120ml
-        quantity: null
-        unit: ""
-        original: 1/2 cup lukewarm water 120ml
-        category: Other
-        optional: false
-      - id: i-4
-        ingredient: keema-naan-egg
-        name: egg
-        quantity: 1
-        unit: piece
-        original: 1  egg
-        category: Other
-        optional: false
-      - id: i-5
-        ingredient: keema-naan-1-4-cup-avocado-oil-60ml
-        name: 1/4 cup avocado oil 60ml
-        quantity: null
-        unit: ""
-        original: 1/4 cup avocado oil 60ml
-        category: Other
-        optional: false
-      - id: i-6
-        ingredient: keema-naan-1-4-cup-plain-yoghurt-60ml
-        name: 1/4 cup plain yoghurt 60ml
-        quantity: null
-        unit: ""
-        original: 1/4 cup plain yoghurt 60ml
-        category: Other
-        optional: false
-      - id: i-7
-        ingredient: keema-naan-2-1-2-cups-all-purpose-flour-400g
-        name: 2 1/2 cups all purpose flour 400g
-        quantity: null
-        unit: ""
-        original: 2 1/2 cups all purpose flour 400g
-        category: Other
-        optional: false
-      - id: i-8
-        ingredient: salt
-        name: salt
-        quantity: 0.75
-        unit: tsp
-        original: 3/4 tsp salt
-        category: Herbs & spices
-        optional: false
-  - name: Spice Mix
+      - { id: yeast, ingredient: active-dry-yeast, name: active dry yeast, quantity: 7, unit: g }
+      - { id: sugar, ingredient: sugar, name: sugar, quantity: 5, unit: ml }
+      - { id: water, ingredient: water, name: lukewarm water, quantity: 120, unit: ml }
+      - { id: egg, ingredient: egg, name: egg, quantity: 1, unit: piece }
+      - { id: oil, ingredient: avocado-oil, name: avocado oil, quantity: 60, unit: ml }
+      - { id: yoghurt, ingredient: plain-yoghurt, name: plain yoghurt, quantity: 60, unit: ml }
+      - { id: flour, ingredient: plain-flour, name: plain flour, quantity: 400, unit: g }
+      - { id: salt, ingredient: salt, name: salt, quantity: 3.75, unit: ml }
+  - name: Spice mix
     items:
-      - id: i-9
-        ingredient: keema-naan-coriander-seed
-        name: coriander seed
-        quantity: 0.75
-        unit: tbsp
-        original: 3/4 TBSP coriander seed
-        category: Other
-        optional: false
-      - id: i-10
-        ingredient: keema-naan-cumin-seed
-        name: cumin seed
-        quantity: 0.75
-        unit: tbsp
-        original: 3/4 TBSP cumin seed
-        category: Other
-        optional: false
-      - id: i-11
-        ingredient: keema-naan-mustard-seed
-        name: mustard seed
-        quantity: 0.75
-        unit: tbsp
-        original: 3/4 TBSP mustard seed
-        category: Other
-        optional: false
-      - id: i-12
-        ingredient: keema-naan-chili-powder
-        name: chili powder
-        quantity: 0.5
-        unit: tbsp
-        original: 1/2 TBSP chili powder
-        category: Other
-        optional: false
-      - id: i-13
-        ingredient: keema-naan-garam-masala
-        name: garam masala
-        quantity: 0.5
-        unit: tbsp
-        original: 1/2 TBSP garam masala
-        category: Other
-        optional: false
-      - id: i-14
-        ingredient: black-pepper
-        name: black pepper
-        quantity: 0.5
-        unit: tbsp
-        original: 1/2 TBSP black pepper
-        category: Herbs & spices
-        optional: false
-  - name: Lamb Mix
+      - { id: coriander, ingredient: coriander-seed, name: coriander seed, quantity: 11, unit: ml }
+      - { id: cumin, ingredient: cumin-seed, name: cumin seed, quantity: 11, unit: ml }
+      - { id: mustard, ingredient: mustard-seed, name: mustard seed, quantity: 11, unit: ml }
+      - { id: chili, ingredient: chilli-powder, name: chilli powder, quantity: 7.5, unit: ml }
+      - { id: garam, ingredient: garam-masala, name: garam masala, quantity: 7.5, unit: ml }
+      - { id: pepper, ingredient: black-pepper, name: black pepper, quantity: 7.5, unit: ml }
+  - name: Lamb mix
     items:
-      - id: i-15
-        ingredient: keema-naan-1-lb-500g-minced-lamb
-        name: 1 lb/ 500g minced lamb
-        quantity: null
-        unit: ""
-        original: 1 lb/ 500g minced lamb
-        category: Other
-        optional: false
-      - id: i-16
-        ingredient: keema-naan-large-onion-diced
-        name: large onion diced
-        quantity: 0.5
-        unit: piece
-        original: 1/2 large onion diced
-        category: Other
-        optional: false
-      - id: i-17
-        ingredient: keema-naan-thumb-sized-ginger-diced
-        name: thumb sized ginger diced
-        quantity: 1
-        unit: piece
-        original: 1 thumb sized ginger diced
-        category: Other
-        optional: false
-      - id: i-18
-        ingredient: keema-naan-large-garlic-cloves-diced
-        name: large garlic cloves diced
-        quantity: 2
-        unit: piece
-        original: 2 large garlic cloves diced
-        category: Other
-        optional: false
-      - id: i-19
-        ingredient: keema-naan-chilli-diced
-        name: chilli diced
-        quantity: 1
-        unit: piece
-        original: 1 chilli diced
-        category: Other
-        optional: false
-      - id: i-20
-        ingredient: tomato-paste
-        name: tomato paste
-        quantity: 2
-        unit: tbsp
-        original: 2 TBSP tomato paste
-        category: Dry goods
-        optional: false
-      - id: i-21
-        ingredient: keema-naan-maldon-salt
-        name: maldon salt
-        quantity: 0.75
-        unit: tbsp
-        original: 3/4 TBSP maldon salt
-        category: Other
-        optional: false
+      - { id: lamb, ingredient: minced-lamb, name: minced lamb, quantity: 500, unit: g }
+      - { id: onion, ingredient: onion, name: large onion, quantity: 0.5, unit: piece, prep: Diced }
+      - { id: ginger, ingredient: ginger, name: ginger, quantity: 1, unit: piece, prep: "Thumb-sized, diced" }
+      - { id: garlic, ingredient: garlic, name: large garlic cloves, quantity: 2, unit: clove, prep: Diced }
+      - { id: chilli, ingredient: fresh-chilli, name: fresh chilli, quantity: 1, unit: piece, prep: Diced }
+      - { id: paste, ingredient: tomato-paste, name: tomato paste, quantity: 30, unit: ml }
+      - { id: flaky-salt, ingredient: flaky-salt, name: Maldon salt, quantity: 11, unit: ml }
 steps:
-  - id: step-1
-    title: ""
-    text: ... Missing
-    images: []
+  - { id: method, title: Method not recorded, text: "The method was never saved. Follow the video for mixing the dough, cooking the lamb and stuffing and cooking the naan." }
 sources:
-  - title: Saved video
-    url: https://www.youtube.com/watch?v=xvRaUrgde8s
+  - { title: Saved video, url: "https://www.youtube.com/watch?v=xvRaUrgde8s" }
 issues:
-  - Yield is not recorded.
-  - This is an unfinished recipe; the method needs completing.
+  - The method is missing; only the ingredients were saved.
 adaptations:
-  - Migrated from the saved cookbook. Original wording and source links preserved; external sources have not been reverified.
+  - "Converted to metric using the ml and g values the source gives; other volume measures converted to ml (15 ml and 5 ml per spoon, rounded to 0.5 ml)."
+  - The original was tagged beef by mistake; the recipe uses lamb.
 legacyPath: main_dishes/keema_naan/
 ---
-
-

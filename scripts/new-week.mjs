@@ -20,7 +20,7 @@ fs.writeFileSync(file, `id: ${id}
 title: Week ${week}
 start: '${day(start)}'
 notes: ''
-# Add meals: { id: mon, date: '${day(start)}', meal: Dinner, recipe: lohikeitto, servings: 4 }
+# Add meals: { date: '${day(start)}', meal: Dinner, recipe: lohikeitto, servings: 4 }
 meals: []
 # Extra shopping items: { ingredient: milk, quantity: 1, unit: l } or { name: dish soap }
 extras: []

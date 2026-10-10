@@ -1,192 +1,43 @@
 ---
-title: Apple Galette
-description: ""
-category: Desserts
-tags:
-  - dough
-  - apple
-language: en
+title: Apple galette
+description: Rustic free-form tart with a flaky butter crust and cinnamon apples.
+category: Desserts & baking
+tags: [french, apple, oven-baked, food-processor, vegetarian]
 status: needs-review
-yield:
-  label: 4 portions
-  scalable: false
-time: {}
+yield: { label: 4 portions, amount: 4, unit: portions, scalable: false }
+time: { rest: at least 1 h, cook: 40–50 min }
 groups:
   - name: Crust
     items:
-      - id: i-1
-        ingredient: plain-flour
-        name: all purpose flour
-        quantity: 200
-        unit: g
-        original: 200g all purpose flour
-        category: Dry goods
-        optional: false
-      - id: i-2
-        ingredient: sugar
-        name: sugar
-        quantity: 20
-        unit: g
-        original: 20g sugar
-        category: Dry goods
-        optional: false
-      - id: i-3
-        ingredient: salt
-        name: salt
-        quantity: 3
-        unit: g
-        original: 3g salt
-        category: Herbs & spices
-        optional: false
-      - id: i-4
-        ingredient: apple-galette-or-unsalted-butter-cold-and-cubed
-        name: or unsalted butter, cold and cubed
-        quantity: 150
-        unit: g
-        original: 150g or unsalted butter, cold and cubed
-        category: Other
-        optional: false
-      - id: i-5
-        ingredient: apple-galette-ice-cold-water
-        name: ice cold water
-        quantity: 65
-        unit: g
-        original: 65g ice cold water
-        category: Other
-        optional: false
-  - name: Apple Filling
+      - { id: flour, ingredient: plain-flour, name: plain flour, quantity: 200, unit: g, note: Plus extra for rolling }
+      - { id: sugar, ingredient: sugar, name: sugar, quantity: 20, unit: g }
+      - { id: salt, ingredient: salt, name: salt, quantity: 3, unit: g }
+      - { id: butter, ingredient: unsalted-butter, name: unsalted butter, quantity: 150, unit: g, prep: "Cold, cubed" }
+      - { id: water, ingredient: water, name: ice-cold water, quantity: 65, unit: g }
+  - name: Apple filling
     items:
-      - id: i-6
-        ingredient: apple-galette-honeycrisp-apples-peeled-and-sliced-into-less-than-1-2cm-pieces
-        name: honeycrisp apples, peeled and sliced into less than 1/2cm pieces.
-        quantity: 300
-        unit: g
-        original: 300g honeycrisp apples, peeled and sliced into less than 1/2cm pieces.
-        category: Other
-        optional: false
-      - id: i-7
-        ingredient: sugar
-        name: granulated sugar
-        quantity: 50
-        unit: g
-        original: 50g granulated sugar
-        category: Dry goods
-        optional: false
-      - id: i-8
-        ingredient: apple-galette-corn-starch
-        name: corn starch
-        quantity: 15
-        unit: g
-        original: 15g corn starch
-        category: Other
-        optional: false
-      - id: i-9
-        ingredient: salt
-        name: salt
-        quantity: 2
-        unit: g
-        original: 2g salt
-        category: Herbs & spices
-        optional: false
-      - id: i-10
-        ingredient: apple-galette-cinnamon
-        name: cinnamon
-        quantity: 2
-        max: 3
-        unit: g
-        original: 2-3g cinnamon
-        category: Other
-        optional: false
-      - id: i-11
-        ingredient: apple-galette-nutmeg-grated
-        name: nutmeg, grated
-        quantity: 1
-        unit: g
-        original: 1g nutmeg, grated
-        category: Other
-        optional: false
-      - id: i-12
-        ingredient: apple-galette-lemon-juice
-        name: lemon juice
-        quantity: 5
-        unit: g
-        original: 5g lemon juice
-        category: Other
-        optional: false
-  - name: Rolling out the dough and baking the gallete
+      - { id: apples, ingredient: apple, name: Honeycrisp apples, quantity: 300, unit: g, prep: "Peeled, sliced under 5 mm thick" }
+      - { id: filling-sugar, ingredient: sugar, name: granulated sugar, quantity: 50, unit: g }
+      - { id: cornstarch, ingredient: cornstarch, name: cornflour, quantity: 15, unit: g }
+      - { id: filling-salt, ingredient: salt, name: salt, quantity: 2, unit: g }
+      - { id: cinnamon, ingredient: cinnamon, name: ground cinnamon, quantity: 2, max: 3, unit: g }
+      - { id: nutmeg, ingredient: nutmeg, name: nutmeg, quantity: 1, unit: g, prep: Freshly grated }
+      - { id: lemon, ingredient: lemon-juice, name: lemon juice, quantity: 5, unit: g }
+  - name: To finish
     items:
-      - id: i-13
-        ingredient: apple-galette-egg-wash-1-egg-whisked-with-a-splash-of-water
-        name: Egg wash (1 egg whisked with a splash of water)
-        quantity: null
-        unit: ""
-        original: Egg wash (1 egg whisked with a splash of water)
-        category: Other
-        optional: false
-      - id: i-14
-        ingredient: apple-galette-sugar-in-the-raw
-        name: Sugar in the raw
-        quantity: null
-        unit: ""
-        original: Sugar in the raw
-        category: Other
-        optional: false
-      - id: i-15
-        ingredient: butter
-        name: Butter
-        quantity: null
-        unit: ""
-        original: Butter
-        category: Dairy & eggs
-        optional: false
-      - id: i-16
-        ingredient: apple-galette-flaky-salt
-        name: Flaky salt
-        quantity: null
-        unit: ""
-        original: Flaky salt
-        category: Other
-        optional: false
+      - { id: egg, ingredient: egg, name: egg, quantity: 1, unit: piece, prep: Whisked with a splash of water, note: For the egg wash }
+      - { id: raw-sugar, ingredient: raw-sugar, name: raw sugar, note: For sprinkling }
+      - { id: finish-butter, ingredient: butter, name: butter, note: 3–4 thin slices }
+      - { id: flaky-salt, ingredient: flaky-salt, name: flaky salt, quantity: 1, unit: pinch }
 steps:
-  - id: step-1
-    title: ""
-    text: Add flour, sugar, and salt to food processor and process until combined. Add in cold cubed butter. Pulse until butter is incorporated and flour mix has become pebbly. Stream in ice cold water while pulsing (no more than 12-15 pulses to not overwork the dough).
-    images: []
-  - id: step-2
-    title: ""
-    text: Dump dough out onto plastic wrap, squeeze into a mass, wrap and flatten into a big puck. Refrigerate for at least an hour. Allow to sit at room temperature for around 15 minutes before rolling out.
-    images: []
-  - id: step-3
-    title: ""
-    text: Before baking, preheat oven to 190C.
-    images: []
-  - id: step-4
-    title: ""
-    text: Gengly combine apples with the rest of the ingredients to coat. Allow apple mixture to sit while you roll out the dough.
-    images: []
-  - id: step-5
-    title: ""
-    text: Flour dough and work surface then roll out, using downward pressure, into a flat 30cm wide circle. Transfer onto a piece of parchment then continue to roll out into a 33-35c wide circle.
-    images: []
-  - id: step-6
-    title: ""
-    text: Lay apples onto galette dough and pleat crust as shown @6:45 (or dump them all in the center if you want to be less fussy).
-    images: []
-  - id: step-7
-    title: ""
-    text: Brush visible crust with egg wash then sprinkle egg washed crust with sugar in the raw.
-    images: []
-  - id: step-8
-    title: ""
-    text: Drizzle in a few spoons of the cinnamon corn starch slurry that the apples were sitting in. Sprinkle with a pinch of flaky salt and place 3-4 slices of butter on the apples.  Transfer galette and parchment onto baking sheet and bake at 190C for 40-50min, rotating pan halfway through.
-    images: []
+  - { id: crust, title: Make the crust, text: "Pulse the flour, sugar and salt in a food processor to combine. Add the cold butter and pulse until pebbly. Stream in the ice-cold water while pulsing, no more than 12–15 pulses so the dough isn't overworked." }
+  - { id: chill, title: Chill, duration: at least 1 h, text: "Tip the dough onto cling film, squeeze it together, wrap and flatten into a thick disc. Refrigerate, then leave at room temperature for about 15 minutes before rolling." }
+  - { id: preheat, title: Preheat, text: Preheat the oven to 190 °C. }
+  - { id: filling, title: Make the filling, text: Gently toss the apples with the rest of the filling ingredients and leave them to sit while you roll out the dough. }
+  - { id: roll, title: Roll out, text: "Flour the dough and work surface and roll, pressing downwards, into a flat 30 cm circle. Move it onto baking paper and keep rolling to 33–35 cm." }
+  - { id: fill, title: Fill and pleat, text: "Lay the apples on the dough and pleat the crust over them (video at 6:45), or simply pile them in the centre." }
+  - { id: bake, title: Finish and bake, duration: 40–50 min, text: "Brush the exposed crust with egg wash and sprinkle it with raw sugar. Drizzle a little of the cinnamon and cornflour juices from the apple bowl over the fruit, add a pinch of flaky salt and the butter slices. Slide the galette, on its paper, onto a baking sheet and bake at 190 °C, rotating halfway." }
 sources:
-  - title: Saved video
-    url: https://www.youtube.com/watch?v=sSkjBodTzGU
-issues: []
-adaptations:
-  - Migrated from the saved cookbook. Original wording and source links preserved; external sources have not been reverified.
+  - { title: Saved video, url: "https://www.youtube.com/watch?v=sSkjBodTzGU" }
 legacyPath: desserts/apple_galette/
 ---
-
-

@@ -4,6 +4,7 @@ sources:
   - { title: "King Arthur Baking — Ingredient weight chart", url: "https://www.kingarthurbaking.com/learn/ingredient-weight-chart" }
 tables:
   - name: Volume
+    icon: "🥛"
     rows:
       - [1 teaspoon, 5 ml]
       - [1 tablespoon, 15 ml (Australia 20 ml)]
@@ -12,11 +13,13 @@ tables:
       - [1 fluid ounce, 30 ml]
       - [1 pint (US / UK), 473 ml / 568 ml]
   - name: Weight
+    icon: "⚖️"
     rows:
       - [1 ounce, 28 g]
       - [1 pound, 454 g]
       - [1 stick of butter (US), 113 g]
   - name: Oven
+    icon: "🌡️"
     note: For a fan oven, use about 20 °C less.
     rows:
       - [275 °F · gas 1, 140 °C]
@@ -30,12 +33,14 @@ tables:
       - [475 °F · gas 9, 240 °C]
       - [500 °F, 260 °C]
   - name: Length and pans
+    icon: "📏"
     rows:
       - [1 inch, 2.5 cm]
       - [8-inch square pan, 20 × 20 cm]
       - [9-inch round pan, 23 cm]
       - [9 × 13-inch pan, 23 × 33 cm]
   - name: One US cup weighs
+    icon: "🥣"
     note: Spoon-and-level method. Weights differ by ingredient, so never use one figure for everything.
     rows:
       - [Plain or bread flour, 120 g]
@@ -49,6 +54,7 @@ tables:
       - [Almond flour, 96 g]
       - [Cocoa powder, 84 g]
   - name: Small amounts
+    icon: "🧂"
     rows:
       - [1 tablespoon honey, 21 g]
       - [1 tablespoon table salt, 18 g]

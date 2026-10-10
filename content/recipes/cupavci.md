@@ -1,125 +1,34 @@
 ---
-title: Cupavci
-description: ""
-category: Desserts
-tags:
-  - coconut
-language: en
+title: Ćupavci
+description: Croatian sponge squares dipped in chocolate icing and rolled in coconut.
+category: Desserts & baking
+tags: [croatian, coconut, chocolate, oven-baked, vegetarian]
 status: needs-review
-yield:
-  label: Yield not recorded
-  scalable: false
-time: {}
+yield: { label: Yield not recorded, scalable: false }
 groups:
-  - name: Dough
+  - name: Sponge
     items:
-      - id: i-1
-        ingredient: cupavci-eggs
-        name: eggs
-        quantity: 3
-        unit: piece
-        original: 3 eggs
-        category: Other
-        optional: false
-      - id: i-2
-        ingredient: sugar
-        name: sugar
-        quantity: 150
-        unit: g
-        original: 150g sugar
-        category: Dry goods
-        optional: false
-      - id: i-3
-        ingredient: cupavci-1-vanilla-sugar
-        name: 1 vanilla sugar
-        quantity: null
-        unit: ""
-        note: "Check package/measure size. Saved: 1 vanilla sugar"
-        original: 1 vanilla sugar
-        category: Other
-        optional: false
-      - id: i-4
-        ingredient: cupavci-oil
-        name: oil
-        quantity: 100
-        unit: ml
-        original: 100ml oil
-        category: Other
-        optional: false
-      - id: i-5
-        ingredient: milk
-        name: milk
-        quantity: 150
-        unit: ml
-        original: 150ml milk
-        category: Dairy & eggs
-        optional: false
-      - id: i-6
-        ingredient: flour
-        name: flour
-        quantity: 200
-        unit: g
-        original: 200g flour
-        category: Dry goods
-        optional: false
-      - id: i-7
-        ingredient: cupavci-baking-powder
-        name: baking powder
-        quantity: 7
-        unit: g
-        original: 7g baking powder
-        category: Other
-        optional: false
+      - { id: eggs, ingredient: egg, name: eggs, quantity: 3, unit: piece }
+      - { id: sugar, ingredient: sugar, name: sugar, quantity: 150, unit: g }
+      - { id: vanilla, ingredient: vanilla-sugar, name: vanilla sugar, quantity: 1, unit: package, scalable: false }
+      - { id: oil, ingredient: sunflower-oil, name: oil, quantity: 100, unit: ml }
+      - { id: milk, ingredient: milk, name: milk, quantity: 150, unit: ml }
+      - { id: flour, ingredient: plain-flour, name: plain flour, quantity: 200, unit: g }
+      - { id: baking-powder, ingredient: baking-powder, name: baking powder, quantity: 7, unit: g }
   - name: Icing
     items:
-      - id: i-8
-        ingredient: butter
-        name: butter
-        quantity: 125
-        unit: g
-        original: 125g butter
-        category: Dairy & eggs
-        optional: false
-      - id: i-9
-        ingredient: cupavci-baking-chocollate
-        name: baking chocollate
-        quantity: 100
-        unit: g
-        original: 100g baking chocollate
-        category: Other
-        optional: false
-      - id: i-10
-        ingredient: sugar
-        name: sugar
-        quantity: 150
-        unit: g
-        original: 150g sugar
-        category: Dry goods
-        optional: false
-      - id: i-11
-        ingredient: milk
-        name: milk
-        quantity: 250
-        unit: ml
-        original: 250ml milk
-        category: Dairy & eggs
-        optional: false
+      - { id: butter, ingredient: butter, name: butter, quantity: 125, unit: g }
+      - { id: chocolate, ingredient: baking-chocolate, name: baking chocolate, quantity: 100, unit: g }
+      - { id: icing-sugar, ingredient: sugar, name: sugar, quantity: 150, unit: g }
+      - { id: icing-milk, ingredient: milk, name: milk, quantity: 250, unit: ml }
+      - { id: coconut, ingredient: desiccated-coconut, name: desiccated coconut, note: "For coating; not in the saved list" }
 steps:
-  - id: step-1
-    title: ""
-    text: Work in progress.
-    images: []
+  - { id: method, title: Method not recorded, text: "The method was never written up. Follow the saved video for baking the sponge, cooking the icing and coating the squares." }
 sources:
-  - title: Saved video
-    url: https://www.youtube.com/watch?v=00JmYEIlXuM
+  - { title: Saved video, url: "https://www.youtube.com/watch?v=00JmYEIlXuM" }
 issues:
-  - Vanilla-sugar package size is unspecified; check the coconut coating against the source.
-  - The saved source link is the same video as Orehnjaca and Tačkrle; verify the correct source.
-  - Yield is not recorded.
-  - This is an unfinished recipe; the method needs completing.
-adaptations:
-  - Migrated from the saved cookbook. Original wording and source links preserved; external sources have not been reverified.
+  - The method is missing.
+  - Coconut for the coating is not in the saved ingredients, and the vanilla-sugar package size is unspecified.
+  - The saved source link is the same video as Orehnjača and Tačkrle; verify the correct source.
 legacyPath: desserts/cupavci/
 ---
-
-

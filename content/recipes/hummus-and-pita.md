@@ -1,173 +1,45 @@
 ---
 title: Hummus and pita
-description: ""
-category: Main dishes
-tags:
-  - dough
-language: en
+description: Silky hummus from ready-cooked chickpeas, with soft cold-fermented pitas baked on a steel.
+category: Snacks & starters
+tags: [middle-eastern, legumes, yeast-dough, overnight, food-processor, vegetarian]
 status: needs-review
-yield:
-  label: Yield not recorded
-  scalable: false
-time: {}
+yield: { label: 6 pitas, amount: 6, unit: pitas, scalable: false }
+time: { rest: 4–24 h cold ferment }
 groups:
   - name: Pita
     items:
-      - id: i-1
-        ingredient: hummus-and-pita-265g-1tbsp-warm-water-30c
-        name: 265g + 1Tbsp warm water (30C)
-        quantity: null
-        unit: ""
-        original: 265g + 1Tbsp warm water (30C)
-        category: Other
-        optional: false
-      - id: i-2
-        ingredient: olive-oil
-        name: olive oil
-        quantity: 50
-        unit: g
-        original: 50g olive oil
-        category: Dry goods
-        optional: false
-      - id: i-3
-        ingredient: instant-yeast
-        name: instant yeast
-        quantity: 8
-        unit: g
-        original: 8g instant yeast
-        category: Dry goods
-        optional: false
-      - id: i-4
-        ingredient: sugar
-        name: sugar
-        quantity: 15
-        unit: g
-        original: 15g sugar
-        category: Dry goods
-        optional: false
-      - id: i-5
-        ingredient: bread-flour
-        name: bread flour
-        quantity: 450
-        unit: g
-        original: 450g bread flour
-        category: Dry goods
-        optional: false
-      - id: i-6
-        ingredient: hummus-and-pita-oro-2t-salt
-        name: oro 2t salt
-        quantity: 10
-        unit: g
-        original: 10g oro 2t salt
-        category: Other
-        optional: false
+      - { id: water, ingredient: water, name: warm water (30 °C), quantity: 280, unit: g }
+      - { id: oil, ingredient: olive-oil, name: olive oil, quantity: 50, unit: g }
+      - { id: yeast, ingredient: instant-yeast, name: instant yeast, quantity: 8, unit: g }
+      - { id: sugar, ingredient: sugar, name: sugar, quantity: 15, unit: g }
+      - { id: flour, ingredient: bread-flour, name: bread flour, quantity: 450, unit: g, note: Plus extra for rolling }
+      - { id: salt, ingredient: salt, name: salt, quantity: 10, unit: g }
   - name: Hummus
     items:
-      - id: i-7
-        ingredient: hummus-and-pita-chickpeas-net-prebaked
-        name: chickpeas net (prebaked)
-        quantity: 600
-        unit: g
-        original: 600g chickpeas net (prebaked)
-        category: Other
-        optional: false
-      - id: i-8
-        ingredient: hummus-and-pita-water
-        name: water
-        quantity: 500
-        unit: g
-        original: 500g water
-        category: Other
-        optional: false
-      - id: i-9
-        ingredient: hummus-and-pita-baking-soda
-        name: baking soda
-        quantity: 4
-        unit: g
-        original: 4g baking soda
-        category: Other
-        optional: false
-      - id: i-10
-        ingredient: hummus-and-pita-tahini
-        name: tahini
-        quantity: 150
-        unit: g
-        original: 150g tahini
-        category: Other
-        optional: false
-      - id: i-11
-        ingredient: salt
-        name: salt
-        quantity: 10
-        unit: g
-        original: 10g salt
-        category: Herbs & spices
-        optional: false
-      - id: i-12
-        ingredient: hummus-and-pita-orlemon-juice
-        name: orlemon juice
-        quantity: 30
-        unit: g
-        original: 30g orlemon juice
-        category: Other
-        optional: false
-      - id: i-13
-        ingredient: hummus-and-pita-2gcitric-acid
-        name: 2gcitric acid
-        quantity: null
-        unit: ""
-        original: 2gcitric acid
-        category: Other
-        optional: false
-      - id: i-14
-        ingredient: olive-oil
-        name: extra virgin olive oil
-        quantity: 25
-        unit: g
-        original: 25g extra virgin olive oil
-        category: Dry goods
-        optional: false
-      - id: i-15
-        ingredient: hummus-and-pita-ice-cubes
-        name: ice cubes
-        quantity: 50
-        unit: g
-        original: 50g ice cubes
-        category: Other
-        optional: false
+      - { id: chickpeas, ingredient: cooked-chickpeas, name: cooked chickpeas (drained weight), quantity: 600, unit: g }
+      - { id: cooking-water, ingredient: water, name: water, quantity: 500, unit: g }
+      - { id: soda, ingredient: baking-soda, name: baking soda, quantity: 4, unit: g }
+      - { id: tahini, ingredient: tahini, name: tahini, quantity: 150, unit: g }
+      - { id: hummus-salt, ingredient: salt, name: salt, quantity: 10, unit: g }
+      - { id: lemon, ingredient: lemon-juice, name: lemon juice, quantity: 30, unit: g }
+      - { id: citric, ingredient: citric-acid, name: citric acid, quantity: 2, unit: g }
+      - { id: hummus-oil, ingredient: olive-oil, name: extra virgin olive oil, quantity: 25, unit: g, note: Plus extra to serve }
+      - { id: ice, ingredient: ice, name: ice cubes, quantity: 50, unit: g }
+      - { id: garlic, ingredient: garlic, name: garlic, quantity: 1.5, unit: g, note: "Optional: the smallest clove you can find", optional: true }
+      - { id: sumac, ingredient: sumac, name: sumac and flaky salt, note: To serve, optional: true }
 steps:
-  - id: step-1
-    title: ""
-    text: |-
-      Add ingredients to stand mixer with dough hook attachment. Mix on low for 2 mins or until dough comes together. Increase speed to high and continue mixing for about 4 minutes, careful not to overdevelop the dough. When the dough looks more smooth and passes the tug test (no tearing when you tug a piece) it’s ready. 
-
-      Separate dough into 6 even (130ish gram) pieces, shaping and rounding each into a ball as shown in video @1:02. Transfer all shaped dough balls to a lightly oiled sheet tray and wrap tightly. Refrigerate to cold ferment for 4 to 24 hours.
-    images: []
-  - id: step-2
-    title: ""
-    text: To roll out pitas, lightly flour work surface and dough ball then press with your hand to spread into a 10cm circle. Use a rolling pin roll out until dough is about 3mm thick and about 23cm in diameter, making sure to keep work surface and dough well dusted while rolling.
-    images: []
-  - id: step-3
-    title: ""
-    text: Brush off excess flour, then load dough onto a pizza peel then onto a 220C preheated pizza steel/stone to bake for 3-4 minutes, flipping over halfway through. Roll out the next pita while pita 1 is baking. Place in a towel lined bowl or basket and cover with a towel to keep baked pitas warm while you finish the rest.
-    images: []
-  - id: step-4
-    title: Hummus
-    text: |-
-      Add soaked beans and water into a along with baking soda. Cook for 15 minutes. Beans should be soft but not disintegrated. Drain off as much cooking liquid as possible then transfer beans to a food processor along with tahini, salt, lemon juice, and citric acid. Process for 3 minutes then stream in olive oil while still spinning. Then add in ice cubes one at a time until hummus reaches desired texture/consistency. 
-
-      Taste for seasoning and add extra  lemon juice, salt, and/or olive oil if needed. Spin for a few seconds to combine. 
-
-      Serve with olive oil, a sprinkle of sumac, and flaky salt.
-    images: []
+  - { id: knead, title: Mix the pita dough, duration: about 6 min, text: "Put all the pita ingredients in a stand mixer with the dough hook. Mix on low for 2 minutes until it comes together, then on high for about 4 minutes, without overdeveloping. It's ready when smooth and a tugged piece doesn't tear." }
+  - { id: divide, title: Divide and cold-ferment, duration: 4–24 h, text: "Divide into 6 pieces of about 130 g and round each into a ball (video at 1:02). Put them on a lightly oiled tray, wrap tightly and refrigerate." }
+  - { id: roll, title: Roll out, text: "On a lightly floured surface, press a ball into a 10 cm circle, then roll it to about 3 mm thick and 23 cm across, keeping everything well dusted." }
+  - { id: bake, title: Bake, duration: 3–4 min each, text: "Brush off excess flour and slide the pita onto a pizza steel or stone preheated to 220 °C, flipping halfway. Roll the next one while it bakes. Keep the baked pitas covered in a towel-lined basket." }
+  - { id: chickpeas, title: Cook the chickpeas, duration: 15 min, text: "Cook the chickpeas in the water with the baking soda until soft but not falling apart. Drain off as much liquid as possible." }
+  - { id: blend, title: Blend the hummus, duration: about 4 min, text: "Process the chickpeas with the tahini, salt, lemon juice, citric acid (and garlic, if using) for 3 minutes. Stream in the olive oil with the motor running, then add ice cubes one at a time until smooth and creamy. Adjust with lemon juice, salt or oil." }
+  - { id: serve, title: Serve, text: "Serve the hummus with olive oil, a sprinkle of sumac and flaky salt, and the warm pitas." }
 sources:
-  - title: Saved video
-    url: https://www.youtube.com/watch?v=1fiFBTW6vSc
-issues:
-  - Yield is not recorded.
+  - { title: Saved video, url: "https://www.youtube.com/watch?v=1fiFBTW6vSc" }
 adaptations:
-  - Migrated from the saved cookbook. Original wording and source links preserved; external sources have not been reverified.
+  - Quantities halved from the video; ready-cooked chickpeas used instead of dried.
+  - "Pita water: the source gives 265 g plus a further 15 ml; combined here into 280 g."
 legacyPath: main_dishes/hummus_and_pita/
 ---
-
-I halfed the quantities in the video, and did not use dry beans but rather ready made.

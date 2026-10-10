@@ -1,12 +1,19 @@
 ---
 import RefPage from '../../components/RefPage.astro';
+import RuleCards from '../../components/RuleCards.astro';
 import { readReference } from '../../lib/reference.mjs';
 const data = readReference('temperatures');
 ---
 <RefPage data={data}>
-  <h2>Safe minimum (core temperature)</h2>
-  <table><tbody>{data.safety.map(r => <tr><th scope="row">{r.food}</th><td class="num">{r.temp} °C</td><td>{r.note}</td></tr>)}</tbody></table>
-  <h2>Doneness</h2>
-  <p class="caption">{data.doneness.note}</p>
-  <table><tbody>{data.doneness.rows.map(r => <tr><th scope="row">{r.food}</th><td class="num">{r.temp} °C</td></tr>)}</tbody></table>
+  <RuleCards rules={data.rules} />
+  <h2 class="ref-section">Thermometer targets</h2>
+  <div class="targets">
+    {data.targets.map((t: any) => (
+      <section class="target">
+        <h3><span aria-hidden="true">{t.icon}</span> {t.food}</h3>
+        <ul>{t.rows.map((r: any) => <li><span class={`tone ${r.tone}`} aria-hidden="true"></span>{r.label}<b>{r.temp} °C</b></li>)}</ul>
+      </section>
+    ))}
+  </div>
+  <p class="caption">🌡️ {data.note}</p>
 </RefPage>

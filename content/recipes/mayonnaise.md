@@ -1,105 +1,37 @@
 ---
-title: Mayonnaise
-description: ""
-category: Sauces
-tags: []
-language: en
+title: Two-minute mayonnaise
+description: Whole-egg mayonnaise made with a stick blender in a tall jar.
+category: Sauces & dips
+tags: [quick, vegetarian]
+originalLanguage: hr
 status: needs-review
-yield:
-  label: Yield not recorded
-  scalable: false
-time: {}
+yield: { label: About 300 ml, amount: 300, unit: ml, scalable: true }
+time: { total: 2 min }
 groups:
   - name: Ingredients
     items:
-      - id: i-1
-        ingredient: mayonnaise-egg
-        name: egg
-        quantity: 1
-        unit: piece
-        original: 1 egg
-        category: Other
-        optional: false
-      - id: i-2
-        ingredient: mayonnaise-two-pinches-of-salt
-        name: two pinches of salt
-        quantity: null
-        unit: ""
-        original: two pinches of salt
-        category: Other
-        optional: false
-      - id: i-3
-        ingredient: mayonnaise-dijon-mustard
-        name: dijon mustard
-        quantity: 1
-        unit: tbsp
-        original: 1 tablespoon of dijon mustard
-        category: Other
-        optional: false
-      - id: i-4
-        ingredient: mayonnaise-lemon-juice
-        name: lemon juice
-        quantity: 3
-        unit: tsp
-        original: 3 teaspoons of lemon juice
-        category: Other
-        optional: false
-      - id: i-5
-        ingredient: mayonnaise-white-wine-vinager
-        name: white wine vinager
-        quantity: 3
-        unit: tsp
-        original: 3 teaspoons white wine vinager
-        category: Other
-        optional: false
-      - id: i-6
-        ingredient: sunflower-oil
-        name: sunflower oil
-        quantity: 200
-        unit: ml
-        original: 200 ml sunflower oil
-        category: Dry goods
-        optional: false
-      - id: i-7
-        ingredient: mayonnaise-seaseme-oil-optional-if-you-like-or-replace-with-sunflower
-        name: seaseme oil OPTIONAL if you like or replace with sunflower
-        quantity: 50
-        unit: ml
-        original: 50 ml seaseme oil OPTIONAL if you like or replace with sunflower
-        category: Other
-        optional: true
+      - { id: egg, ingredient: egg, name: very fresh egg, quantity: 1, unit: piece, note: "Preferably free-range" }
+      - { id: salt, ingredient: salt, name: salt, quantity: 2, unit: pinch }
+      - { id: mustard, ingredient: dijon-mustard, name: Dijon mustard, quantity: 15, unit: ml }
+      - { id: lemon, ingredient: lemon-juice, name: lemon juice, quantity: 15, unit: ml }
+      - { id: vinegar, ingredient: white-wine-vinegar, name: white wine vinegar, quantity: 15, unit: ml }
+      - { id: oil, ingredient: sunflower-oil, name: sunflower oil, quantity: 200, unit: ml }
+      - { id: sesame-oil, ingredient: sesame-oil, name: sesame oil, quantity: 50, unit: ml, note: Or more sunflower oil, optional: true }
 steps:
-  - id: step-1
-    title: ""
-    text: Razbijte jaje u visoku i usku posudu.
-    images: []
-  - id: step-2
-    title: ""
-    text: Dodajte sol, senf, limunov sok, ocat i ulje.
-    images: []
-  - id: step-3
-    title: ""
-    text: Uronite štapni mikser na dno i uključite ga. Miksajte na početku samo po dnu, a kad se smjesa zabijeli i krene zgušnjavati lagano podižite mikser prema gore.
-    images: []
-  - id: step-4
-    title: ""
-    text: |-
-      Za nekih minutu i pol imati ćete gotovu majonezu. Prebacite je u staklenku i čuvajte je u hladnjaku do sedam dana.
-
-      Napomene
-      Za majonezu uvijek koristim hladno prešana ulja kako bi ona bila nutritivno što kvalitetnija. Biram ulja blažeg okusa, uglavnom suncokretovo pomiješano sa sezamovim ili nekim drugim. Vi slobodno koristite ulje po vlastitom izboru, samo budite oprezni s maslinovim. Jednom sam je napravila s 250 ml hladno prešanog maslinovog ulja i bila je nejestiva, a ja inače volim gorko. Žali bože kvalitetnog ulja koje sam potrošila. 😀
-      Vodite računa o jajima koja koristite za majonezu - neka budu apsolutno svježa i po mogućnosti iz slobodnog uzgoja
-    images: []
+  - { id: jar, title: Fill the jar, text: "Crack the egg into a tall, narrow container. Add the salt, mustard, lemon juice, vinegar and oil." }
+  - { id: blend, title: Blend, duration: about 1½ min, text: "Push a stick blender to the bottom and switch it on. Blend only at the bottom at first; when the mixture turns white and starts to thicken, slowly lift the blender upwards." }
+  - { id: store, title: Store, text: Transfer to a jar and keep in the fridge for up to seven days. }
 sources:
-  - title: Saved video
-    url: https://www.youtube.com/watch?v=-8JzpvydHq4
-  - title: Original Recipe Source
-    url: https://cukar.com.hr/video-domaca-majoneza-dvije-minute/
+  - { title: Cukar, url: "https://cukar.com.hr/video-domaca-majoneza-dvije-minute/" }
+  - { title: Saved video, url: "https://www.youtube.com/watch?v=-8JzpvydHq4" }
 issues:
-  - Yield is not recorded.
+  - The yield is estimated from the volume of oil.
 adaptations:
-  - Migrated from the saved cookbook. Original wording and source links preserved; external sources have not been reverified.
+  - Translated from Croatian.
+  - "Volume measures converted to ml (15 ml and 5 ml per spoon)."
 legacyPath: sauces/mayonnaise/
 ---
 
+The author always uses mild cold-pressed oils, mostly sunflower mixed with sesame or another oil. Use any oil you like, but be careful with olive oil: a batch made with 250 ml cold-pressed olive oil came out inedibly bitter.
 
+Use absolutely fresh eggs, ideally free-range.
