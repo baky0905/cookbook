@@ -39,7 +39,7 @@ tagGroups:
   - name: Cuisine
     tags: [american, austrian, croatian, finnish, french, hungarian, indian, italian, mexican, middle-eastern, turkish]
   - name: Main ingredient
-    tags: [beef, pork, lamb, chicken, fish, seafood, sausage, cheese, potato, pasta, rice, grains, legumes, cabbage, squash, broccoli, mushrooms, apple, plum, lemon, walnut, coconut, chocolate]
+    tags: [beef, pork, lamb, chicken, fish, seafood, sausage, cheese, potato, pasta, rice, grains, legumes, cabbage, squash, broccoli, cauliflower, mushrooms, apple, plum, lemon, walnut, coconut, chocolate]
   - name: Diet
     tags: [vegetarian]
   - name: Technique

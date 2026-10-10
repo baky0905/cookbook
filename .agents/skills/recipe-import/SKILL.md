@@ -15,7 +15,7 @@ This is the main way recipes enter the cookbook. One recipe is one file: `conten
 4. **Keep uncertainty visible.** Unknown amount → `quantity: null` plus a `note`. Conflicts and gaps go in `issues:`; your conversions and changes go in `adaptations:`.
 5. **Cross-check** every ingredient against the steps and back. Give every step a short `title` and a `duration` when the source gives one.
 6. **Check:** `npm run validate` and `npm test`. Preview with `npm run dev` (http://127.0.0.1:4321/cookbook/).
-7. **Report briefly:** what was added, conversions, open questions. New recipes stay `status: draft` until the user reviews them. Importing never authorises a commit or push.
+7. **Report briefly:** what was added, conversions, open questions. Default to `status: draft` for an import awaiting review. If the user asks to make a complete recipe visible in the cookbook or on its front-page list, cross-check the supplied source and use `reviewed`; use `needs-review` for material unresolved questions. Use `cooked` only when the user confirms they cooked the recipe, not merely because a finished-dish photo was supplied. Importing alone does not authorise a commit or push.
 
 ## Writing the recipe
 
@@ -33,14 +33,16 @@ This is the main way recipes enter the cookbook. One recipe is one file: `conten
 
 ## Photos
 
-Real photos the user took, or freely licensed ones with credit. Never present an AI illustration as what the source shows.
+Real photos the user supplies for their recipe, or freely licensed ones with credit. Never present an AI illustration as what the source shows. When the user identifies a particular image as the cover/front-page photo, use that exact image as `cover`; the recipe index already uses this field for its thumbnail. Keep cookbook-page evidence separate from publishable food photos.
 
 1. Put files in `content/media/<recipe-id>/`, named after the step (`shape-1.jpg`) or `cover.jpg`.
 2. Run `npm run media:optimize`: converts to WebP, max 1600 px, strips location data, updates references. Validation rejects files over 600 KB or 2400 px.
 3. Reference them: `cover: { src: <recipe-id>/cover.webp, alt: … }` or in a step's `images:` with `alt` and a `caption` describing the target state ("soft and slightly tacky").
 
+4. Verify the cover on both the recipe page and recipe-index entry in the built site. Do not substitute a generated image if the attachment bytes are unavailable; locate the supplied file or report the missing asset.
+
 ## From photos of a cookbook page or card
 
 1. Transcribe ingredients and method; list anything illegible or cut off as an issue instead of guessing. Ask about page order if unclear.
-2. Source: `{ title: "<Book> by <author>, p. <page>" }`; family cards `{ title: "Family recipe · <who>" }` plus tag `family-recipe`.
+2. Source: `{ title: "<Book> by <author>, p. <page>" }` using only details visible or otherwise verified; omit an unknown author rather than inventing one. family cards `{ title: "Family recipe · <who>" }` plus tag `family-recipe`.
 3. The site is public: copy ingredient lists and quantities (facts), but **write the method in your own concise words** and keep the credit. Don't commit photos of book pages.

@@ -30,6 +30,7 @@ ingredients:
   - { id: cake-flour, name: cake flour, aisle: Dry goods, kcal: 362, density: 0.53 }
   - { id: campanelle, name: campanelle, aisle: Dry goods, kcal: 371 }
   - { id: carrot, name: carrots, aisle: Produce, kcal: 41, weights: { piece: 60 } }
+  - { id: cauliflower, name: cauliflower, aisle: Produce }
   - { id: cayenne-pepper, name: cayenne pepper, aisle: "Herbs & spices" }
   - { id: celery, name: celery, aisle: Produce, kcal: 16, weights: { piece: 40 } }
   - { id: cheddar, name: cheddar, aisle: "Dairy & eggs", kcal: 403 }
