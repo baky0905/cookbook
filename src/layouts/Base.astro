@@ -1,0 +1,57 @@
+---
+import '../styles/global.css';
+import { url } from '../lib/urls.mjs';
+import { publishedRecipes, readPlans, readPantry, currentPlan } from '../lib/content.mjs';
+import { shoppingList } from '../lib/quantities.mjs';
+
+interface Props { title: string; active?: string; description?: string }
+const { title, active, description = 'Personal cookbook: recipes, this week’s meals and the shopping list.' } = Astro.props;
+const recipes = publishedRecipes();
+const plan = currentPlan(readPlans());
+const shopping = plan ? shoppingList(plan, recipes, readPantry()).rows : [];
+const weekday = (date: string) => new Date(date + 'T12:00:00Z').toLocaleDateString('en-GB', { weekday: 'long', timeZone: 'UTC' });
+const mealTitle = (meal: any) => meal.title || recipes.find(r => r.id === meal.recipe)?.data.title || (meal.leftoversFrom ? 'Leftovers' : meal.recipe);
+const nav = [
+  ['recipes', 'Recipes', '', `${recipes.length}`],
+  ['week', 'This week', 'week/', plan ? `${plan.meals.length} meals` : ''],
+  ['shopping', 'Shopping', 'shopping/', shopping.length ? `${shopping.length} items` : ''],
+  ['pantry', 'Pantry', 'pantry/', ''],
+  ['reference', 'Reference', 'reference/', ''],
+];
+---
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content={description}>
+  <title>{title === 'Recipes' ? 'Cookbook' : `${title} · Cookbook`}</title>
+  <link rel="icon" href={url('favicon.svg')} type="image/svg+xml">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header><div class="top"><a class="brand" href={url()}><span aria-hidden="true">c.</span>cookbook</a><small>Your recipes. Ready to cook.</small></div></header>
+  <div class="layout">
+    <aside>
+      <div class="eyebrow">At your table</div>
+      <nav class="nav" aria-label="Cookbook">
+        {nav.map(([key, label, path, count]) => (
+          <a href={url(path)} class={active === key ? 'active' : undefined} aria-current={active === key ? 'page' : undefined}>{label} {count && <span>{count}</span>}</a>
+        ))}
+      </nav>
+      {plan && (
+        <section class="week" aria-label="This week">
+          <div class="eyebrow">{plan.title}{plan.example && ' · example'}</div>
+          {plan.meals.map(meal => (
+            <div class="day"><b>{weekday(meal.date)}</b>{meal.recipe && !meal.leftoversFrom ? <a href={url(`recipes/${meal.recipe}/`)}>{mealTitle(meal)}</a> : mealTitle(meal)}</div>
+          ))}
+        </section>
+      )}
+      <p class="side-note">Plan on your PC.<br>Take your cookbook to the kitchen.</p>
+    </aside>
+    <main id="main">
+      <slot />
+    </main>
+  </div>
+</body>
+</html>

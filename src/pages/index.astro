@@ -1,0 +1,80 @@
+---
+import Base from '../layouts/Base.astro';
+import { publishedRecipes } from '../lib/content.mjs';
+import { picture } from '../lib/media.mjs';
+import { url } from '../lib/urls.mjs';
+
+const recipes = await Promise.all(publishedRecipes().map(async recipe => ({
+  ...recipe,
+  thumb: recipe.data.cover ? await picture(recipe.data.cover.src, 128) : null,
+  search: [recipe.data.title, recipe.data.description, recipe.data.category, ...recipe.data.tags,
+    ...recipe.data.groups.flatMap(g => g.items.map(i => i.name))].join(' ').toLowerCase(),
+})));
+const categories = [...new Set(recipes.map(r => r.data.category))].sort();
+const tags = [...new Set(recipes.flatMap(r => r.data.tags))].sort();
+const info = (r: any) => [r.time.total && `${r.time.total} total`, r.time.active && `${r.time.active} active`,
+  !/not recorded/.test(r.yield.label) && r.yield.label, r.status === 'needs-review' && 'needs review'].filter(Boolean).join(' · ');
+---
+<Base title="Recipes" active="recipes">
+  <h1>Recipes</h1>
+  <p class="subtitle">Search by title, ingredient or tag.</p>
+  <form class="search" role="search" action="" onsubmit="return false">
+    <label class="visually-hidden" for="q">Search recipes</label>
+    <input type="search" id="q" name="q" placeholder="Search: salmon, bread, garlic…" autocomplete="off">
+    <div class="filters" hidden data-js aria-label="Category">
+      <button type="button" class="chip" data-category="" aria-pressed="true">All</button>
+      {categories.map(c => <button type="button" class="chip" data-category={c} aria-pressed="false">{c}</button>)}
+    </div>
+    <div class="filters" hidden data-js aria-label="Tags">
+      {tags.map(t => <button type="button" class="chip" data-tag={t} aria-pressed="false">#{t}</button>)}
+    </div>
+  </form>
+  <p class="count" aria-live="polite" id="count">{recipes.length} recipes</p>
+  <ul class="results">
+    {recipes.map(r => (
+      <li data-search={r.search} data-category={r.data.category} data-tags={r.data.tags.join('|')}>
+        <a href={url(`recipes/${r.id}/`)}>
+          {r.thumb && <img src={r.thumb.src} width="64" height="48" alt="" loading="lazy">}
+          <span><span class="name">{r.data.title}</span><span class="info">{r.data.category}{info(r.data) && ` · ${info(r.data)}`}</span></span>
+        </a>
+      </li>
+    ))}
+  </ul>
+  <p class="empty" id="empty" hidden>No recipes match. Try a single ingredient.</p>
+</Base>
+
+<script>
+  const input = document.getElementById('q') as HTMLInputElement;
+  const rows = [...document.querySelectorAll<HTMLElement>('.results li')];
+  const params = new URLSearchParams(location.search);
+  let category = params.get('category') || '';
+  const tags = new Set(params.getAll('tag'));
+  input.value = params.get('q') || '';
+  document.querySelectorAll<HTMLElement>('[data-js]').forEach(el => (el.hidden = false));
+
+  function apply() {
+    const words = input.value.toLowerCase().split(/\s+/).filter(Boolean);
+    let shown = 0;
+    for (const row of rows) {
+      const rowTags = row.dataset.tags!.split('|');
+      const match = words.every(w => row.dataset.search!.includes(w))
+        && (!category || row.dataset.category === category)
+        && [...tags].every(t => rowTags.includes(t));
+      row.hidden = !match;
+      if (match) shown++;
+    }
+    document.getElementById('count')!.textContent = `${shown} ${shown === 1 ? 'recipe' : 'recipes'}`;
+    document.getElementById('empty')!.hidden = shown > 0;
+    document.querySelectorAll<HTMLElement>('[data-category]').forEach(b => b.tagName === 'BUTTON' && b.setAttribute('aria-pressed', String(b.dataset.category === category)));
+    document.querySelectorAll<HTMLElement>('button[data-tag]').forEach(b => b.setAttribute('aria-pressed', String(tags.has(b.dataset.tag!))));
+    const next = new URLSearchParams();
+    if (input.value) next.set('q', input.value);
+    if (category) next.set('category', category);
+    tags.forEach(t => next.append('tag', t));
+    history.replaceState(null, '', next.size ? `?${next}` : location.pathname);
+  }
+  input.addEventListener('input', apply);
+  document.querySelectorAll<HTMLButtonElement>('button[data-category]').forEach(b => b.addEventListener('click', () => { category = b.dataset.category!; apply(); }));
+  document.querySelectorAll<HTMLButtonElement>('button[data-tag]').forEach(b => b.addEventListener('click', () => { tags.has(b.dataset.tag!) ? tags.delete(b.dataset.tag!) : tags.add(b.dataset.tag!); apply(); }));
+  apply();
+</script>

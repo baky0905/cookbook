@@ -1,0 +1,47 @@
+---
+import Base from '../../layouts/Base.astro';
+import { publishedRecipes, readPlans, currentPlan } from '../../lib/content.mjs';
+import { url } from '../../lib/urls.mjs';
+
+const recipes = publishedRecipes();
+const plans = readPlans();
+const plan = currentPlan(plans);
+const others = plans.filter(p => p !== plan && !p.example);
+const day = (date: string) => new Date(date + 'T12:00:00Z').toLocaleDateString('en-GB', { weekday: 'long', day: 'numeric', month: 'short', timeZone: 'UTC' });
+const recipeOf = (id?: string) => recipes.find(r => r.id === id);
+const portions = (meal: any) => meal.servings ? `${meal.servings} servings` : meal.batches ? `${meal.batches} × original batch (${recipeOf(meal.recipe)?.data.yield.label})` : '';
+---
+<Base title="This week" active="week">
+  <h1>This week</h1>
+  {!plan && <p class="subtitle">No plan published yet. Ask the assistant to plan a few meals, then publish.</p>}
+  {plan && (
+    <>
+      <p class="subtitle">{plan.title}</p>
+      {plan.example && <p class="notice">This is an example plan. It disappears from here as soon as a real weekly plan is published.</p>}
+      <ul class="plan">
+        {[...plan.meals].sort((a, b) => a.date.localeCompare(b.date)).map(meal => {
+          const recipe = recipeOf(meal.recipe);
+          const source = meal.leftoversFrom && plan.meals.find(m => m.id === meal.leftoversFrom);
+          return (
+            <li>
+              <span class="when">{day(meal.date)} · {meal.meal}</span>
+              <span>
+                {source
+                  ? <>Leftovers: <a href={url(`recipes/${source.recipe}/`)}>{recipeOf(source.recipe)?.data.title}</a></>
+                  : recipe ? <a href={url(`recipes/${recipe.id}/`)}>{meal.title || recipe.data.title}</a> : meal.title}
+                {!source && portions(meal) && <small>{portions(meal)}</small>}
+                {meal.note && <small>{meal.note}</small>}
+              </span>
+            </li>
+          );
+        })}
+      </ul>
+      <p><a class="btn primary" href={url('shopping/')}>Shopping list</a></p>
+    </>
+  )}
+  {others.length > 0 && (
+    <details><summary>Earlier plans</summary>
+      <ul>{others.map(p => <li>{p.title}: {p.meals.map(m => m.title || recipeOf(m.recipe)?.data.title || 'Leftovers').join(', ')}</li>)}</ul>
+    </details>
+  )}
+</Base>

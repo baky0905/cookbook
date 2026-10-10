@@ -1,0 +1,18 @@
+id: example-week
+title: A simple week
+example: true
+meals:
+  - id: monday-soup
+    date: '2026-10-12'
+    recipe: lohikeitto
+    batches: 1
+    note: One original batch, serving 4–6. Check the dill quantity first.
+  - id: wednesday-pasta
+    date: '2026-10-14'
+    recipe: pasta-carbonara
+    batches: 1
+    note: Check the pasta-water discrepancy in the saved recipe.
+  - id: friday-leftovers
+    date: '2026-10-16'
+    title: Choose something from the freezer
+    note: Replace this example with your own plan.

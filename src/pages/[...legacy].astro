@@ -1,0 +1,17 @@
+---
+import Redirect from '../components/Redirect.astro';
+import { publishedRecipes } from '../lib/content.mjs';
+import { url } from '../lib/urls.mjs';
+
+// Old MkDocs URLs: /<category>/<recipe>/, category indexes, tags and the template page.
+export function getStaticPaths() {
+  const recipePaths = publishedRecipes().filter(r => r.data.legacyPath).map(r => ({
+    params: { legacy: r.data.legacyPath.replace(/\/$/, '') }, props: { to: `recipes/${r.id}/`, title: r.data.title },
+  }));
+  const home = ['main_dishes', 'side_dishes', 'snacks', 'sauces', 'desserts', 'breakfasts', 'tags', 'template_recipe']
+    .map(legacy => ({ params: { legacy }, props: { to: '', title: 'Recipes' } }));
+  return [...recipePaths, ...home];
+}
+const { to, title } = Astro.props;
+---
+<Redirect to={url(to)} title={title} />

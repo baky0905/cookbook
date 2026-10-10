@@ -1,0 +1,266 @@
+[
+  {
+    "id": "beef-pot-roast",
+    "original": "docs/main_dishes/beef_pot_roast.md",
+    "legacyPath": "main_dishes/beef_pot_roast/",
+    "sha256": "832ea181455ae9ce66ec5f849036f24f8d6efefc7bda0bcf8b3c4d555d92d3bc",
+    "ingredientCount": 15,
+    "stepCount": 7
+  },
+  {
+    "id": "beef-stroganoff-with-noodles",
+    "original": "docs/main_dishes/beef_stroganoff_with_noodles.md",
+    "legacyPath": "main_dishes/beef_stroganoff_with_noodles/",
+    "sha256": "29fe4135d307f64bff6e3c2da0f0e7aa25fd8920fd309a1076eba3dbc4a71529",
+    "ingredientCount": 17,
+    "stepCount": 8
+  },
+  {
+    "id": "brocolli-cheddar-soup-in-bread",
+    "original": "docs/main_dishes/brocolli_cheddar_soup_in_bread.md",
+    "legacyPath": "main_dishes/brocolli_cheddar_soup_in_bread/",
+    "sha256": "2e9b986307968ae974ac3eaa6c4c3505593d6ed67ca0f7f8e0a2405c2cded93f",
+    "ingredientCount": 18,
+    "stepCount": 7
+  },
+  {
+    "id": "chicken-paprikash",
+    "original": "docs/main_dishes/chicken_paprikash.md",
+    "legacyPath": "main_dishes/chicken_paprikash/",
+    "sha256": "12508960369ff9be1c86cf9fbfbc4721cdc739804583f9135a5c578f181d74bf",
+    "ingredientCount": 11,
+    "stepCount": 4
+  },
+  {
+    "id": "ciopinno",
+    "original": "docs/main_dishes/ciopinno.md",
+    "legacyPath": "main_dishes/ciopinno/",
+    "sha256": "cf3283e8c02e8f6090d48f90055e3068cb29e98e1d229c1e6e1372c264ec3928",
+    "ingredientCount": 17,
+    "stepCount": 5
+  },
+  {
+    "id": "detroit-style-pan-pizza",
+    "original": "docs/main_dishes/detroit_style_pan_pizza.md",
+    "legacyPath": "main_dishes/detroit_style_pan_pizza/",
+    "sha256": "f24cb492e4b6cb056df08bc6e00c7ae5eb10536be829b2b461c2586b7b4e0dd2",
+    "ingredientCount": 15,
+    "stepCount": 7
+  },
+  {
+    "id": "honey-soya-marinated-chicken",
+    "original": "docs/main_dishes/honey_soya_marinated_chicken.md",
+    "legacyPath": "main_dishes/honey_soya_marinated_chicken/",
+    "sha256": "0f23b4974f1aa23c03946093601a4e962d495111cb32f1ce732bb45396727c01",
+    "ingredientCount": 8,
+    "stepCount": 6
+  },
+  {
+    "id": "hummus-and-pita",
+    "original": "docs/main_dishes/hummus_and_pita.md",
+    "legacyPath": "main_dishes/hummus_and_pita/",
+    "sha256": "db239d292bcb98d055c6d8a90422db62dcbc9d82d71343ff022e4590ed736163",
+    "ingredientCount": 15,
+    "stepCount": 4
+  },
+  {
+    "id": "keema-naan",
+    "original": "docs/main_dishes/keema_naan.md",
+    "legacyPath": "main_dishes/keema_naan/",
+    "sha256": "7312ce27c877c15d05c576124bdd606f1569ed8d8f8559846ce532f20a6455a2",
+    "ingredientCount": 21,
+    "stepCount": 1
+  },
+  {
+    "id": "lohikeitto",
+    "original": "docs/main_dishes/lohikeitto.md",
+    "legacyPath": "main_dishes/lohikeitto/",
+    "sha256": "f4639dc8582a4e0e60e7f559db2af1301a85f8185affd424f0f18aeb5369ec90",
+    "ingredientCount": 9,
+    "stepCount": 6
+  },
+  {
+    "id": "mexican-lentil-stew",
+    "original": "docs/main_dishes/mexican_lentil_stew.md",
+    "legacyPath": "main_dishes/mexican_lentil_stew/",
+    "sha256": "645a4c129f23f62ca02ed93c0f7de542758911c71238baa152d55987496f01de",
+    "ingredientCount": 15,
+    "stepCount": 6
+  },
+  {
+    "id": "minced-meat-roles",
+    "original": "docs/main_dishes/minced_meat_roles.md",
+    "legacyPath": "main_dishes/minced_meat_roles/",
+    "sha256": "dfe1caef068b7ebb15e7ad3612658c899ab1a694e0b781e5cf2600bd313f7302",
+    "ingredientCount": 13,
+    "stepCount": 2
+  },
+  {
+    "id": "pasta-bolognese",
+    "original": "docs/main_dishes/pasta_bolognese.md",
+    "legacyPath": "main_dishes/pasta_bolognese/",
+    "sha256": "3dfc5d7f124673f29b37f73cb56a7c92527dfee60bb52e2ea3464c6e38ec7f21",
+    "ingredientCount": 18,
+    "stepCount": 14
+  },
+  {
+    "id": "pasta-carbonara",
+    "original": "docs/main_dishes/pasta_carbonara.md",
+    "legacyPath": "main_dishes/pasta_carbonara/",
+    "sha256": "f57d9a2514aadb5d2c2021643459f55f077dd5b141fac194fcc34582ef92c035",
+    "ingredientCount": 8,
+    "stepCount": 5
+  },
+  {
+    "id": "rice-chicken-vegetables",
+    "original": "docs/main_dishes/rice_chicken_vegetables.md",
+    "legacyPath": "main_dishes/rice_chicken_vegetables/",
+    "sha256": "79d2d38ed0382124bfc4f12959ecceac8a2845344c5a23ee6757f67db3034435",
+    "ingredientCount": 14,
+    "stepCount": 8
+  },
+  {
+    "id": "ricet",
+    "original": "docs/main_dishes/ricet.md",
+    "legacyPath": "main_dishes/ricet/",
+    "sha256": "c02c1572d7c51dc4ffdadc09e82b6d963413d578dc12f44edae1482b75932520",
+    "ingredientCount": 6,
+    "stepCount": 4
+  },
+  {
+    "id": "sausage-and-sauerkraut",
+    "original": "docs/main_dishes/sausage_and_sauerkraut.md",
+    "legacyPath": "main_dishes/sausage_and_sauerkraut/",
+    "sha256": "4551736dac2dcb4a91cdc59340d7aed6aa2aeb5bd43c4e126a59771dc1189ee8",
+    "ingredientCount": 5,
+    "stepCount": 3
+  },
+  {
+    "id": "sloppy-joe",
+    "original": "docs/main_dishes/sloppy_joe.md",
+    "legacyPath": "main_dishes/sloppy_joe/",
+    "sha256": "e1c1837ec0f49b31c39752efb9fa37c0ea89dc27caaa2028bd9655158c1d2d78",
+    "ingredientCount": 20,
+    "stepCount": 1
+  },
+  {
+    "id": "squash-patties",
+    "original": "docs/main_dishes/squash_patties.md",
+    "legacyPath": "main_dishes/squash_patties/",
+    "sha256": "22779ee38f139a7d9b9e049e099b4eed84bfddf49b37cd5fc7556f5e1b31af50",
+    "ingredientCount": 1,
+    "stepCount": 1
+  },
+  {
+    "id": "mashed-potatos",
+    "original": "docs/side_dishes/mashed_potatos.md",
+    "legacyPath": "side_dishes/mashed_potatos/",
+    "sha256": "f3191358f29a611efc2be218f54e89f22b95631cf30994007ea0f33bcef2361b",
+    "ingredientCount": 3,
+    "stepCount": 1
+  },
+  {
+    "id": "roasted-potatos",
+    "original": "docs/side_dishes/roasted_potatos.md",
+    "legacyPath": "side_dishes/roasted_potatos/",
+    "sha256": "0ab8ac760d5b2c6a7fdc9d5f4d613bb30508e68daf860ce9bb5d0fac698c910e",
+    "ingredientCount": 8,
+    "stepCount": 5
+  },
+  {
+    "id": "bazlama",
+    "original": "docs/snacks/bazlama.md",
+    "legacyPath": "snacks/bazlama/",
+    "sha256": "5e45d67af74f30f5483b26cace2bccad20c2a5f8c0b33c1e001dd130a7ca82d1",
+    "ingredientCount": 7,
+    "stepCount": 1
+  },
+  {
+    "id": "easy-bread",
+    "original": "docs/snacks/easy_bread.md",
+    "legacyPath": "snacks/easy_bread/",
+    "sha256": "0d3d9280bfa0a2149f5c87f4483fdef5a4183b96a197759aa8e3793add65acd1",
+    "ingredientCount": 5,
+    "stepCount": 11
+  },
+  {
+    "id": "foccacia",
+    "original": "docs/snacks/foccacia.md",
+    "legacyPath": "snacks/foccacia/",
+    "sha256": "29b31e7e31a5a0b341bfbcfb0e7c2e6a73a1b98e61dcaa56eeac800dabaf74f7",
+    "ingredientCount": 5,
+    "stepCount": 4
+  },
+  {
+    "id": "kiflice",
+    "original": "docs/snacks/kiflice.md",
+    "legacyPath": "snacks/kiflice/",
+    "sha256": "e0e61aa5550920dfdf2b266075f09299203895ddb82841382dd5adf17af460c1",
+    "ingredientCount": 11,
+    "stepCount": 6
+  },
+  {
+    "id": "mayonnaise",
+    "original": "docs/sauces/mayonnaise.md",
+    "legacyPath": "sauces/mayonnaise/",
+    "sha256": "6b157ca3920040fabf36e90fdb82e58da6a6f0bbba40dcae48f7a2e8ba8ddd63",
+    "ingredientCount": 7,
+    "stepCount": 4
+  },
+  {
+    "id": "mustard-sauce",
+    "original": "docs/sauces/mustard_sauce.md",
+    "legacyPath": "sauces/mustard_sauce/",
+    "sha256": "600f7272b2ea97bee161598f3f817fca15853eebd26dff21de80382920def642",
+    "ingredientCount": 12,
+    "stepCount": 4
+  },
+  {
+    "id": "apple-galette",
+    "original": "docs/desserts/apple_galette.md",
+    "legacyPath": "desserts/apple_galette/",
+    "sha256": "1d0e976bea06a2a798eae0da758fd18607dbbb793ffa6ff716010228e0ff2b5d",
+    "ingredientCount": 16,
+    "stepCount": 8
+  },
+  {
+    "id": "cupavci",
+    "original": "docs/desserts/cupavci.md",
+    "legacyPath": "desserts/cupavci/",
+    "sha256": "4d1c4475cd120efc0ec01c9226bd5ce73366c4d6f25ebe3912a467486ded2f80",
+    "ingredientCount": 11,
+    "stepCount": 1
+  },
+  {
+    "id": "macaroon",
+    "original": "docs/desserts/macaroon.md",
+    "legacyPath": "desserts/macaroon/",
+    "sha256": "ff581e4c675010e85e947564662d39d37eb1c949d900dc2de86d868dad08f2d5",
+    "ingredientCount": 13,
+    "stepCount": 1
+  },
+  {
+    "id": "mini-strudle",
+    "original": "docs/desserts/mini_strudle.md",
+    "legacyPath": "desserts/mini_strudle/",
+    "sha256": "6443d3631927e117e41e69acc199d5a6fcde811f0105842215dfe9dea6221038",
+    "ingredientCount": 7,
+    "stepCount": 10
+  },
+  {
+    "id": "orehnjaca",
+    "original": "docs/desserts/orehnjaca.md",
+    "legacyPath": "desserts/orehnjaca/",
+    "sha256": "2953b17beaec79a0adea494ee4e5461fc61b4e5347691bacb5daad1778768fe9",
+    "ingredientCount": 11,
+    "stepCount": 7
+  },
+  {
+    "id": "tackrle-pekmez",
+    "original": "docs/desserts/tackrle_pekmez.md",
+    "legacyPath": "desserts/tackrle_pekmez/",
+    "sha256": "73172f3f6d104c22681fed9c9b899cb0dd82d4d92d3036f44e26f36f32c3ca7d",
+    "ingredientCount": 7,
+    "stepCount": 1
+  }
+]

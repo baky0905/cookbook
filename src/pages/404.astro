@@ -1,0 +1,8 @@
+---
+import Base from '../layouts/Base.astro';
+import { url } from '../lib/urls.mjs';
+---
+<Base title="Not found">
+  <h1>Not found</h1>
+  <p class="subtitle">That page isn’t in the cookbook. <a href={url()}>Search the recipes</a>.</p>
+</Base>

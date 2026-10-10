@@ -1,0 +1,217 @@
+---
+import crypto from 'node:crypto';
+import Base from '../../layouts/Base.astro';
+import { publishedRecipes } from '../../lib/content.mjs';
+import { amount } from '../../lib/quantities.mjs';
+import { stepHtml, quantityAttrs, markdown, escape } from '../../lib/render.mjs';
+import { picture } from '../../lib/media.mjs';
+import { url } from '../../lib/urls.mjs';
+
+export function getStaticPaths() {
+  return publishedRecipes().map(recipe => ({ params: { id: recipe.id }, props: { recipe } }));
+}
+const { recipe } = Astro.props;
+const r = recipe.data;
+const items = r.groups.flatMap(g => g.items);
+// Progress is stored per device; changing ingredients or steps invalidates it.
+const version = crypto.createHash('sha256').update(JSON.stringify([r.groups, r.steps])).digest('hex').slice(0, 10);
+const cover = r.cover ? await picture(r.cover.src, 480) : null;
+const steps = await Promise.all(r.steps.map(async step => ({
+  ...step,
+  html: stepHtml(step.text, items),
+  photos: await Promise.all(step.images.map(async image => ({ ...image, ...(await picture(image.src, 440)) }))),
+})));
+const hasPhotos = steps.some(s => s.photos.length);
+const times = [['total', 'total'], ['active', 'active'], ['cook', 'cooking'], ['rest', 'resting']].filter(([k]) => r.time[k]);
+const statusLabel = { draft: 'Draft', 'needs-review': 'Needs review', reviewed: 'Checked against source', cooked: 'Cooked & tested' }[r.status];
+const archive = r.legacyPath ? url(`archive/${r.legacyPath.replace(/\/$/, '')}.md`) : null;
+const hostname = (u: string) => new URL(u).hostname.replace(/^www\./, '');
+---
+<Base title={r.title} active="recipes" description={r.description || `${r.title} recipe`}>
+  <article id="recipe" data-recipe={recipe.id} data-version={version} data-yield={r.yield.scalable ? r.yield.amount : undefined} data-yield-unit={r.yield.unit}>
+    <div class="crumb"><a href={url()}>Recipes</a> &nbsp;/&nbsp; <a href={url(`?category=${encodeURIComponent(r.category)}`)}>{r.category}</a></div>
+    <div class="title-row">
+      <div>
+        <h1>{r.title}</h1>
+        {r.description && <p class="subtitle">{r.description}</p>}
+      </div>
+      {cover && (
+        <button class="cover" type="button" data-full={cover.full} data-caption={r.cover!.caption || r.cover!.alt} aria-label={`Enlarge photo: ${r.cover!.alt}`}>
+          <img src={cover.src} width={cover.width} height={cover.height} alt={r.cover!.alt}>
+        </button>
+      )}
+    </div>
+    <div class="meta">
+      {times.map(([k, label]) => <span><strong>{r.time[k]}</strong> {label}</span>)}
+      <span><strong id="yield-label">{r.yield.label}</strong></span>
+      <span class={`status ${r.status}`}>{statusLabel}</span>
+    </div>
+
+    <div class="actions" hidden data-js>
+      <button class="btn primary" type="button" id="cook" aria-pressed="false">Cooking view</button>
+      <button class="btn" type="button" id="print">Print recipe</button>
+      {hasPhotos && <label class="toggle"><input type="checkbox" id="print-photos"> Include step photos when printing</label>}
+      {r.yield.scalable && (
+        <div class="servings" role="group" aria-label="Servings">
+          <button type="button" data-step="-1" aria-label="Fewer servings">−</button>
+          <output id="servings" aria-live="polite">{r.yield.amount} {r.yield.unit}</output>
+          <button type="button" data-step="1" aria-label="More servings">+</button>
+        </div>
+      )}
+    </div>
+
+    <div class="recipe">
+      <section class="ingredients" id="ingredients" aria-labelledby="ingredients-title">
+        <h2 id="ingredients-title">Ingredients</h2>
+        <p class="caption">Tick off as you prepare <a class="jump" href="#method">Method ↓</a></p>
+        {!r.yield.scalable && <p class="caption">Shown for the original batch ({r.yield.label}).</p>}
+        {r.groups.map(group => (
+          <>
+            {(r.groups.length > 1 || group.name !== 'Ingredients') && <h3>{group.name}</h3>}
+            {group.items.map(item => (
+              <label class="ingredient">
+                <input type="checkbox" data-check={`i:${item.id}`}>
+                <span set:html={`${item.quantity != null ? `<b class="qty"${quantityAttrs(item)}>${amount(item)}</b> ` : ''}${escape(item.name)}${item.optional ? ' <small>Optional</small>' : ''}${item.note ? `<small>${escape(item.note)}</small>` : ''}${item.quantity == null && !item.note ? '<small>Amount not specified</small>' : ''}`} />
+              </label>
+            ))}
+          </>
+        ))}
+        {r.issues.length > 0 && (
+          <div class="review" role="note"><strong>Before cooking</strong>
+            <ul>{r.issues.map(issue => <li>{issue}</li>)}</ul>
+          </div>
+        )}
+        <button class="reset" type="button" id="reset" hidden data-js>Clear ticks</button>
+      </section>
+
+      <section id="method" aria-labelledby="method-title">
+        <h2 id="method-title">Method</h2>
+        <p class="caption">Everything in the order you need it <a class="jump" href="#ingredients">Ingredients ↑</a></p>
+        <ol class="steps">
+          {steps.map(step => (
+            <li id={step.id}>
+              <div class="step-head">
+                <div>
+                  {(step.title || step.duration) && <h3>{step.title}{step.duration && <span class="time">{step.duration}</span>}</h3>}
+                  <div class="step-text" set:html={step.html} />
+                </div>
+                <input class="step-check" type="checkbox" data-check={`s:${step.id}`} aria-label={`Mark step done`}>
+              </div>
+              {step.photos.length > 0 && (
+                <ul class="photos">
+                  {step.photos.map(photo => (
+                    <li><figure>
+                      <button type="button" data-full={photo.full} data-caption={photo.caption || photo.alt} aria-label={`Enlarge photo: ${photo.alt}`}>
+                        <img src={photo.src} width={photo.width} height={photo.height} alt={photo.alt} loading="lazy" decoding="async">
+                      </button>
+                      {(photo.caption || photo.credit) && <figcaption>{photo.caption}{photo.credit && <> · {photo.credit}</>}</figcaption>}
+                    </figure></li>
+                  ))}
+                </ul>
+              )}
+            </li>
+          ))}
+        </ol>
+      </section>
+    </div>
+
+    {r.sources.length > 0 && (
+      <div class="source">
+        {r.sources.map(source => source.url
+          ? <a href={source.url + (source.timestamp && source.url.includes('youtube.com') ? `&t=${source.timestamp}` : '')} rel="noopener">{source.title === 'Original Recipe Source' || source.title === 'Saved video' ? `${source.title} · ${hostname(source.url)}` : source.title} ↗</a>
+          : <span>{source.title}</span>)}
+      </div>
+    )}
+    {recipe.body && <section class="notes"><h2>Notes</h2><div class="prose" set:html={markdown(recipe.body)} /></section>}
+    {(r.adaptations.length > 0 || archive) && (
+      <details>
+        <summary>Provenance</summary>
+        <ul>{r.adaptations.map(a => <li>{a}</li>)}</ul>
+        {r.sources.some(s => s.accessed) && <p>Sources accessed: {r.sources.filter(s => s.accessed).map(s => `${s.title} (${s.accessed})`).join(', ')}</p>}
+        {archive && <p><a href={archive}>Original saved version</a></p>}
+      </details>
+    )}
+  </article>
+  <dialog class="lightbox" aria-label="Enlarged photo">
+    <button class="close" type="button">Close ✕</button>
+    <img alt="">
+    <p></p>
+  </dialog>
+</Base>
+
+<script>
+  import { formatAmount } from '../../lib/format.mjs';
+  const article = document.getElementById('recipe')!;
+  const key = `cookbook:recipe:${article.dataset.recipe}:${article.dataset.version}`;
+  const store = {
+    get() { try { return JSON.parse(localStorage.getItem(key) || '{}'); } catch { return {}; } },
+    set(value: object) { try { localStorage.setItem(key, JSON.stringify(value)); } catch {} },
+  };
+  document.querySelectorAll<HTMLElement>('[data-js]').forEach(el => (el.hidden = false));
+
+  // Ticks
+  const state = store.get();
+  const boxes = [...document.querySelectorAll<HTMLInputElement>('[data-check]')];
+  for (const box of boxes) {
+    box.checked = !!state.checked?.[box.dataset.check!];
+    box.addEventListener('change', () => {
+      const s = store.get(); s.checked = { ...s.checked, [box.dataset.check!]: box.checked }; store.set(s);
+    });
+  }
+  document.getElementById('reset')!.addEventListener('click', () => {
+    boxes.forEach(b => (b.checked = false));
+    const s = store.get(); delete s.checked; store.set(s);
+  });
+
+  // Servings
+  const base = Number(article.dataset.yield);
+  const yieldLabel = document.getElementById('yield-label')!.textContent;
+  const output = document.getElementById('servings');
+  function scale(servings: number) {
+    if (!output) return;
+    output.textContent = `${servings} ${article.dataset.yieldUnit}`;
+    document.getElementById('yield-label')!.textContent = servings === base ? yieldLabel : `${servings} ${article.dataset.yieldUnit} (scaled from ${yieldLabel})`;
+    document.querySelectorAll<HTMLElement>('[data-qty]').forEach(el => {
+      const target = el.matches('.ref') ? el.querySelector('.qty')! : el;
+      target.textContent = formatAmount(el.dataset, servings / base);
+    });
+  }
+  if (output && base) {
+    let servings = state.servings || base;
+    scale(servings);
+    document.querySelectorAll<HTMLButtonElement>('.servings button').forEach(button => button.addEventListener('click', () => {
+      servings = Math.max(1, servings + Number(button.dataset.step));
+      scale(servings);
+      const s = store.get(); s.servings = servings; store.set(s);
+    }));
+  }
+
+  // Cooking view and printing
+  const cook = document.getElementById('cook')!;
+  const setCooking = (on: boolean) => {
+    document.body.classList.toggle('cooking', on);
+    cook.setAttribute('aria-pressed', String(on));
+    cook.textContent = on ? 'Exit cooking view' : 'Cooking view';
+  };
+  cook.addEventListener('click', () => setCooking(!document.body.classList.contains('cooking')));
+  if (location.hash === '#cook') setCooking(true);
+  const photos = document.getElementById('print-photos') as HTMLInputElement | null;
+  photos?.addEventListener('change', () => document.body.classList.toggle('print-photos', photos.checked));
+  document.getElementById('print')!.addEventListener('click', () => window.print());
+
+  // Lightbox
+  const dialog = document.querySelector<HTMLDialogElement>('dialog.lightbox')!;
+  const big = dialog.querySelector('img')!;
+  let opener: HTMLElement | null = null;
+  document.querySelectorAll<HTMLButtonElement>('[data-full]').forEach(button => button.addEventListener('click', () => {
+    opener = button;
+    big.src = button.dataset.full!;
+    big.alt = button.querySelector('img')!.alt;
+    dialog.querySelector('p')!.textContent = button.dataset.caption || '';
+    dialog.showModal();
+  }));
+  dialog.querySelector('.close')!.addEventListener('click', () => dialog.close());
+  dialog.addEventListener('click', e => { if (e.target === dialog) dialog.close(); });
+  dialog.addEventListener('close', () => opener?.focus());
+</script>
+
