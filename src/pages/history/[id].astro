@@ -1,0 +1,30 @@
+---
+import Base from '../../layouts/Base.astro';
+import { readHistory, publishedRecipes } from '../../lib/content.mjs';
+import { number } from '../../lib/quantities.mjs';
+import { url } from '../../lib/urls.mjs';
+export function getStaticPaths() {
+  return readHistory().map(week => ({ params: { id: week.plan.id }, props: { week } }));
+}
+const { week } = Astro.props;
+const live = new Set(publishedRecipes().map(r => r.id));
+const day = (d: string) => new Date(d + 'T12:00:00Z').toLocaleDateString('en-GB', { weekday: 'short', day: 'numeric', month: 'short', timeZone: 'UTC' });
+const groups = [...new Set(week.shopping.map((r: any) => r.category))].map(c => ({ c, rows: week.shopping.filter((r: any) => r.category === c) }));
+const qty = (r: any) => r.quantity == null ? '' : `${number(r.quantity)}${r.max && r.max !== r.quantity ? '–' + number(r.max) : ''}${r.unit && r.unit !== 'piece' ? ' ' + r.unit : ''} `;
+---
+<Base title={week.plan.title} active="history" crumbs={[{ label: 'History', href: 'history/' }, { label: week.plan.title }]}>
+  <h1>{week.plan.title}</h1>
+  <p class="subtitle">Saved {new Date(week.takenAt).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' })}.</p>
+  {week.plan.notes && <p class="notice plan-notes">{week.plan.notes}</p>}
+  <div class="table-wrap"><table>
+    <thead><tr><th scope="col">Day</th><th scope="col">Meal</th><th scope="col">Amount</th><th scope="col">kcal/portion</th></tr></thead>
+    <tbody>{week.meals.map((m: any) => (
+      <tr><td>{day(m.date)} · {m.meal}</td>
+        <td>{m.recipe ? (live.has(m.recipe.id) ? <a href={url(`recipes/${m.recipe.id}/`)}>{m.recipe.title}</a> : m.recipe.title) : m.leftoversFrom ? 'Leftovers' : m.title}{m.note && <small class="block">{m.note}</small>}</td>
+        <td>{m.servings ? `${m.servings} servings` : m.factor && m.factor !== 1 ? `×${number(m.factor)}` : m.recipe ? '×1' : ''}</td>
+        <td class="num">{m.recipe?.kcalPerPortion ?? ''}</td></tr>
+    ))}</tbody>
+  </table></div>
+  <h2>Shopping list</h2>
+  {groups.map(g => <section class="shopping-group"><h3>{g.c}</h3><ul>{g.rows.map((r: any) => <li><b>{qty(r)}</b>{r.name} <small>· {r.recipes.join(', ')}</small></li>)}</ul></section>)}
+</Base>

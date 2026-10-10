@@ -1,0 +1,30 @@
+---
+import Base from '../../layouts/Base.astro';
+import { readHistory } from '../../lib/content.mjs';
+import { url } from '../../lib/urls.mjs';
+const weeks = readHistory();
+const meals = weeks.flatMap(w => w.meals.filter((m: any) => m.recipe).map((m: any) => ({ ...m, week: w.plan.id })));
+const count = (key: (m: any) => string) => [...meals.reduce((map, m) => map.set(key(m), (map.get(key(m)) || 0) + 1), new Map<string, number>())].sort((a, b) => b[1] - a[1]);
+const topRecipes = count(m => m.recipe.title).slice(0, 10);
+const categories = count(m => m.recipe.category);
+const date = (d: string) => d ? new Date(d + 'T12:00:00Z').toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric', timeZone: 'UTC' }) : '';
+---
+<Base title="History" active="history" crumbs={[{ label: 'History' }]}>
+  <h1>History</h1>
+  <p class="subtitle">Past weeks, frozen when the next week started. Later recipe changes don't alter them.</p>
+  {weeks.length === 0
+    ? <p class="empty">No past weeks yet. A week is saved here automatically when the next one starts.</p>
+    : <>
+        <ul class="results">
+          {weeks.map(w => (
+            <li><a href={url(`history/${w.plan.id}/`)}><span><span class="name">{w.plan.title}</span>
+              <span class="info">{date(w.plan.start)} · {w.meals.length} meals · {w.shopping.length} shopping items</span></span></a></li>
+          ))}
+        </ul>
+        <div class="ref-grid">
+          <section><h2>Most planned</h2><table><tbody>{topRecipes.map(([t, n]) => <tr><th scope="row">{t}</th><td class="num">{n}×</td></tr>)}</tbody></table></section>
+          <section><h2>By category</h2><table><tbody>{categories.map(([t, n]) => <tr><th scope="row">{t}</th><td class="num">{n}</td></tr>)}</tbody></table></section>
+        </div>
+      </>}
+  <p class="caption">Download for analysis: <a href={url('history.json')}>all weeks (JSON)</a> · <a href={url('history-meals.csv')}>meals (CSV)</a></p>
+</Base>

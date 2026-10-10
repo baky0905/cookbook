@@ -1,0 +1,14 @@
+---
+import { url } from '../lib/urls.mjs';
+// Path back up the site: Cookbook › Section › Page. The last item is the current page.
+interface Props { items: { label: string; href?: string }[] }
+const { items } = Astro.props;
+const trail = [{ label: 'Cookbook', href: '' }, ...items];
+---
+<nav class="crumb" aria-label="Breadcrumb">
+  <ol>
+    {trail.map((c, i) => (
+      <li>{i < trail.length - 1 && c.href !== undefined ? <a href={url(c.href)}>{c.label}</a> : <span aria-current="page">{c.label}</span>}</li>
+    ))}
+  </ol>
+</nav>
