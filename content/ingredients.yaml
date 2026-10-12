@@ -10,6 +10,7 @@ ingredients:
   - { id: active-dry-yeast, name: active dry yeast, aisle: Dry goods, kcal: 325 }
   - { id: aioli, name: aioli, aisle: "Oils & condiments", kcal: 680 }
   - { id: apple, name: apple, aisle: Produce, kcal: 52, weights: { piece: 180 } }
+  - { id: apple-cider-vinegar, name: apple cider vinegar, aisle: "Oils & condiments", kcal: 21, density: 1.01 }
   - { id: avocado-oil, name: avocado oil, aisle: "Oils & condiments", kcal: 884, density: 0.92 }
   - { id: baking-chocolate, name: baking chocolate, aisle: Dry goods, kcal: 500 }
   - { id: baking-powder, name: baking powder, aisle: Dry goods, kcal: 53 }
@@ -47,6 +48,7 @@ ingredients:
   - { id: chicken-stock, name: chicken stock, aisle: "Tins & jars", kcal: 5, density: 1 }
   - { id: chilli-flakes, name: chilli flakes, aisle: "Herbs & spices" }
   - { id: chilli-powder, name: chilli powder, aisle: "Herbs & spices" }
+  - { id: chocolate-spread, name: chocolate spread, aisle: "Tins & jars", kcal: 540 }
   - { id: cinnamon, name: ground cinnamon, aisle: "Herbs & spices" }
   - { id: citric-acid, name: citric acid, aisle: Dry goods, kcal: 0 }
   - { id: clam-juice, name: clam juice, aisle: "Tins & jars", kcal: 2, density: 1 }
@@ -57,6 +59,7 @@ ingredients:
   - { id: coriander, name: fresh coriander, aisle: Produce, kcal: 23 }
   - { id: coriander-seed, name: coriander seed, aisle: "Herbs & spices" }
   - { id: cornstarch, name: cornflour, aisle: Dry goods, kcal: 381 }
+  - { id: cottage-cheese, name: cottage cheese, aisle: "Dairy & eggs", kcal: 98 }
   - { id: cream-cheese, name: cream cheese, aisle: "Dairy & eggs", kcal: 342 }
   - { id: crushed-tomatoes, name: canned crushed tomatoes, aisle: "Tins & jars", kcal: 32 }
   - { id: crusty-bread, name: crusty bread, aisle: Bakery, kcal: 270 }
@@ -96,6 +99,7 @@ ingredients:
   - { id: kranjska-sausage, name: Kranjska sausages, aisle: "Meat & fish", kcal: 300, weights: { piece: 180 } }
   - { id: lard, name: lard, aisle: "Meat & fish", kcal: 902, density: 0.92 }
   - { id: leek, name: leeks, aisle: Produce, kcal: 61, weights: { piece: 100 } }
+  - { id: lemon, name: lemons, aisle: Produce, kcal: 29, weights: { piece: 100 } }
   - { id: lemon-juice, name: lemon juice, aisle: Produce, kcal: 22, density: 1.03 }
   - { id: lime, name: limes, aisle: Produce, kcal: 30, weights: { piece: 65 } }
   - { id: long-grain-rice, name: long-grain rice, aisle: Dry goods, kcal: 365 }
@@ -104,6 +108,7 @@ ingredients:
   - { id: minced-lamb, name: minced lamb, aisle: "Meat & fish", kcal: 282 }
   - { id: minced-pork, name: minced pork, aisle: "Meat & fish", kcal: 263 }
   - { id: mini-sweet-pepper, name: mini sweet peppers, aisle: Produce, kcal: 31, weights: { piece: 40 } }
+  - { id: mixed-berries, name: fresh berries, aisle: Produce, kcal: 45 }
   - { id: mozzarella, name: mozzarella, aisle: "Dairy & eggs", kcal: 280 }
   - { id: mushrooms, name: mushrooms, aisle: Produce, kcal: 22 }
   - { id: mussels, name: mussels (in shell), aisle: "Meat & fish", kcal: 35 }
@@ -130,6 +135,7 @@ ingredients:
   - { id: poblano-pepper, name: poblano peppers, aisle: Produce, kcal: 20 }
   - { id: poolish, name: poolish (made earlier), aisle: Other, kcal: 0, shop: false }
   - { id: potato, name: potatoes, aisle: Produce, kcal: 77, weights: { piece: 170 } }
+  - { id: raisins, name: raisins, aisle: Dry goods, kcal: 299 }
   - { id: raw-sugar, name: raw sugar, aisle: Dry goods, kcal: 387 }
   - { id: red-bell-pepper, name: red bell peppers, aisle: Produce, kcal: 31, weights: { piece: 150 } }
   - { id: red-kidney-beans, name: red kidney beans (canned), aisle: "Tins & jars", kcal: 80, weights: { can: 400 } }
@@ -138,6 +144,7 @@ ingredients:
   - { id: red-wine-vinegar, name: red wine vinegar, aisle: "Oils & condiments", kcal: 19 }
   - { id: rolled-oats, name: rolled oats, aisle: Dry goods, kcal: 379, staple: true }
   - { id: rosemary, name: fresh rosemary, aisle: Produce, kcal: 131, weights: { handful: 5 } }
+  - { id: rum, name: rum, aisle: Drinks, kcal: 231, density: 0.94 }
   - { id: salad-leaves, name: salad leaves, aisle: Produce, kcal: 17 }
   - { id: salmon, name: salmon, aisle: "Meat & fish", kcal: 208 }
   - { id: salt, name: salt, aisle: "Herbs & spices", staple: true }
