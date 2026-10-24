@@ -1,5 +1,6 @@
 ---
-title: Tačkrle
+title: Plum Jam Pockets
+originalName: { name: Tačkrle, lang: hr }
 description: Croatian boiled dough pockets filled with plum jam.
 category: Desserts & baking
 tags: [croatian, plum, potato, family-recipe, vegetarian]
@@ -23,11 +24,11 @@ groups:
 steps:
   - { id: dough, title: Make the dough, text: Mix the ingredients into a smooth dough. }
   - { id: shape, title: Cut and fill, text: "Roll out the dough and cut circles with a glass. Fill them with plum jam (or another jam), fold over and seal the edges firmly with a fork so the jam doesn't leak during cooking." }
-  - { id: cook, title: Boil, text: "Cook in boiling water. When the tačkrle rise to the surface, cook them for 2 minutes more." }
+  - { id: cook, title: Boil, text: "Cook in boiling water. When the pockets rise to the surface, cook them for 2 minutes more." }
 sources:
   - { title: Saved video, url: "https://www.youtube.com/watch?v=00JmYEIlXuM" }
 issues:
-  - The saved source link is the same video as Orehnjača and Ćupavci; verify the correct source.
+  - The saved source link is the same video as Walnut Roll and Coconut Chocolate Squares; verify the correct source.
   - Rolling thickness and serving are not described.
 adaptations:
   - Translated from Croatian.

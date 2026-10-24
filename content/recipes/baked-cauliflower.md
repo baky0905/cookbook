@@ -1,5 +1,6 @@
 ---
 title: Baked cauliflower
+originalName: { name: Zapečena cvjetača, lang: hr }
 description: Croatian cauliflower bake with a golden cheese crust and an egg-and-sour-cream topping.
 category: Mains
 tags: [croatian, cauliflower, cheese, vegetarian, oven-baked]
@@ -52,7 +53,5 @@ adaptations:
   - The source does not specify a fan setting or exact dish dimensions. Scaling may require a different baking dish and adjusted cooking time.
   - Salt, pepper and butter amounts are unspecified in the source and remain unquantified.
 ---
-
-Known in Croatian as **zapečena cvjetača**.
 
 The book suggests a little Parmigiano or Grana Padano as an optional finishing touch. No amount is given, so it is not included in the base shopping quantities. For a vegetarian version, choose cheeses made with vegetarian rennet.

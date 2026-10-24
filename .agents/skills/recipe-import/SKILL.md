@@ -19,7 +19,7 @@ This is the main way recipes enter the cookbook. One recipe is one file: `conten
 
 ## Writing the recipe
 
-- **English only.** Translate; set `originalLanguage` (e.g. `hr`, `no`) and add "Translated from …" to `adaptations`. Established dish names may stay as the title (Orehnjača, Lohikeitto) with an English `description`.
+- **English only.** Translate; set `originalLanguage` (e.g. `hr`, `no`) and add "Translated from …" to `adaptations`. The title is always English (Walnut Roll, Finnish Salmon Soup); put the dish's own name, correctly spelled with diacritics, in `originalName: { name: Orehnjača, lang: hr }`, which shows under the title and is searchable. Loanwords used as-is in English (carbonara, focaccia, naan) can stay as the title. Write all other text in English, using the English name in steps and notes.
 - **Metric only**, enforced everywhere including notes: g, kg, ml, l, °C, cm/mm, plus count units from `content/taxonomy.yaml` (piece, clove, sprig, pinch, slice, bunch, handful, can, package). No cups, spoons, ounces, pounds, quarts, inches or °F.
   - Prefer the source's own gram/ml figures when it gives them (many sites show both).
   - Spoons → ml (15 and 5 ml per spoon), cups → ml (240 ml), exact volume conversions. Grams from volume only with ingredient-specific data (butter 14 g per 15 ml).

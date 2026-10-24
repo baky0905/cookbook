@@ -43,6 +43,8 @@ export const ingredientSchema = z.object({
 export const recipeSchema = z.object({
   title: z.string().min(1), description: z.preprocess(v => v ?? '', z.string()), category: z.enum(recipeCategories),
   tags: z.array(z.string()).default([]), language: z.literal('en').default('en'), originalLanguage: opt(z.string()),
+  // The dish's name in its own language (Palačinke, hr), shown under the English title.
+  originalName: opt(z.object({ name: z.string().min(1), lang: z.string().min(2) }).strict()),
   aliases: z.array(id).default([]),
   status: z.enum(['draft', 'needs-review', 'reviewed', 'cooked']).default('draft'),
   // amount: what the original recipe makes, for scaling by portions. scalable: false warns that pan size or times may need adjusting.

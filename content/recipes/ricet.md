@@ -1,5 +1,6 @@
 ---
-title: Ričet
+title: Barley and Bean Stew
+originalName: { name: Ričet, lang: hr }
 description: Grandma's thick barley and bean stew with smoked sausage and bacon.
 category: Soups & stews
 tags: [croatian, legumes, grains, sausage, slow-cooked, family-recipe]
@@ -7,7 +8,7 @@ originalLanguage: hr
 status: needs-review
 yield: { label: 6 portions, amount: 6, unit: portions, scalable: true }
 time: { cook: 1–1½ h }
-cover: { src: ricet/ricet.webp, alt: A bowl of ričet with beans and barley, credit: From the original cookbook }
+cover: { src: ricet/ricet.webp, alt: A bowl of barley and bean stew, credit: From the original cookbook }
 groups:
   - name: Ingredients
     items:

@@ -44,6 +44,7 @@ const portionStep = r.yield.amount ? (r.yield.amount <= 12 ? 1 : r.yield.amount 
     <div class="title-row">
       <div>
         <h1>{r.title}</h1>
+        {r.originalName && <p class="original-name" lang={r.originalName.lang}>{r.originalName.name}</p>}
         {r.description && <p class="subtitle">{r.description}</p>}
       </div>
       {cover && (

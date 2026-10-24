@@ -1,5 +1,6 @@
 ---
-title: Kiflice
+title: Crescent Rolls
+originalName: { name: Kiflice, lang: hr }
 description: Soft yeasted crescent rolls brushed with egg and sprinkled with sesame.
 category: Breads & doughs
 tags: [croatian, yeast-dough, oven-baked, vegetarian]
@@ -26,7 +27,7 @@ steps:
   - { id: yeast, title: Activate the yeast, duration: 10 min, text: "Mix the fresh yeast, sugar and warm milk and leave at room temperature." }
   - { id: dough, title: Make the dough, duration: about 15 min, text: "Mix the flour, baking powder, salt, egg and oil with the yeast mixture and knead into a smooth dough. Cover with cling film and rest 10 minutes at room temperature, then knead for about 2 minutes until smooth and even." }
   - { id: shape, title: Rest and shape, duration: 30–60 min, text: "Rest the dough, then shape the crescents as shown in the video." }
-  - { id: rise, title: Rise, duration: 30–60 min, text: Leave the kiflice to rise at room temperature. }
+  - { id: rise, title: Rise, duration: 30–60 min, text: Leave the rolls to rise at room temperature. }
   - { id: wash, title: Egg wash, text: "Whisk the egg with the milk, brush over the tops and sprinkle with sesame seeds if you like." }
   - { id: bake, title: Bake, duration: about 20 min, text: Bake at 180 °C. }
 sources:

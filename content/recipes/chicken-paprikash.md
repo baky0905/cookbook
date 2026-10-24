@@ -1,5 +1,6 @@
 ---
 title: Chicken Paprikash
+originalName: { name: Picekovo tenfanje, lang: hr }
 description: Međimurje-style bone-in chicken braised on onions with sweet paprika and sour cream, served with wide egg noodles.
 category: Mains
 tags: [croatian, chicken, pasta, one-pot]
@@ -39,7 +40,7 @@ adaptations:
   - "Rewrote the method concisely in my own words."
 ---
 
-Known in Croatian as **picekovo tenfanje**, from Međimurje. It's the closest relative of Hungarian chicken paprikash.
+A dish from Međimurje, and the closest relative of Hungarian chicken paprikash.
 
 For the pasta, make [Homemade Egg Pasta](../homemade-egg-pasta/) (široki rezanci) from the same book.
 

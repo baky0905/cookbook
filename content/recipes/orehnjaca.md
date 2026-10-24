@@ -1,5 +1,6 @@
 ---
-title: Orehnjača
+title: Walnut Roll
+originalName: { name: Orehnjača, lang: hr }
 description: Croatian sweet yeast rolls filled with walnuts (or poppy seeds) and jam.
 category: Desserts & baking
 tags: [croatian, walnut, yeast-dough, oven-baked, family-recipe, vegetarian]
@@ -40,7 +41,7 @@ issues:
   - The yeast cube and vanilla-sugar package sizes are not recorded.
   - Butter is given as 60 ml (presumably melted); check whether 60 g was meant.
   - The filling lists whisked egg whites but doesn't say how to combine the filling.
-  - The saved source link is also used by Ćupavci and Tačkrle; verify it.
+  - The saved source link is also used by Coconut Chocolate Squares and Plum Jam Pockets; verify it.
 adaptations:
   - Translated from Croatian.
 legacyPath: desserts/orehnjaca/

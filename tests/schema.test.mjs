@@ -61,6 +61,10 @@ test('recipes are written in English', () => {
   assert.equal(recipeSchema.safeParse(r).success, false);
   assert.equal(recipeSchema.safeParse({ ...base(), originalLanguage: 'hr' }).success, true);
 });
+test('the original dish name needs a name and a language code', () => {
+  assert.equal(recipeSchema.safeParse({ ...base(), originalName: { name: 'Palačinke', lang: 'hr' } }).success, true);
+  assert.equal(recipeSchema.safeParse({ ...base(), originalName: { name: 'Palačinke' } }).success, false);
+});
 test('spoon units are no longer accepted', () => {
   for (const unit of ['tsp', 'tbsp']) {
     const r = base(); r.groups[0].items[0].unit = unit;

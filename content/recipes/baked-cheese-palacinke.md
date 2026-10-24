@@ -1,5 +1,6 @@
 ---
-title: Baked Cheese Palačinke
+title: Baked Cheese Pancakes
+originalName: { name: Zapečene palačinke sa sirom, lang: hr }
 description: Thin Croatian pancakes rolled around sweet lemony cottage cheese and baked under sour cream until golden.
 category: Desserts & baking
 tags: [croatian, cheese, vegetarian, oven-baked]
@@ -44,4 +45,4 @@ adaptations:
   - "Rewrote the method concisely in my own words."
 ---
 
-The baked, cheese-filled version of [Palačinke](../palacinke/). It's the one time they're eaten with a knife and fork at home.
+The baked, cheese-filled version of [Croatian Pancakes](../palacinke/). It's the one time they're eaten with a knife and fork at home.

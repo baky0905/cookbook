@@ -8,8 +8,8 @@ import { recipeCategories, tagGroups as vocabulary } from '../lib/schema.mjs';
 const recipes = await Promise.all(publishedRecipes().map(async recipe => ({
   ...recipe,
   thumb: recipe.data.cover ? await picture(recipe.data.cover.src, 128) : null,
-  search: [recipe.data.title, recipe.data.description, recipe.data.category, ...recipe.data.tags,
-    ...recipe.data.groups.flatMap(g => g.items.map(i => i.name))].join(' ').toLowerCase(),
+  search: [recipe.data.title, recipe.data.originalName?.name, recipe.data.description, recipe.data.category, ...recipe.data.tags,
+    ...recipe.data.groups.flatMap(g => g.items.map(i => i.name))].join(' ').toLowerCase().normalize('NFD').replace(/\p{M}/gu, '').replace(/đ/g, 'd'),
 })));
 // Course order, then tag groups from content/taxonomy.yaml; only values in use are shown.
 const categories = recipeCategories.filter(c => recipes.some(r => r.data.category === c));
@@ -46,7 +46,7 @@ const info = (r: any) => [r.time.total && `${r.time.total} total`, r.time.active
       <li data-search={r.search} data-category={r.data.category} data-tags={r.data.tags.join('|')}>
         <a href={url(`recipes/${r.id}/`)}>
           {r.thumb && <img src={r.thumb.src} width="64" height="48" alt="" loading="lazy">}
-          <span><span class="name">{r.data.title}</span><span class="info">{r.data.category}{info(r.data) && ` · ${info(r.data)}`}</span></span>
+          <span><span class="name">{r.data.title}{r.data.originalName && <span class="original-name" lang={r.data.originalName.lang}> · {r.data.originalName.name}</span>}</span><span class="info">{r.data.category}{info(r.data) && ` · ${info(r.data)}`}</span></span>
         </a>
       </li>
     ))}
@@ -65,7 +65,8 @@ const info = (r: any) => [r.time.total && `${r.time.total} total`, r.time.active
   document.querySelectorAll<HTMLElement>('[data-js]').forEach(el => (el.hidden = false));
 
   function apply() {
-    const words = input.value.toLowerCase().split(/\s+/).filter(Boolean);
+    // Accents are ignored, so “palacinke” finds Palačinke.
+    const words = input.value.toLowerCase().normalize('NFD').replace(/\p{M}/gu, '').replace(/đ/g, 'd').split(/\s+/).filter(Boolean);
     let shown = 0;
     for (const row of rows) {
       const rowTags = row.dataset.tags!.split('|');

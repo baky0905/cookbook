@@ -1,5 +1,6 @@
 ---
-title: Lohikeitto
+title: Finnish Salmon Soup
+originalName: { name: Lohikeitto, lang: fi }
 description: Finnish salmon soup with leeks, potatoes, cream and dill.
 category: Soups & stews
 tags: [finnish, fish, potato, one-pot, weeknight]

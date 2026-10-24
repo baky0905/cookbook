@@ -1,6 +1,7 @@
 ---
 title: Homemade Egg Pasta
-description: Hand-kneaded, hand-cut wide egg noodles (široki rezanci) made with weighed eggs and yolks.
+originalName: { name: Široki rezanci, lang: hr }
+description: Hand-kneaded, hand-cut wide egg noodles made with weighed eggs and yolks.
 category: Breads & doughs
 tags: [croatian, pasta]
 status: reviewed
@@ -37,6 +38,6 @@ adaptations:
   - "Rewrote the method concisely in my own words."
 ---
 
-Known in Croatian as **široki rezanci**. Serve with [Chicken Paprikash](../chicken-paprikash/).
+Serve with [Chicken Paprikash](../chicken-paprikash/).
 
 Fresh noodles keep for a few days in an airtight container in the fridge. Dried, they keep in a paper bag for up to 3 months.

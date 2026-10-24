@@ -1,5 +1,6 @@
 ---
 title: Potato Moussaka
+originalName: { name: Musaka, lang: hr }
 description: Croatian layered bake of sliced potatoes and herby minced beef under an egg and sour cream topping.
 category: Mains
 tags: [croatian, beef, potato, oven-baked]
@@ -44,6 +45,6 @@ adaptations:
   - "The oven is assumed conventional at 200 °C, since the book suggests turning the fan on only at the end."
 ---
 
-Known in Croatian as **musaka**. The Croatian version uses beef rather than lamb and potatoes instead of aubergine, and swaps béchamel for an egg and sour cream topping.
+The Croatian version uses beef rather than lamb and potatoes instead of aubergine, and swaps béchamel for an egg and sour cream topping.
 
 Short on time? Peel and slice the raw potatoes thinner and parboil them instead. A splash of milk keeps them from sticking while they finish cooking in the oven.

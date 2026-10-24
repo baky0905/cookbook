@@ -1,5 +1,6 @@
 ---
-title: Ajngemahtec
+title: Chicken and Vegetable Broth
+originalName: { name: Ajngemahtec, lang: hr }
 description: Zagreb's spring chicken and vegetable broth with young peas, root vegetables and egg dumplings.
 category: Soups & stews
 tags: [croatian, chicken, one-pot]
@@ -44,6 +45,6 @@ adaptations:
   - "Rewrote the method concisely in my own words."
 ---
 
-Known in Croatian as **ajngemahtec**, from the German *eingemacht*. It's a Zagreb spring dish, best with young peas in the pod, which give the broth a gentle sweetness.
+The name comes from the German *eingemacht*. It's a Zagreb spring dish, best with young peas in the pod, which give the broth a gentle sweetness.
 
 Zagreb locals serve it as a Sunday lunch soup. You can also make it thicker and eat it as a meal on its own, especially with plenty of dumplings.

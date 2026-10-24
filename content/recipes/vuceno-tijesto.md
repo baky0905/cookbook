@@ -1,6 +1,7 @@
 ---
 title: Phyllo Pastry from Scratch
-description: Hand-stretched, see-through phyllo dough (domaće vučeno tijesto) for burek, štrukli and other Croatian pies.
+originalName: { name: Domaće vučeno tijesto, lang: hr }
+description: Hand-stretched, see-through phyllo dough for burek, štrukli and other Croatian pies.
 category: Breads & doughs
 tags: [croatian, vegetarian]
 status: reviewed
@@ -38,6 +39,6 @@ adaptations:
   - "Rewrote the method concisely in my own words."
 ---
 
-Known in Croatian as **domaće vučeno tijesto**. It's the base for burek (meat, cheese, potato or spinach) and for štrukli.
+It's the base for burek (meat, cheese, potato or spinach) and for štrukli.
 
 For a slightly thicker dough to go under a rich topping, as in štrukli, the book suggests adding an egg.

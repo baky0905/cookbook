@@ -1,5 +1,6 @@
 ---
-title: Palačinke
+title: Croatian Pancakes
+originalName: { name: Palačinke, lang: hr }
 description: Croatian pancakes, thin as crêpes, spread with jam or chocolate and rolled up to eat by hand.
 category: Desserts & baking
 tags: [croatian, vegetarian, quick]
@@ -35,6 +36,6 @@ adaptations:
   - "The book's baked cheese version is a separate recipe here, so each has its own shopping list."
 ---
 
-Known in Croatian as **palačinke**, close cousins of French crêpes. They should be very thin, never thick or chewy.
+Close cousins of French crêpes. They should be very thin, never thick or chewy.
 
-For an oven-baked version with a sweet cottage cheese filling, see [Baked Cheese Palačinke](../baked-cheese-palacinke/).
+For an oven-baked version with a sweet cottage cheese filling, see [Baked Cheese Pancakes](../baked-cheese-palacinke/).

@@ -1,5 +1,6 @@
 ---
-title: Ćupavci
+title: Coconut Chocolate Squares
+originalName: { name: Čupavci, lang: hr }
 description: Croatian sponge squares dipped in chocolate icing and rolled in coconut.
 category: Desserts & baking
 tags: [croatian, coconut, chocolate, oven-baked, vegetarian]
@@ -29,6 +30,6 @@ sources:
 issues:
   - The method is missing.
   - Coconut for the coating is not in the saved ingredients, and the vanilla-sugar package size is unspecified.
-  - The saved source link is the same video as Orehnjača and Tačkrle; verify the correct source.
+  - The saved source link is the same video as Walnut Roll and Plum Jam Pockets; verify the correct source.
 legacyPath: desserts/cupavci/
 ---

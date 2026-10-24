@@ -1,5 +1,6 @@
 ---
-title: Kaiserschmarrn
+title: Shredded Pancake
+originalName: { name: Kaiserschmarrn, lang: de }
 description: Fluffy, rum-raisin pancake torn into caramelised shreds in the pan, dusted with icing sugar and served with plums.
 category: Desserts & baking
 tags: [austrian, croatian, vegetarian, quick]

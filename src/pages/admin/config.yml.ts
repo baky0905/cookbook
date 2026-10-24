@@ -59,7 +59,9 @@ export function GET() {
         identifier_field: 'title', slug: '{{slug}}', summary: '{{title}} · {{category}}', sortable_fields: ['title', 'category', 'status'],
         description: 'Usually added with the AI import skill. Use the editor for notes, photos, status and small fixes.',
         fields: [
-          str('title', 'Title'), str('description', 'Description', opt), sel('category', 'Category', recipeCategories),
+          str('title', 'Title', { hint: 'In English' }),
+          { name: 'originalName', label: 'Original name', widget: 'object', ...opt, collapsed: true, fields: [str('name', 'Name in its own language'), str('lang', 'Language code', { hint: 'e.g. hr, fi, de' })] },
+          str('description', 'Description', opt), sel('category', 'Category', recipeCategories),
           sel('tags', 'Tags', tags, { multiple: true, ...opt }),
           sel('status', 'Status', ['draft', 'needs-review', 'reviewed', 'cooked'], { default: 'draft', hint: 'Drafts are not published' }),
           photo('cover', 'Main photo'),
