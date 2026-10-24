@@ -3,11 +3,12 @@ import Base from '../layouts/Base.astro';
 import { publishedRecipes } from '../lib/content.mjs';
 import { picture } from '../lib/media.mjs';
 import { url } from '../lib/urls.mjs';
+import { categorySlug } from '../lib/format.mjs';
 import { recipeCategories, tagGroups as vocabulary } from '../lib/schema.mjs';
 
 const recipes = await Promise.all(publishedRecipes().map(async recipe => ({
   ...recipe,
-  thumb: recipe.data.cover ? await picture(recipe.data.cover.src, 128) : null,
+  thumb: recipe.data.cover ? await picture(recipe.data.cover.src, 480) : null,
   search: [recipe.data.title, recipe.data.originalName?.name, recipe.data.description, recipe.data.category, ...recipe.data.tags,
     ...recipe.data.groups.flatMap(g => g.items.map(i => i.name))].join(' ').toLowerCase().normalize('NFD').replace(/\p{M}/gu, '').replace(/đ/g, 'd'),
 })));
@@ -16,7 +17,7 @@ const categories = recipeCategories.filter(c => recipes.some(r => r.data.categor
 const used = new Set(recipes.flatMap(r => r.data.tags));
 const tagGroups = vocabulary.map(({ name, tags }: { name: string; tags: string[] }) => ({ group: name, tags: tags.filter(t => used.has(t)).sort() })).filter(g => g.tags.length);
 const info = (r: any) => [r.time.total && `${r.time.total} total`, r.time.active && `${r.time.active} active`,
-  !/not recorded/.test(r.yield.label) && r.yield.label, r.status === 'needs-review' && 'needs review'].filter(Boolean).join(' · ');
+  !/not recorded/.test(r.yield.label) && r.yield.label, r.status === 'needs-review' && 'needs review', r.status === 'cooked' && '✓ cooked'].filter(Boolean).join(' · ');
 ---
 <Base title="Recipes" active="recipes">
   <h1>Recipes</h1>
@@ -40,13 +41,18 @@ const info = (r: any) => [r.time.total && `${r.time.total} total`, r.time.active
       ))}
     </details>
   </form>
-  <p class="count" aria-live="polite" id="count">{recipes.length} recipes</p>
-  <ul class="results">
+  <div class="count-row">
+    <p class="count" aria-live="polite" id="count">{recipes.length} recipes</p>
+    <button class="btn" type="button" id="surprise" hidden data-js>🎲 What should I cook?</button>
+  </div>
+  <ul class="results cards">
     {recipes.map(r => (
-      <li data-search={r.search} data-category={r.data.category} data-tags={r.data.tags.join('|')}>
+      <li data-search={r.search} data-category={r.data.category} data-tags={r.data.tags.join('|')} data-cat={categorySlug(r.data.category)}>
         <a href={url(`recipes/${r.id}/`)}>
-          {r.thumb && <img src={r.thumb.src} width="64" height="48" alt="" loading="lazy">}
-          <span><span class="name">{r.data.title}{r.data.originalName && <span class="original-name" lang={r.data.originalName.lang}> · {r.data.originalName.name}</span>}</span><span class="info">{r.data.category}{info(r.data) && ` · ${info(r.data)}`}</span></span>
+          {r.thumb
+            ? <img class="card-img" src={r.thumb.src} width={r.thumb.width} height={r.thumb.height} alt="" loading="lazy" decoding="async">
+            : <span class="card-img placeholder" aria-hidden="true">{r.data.title[0]}</span>}
+          <span class="card-body"><span class="card-cat">{r.data.category}</span><span class="name">{r.data.title}{r.data.originalName && <span class="original-name" lang={r.data.originalName.lang}>{r.data.originalName.name}</span>}</span>{info(r.data) && <span class="info">{info(r.data)}</span>}</span>
         </a>
       </li>
     ))}
@@ -90,4 +96,11 @@ const info = (r: any) => [r.time.total && `${r.time.total} total`, r.time.active
   document.querySelectorAll<HTMLButtonElement>('button[data-category]').forEach(b => b.addEventListener('click', () => { category = b.dataset.category!; apply(); }));
   document.querySelectorAll<HTMLButtonElement>('button[data-tag]').forEach(b => b.addEventListener('click', () => { tags.has(b.dataset.tag!) ? tags.delete(b.dataset.tag!) : tags.add(b.dataset.tag!); apply(); }));
   apply();
+
+  // A random pick from the recipes currently shown.
+  document.getElementById('surprise')!.addEventListener('click', () => {
+    const shown = rows.filter(r => !r.hidden);
+    const pick = shown[Math.floor(Math.random() * shown.length)];
+    if (pick) location.href = pick.querySelector('a')!.href;
+  });
 </script>

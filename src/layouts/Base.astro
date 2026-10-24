@@ -23,10 +23,11 @@ const nav = [
   <meta name="description" content={description}>
   <title>{title === 'Recipes' ? 'Cookbook' : `${title} · Cookbook`}</title>
   <link rel="icon" href={url('favicon.svg')} type="image/svg+xml">
+  <script is:inline>try{var t=localStorage.getItem('cookbook:theme');if(t==='light'||t==='dark')document.documentElement.dataset.theme=t}catch(e){}</script>
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
-  <header><div class="top"><a class="brand" href={url()}><span aria-hidden="true">c.</span>cookbook</a><small>Your recipes. Ready to cook.</small></div></header>
+  <header><div class="top"><a class="brand" href={url()}><span aria-hidden="true">c.</span>cookbook</a><div class="top-end"><small>Your recipes. Ready to cook.</small><button class="theme" type="button" id="theme" hidden>Theme</button></div></div></header>
   <div class="layout">
     <aside>
       <div class="eyebrow">At your table</div>
@@ -46,5 +47,21 @@ const nav = [
       <slot />
     </main>
   </div>
+  <script>
+    // Theme: follow the device, or a choice saved on this device.
+    const button = document.getElementById('theme')!;
+    const modes = ['auto', 'light', 'dark'] as const;
+    const label = { auto: '◐ Auto', light: '☀ Light', dark: '☾ Dark' };
+    let mode: typeof modes[number] = (document.documentElement.dataset.theme as any) || 'auto';
+    const show = () => { button.textContent = label[mode]; button.setAttribute('aria-label', `Colour theme: ${mode}. Change`); };
+    button.addEventListener('click', () => {
+      mode = modes[(modes.indexOf(mode) + 1) % modes.length];
+      if (mode === 'auto') delete document.documentElement.dataset.theme; else document.documentElement.dataset.theme = mode;
+      try { mode === 'auto' ? localStorage.removeItem('cookbook:theme') : localStorage.setItem('cookbook:theme', mode); } catch {}
+      show();
+    });
+    show();
+    button.hidden = false;
+  </script>
 </body>
 </html>

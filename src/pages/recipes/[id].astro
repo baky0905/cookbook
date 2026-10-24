@@ -7,6 +7,7 @@ import { amount } from '../../lib/quantities.mjs';
 import { stepHtml, quantityAttrs, markdown, escape, prepHtml } from '../../lib/render.mjs';
 import { picture } from '../../lib/media.mjs';
 import { url } from '../../lib/urls.mjs';
+import { categorySlug, timerSeconds } from '../../lib/format.mjs';
 
 export function getStaticPaths() {
   return publishedRecipes().map(recipe => ({ params: { id: recipe.id }, props: { recipe } }));
@@ -16,10 +17,11 @@ const r = recipe.data;
 const items = r.groups.flatMap(g => g.items);
 // Progress is stored per device; changing ingredients or steps invalidates it.
 const version = crypto.createHash('sha256').update(JSON.stringify([r.groups, r.steps])).digest('hex').slice(0, 10);
-const cover = r.cover ? await picture(r.cover.src, 480) : null;
+const cover = r.cover ? await picture(r.cover.src, 1200) : null;
 const steps = await Promise.all(r.steps.map(async step => ({
   ...step,
   html: stepHtml(step.text, items),
+  seconds: step.duration ? timerSeconds(step.duration) : null,
   photos: await Promise.all(step.images.map(async image => ({ ...image, ...(await picture(image.src, 440)) }))),
 })));
 const hasPhotos = steps.some(s => s.photos.length);
@@ -40,22 +42,23 @@ const kcal = r.nutrition?.kcalPerPortion
 const portionStep = r.yield.amount ? (r.yield.amount <= 12 ? 1 : r.yield.amount / 4) : null;
 ---
 <Base title={r.title} active="recipes" description={r.description || `${r.title} recipe`} crumbs={[{ label: r.category, href: `?category=${encodeURIComponent(r.category)}` }, { label: r.title }]}>
-  <article id="recipe" data-recipe={recipe.id} data-version={version} data-yield={r.yield.amount} data-yield-unit={r.yield.unit} data-step={portionStep}>
+  <article id="recipe" data-recipe={recipe.id} data-version={version} data-yield={r.yield.amount} data-yield-unit={r.yield.unit} data-step={portionStep} data-cat={categorySlug(r.category)} data-status={r.status}>
     <div class="title-row">
       <div>
+        <a class="cat-label" href={url(`?category=${encodeURIComponent(r.category)}`)}>{r.category}</a>
         <h1>{r.title}</h1>
         {r.originalName && <p class="original-name" lang={r.originalName.lang}>{r.originalName.name}</p>}
         {r.description && <p class="subtitle">{r.description}</p>}
       </div>
-      {cover && (
-        <figure class="cover-fig">
+    </div>
+    {cover && (
+        <figure class="hero">
           <button class="cover" type="button" data-full={cover.full} data-caption={[r.cover!.caption || r.cover!.alt, r.cover!.credit && `Photo: ${r.cover!.credit}`].filter(Boolean).join(' · ')} aria-label={`Enlarge photo: ${r.cover!.alt}`}>
             <img src={cover.src} width={cover.width} height={cover.height} alt={r.cover!.alt}>
           </button>
           {r.cover!.credit && <figcaption>Photo: {r.cover!.source ? <a href={r.cover!.source} rel="noopener">{r.cover!.credit}</a> : r.cover!.credit}</figcaption>}
         </figure>
-      )}
-    </div>
+    )}
     <div class="meta">
       {times.map(([k, label]) => <span>{label} <strong>{r.time[k]}</strong></span>)}
       <span><strong id="yield-label">{r.yield.label}</strong></span>
@@ -67,6 +70,7 @@ const portionStep = r.yield.amount ? (r.yield.amount <= 12 ? 1 : r.yield.amount 
     <p><a class="btn" href={url('family/')}>Plan a meal with this recipe</a></p>
     <div class="actions" hidden data-js>
       <button class="btn primary" type="button" id="cook" aria-pressed="false">Cooking view</button>
+      <span class="awake" id="awake" hidden>☀ Screen stays on</span>
       <button class="btn" type="button" id="print">Print recipe</button>
       {hasPhotos && <label class="toggle"><input type="checkbox" id="print-photos"> Include step photos when printing</label>}
       <div class="servings" role="group" aria-label={r.yield.amount ? 'Portions' : 'Batch size'}>
@@ -109,7 +113,9 @@ const portionStep = r.yield.amount ? (r.yield.amount <= 12 ? 1 : r.yield.amount 
             <li id={step.id}>
               <div class="step-head">
                 <div>
-                  {(step.title || step.duration) && <h3>{step.title}{step.duration && <span class="time">{step.duration}</span>}</h3>}
+                  {(step.title || step.duration) && <h3>{step.title}{step.duration && (step.seconds
+                    ? <button class="time timer" type="button" data-timer={step.id} data-seconds={step.seconds} data-label={step.duration} aria-label={`Start a timer: ${step.duration}`}>{step.duration}</button>
+                    : <span class="time">{step.duration}</span>)}</h3>}
                   <div class="step-text" set:html={step.html} />
                 </div>
                 <input class="step-check" type="checkbox" data-check={`s:${step.id}`} aria-label={`Mark step done`}>
@@ -129,6 +135,14 @@ const portionStep = r.yield.amount ? (r.yield.amount <= 12 ? 1 : r.yield.amount 
             </li>
           ))}
         </ol>
+        <p class="dobar-tek" id="dobar-tek" role="status" hidden>Dobar tek! <span>Enjoy your meal.</span></p>
+        <div class="cooked-log" hidden data-js>
+          <button class="btn" type="button" id="cooked">✓ I cooked this</button>
+          <span id="cooked-text"></span>
+          <button class="reset" type="button" id="cooked-undo" hidden>Undo</button>
+          <a id="cooked-editor" href={url(`admin/#/collections/recipes/entries/${recipe.id}`)} hidden>Mark as cooked in the editor ↗</a>
+        </div>
+        <p class="visually-hidden" aria-live="assertive" id="timer-announce"></p>
       </section>
     </div>
 
@@ -158,7 +172,7 @@ const portionStep = r.yield.amount ? (r.yield.amount <= 12 ? 1 : r.yield.amount 
 </Base>
 
 <script>
-  import { formatAmount } from '../../lib/format.mjs';
+  import { formatAmount, clock } from '../../lib/format.mjs';
   const article = document.getElementById('recipe')!;
   const key = `cookbook:recipe:${article.dataset.recipe}:${article.dataset.version}`;
   const store = {
@@ -176,9 +190,16 @@ const portionStep = r.yield.amount ? (r.yield.amount <= 12 ? 1 : r.yield.amount 
       const s = store.get(); s.checked = { ...s.checked, [box.dataset.check!]: box.checked }; store.set(s);
     });
   }
+  // "Dobar tek!" once every step is ticked.
+  const stepBoxes = boxes.filter(b => b.classList.contains('step-check'));
+  const dobar = document.getElementById('dobar-tek')!;
+  const celebrate = () => { dobar.hidden = !(stepBoxes.length && stepBoxes.every(b => b.checked)); };
+  stepBoxes.forEach(b => b.addEventListener('change', celebrate));
+  celebrate();
   document.getElementById('reset')!.addEventListener('click', () => {
     boxes.forEach(b => (b.checked = false));
     const s = store.get(); delete s.checked; store.set(s);
+    celebrate();
   });
 
   // Scaling: by portions when the yield is exact, otherwise by batch; always from the original amounts.
@@ -217,16 +238,96 @@ const portionStep = r.yield.amount ? (r.yield.amount <= 12 ? 1 : r.yield.amount 
 
   // Cooking view and printing
   const cook = document.getElementById('cook')!;
+  // In cooking view the screen stays on, where the browser allows it.
+  let wakeLock: any = null;
+  const awake = document.getElementById('awake')!;
+  const keepAwake = async (on: boolean) => {
+    try {
+      if (on && 'wakeLock' in navigator) { wakeLock = await (navigator as any).wakeLock.request('screen'); awake.hidden = false; wakeLock.addEventListener('release', () => { awake.hidden = true; }); }
+      if (!on) { await wakeLock?.release(); wakeLock = null; awake.hidden = true; }
+    } catch { awake.hidden = true; }
+  };
+  document.addEventListener('visibilitychange', () => { if (document.visibilityState === 'visible' && document.body.classList.contains('cooking')) keepAwake(true); });
   const setCooking = (on: boolean) => {
     document.body.classList.toggle('cooking', on);
     cook.setAttribute('aria-pressed', String(on));
     cook.textContent = on ? 'Exit cooking view' : 'Cooking view';
+    keepAwake(on);
   };
   cook.addEventListener('click', () => setCooking(!document.body.classList.contains('cooking')));
   if (location.hash === '#cook') setCooking(true);
   const photos = document.getElementById('print-photos') as HTMLInputElement | null;
   photos?.addEventListener('change', () => document.body.classList.toggle('print-photos', photos.checked));
   document.getElementById('print')!.addEventListener('click', () => window.print());
+
+  // Step timers: tap to start, tap again to stop. They survive a page reload on this device.
+  const timerKey = `cookbook:timers:${article.dataset.recipe}`;
+  const timers: Record<string, number> = (() => { try { return JSON.parse(localStorage.getItem(timerKey) || '{}'); } catch { return {}; } })();
+  const saveTimers = () => { try { localStorage.setItem(timerKey, JSON.stringify(timers)); } catch {} };
+  const announce = document.getElementById('timer-announce')!;
+  const pageTitle = document.title;
+  let audio: AudioContext | null = null;
+  const beep = () => {
+    try {
+      audio ??= new AudioContext();
+      [0, 0.35, 0.7].forEach(t => {
+        const o = audio!.createOscillator(), g = audio!.createGain();
+        o.frequency.value = 880; o.connect(g); g.connect(audio!.destination);
+        g.gain.setValueAtTime(0.25, audio!.currentTime + t); g.gain.exponentialRampToValueAtTime(0.001, audio!.currentTime + t + 0.25);
+        o.start(audio!.currentTime + t); o.stop(audio!.currentTime + t + 0.3);
+      });
+    } catch {}
+    navigator.vibrate?.([300, 150, 300]);
+  };
+  const timerButtons = [...document.querySelectorAll<HTMLButtonElement>('[data-timer]')];
+  const stepName = (b: HTMLElement) => b.closest('h3')?.firstChild?.textContent?.trim() || 'Step';
+  const tick = () => {
+    const now = Date.now();
+    let ringing = false;
+    for (const b of timerButtons) {
+      const end = timers[b.dataset.timer!];
+      if (!end) { b.textContent = b.dataset.label!; b.classList.remove('running', 'done'); b.setAttribute('aria-label', `Start a timer: ${b.dataset.label}`); continue; }
+      const left = (end - now) / 1000;
+      if (left > 0) { b.textContent = `⏱ ${clock(left)}`; b.classList.add('running'); b.setAttribute('aria-label', `Timer running, ${clock(left)} left. Stop`); }
+      else {
+        ringing = true;
+        if (!b.classList.contains('done')) { b.classList.add('done'); beep(); announce.textContent = `Timer done: ${stepName(b)}`; }
+        b.classList.remove('running'); b.textContent = '✓ Time!'; b.setAttribute('aria-label', 'Timer done. Dismiss');
+      }
+    }
+    document.title = ringing ? `⏰ ${pageTitle}` : pageTitle;
+  };
+  timerButtons.forEach(b => b.addEventListener('click', () => {
+    const id = b.dataset.timer!;
+    if (timers[id]) delete timers[id];
+    else { timers[id] = Date.now() + Number(b.dataset.seconds) * 1000; try { audio ??= new AudioContext(); audio.resume(); } catch {} }
+    b.classList.remove('done');
+    saveTimers(); tick();
+  }));
+  if (timerButtons.length) { tick(); setInterval(tick, 1000); }
+
+  // "I cooked this": a log on this device; the owner can mark the recipe cooked in the editor.
+  const cookedKey = `cookbook:cooked:${article.dataset.recipe}`;
+  const cookedText = document.getElementById('cooked-text')!;
+  const undo = document.getElementById('cooked-undo')!;
+  const editorLink = document.getElementById('cooked-editor')!;
+  const cookedDates = (): string[] => { try { return JSON.parse(localStorage.getItem(cookedKey) || '[]'); } catch { return []; } };
+  const showCooked = () => {
+    const dates = cookedDates();
+    const last = dates.at(-1);
+    cookedText.textContent = last ? `Cooked ${dates.length}× on this device · last ${new Date(last).toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' })}` : '';
+    undo.hidden = !last;
+    editorLink.hidden = !last || article.dataset.status === 'cooked';
+  };
+  document.getElementById('cooked')!.addEventListener('click', () => {
+    try { localStorage.setItem(cookedKey, JSON.stringify([...cookedDates(), new Date().toISOString()])); } catch {}
+    showCooked();
+  });
+  undo.addEventListener('click', () => {
+    try { localStorage.setItem(cookedKey, JSON.stringify(cookedDates().slice(0, -1))); } catch {}
+    showCooked();
+  });
+  showCooked();
 
   // Lightbox
   const dialog = document.querySelector<HTMLDialogElement>('dialog.lightbox')!;
