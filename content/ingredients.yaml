@@ -63,6 +63,7 @@ ingredients:
   - { id: cream-cheese, name: cream cheese, aisle: "Dairy & eggs", kcal: 342 }
   - { id: crushed-tomatoes, name: canned crushed tomatoes, aisle: "Tins & jars", kcal: 32 }
   - { id: crusty-bread, name: crusty bread, aisle: Bakery, kcal: 270 }
+  - { id: cucumber, name: cucumber, aisle: Produce, kcal: 15, weights: { piece: 300 } }
   - { id: cumin-seed, name: cumin seed, aisle: "Herbs & spices" }
   - { id: desiccated-coconut, name: desiccated coconut, aisle: Dry goods, kcal: 660 }
   - { id: dijon-mustard, name: Dijon mustard, aisle: "Oils & condiments", kcal: 150, density: 1.05 }
@@ -72,6 +73,7 @@ ingredients:
   - { id: dried-oregano, name: dried oregano, aisle: "Herbs & spices" }
   - { id: egg, name: eggs, aisle: "Dairy & eggs", kcal: 143, weights: { piece: 50 } }
   - { id: fennel, name: fennel, aisle: Produce, kcal: 31, weights: { piece: 250 } }
+  - { id: feta, name: feta, aisle: "Dairy & eggs", kcal: 264 }
   - { id: fish-stock, name: fish stock, aisle: "Tins & jars", kcal: 5, density: 1 }
   - { id: flaky-salt, name: flaky salt, aisle: "Herbs & spices" }
   - { id: food-colouring, name: food colouring, aisle: Dry goods, kcal: 0 }
@@ -94,6 +96,7 @@ ingredients:
   - { id: icing-sugar, name: icing sugar, aisle: Dry goods, kcal: 389 }
   - { id: instant-yeast, name: instant yeast, aisle: Dry goods, kcal: 325 }
   - { id: jam, name: jam, aisle: "Tins & jars", kcal: 250 }
+  - { id: jasmine-rice, name: jasmine rice, aisle: Dry goods, kcal: 360, staple: true }
   - { id: ketchup, name: ketchup, aisle: "Oils & condiments", kcal: 112, density: 1.15 }
   - { id: kohlrabi, name: kohlrabi, aisle: Produce, kcal: 27, weights: { piece: 300 } }
   - { id: kranjska-sausage, name: Kranjska sausages, aisle: "Meat & fish", kcal: 300, weights: { piece: 180 } }
