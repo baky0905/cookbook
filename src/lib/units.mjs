@@ -7,3 +7,11 @@ export const imperial = new RegExp([
   String.raw`\d\s*°?\s*F\b`,
   String.raw`\d\s*″`,
 ].join('|'), 'i');
+
+// The one exception: a spoon hint after a small gram amount ("1 g (½ teaspoon)"), stored in an ingredient's
+// `spoon` field. Grams stay the real amount; the hint is for weights too small for a kitchen scale.
+export const SPOON_HINT_MAX_G = 15;
+const n = String.raw`(?:\d+|\d*[¼½¾⅓⅔⅛])`;
+export const spoonHint = new RegExp(String.raw`^${n}(?:–${n})? (?:teaspoons?|tablespoons?)$`);
+// Removes valid `spoon:` hints from a raw YAML line so the imperial check can run on the rest.
+export const withoutSpoonHints = line => line.replace(/\bspoon:\s*"?([^",}]+?)"?\s*(?=[,}]|$)/g, (all, hint) => spoonHint.test(hint.trim()) ? '' : all);

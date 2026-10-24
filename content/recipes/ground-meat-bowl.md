@@ -10,19 +10,19 @@ cover: { src: ground-meat-bowl/cover.webp, alt: "A bowl of yellow rice, browned 
 groups:
   - name: Yellow rice
     items:
-      - { id: rice, ingredient: jasmine-rice, name: jasmine rice, quantity: 360, unit: ml, note: "2 rice cooker measures (180 ml each); 1 part" }
+      - { id: rice, ingredient: jasmine-rice, name: jasmine rice, quantity: 300, unit: g, note: "2 rice cooker measures (150 g each)" }
       - { id: water, ingredient: water, name: water, note: "Up to the matching water line in the rice cooker bowl (about 1.25 parts)" }
-      - { id: bouillon, ingredient: vegetable-stock-powder, name: Vegeta or chicken bouillon, quantity: 7.5, max: 10, unit: ml }
-      - { id: turmeric, ingredient: turmeric, name: turmeric, quantity: 2.5, unit: ml }
+      - { id: bouillon, ingredient: vegetable-stock-powder, name: Vegeta or chicken bouillon, quantity: 6, max: 8, unit: g, spoon: "1½–2 teaspoons" }
+      - { id: turmeric, ingredient: turmeric, name: turmeric, quantity: 1.5, unit: g, spoon: ½ teaspoon }
       - { id: cloves, ingredient: whole-cloves, name: whole cloves, quantity: 1, max: 2, unit: piece, scalable: false }
-      - { id: oregano, ingredient: dried-oregano, name: dried oregano, quantity: 2.5, unit: ml }
+      - { id: oregano, ingredient: dried-oregano, name: dried oregano, quantity: 0.5, unit: g, spoon: ½ teaspoon }
   - name: Meat
     items:
       - { id: beef, ingredient: minced-beef, name: minced beef, quantity: 400, unit: g, note: "Or pork, chicken or lamb" }
       - { id: salt, ingredient: salt, name: salt, quantity: 4, unit: g, note: 1% of the meat's weight }
-      - { id: pepper, ingredient: black-pepper, name: black pepper, quantity: 2, unit: ml }
-      - { id: paprika, ingredient: sweet-paprika, name: red paprika, quantity: 2.5, unit: ml }
-      - { id: cumin, ingredient: cumin-seed, name: cumin seeds, quantity: 5, unit: ml }
+      - { id: pepper, ingredient: black-pepper, name: black pepper, quantity: 1, unit: g, spoon: ½ teaspoon }
+      - { id: paprika, ingredient: sweet-paprika, name: red paprika, quantity: 1, unit: g, spoon: ½ teaspoon }
+      - { id: cumin, ingredient: cumin-seed, name: cumin seeds, quantity: 2, unit: g, spoon: 1 teaspoon }
   - name: Cucumber tomato salad
     items:
       - { id: tomatoes, ingredient: cherry-tomatoes, name: cherry tomatoes, quantity: 200, unit: g, prep: Halved }
@@ -46,7 +46,7 @@ sources:
   - { title: "How to Eat Ground Meat & Rice Everyday · Ethan Chlebowski (YouTube), Level 3", url: "https://www.youtube.com/watch?v=M3tYTsY4A84", timestamp: 611s }
 issues: []
 adaptations:
-  - "Converted to metric: 2 rice cooker measures of rice to 360 ml; spoons to ml (5 ml per spoon)."
+  - "Converted to grams: rice at 150 g per rice cooker measure; spices by their own weight per spoon."
   - "Built from the Level 3 framework with our own picks: yellow rice, beef, cumin + paprika, cucumber tomato salad, feta."
 ---
 

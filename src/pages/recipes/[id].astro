@@ -88,7 +88,7 @@ const portionStep = r.yield.amount ? (r.yield.amount <= 12 ? 1 : r.yield.amount 
             {group.items.map(item => (
               <label class="ingredient">
                 <input type="checkbox" data-check={`i:${item.id}`}>
-                <span set:html={`${item.quantity != null ? `<b class="qty"${quantityAttrs(item)}>${amount(item)}</b> ` : ''}${escape(item.name)}${item.prep ? `, <span class="prep">${prepHtml(item.prep[0].toLowerCase() + item.prep.slice(1), base)}</span>` : ''}${item.optional ? ' <small>Optional</small>' : ''}${item.note ? `<small>${escape(item.note)}</small>` : ''}${item.quantity == null && !item.note ? '<small>Amount not specified</small>' : ''}`} />
+                <span set:html={`${item.quantity != null ? `<b class="qty"${quantityAttrs(item)}>${amount(item)}</b>${item.spoon ? ` <span class="spoon">(${escape(item.spoon)})</span>` : ''} ` : ''}${escape(item.name)}${item.prep ? `, <span class="prep">${prepHtml(item.prep[0].toLowerCase() + item.prep.slice(1), base)}</span>` : ''}${item.optional ? ' <small>Optional</small>' : ''}${item.note ? `<small>${escape(item.note)}</small>` : ''}${item.quantity == null && !item.note ? '<small>Amount not specified</small>' : ''}`} />
               </label>
             ))}
           </>
@@ -198,6 +198,8 @@ const portionStep = r.yield.amount ? (r.yield.amount <= 12 ? 1 : r.yield.amount 
     yieldLabelEl.textContent = scaled ? `${base ? `${+(base * f).toFixed(2)} ${unit}` : `×${f}`} (scaled from ${yieldLabel})` : yieldLabel;
     document.getElementById('scale-note')!.hidden = !scaled;
     document.getElementById('scale-reset')!.hidden = !scaled;
+    // Spoon hints describe the original amount only.
+    document.querySelectorAll<HTMLElement>('.spoon').forEach(el => { el.hidden = scaled; });
     document.querySelectorAll<HTMLElement>('[data-qty]').forEach(el => {
       const target = el.matches('.ref') ? el.querySelector('.qty')! : el;
       target.textContent = formatAmount(el.dataset, f);

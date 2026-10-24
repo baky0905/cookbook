@@ -75,6 +75,7 @@ export function GET() {
             { name: 'items', label: 'Items', widget: 'list', summary: '{{fields.quantity}} {{fields.unit}} {{fields.name}}', fields: [
               str('id', 'ID', { pattern: idPattern }), sel('ingredient', 'Ingredient', ingredientOptions), str('name', 'Name as shown'),
               num('quantity', 'Quantity'), num('max', 'Up to (for ranges)'), sel('unit', 'Unit', unitOptions, opt),
+              str('spoon', 'Spoon hint', { ...opt, hint: 'Only after a gram amount of at most 15 g, e.g. ½ teaspoon' }),
               str('prep', 'Prep (e.g. finely chopped)', opt), str('note', 'Note', opt), bool('optional', 'Optional', false), bool('scalable', 'Scales with portions', true),
             ] },
           ] },

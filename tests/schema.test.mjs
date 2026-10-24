@@ -65,6 +65,12 @@ test('the original dish name needs a name and a language code', () => {
   assert.equal(recipeSchema.safeParse({ ...base(), originalName: { name: 'Palačinke', lang: 'hr' } }).success, true);
   assert.equal(recipeSchema.safeParse({ ...base(), originalName: { name: 'Palačinke' } }).success, false);
 });
+test('a spoon hint only goes with a small gram amount', () => {
+  const withHint = (quantity, unit) => { const r = base(); Object.assign(r.groups[0].items[0], { quantity, unit, spoon: '½ teaspoon' }); return recipeSchema.safeParse(r).success; };
+  assert.equal(withHint(1, 'g'), true);
+  assert.equal(withHint(20, 'g'), false);
+  assert.equal(withHint(5, 'ml'), false);
+});
 test('spoon units are no longer accepted', () => {
   for (const unit of ['tsp', 'tbsp']) {
     const r = base(); r.groups[0].items[0].unit = unit;

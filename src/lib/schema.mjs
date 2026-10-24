@@ -2,6 +2,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import YAML from 'yaml';
 import { z } from 'zod';
+import { spoonHint, SPOON_HINT_MAX_G } from './units.mjs';
 
 // Controlled lists live in content/taxonomy.yaml so they can grow without code changes.
 const read = file => YAML.parse(fs.readFileSync(path.join(process.cwd(), 'content', file), 'utf8'));
@@ -38,7 +39,10 @@ export const ingredientSchema = z.object({
   // prep: what to do before cooking ("finely chopped"); note: anything else. The ingredient list doubles as the prep list.
   unit: z.preprocess(v => v ?? '', z.enum(units)), prep: opt(z.string()), note: opt(z.string()),
   optional: z.boolean().default(false), scalable: z.boolean().default(true),
-}).strict().refine(v => v.max === undefined || (v.quantity !== null && v.max >= v.quantity), 'Invalid quantity range');
+  // A spoon hint for a small gram amount, e.g. "½ teaspoon" after 1 g.
+  spoon: opt(z.string().regex(spoonHint, 'Spoon hint must look like "½ teaspoon" or "1½–2 teaspoons"')),
+}).strict().refine(v => v.max === undefined || (v.quantity !== null && v.max >= v.quantity), 'Invalid quantity range')
+  .refine(v => !v.spoon || (v.unit === 'g' && v.quantity !== null && (v.max ?? v.quantity) <= SPOON_HINT_MAX_G), `A spoon hint needs a gram amount of at most ${SPOON_HINT_MAX_G} g`);
 
 export const recipeSchema = z.object({
   title: z.string().min(1), description: z.preprocess(v => v ?? '', z.string()), category: z.enum(recipeCategories),
