@@ -11,7 +11,7 @@ groups:
   - name: Dough
     items:
       - { id: flour, ingredient: plain-flour, name: plain flour, quantity: 600, unit: g }
-      - { id: water, ingredient: water, name: warm water (38–40 °C), quantity: 450, unit: g }
+      - { id: water, ingredient: water, name: water, quantity: 450, unit: g, prep: Heated to 40 °C }
       - { id: salt, ingredient: salt, name: sea salt, quantity: 6, unit: g }
       - { id: oil, ingredient: olive-oil, name: extra virgin olive oil, quantity: 20, unit: g, note: "Plus about 15 ml for the pan" }
       - { id: yeast, ingredient: active-dry-yeast, name: active dry yeast, quantity: 1, unit: g }
@@ -21,7 +21,8 @@ groups:
       - { id: confit, ingredient: garlic, name: garlic confit and its oil, note: "Garlic cloves gently cooked in olive oil until tender; amount not recorded" }
       - { id: flaky-salt, ingredient: flaky-salt, name: flaky salt, note: A few big pinches }
 steps:
-  - { id: mix, title: Mix the dough, text: "Combine the flour and yeast in a large bowl and make a well in the centre. Dissolve the salt in the warm water, pour it into the well and drizzle in the olive oil. Stir with your hands; after a minute or two the shaggy mixture comes together into a fairly wet dough." }
+  - { id: start-yeast, title: Start the yeast, duration: 10 min, text: "Heat the {{water}} to 40 °C, measured with a thermometer. Stir in the {{yeast}} and leave until bubbles appear (without sugar the foam is light). With only 1 g of yeast, look for a thin layer of fine bubbles. No foam means the yeast is dead: start again with fresh yeast." }
+  - { id: mix, title: Mix the dough, text: "Mix the flour and salt in a large bowl and make a well in the centre. Pour in the yeast water and drizzle in the olive oil. Stir with your hands; after a minute or two the shaggy mixture comes together into a fairly wet dough." }
   - { id: folds, title: Stretch and fold, duration: 1–1½ h, text: "Move the dough to a lightly oiled bowl. Lift a quarter of the dough from underneath, stretch it until it resists and fold it over; repeat four times around the bowl. Cover with a damp towel and rest 20 minutes. Repeat the folds and rest 3–4 more times, until the dough is silky and springs back slightly." }
   - { id: cold, title: Ferment overnight, duration: about 12 h, text: Cover tightly and ferment in the fridge overnight. }
   - { id: pan, title: Pan and rise, duration: 2 h, text: "Grease a 28 × 33 cm baking pan with about 15 ml olive oil and stretch the dough gently into the corners (wet your fingers if it sticks; if it resists, cover and try again after 10 minutes). Cover and rise for an hour; it rises but doesn't quite double. Dimple the dough with wet fingers all the way to the bottom of the pan, cover and rest another hour, until it fills about half to two-thirds of the pan, is bubbly and jiggles." }
@@ -34,6 +35,7 @@ issues:
   - Rosemary, garlic confit and finishing salt have no quantities.
   - The saved summary said 35 minutes cooking, but the method bakes for 15–20 minutes; the overnight ferment and two rises come on top.
 adaptations:
+  - "Added a 10-minute yeast prestart in the recipe's own liquid, so you can see the yeast is alive before mixing."
   - "Pan oil converted to about 15 ml."
 legacyPath: snacks/foccacia/
 ---

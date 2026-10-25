@@ -9,7 +9,7 @@ time: { rest: 4–24 h cold ferment }
 groups:
   - name: Pita
     items:
-      - { id: water, ingredient: water, name: warm water (30 °C), quantity: 280, unit: g }
+      - { id: water, ingredient: water, name: water, quantity: 280, unit: g, prep: Heated to 40 °C }
       - { id: oil, ingredient: olive-oil, name: olive oil, quantity: 50, unit: g }
       - { id: yeast, ingredient: instant-yeast, name: instant yeast, quantity: 8, unit: g }
       - { id: sugar, ingredient: sugar, name: sugar, quantity: 15, unit: g }
@@ -29,7 +29,8 @@ groups:
       - { id: garlic, ingredient: garlic, name: garlic, quantity: 1.5, unit: g, note: "Optional: the smallest clove you can find", optional: true }
       - { id: sumac, ingredient: sumac, name: sumac and flaky salt, note: To serve, optional: true }
 steps:
-  - { id: knead, title: Mix the pita dough, duration: about 6 min, text: "Put all the pita ingredients in a stand mixer with the dough hook. Mix on low for 2 minutes until it comes together, then on high for about 4 minutes, without overdeveloping. It's ready when smooth and a tugged piece doesn't tear." }
+  - { id: start-yeast, title: Start the yeast, duration: 10 min, text: "Heat the {{water}} to 40 °C, measured with a thermometer. Stir in the {{yeast}} and {{sugar}} and leave until foamy. No foam means the yeast is dead: start again with fresh yeast." }
+  - { id: knead, title: Mix the pita dough, duration: about 6 min, text: "Put the yeast water and the rest of the pita ingredients in a stand mixer with the dough hook. Mix on low for 2 minutes until it comes together, then on high for about 4 minutes, without overdeveloping. It's ready when smooth and a tugged piece doesn't tear." }
   - { id: divide, title: Divide and cold-ferment, duration: 4–24 h, text: "Divide into 6 pieces of about 130 g and round each into a ball (video at 1:02). Put them on a lightly oiled tray, wrap tightly and refrigerate." }
   - { id: roll, title: Roll out, text: "On a lightly floured surface, press a ball into a 10 cm circle, then roll it to about 3 mm thick and 23 cm across, keeping everything well dusted." }
   - { id: bake, title: Bake, duration: 3–4 min each, text: "Brush off excess flour and slide the pita onto a pizza steel or stone preheated to 220 °C, flipping halfway. Roll the next one while it bakes. Keep the baked pitas covered in a towel-lined basket." }
@@ -39,6 +40,8 @@ steps:
 sources:
   - { title: Saved video, url: "https://www.youtube.com/watch?v=1fiFBTW6vSc" }
 adaptations:
+  - "Yeast prestart at 40 °C instead of the source's 30 °C water, which suits fridge-cold dry yeast."
+  - "Added a 10-minute yeast prestart in the recipe's own liquid, so you can see the yeast is alive before mixing."
   - Quantities halved from the video; ready-cooked chickpeas used instead of dried.
   - "Pita water: the source gives 265 g plus a further 15 ml; combined here into 280 g."
 legacyPath: main_dishes/hummus_and_pita/

@@ -9,7 +9,7 @@ time: { rest: "2 h, plus 8–24 h in the fridge", cook: 13–19 min }
 groups:
   - name: Dough
     items:
-      - { id: water, ingredient: water, name: warm water (32 °C), quantity: 250, unit: g }
+      - { id: water, ingredient: water, name: water, quantity: 250, unit: g, prep: Heated to 40 °C }
       - { id: yeast, ingredient: instant-yeast, name: instant yeast, quantity: 3, unit: g }
       - { id: salt, ingredient: salt, name: salt, quantity: 9, unit: g }
       - { id: flour, ingredient: bread-flour, name: bread flour, quantity: 365, unit: g }
@@ -28,7 +28,8 @@ groups:
     items:
       - { id: cheese, ingredient: brick-cheese, name: Wisconsin brick cheese, quantity: 250, unit: g, prep: Shredded, note: Full-fat mozzarella also works }
 steps:
-  - { id: mix, title: Mix the dough, text: "Mix the water, yeast, salt and flour in a bowl with a spoon. When it forms a ball, wet your hand and knead for 1–2 minutes more (or use a stand mixer with a dough hook on medium-high for 7–8 minutes)." }
+  - { id: start-yeast, title: Start the yeast, duration: 10 min, text: "Heat the {{water}} to 40 °C, measured with a thermometer. Stir in the {{yeast}} and leave until bubbles appear (without sugar the foam is light). No foam means the yeast is dead: start again with fresh yeast." }
+  - { id: mix, title: Mix the dough, text: "Add the salt and flour to the yeast water and mix with a spoon. When it forms a ball, wet your hand and knead for 1–2 minutes more (or use a stand mixer with a dough hook on medium-high for 7–8 minutes)." }
   - { id: ferment, title: Ferment, duration: "about 2 h, then 8–24 h cold", text: "Cover and ferment at room temperature for 30 minutes. Do 5–6 strength-building folds, then round the dough into a tight ball (video at 1:57). Cover and ferment, repeat the folds and rounding, then ferment 1 hour at room temperature. Finally refrigerate, covered, for 8–24 hours." }
   - { id: pan, title: Pan the dough, duration: 1 h, text: "Turn the dough onto a floured surface, flatten into a rough square and cut in half. Oil two Detroit-style pans (about 25 × 35 cm) very well. Dimple and stretch each half into a pan. Proof, covered, for 30 minutes somewhere warm (about 32 °C; heat the oven on its lowest setting for 2 minutes, then switch it off). Dimple again into the corners and proof 30 minutes more at room temperature." }
   - { id: sauce, title: Make the sauce, duration: about 12 min, text: "Blend the tomato paste, salt, sugar, oregano, basil and chilli flakes into the crushed tomatoes with a stick blender until smooth. Heat a large drizzle of olive oil in a non-stick pan over medium heat and fry the garlic until fragrant, 30–60 seconds. Add the tomato mixture and simmer about 10 minutes, until reduced by half." }
@@ -43,6 +44,8 @@ sources:
 issues:
   - The original article link was a placeholder; only the video link is saved.
 adaptations:
+  - "Yeast prestart at 40 °C instead of the source's 32 °C water, which suits fridge-cold dry yeast."
+  - "Added a 10-minute yeast prestart in the recipe's own liquid, so you can see the yeast is alive before mixing."
   - "Pan size given in cm (the source names Lloyd Detroit-style pans)."
 legacyPath: main_dishes/detroit_style_pan_pizza/
 ---

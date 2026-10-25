@@ -10,14 +10,15 @@ groups:
   - name: Dough
     items:
       - { id: flour, ingredient: bread-flour, name: bread flour or plain flour, quantity: 450, unit: g, note: See notes }
-      - { id: yeast, ingredient: instant-yeast, name: instant yeast, quantity: 6, unit: g, note: See notes for active dry yeast }
+      - { id: yeast, ingredient: instant-yeast, name: instant yeast, quantity: 6, unit: g, note: Active dry yeast works the same way }
       - { id: salt, ingredient: salt, name: table salt, quantity: 7, unit: g }
-      - { id: water, ingredient: water, name: very warm tap water (up to 55 °C), quantity: 375, unit: ml }
+      - { id: water, ingredient: water, name: water, quantity: 375, unit: ml, prep: Heated to 40 °C }
   - name: Shaping
     items:
       - { id: dusting, ingredient: plain-flour, name: flour, quantity: 12, unit: g, note: "For dusting: 8 g under, 4 g on top" }
 steps:
-  - { id: mix, title: Mix the dough, text: "Mix the flour, yeast and salt in a large bowl. Add the water and stir with the handle of a wooden spoon until all the flour is incorporated. The dough should be wet and sloppy: not kneadable, but not runny like cake batter. Adjust with a little water or flour if needed (video at 17 seconds)." }
+  - { id: start-yeast, title: Start the yeast, duration: 10 min, text: "Heat the {{water}} to 40 °C, measured with a thermometer. Stir in the {{yeast}} and leave until bubbles appear (without sugar the foam is light). No foam means the yeast is dead: start again with fresh yeast." }
+  - { id: mix, title: Mix the dough, text: "Mix the flour and salt in a large bowl. Add the yeast water and stir with the handle of a wooden spoon until all the flour is incorporated. The dough should be wet and sloppy: not kneadable, but not runny like cake batter. Adjust with a little water or flour if needed (video at 17 seconds)." }
   - { id: rise, title: Rise, duration: 2–3 h, text: "Cover and leave on the counter until doubled, wobbly like jelly and bubbly on top (video at 24 seconds). If it isn't rising after 1 hour, move it somewhere warmer." }
   - { id: chill, title: Refrigerate (optional), text: "For more flavour, refrigerate the dough for up to 3 days at this stage, or bake straight away." }
   - { id: warm, title: Take the chill off (if refrigerated), duration: 45–60 min, text: Leave refrigerated dough on the counter while the oven preheats; cold dough doesn't rise as well. }
@@ -32,6 +33,7 @@ sources:
 issues:
   - "Dusting flour was listed as 11 g, but the method uses 8 g + 4 g = 12 g; 12 g is used here."
 adaptations:
+  - "Added a 10-minute yeast prestart, using water at 40 °C instead of the source's 55 °C, which would kill the yeast before the flour cools it."
   - The source's notes are condensed below; non-metric alternatives were dropped.
 legacyPath: snacks/easy_bread/
 ---
@@ -40,7 +42,7 @@ legacyPath: snacks/easy_bread/
 
 **Flour.** Bread flour gives a chewier, fluffier crumb and keeps longer; plain flour works perfectly too. With wholemeal flour, start with 30 g less and add more as needed, since it absorbs more water.
 
-**Yeast.** Use instant or rapid-rise yeast. With active dry yeast, dissolve it in the water first (no need to wait for foam), then add the flour and salt.
+**Yeast.** The yeast is started in warm water first, so instant and active dry yeast both work. The source uses hotter water (up to 55 °C) mixed straight into the flour; with the cooler water here, expect the rise to take the full 3 hours.
 
 **Water temperature.** Too hot to bathe in will kill the yeast; pleasant bath temperature is right.
 

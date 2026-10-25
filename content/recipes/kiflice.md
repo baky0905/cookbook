@@ -8,14 +8,16 @@ status: reviewed
 yield: { label: 32 rolls (8 portions), amount: 32, unit: rolls, scalable: false }
 time: { total: about 2 h 30 min, active: 30 min, rest: 1 h 20 min, cook: 18 min per tray }
 groups:
+  - name: To start the yeast
+    items:
+      - { id: milk, ingredient: milk, name: milk, quantity: 250, unit: ml, prep: Heated to 40 °C }
+      - { id: sugar, ingredient: sugar, name: sugar, quantity: 10, unit: g }
+      - { id: yeast, ingredient: active-dry-yeast, name: dry yeast, quantity: 7, unit: g }
   - name: Dough
     items:
       - { id: flour, ingredient: bread-flour, name: bread (strong) flour, quantity: 650, unit: g }
-      - { id: yeast, ingredient: active-dry-yeast, name: dry yeast, quantity: 7, unit: g }
-      - { id: sugar, ingredient: sugar, name: sugar, quantity: 10, unit: g }
       - { id: salt, ingredient: salt, name: salt, quantity: 10, unit: g }
-      - { id: butter, ingredient: butter, name: butter, quantity: 50, unit: g, prep: Melted }
-      - { id: milk, ingredient: milk, name: lukewarm milk, quantity: 250, unit: ml }
+      - { id: butter, ingredient: butter, name: butter, quantity: 50, unit: g, prep: Melted and cooled to warm }
       - { id: sour-cream, ingredient: sour-cream, name: sour cream, quantity: 150, unit: ml }
       - { id: oil, ingredient: vegetable-oil, name: vegetable oil, quantity: 50, unit: ml }
       - { id: yolk, ingredient: egg, name: egg yolk, quantity: 1, unit: piece }
@@ -29,9 +31,10 @@ groups:
       - { id: wash-water, ingredient: water, name: water, quantity: 15, unit: ml }
       - { id: sesame, ingredient: sesame-seeds, name: toasted sesame seeds, quantity: 30, unit: g }
 steps:
-  - { id: dry, title: Mix the dry ingredients, text: "Sift the {{flour}} into a bowl and whisk in the {{yeast}}, {{sugar}} and {{salt}}." }
-  - { id: wet, title: Mix the wet ingredients, text: "Whisk the {{butter}} with the {{milk}}, then stir in the {{sour-cream}}, {{oil}} and {{yolk}} until smooth." }
-  - { id: knead, title: Knead, duration: 4–5 min, text: "Combine with a stand or hand mixer fitted with dough hooks, starting slowly. Once it forms a ball, knead on medium until smooth and no longer sticking to the bowl." }
+  - { id: start-yeast, title: Start the yeast, duration: 10 min, text: "Heat the {{milk}} to 40 °C, measured with a thermometer. Stir in the {{yeast}} and {{sugar}} and leave until foamy. No foam means the yeast is dead: start again with fresh yeast." }
+  - { id: dry, title: Mix the dry ingredients, text: "Sift the {{flour}} into a bowl and whisk in the {{salt}}." }
+  - { id: wet, title: Mix the wet ingredients, text: "Stir the {{butter}}, {{sour-cream}} (not fridge-cold), {{oil}} and {{yolk}} into the yeast milk until smooth." }
+  - { id: knead, title: Knead, duration: 4–5 min, text: "Combine the wet and dry with a stand or hand mixer fitted with dough hooks, starting slowly. Once it forms a ball, knead on medium until smooth and no longer sticking to the bowl." }
   - { id: proof, title: First proof, duration: 45–60 min, text: "Put the dough in a clean bowl, dust with a little flour, cover with a tea towel and leave somewhere warm until doubled. Heat the oven to 200 °C towards the end." }
   - { id: divide, title: Divide, text: "Turn the dough onto a clean, unfloured counter, cut into 4 equal pieces and shape into balls without kneading. Two balls make one tray." }
   - { id: cut, title: Roll and cut, text: "Roll a ball into a round 2–3 mm thick and cut it into 8 wedges with a pizza wheel." }
@@ -44,6 +47,7 @@ sources:
   - { title: "Croatian savoury baking, pp. 220–225 — Crescent rolls with cheese (kiflice sa sirom); supplied book photographs" }
 issues: []
 adaptations:
+  - "Added a 10-minute yeast prestart in the recipe's own liquid, so you can see the yeast is alive before mixing."
   - "Kept the book's metric quantities; the filling per roll is given as about 5 g, which uses the 180 g across 32 rolls."
   - "Rewrote the method concisely in my own words."
   - "Replaces an earlier version saved from a video, which used plain flour, fresh yeast and no filling."

@@ -10,11 +10,11 @@ time: { total: about 2 h 5 min, active: 30 min, rest: 1 h 15 min, cook: 21 min }
 groups:
   - name: Dough
     items:
-      - { id: flour, ingredient: bread-flour, name: bread (strong) flour, quantity: 650, unit: g }
-      - { id: yeast, ingredient: active-dry-yeast, name: dry yeast, quantity: 10, unit: g }
+      - { id: milk, ingredient: milk, name: milk, quantity: 320, unit: ml, prep: Heated to 40 °C }
       - { id: sugar, ingredient: sugar, name: sugar, quantity: 5, unit: g }
+      - { id: yeast, ingredient: active-dry-yeast, name: dry yeast, quantity: 10, unit: g }
+      - { id: flour, ingredient: bread-flour, name: bread (strong) flour, quantity: 650, unit: g }
       - { id: salt, ingredient: salt, name: salt, quantity: 10, unit: g }
-      - { id: milk, ingredient: milk, name: lukewarm milk, quantity: 320, unit: ml }
       - { id: sour-cream, ingredient: sour-cream, name: sour cream, quantity: 100, unit: ml, note: Or Greek yoghurt }
       - { id: oil, ingredient: vegetable-oil, name: vegetable oil, quantity: 50, unit: ml }
       - { id: vinegar, ingredient: apple-cider-vinegar, name: apple cider vinegar, quantity: 15, unit: ml }
@@ -29,7 +29,8 @@ groups:
       - { id: baking-soda, ingredient: baking-soda, name: baking soda, quantity: 1, unit: g }
       - { id: topping-water, ingredient: water, name: water, quantity: 45, unit: ml }
 steps:
-  - { id: mix, title: Mix and knead, duration: 8 min, text: "Sift the {{flour}} into a bowl and whisk in the {{yeast}}, {{sugar}} and {{salt}}. In another bowl stir together the {{milk}}, {{sour-cream}}, {{oil}} and {{vinegar}}. Combine and knead in a stand mixer with a dough hook, 3 minutes on medium-low, then 5 minutes on medium." }
+  - { id: start-yeast, title: Start the yeast, duration: 10 min, text: "Heat the {{milk}} to 40 °C, measured with a thermometer. Stir in the {{yeast}} and {{sugar}} and leave until foamy. No foam means the yeast is dead: start again with fresh yeast." }
+  - { id: mix, title: Mix and knead, duration: 8 min, text: "Sift the {{flour}} into a bowl and whisk in the {{salt}}. Stir the {{sour-cream}} (not fridge-cold), {{oil}} and {{vinegar}} into the yeast milk. Combine and knead in a stand mixer with a dough hook, 3 minutes on medium-low, then 5 minutes on medium." }
   - { id: proof, title: Proof, duration: 45 min, text: "Put the dough in a clean bowl, dust with a little flour, cover with a tea towel and leave somewhere warm." }
   - { id: divide, title: Divide and shape, text: "Turn the dough onto a clean, unfloured counter and weigh it into 10 pieces of about 115 g. Fold the ends of each piece to the middle, turn seam-down and roll under a cupped hand until smooth. Press into a cylinder and roll a little more." }
   - { id: rest, title: Rest, duration: 10 min, text: "Cover the cylinders with a tea towel." }
@@ -42,9 +43,10 @@ sources:
   - { title: "Croatian savoury baking, pp. 194–199 — Soft and salty breadsticks (slanci); supplied book photographs" }
 issues: []
 adaptations:
+  - "Added a 10-minute yeast prestart in the recipe's own liquid, so you can see the yeast is alive before mixing."
   - "Kept the book's metric quantities."
   - "Rewrote the method concisely in my own words."
-  - "The book says dry yeast and mixes it straight into the flour, so instant yeast works too."
+  - "The book mixes the dry yeast straight into the flour; here it is started in the milk first. Instant yeast works the same way."
 ---
 
 Bakeries hand them over in a paper bag that's always too short, and people peel off the salty strips as they walk.

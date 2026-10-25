@@ -10,7 +10,7 @@ cover: { src: pizza-rossa/cover.webp, alt: "A long dimpled pizza rossa with char
 groups:
   - name: Dough
     items:
-      - { id: water, ingredient: water, name: warm water (30 °C), quantity: 245, unit: g }
+      - { id: water, ingredient: water, name: water, quantity: 245, unit: g, prep: Heated to 40 °C }
       - { id: dough-oil, ingredient: olive-oil, name: olive oil, quantity: 20, unit: g }
       - { id: yeast, ingredient: instant-yeast, name: instant yeast, quantity: 4, unit: g }
       - { id: sugar, ingredient: sugar, name: sugar, quantity: 7, unit: g }
@@ -27,7 +27,8 @@ groups:
       - { id: chillies, ingredient: calabrian-chillies, name: Calabrian chillies, quantity: 15, unit: ml }
       - { id: chilli-oil, ingredient: olive-oil, name: olive oil, quantity: 60, unit: ml, note: Roughly }
 steps:
-  - { id: mix, title: Mix the dough, duration: 7 min, text: "Put the {{water}}, {{dough-oil}}, {{yeast}}, {{sugar}}, {{flour}} and {{salt}} in a stand mixer with a dough hook. Mix 3 minutes on low, then about 4 minutes on medium-high, until the dough pulls away from the side of the bowl. No mixer: pulse for 5 seconds in a food processor, or stir with a spoon and finish with a wet hand." }
+  - { id: start-yeast, title: Start the yeast, duration: 10 min, text: "Heat the {{water}} to 40 °C, measured with a thermometer. Stir in the {{yeast}} and {{sugar}} and leave until foamy. No foam means the yeast is dead: start again with fresh yeast." }
+  - { id: mix, title: Mix the dough, duration: 7 min, text: "Add the {{dough-oil}}, {{flour}} and {{salt}} to the yeast water in a stand mixer with a dough hook. Mix 3 minutes on low, then about 4 minutes on medium-high, until the dough pulls away from the side of the bowl. No mixer: pulse for 5 seconds in a food processor, or stir with a spoon and finish with a wet hand." }
   - { id: ferment, title: Fold and chill, duration: "45 min, then 6–24 h cold", text: "Move the dough to an oiled bowl, cover and leave 45 minutes at room temperature. Do 4–5 stretch-and-folds, then 5–6 slap-and-folds (video at 2:12). Cover and refrigerate for 6–24 hours. If you mixed by hand: rest 30 minutes, do one set of folds (video at 2:46), rest 15 minutes, do a second set, then refrigerate." }
   - { id: shape, title: Shape and proof, duration: 90 min, text: "Turn the cold dough onto a floured surface ({{dust-flour}}) and roll it up away from you. Put it seam-down on a floured sheet tray lined with baking paper, cover and proof at room temperature. Meanwhile heat the oven to 287 °C with a pizza stone or steel inside." }
   - { id: chilli, title: Make the chilli oil, text: "Mix the {{chillies}} with the {{chilli-oil}}." }
@@ -37,6 +38,8 @@ sources:
   - { title: "1 DOUGH 3 PIZZAS · Brian Lagerstrom (YouTube)", url: "https://www.youtube.com/watch?v=QZksuLWRYOY" }
 issues: []
 adaptations:
+  - "Yeast prestart at 40 °C instead of the source's 30 °C water, which suits fridge-cold dry yeast."
+  - "Added a 10-minute yeast prestart in the recipe's own liquid, so you can see the yeast is alive before mixing."
   - "Converted to metric: the source's own gram figures, other volumes to ml; oven given as the source's 287 °C."
   - "Method rewritten in my own words from the video description."
   - "Same dough as the skillet pan pizza and hand-stretched pizza. Each recipe uses one full batch."

@@ -10,7 +10,7 @@ cover: { src: hand-stretched-pizza/cover.webp, alt: A round margherita-style piz
 groups:
   - name: Dough
     items:
-      - { id: water, ingredient: water, name: warm water (30 °C), quantity: 245, unit: g }
+      - { id: water, ingredient: water, name: water, quantity: 245, unit: g, prep: Heated to 40 °C }
       - { id: dough-oil, ingredient: olive-oil, name: olive oil, quantity: 20, unit: g }
       - { id: yeast, ingredient: instant-yeast, name: instant yeast, quantity: 4, unit: g }
       - { id: sugar, ingredient: sugar, name: sugar, quantity: 7, unit: g }
@@ -30,7 +30,8 @@ groups:
       - { id: oil, ingredient: olive-oil, name: olive oil, note: For drizzling }
       - { id: flaky-salt, ingredient: flaky-salt, name: flaky salt }
 steps:
-  - { id: mix, title: Mix the dough, duration: 7 min, text: "Put the {{water}}, {{dough-oil}}, {{yeast}}, {{sugar}}, {{flour}} and {{salt}} in a stand mixer with a dough hook. Mix 3 minutes on low, then about 4 minutes on medium-high, until the dough pulls away from the side of the bowl. No mixer: pulse for 5 seconds in a food processor, or stir with a spoon and finish with a wet hand." }
+  - { id: start-yeast, title: Start the yeast, duration: 10 min, text: "Heat the {{water}} to 40 °C, measured with a thermometer. Stir in the {{yeast}} and {{sugar}} and leave until foamy. No foam means the yeast is dead: start again with fresh yeast." }
+  - { id: mix, title: Mix the dough, duration: 7 min, text: "Add the {{dough-oil}}, {{flour}} and {{salt}} to the yeast water in a stand mixer with a dough hook. Mix 3 minutes on low, then about 4 minutes on medium-high, until the dough pulls away from the side of the bowl. No mixer: pulse for 5 seconds in a food processor, or stir with a spoon and finish with a wet hand." }
   - { id: ferment, title: Fold and chill, duration: "45 min, then 6–24 h cold", text: "Move the dough to an oiled bowl, cover and leave 45 minutes at room temperature. Do 4–5 stretch-and-folds, then 5–6 slap-and-folds (video at 2:12). Cover and refrigerate for 6–24 hours. If you mixed by hand: rest 30 minutes, do one set of folds (video at 2:46), rest 15 minutes, do a second set, then refrigerate." }
   - { id: divide, title: Divide and proof, duration: 90 min, text: "Turn the cold dough onto a floured surface ({{dust-flour}}), divide into two 320 g pieces and shape into balls (video at 9:44). Put them on a floured tray, cover and proof at room temperature. Meanwhile heat the oven to 287 °C with a pizza stone or steel inside." }
   - { id: sauce, title: Make the sauce, text: "Purée the {{tomatoes}} with the {{sauce-salt}}." }
@@ -43,6 +44,8 @@ issues:
   - "The source gives no amounts for the cheeses, basil or finishing oil."
   - "Each pizza only needs a thin layer of sauce, so most of the 800 g is left over."
 adaptations:
+  - "Yeast prestart at 40 °C instead of the source's 30 °C water, which suits fridge-cold dry yeast."
+  - "Added a 10-minute yeast prestart in the recipe's own liquid, so you can see the yeast is alive before mixing."
   - "Converted to metric: the source's own gram figures; dough circle to 18–20 cm; oven given as the source's 287 °C."
   - "Method rewritten in my own words from the video description."
   - "Same dough as the pizza rossa and skillet pan pizza. Each recipe uses one full batch."
