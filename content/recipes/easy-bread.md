@@ -44,8 +44,6 @@ legacyPath: snacks/easy_bread/
 
 **Yeast.** The yeast is started in warm water first, so instant and active dry yeast both work. The source uses hotter water (up to 55 °C) mixed straight into the flour; with the cooler water here, expect the rise to take the full 3 hours.
 
-**Water temperature.** Too hot to bathe in will kill the yeast; pleasant bath temperature is right.
-
 **Rising.** Timing varies with room temperature, humidity and flour; aim for the result (doubled, bubbly, wobbly), not the clock. In a kitchen at 22 °C or cooler, proof it in the oven at 30 °C instead (use the proof setting or the oven light, and check with the thermometer). On hot days it can rise in 45 minutes; refrigerate it to pause while the oven heats.
 
 **Preheating.** Start preheating when the dough is clearly rising (around 1½ hours). You can also shape the dough onto the paper and let it sit for 30 minutes while the oven heats.

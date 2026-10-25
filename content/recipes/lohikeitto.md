@@ -17,7 +17,7 @@ groups:
       - { id: carrots, ingredient: carrot, name: small carrots, quantity: 3, unit: piece, prep: "Sliced crosswise, 6 mm thick" }
       - { id: salmon, ingredient: salmon, name: fresh salmon, quantity: 450, unit: g, prep: "Skinless and boneless, in bite-size pieces" }
       - { id: cream, ingredient: whipping-cream, name: whipping cream, quantity: 200, unit: g }
-      - { id: dill, ingredient: dill, name: fresh dill, prep: Finely chopped, note: "Amount unresolved: the saved recipe says “150 g (??)”" }
+      - { id: dill, ingredient: dill, name: fresh dill, quantity: 20, unit: g, prep: Finely chopped, note: A large bunch }
       - { id: salt, ingredient: salt, name: salt, note: To taste }
       - { id: pepper, ingredient: black-pepper, name: freshly ground black pepper, note: To taste }
 steps:
@@ -30,9 +30,9 @@ steps:
 sources:
   - { title: Saved video, url: "https://www.youtube.com/watch?v=MvwZ8x-k8Uk" }
   - { title: The Cooking Guy, url: "https://www.thecookingguy.com/cookbook/2016/10/12/salmon-soup-finland-finlandia-butter-recipe" }
-issues:
-  - The saved dill amount is marked “150 g (??)”; verify it against the source before cooking.
+issues: []
 adaptations:
+  - "Dill set to 20 g; the saved “150 g (??)” was far too much for 4–6 portions."
   - "Converted to metric: butter given in grams (14 g per spoon); slice thickness in mm."
 legacyPath: main_dishes/lohikeitto/
 ---

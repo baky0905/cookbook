@@ -5,7 +5,7 @@ category: Sides
 tags: [potato, oven-baked]
 aliases: [roasted-potatos]
 status: needs-review
-yield: { label: Yield not recorded, scalable: false }
+yield: { label: about 6 portions, amount: 6, unit: portions, scalable: false }
 time: { cook: about 1¼ h }
 groups:
   - name: Ingredients
@@ -28,9 +28,9 @@ steps:
 sources:
   - { title: Serious Eats, url: "https://www.seriouseats.com/the-best-roast-potatoes-ever-recipe" }
   - { title: Saved video, url: "https://www.youtube.com/watch?v=_wx__fEyDj0" }
-issues:
-  - Yield is not recorded.
+issues: []
 adaptations:
+  - "Yield estimated from the amounts; the source doesn't state it."
   - "Temperatures given in °C only; water and salt for boiling given as 2 l and 25 g."
 legacyPath: side_dishes/roasted_potatos/
 ---

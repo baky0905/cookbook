@@ -46,8 +46,10 @@ ingredients:
   - { id: chicken-pieces, name: chicken pieces (bone-in), aisle: "Meat & fish", kcal: 160 }
   - { id: chicken-seasoning, name: chicken seasoning, aisle: "Herbs & spices" }
   - { id: chicken-stock, name: chicken stock, aisle: "Tins & jars", kcal: 5, density: 1 }
+  - { id: chicken-thigh, name: chicken thigh fillets, aisle: "Meat & fish", kcal: 177 }
   - { id: chilli-flakes, name: chilli flakes, aisle: "Herbs & spices" }
   - { id: chilli-powder, name: chilli powder, aisle: "Herbs & spices" }
+  - { id: chives, name: fresh chives, aisle: Produce, kcal: 30 }
   - { id: chocolate-spread, name: chocolate spread, aisle: "Tins & jars", kcal: 540 }
   - { id: cinnamon, name: ground cinnamon, aisle: "Herbs & spices" }
   - { id: citric-acid, name: citric acid, aisle: Dry goods, kcal: 0 }
@@ -164,6 +166,7 @@ ingredients:
   - { id: sour-cream, name: sour cream, aisle: "Dairy & eggs", kcal: 193 }
   - { id: soy-sauce, name: soy sauce, aisle: "Oils & condiments", kcal: 53, density: 1.17 }
   - { id: spaghetti, name: spaghetti, aisle: Dry goods, kcal: 371 }
+  - { id: spring-onion, name: spring onions, aisle: Produce, kcal: 32, weights: { piece: 15 } }
   - { id: squash, name: squash, aisle: Produce, kcal: 30 }
   - { id: squid, name: squid, aisle: "Meat & fish", kcal: 92 }
   - { id: sugar, name: sugar, aisle: Dry goods, kcal: 387, density: 0.85, staple: true }
@@ -199,3 +202,4 @@ ingredients:
   - { id: wholegrain-mustard, name: wholegrain mustard, aisle: "Oils & condiments", kcal: 140, density: 1.05 }
   - { id: worcestershire-sauce, name: Worcestershire sauce, aisle: "Oils & condiments", kcal: 78, density: 1.1 }
   - { id: yellow-mustard, name: yellow mustard, aisle: "Oils & condiments", kcal: 60 }
+  - { id: zucchini, name: zucchini, aisle: Produce, kcal: 17, weights: { piece: 250 } }

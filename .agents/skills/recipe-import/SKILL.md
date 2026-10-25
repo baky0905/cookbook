@@ -5,7 +5,7 @@ description: Add or update a recipe in this cookbook from a link (recipe site, Y
 
 # Recipe import
 
-This is the main way recipes enter the cookbook. One recipe is one file: `content/recipes/<id>.md`, YAML frontmatter plus optional Markdown notes. The schema is `src/lib/schema.mjs`. Good examples: `content/recipes/lohikeitto.md` (simple), `focaccia.md` (groups, long rests), `ricet.md` (translated family recipe).
+This is the main way recipes enter the cookbook. One recipe is one file: `content/recipes/<id>.md`, YAML frontmatter plus optional Markdown notes. The schema is `src/lib/schema.mjs`. Good examples: `content/recipes/lohikeitto.md` (simple), `focaccia.md` (groups, long rests), `mayonnaise.md` (translated from Croatian).
 
 ## Workflow
 
@@ -19,7 +19,7 @@ This is the main way recipes enter the cookbook. One recipe is one file: `conten
 
 ## Writing the recipe
 
-- **English only.** Translate; set `originalLanguage` (e.g. `hr`, `no`) and add "Translated from …" to `adaptations`. The title is always English (Walnut Roll, Finnish Salmon Soup); put the dish's own name, correctly spelled with diacritics, in `originalName: { name: Orehnjača, lang: hr }`, which shows under the title and is searchable. Loanwords used as-is in English (carbonara, focaccia, naan) can stay as the title. Write all other text in English, using the English name in steps and notes.
+- **English only.** Translate; set `originalLanguage` (e.g. `hr`, `no`) and add "Translated from …" to `adaptations`. The title is always English (Croatian Pancakes, Finnish Salmon Soup); put the dish's own name, correctly spelled with diacritics, in `originalName: { name: Palačinke, lang: hr }`, which shows under the title and is searchable. Loanwords used as-is in English (carbonara, focaccia, naan) can stay as the title. Write all other text in English, using the English name in steps and notes.
 - **Metric only**, enforced everywhere including notes: g, kg, ml, l, °C, cm/mm, plus count units from `content/taxonomy.yaml` (piece, clove, sprig, pinch, slice, bunch, handful, can, package). No cups, spoons, ounces, pounds, quarts, inches or °F (except the `spoon` hint below).
   - **Grams first.** Use g for solids and thick ingredients (flour, sugar, rice, butter, spices, honey, yoghurt) whenever the source gives grams or the conversion is safe, i.e. there is a reliable weight per volume for that exact ingredient (butter 14 g per 15 ml, plain flour 125 g per 240 ml, uncooked rice 150 g per rice-cooker measure, ground spices about 2–3 g per 5 ml, dried leafy herbs about 1 g per 5 ml). The owner cooks with a scale.
   - Prefer the source's own gram figures over your conversion when it gives them (many sites show both).

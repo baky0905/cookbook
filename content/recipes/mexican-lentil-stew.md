@@ -15,20 +15,20 @@ groups:
       - { id: tex-mex, ingredient: tex-mex-spice, name: Tex-Mex spice mix, quantity: 10, unit: g }
       - { id: cajun, ingredient: cajun-spice, name: Cajun spice mix, quantity: 8, unit: g, note: "The original uses Ay Cajun-ba" }
       - { id: stock, ingredient: vegetable-stock-powder, name: vegetable stock powder, quantity: 8, unit: g }
-      - { id: puree, ingredient: tomato-puree, name: tomato purée, note: "Used in the method; amount not in the saved recipe (one meal-kit pack)" }
-      - { id: corn, ingredient: sweetcorn, name: canned sweetcorn, note: "Used in the method; amount not in the saved recipe" }
+      - { id: puree, ingredient: tomato-puree, name: tomato purée, quantity: 70, unit: g }
+      - { id: corn, ingredient: sweetcorn, name: canned sweetcorn, quantity: 300, unit: g, prep: Drained }
       - { id: lentils, ingredient: cooked-green-lentils, name: cooked green lentils, quantity: 800, unit: g, note: 2 packs }
       - { id: water, ingredient: water, name: water, quantity: 90, unit: ml }
-      - { id: salt, ingredient: salt, name: salt, quantity: 5, unit: ml, note: Plus extra to taste }
+      - { id: salt, ingredient: salt, name: salt, quantity: 6, unit: g, note: Plus extra to taste }
       - { id: pepper, ingredient: black-pepper, name: black pepper, note: To taste }
   - name: Salsa and serving
     items:
       - { id: tomatoes, ingredient: tomato, name: tomatoes, quantity: 4, unit: piece, prep: Diced }
       - { id: lime, ingredient: lime, name: lime, quantity: 1, unit: piece, note: "10 ml juice for the stew, the rest in wedges" }
-      - { id: sugar, ingredient: sugar, name: sugar, quantity: 7.5, unit: ml, note: See the note on quantity }
-      - { id: coriander, ingredient: coriander, name: fresh coriander, note: "Used in the method; amount not in the saved recipe" }
+      - { id: sugar, ingredient: sugar, name: sugar, quantity: 2, unit: g, spoon: "½ teaspoon" }
+      - { id: coriander, ingredient: coriander, name: fresh coriander, quantity: 2, unit: bunch }
       - { id: mozzarella, ingredient: mozzarella, name: mozzarella, quantity: 100, unit: g, prep: Grated }
-      - { id: sour-cream, ingredient: sour-cream, name: sour cream, quantity: 250, unit: g }
+      - { id: sour-cream, ingredient: sour-cream, name: sour cream, quantity: 150, unit: ml }
       - { id: chips, ingredient: tortilla-chips, name: tortilla chips, quantity: 150, unit: g }
 steps:
   - { id: prep, title: Prepare, text: "Finely chop the onions. Deseed the bell pepper and cut it into 2 cm pieces. Cut the lime into wedges. Drain the corn. Rinse the lentils in a sieve under cold water." }
@@ -38,10 +38,10 @@ steps:
   - { id: serve, title: Serve, text: "Spoon the stew into deep plates. Top with mozzarella, the salsa and the remaining coriander, and add a few dollops of sour cream. Serve the tortilla chips on the side." }
 sources:
   - { title: HelloFresh Norway, url: "https://www.hellofresh.no/recipes/meksikansk-linsegryte-62224145fe157f240467d865" }
-issues:
-  - "Sugar conflicts: the ingredient list says 7.5 ml but the method says 2.5 ml."
-  - Corn, tomato purée and coriander are used in the method but their amounts were not saved.
+issues: []
 adaptations:
+  - "Missing amounts filled in from the HelloFresh source (2 portions, doubled): corn, tomato purée, coriander; sugar is the source's method amount; sour cream corrected to 150 ml."
+  - "Small dry amounts converted from ml to grams using each ingredient's own weight, with spoon hints where useful."
   - "Volume measures converted to ml (15 ml and 5 ml per spoon)."
   - "The original was tagged chicken by mistake; the recipe is vegetarian."
 legacyPath: main_dishes/mexican_lentil_stew/

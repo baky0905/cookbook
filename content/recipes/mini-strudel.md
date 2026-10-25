@@ -31,5 +31,7 @@ steps:
 sources:
   - { title: Hanuma kocht, url: "https://www.hanumakocht.at/strudlice-mini-strudel/" }
   - { title: Saved video, url: "https://www.youtube.com/watch?v=oSHDnAdNd64" }
+adaptations:
+  - "Oven temperatures are for conventional (top and bottom) heat, since the source doesn't say; with fan, set about 20 °C lower."
 legacyPath: desserts/mini_strudle/
 ---

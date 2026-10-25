@@ -25,8 +25,8 @@ groups:
       - { id: paste, ingredient: tomato-paste, name: tomato paste, quantity: 25, unit: g }
       - { id: sauce-salt, ingredient: salt, name: salt, quantity: 3, unit: g }
       - { id: sauce-sugar, ingredient: sugar, name: sugar, quantity: 5, unit: g }
-      - { id: oregano, ingredient: dried-oregano, name: dried oregano, quantity: 1.25, unit: ml }
-      - { id: basil, ingredient: dried-basil, name: dried basil, quantity: 1.25, unit: ml }
+      - { id: oregano, ingredient: dried-oregano, name: dried oregano, quantity: 0.25, unit: g, spoon: "¼ teaspoon" }
+      - { id: basil, ingredient: dried-basil, name: dried basil, quantity: 0.25, unit: g, spoon: "¼ teaspoon" }
       - { id: sauce-oil, ingredient: olive-oil, name: olive oil, quantity: 10, unit: g }
       - { id: garlic, ingredient: garlic, name: garlic, quantity: 1, unit: clove, prep: Minced }
   - name: Topping
@@ -50,6 +50,7 @@ issues:
   - "The source gives no amounts for mozzarella or toppings."
   - "Only about 80 ml of the reduced sauce goes on the pizza, so expect leftovers."
 adaptations:
+  - "Small dry amounts converted from ml to grams using each ingredient's own weight, with spoon hints where useful."
   - "Yeast prestart at 40 °C instead of the source's 30 °C water, which suits fridge-cold dry yeast."
   - "Added a 10-minute yeast prestart in the recipe's own liquid, so you can see the yeast is alive before mixing."
   - "Converted to metric: the source's own gram figures, other volumes to ml (5 ml per spoon); skillet size to 30 cm; oven given as the source's 287 °C."

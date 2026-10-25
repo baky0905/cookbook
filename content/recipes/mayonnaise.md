@@ -12,7 +12,7 @@ groups:
     items:
       - { id: egg, ingredient: egg, name: very fresh egg, quantity: 1, unit: piece, note: "Preferably free-range" }
       - { id: salt, ingredient: salt, name: salt, quantity: 2, unit: pinch }
-      - { id: mustard, ingredient: dijon-mustard, name: Dijon mustard, quantity: 15, unit: ml }
+      - { id: mustard, ingredient: dijon-mustard, name: Dijon mustard, quantity: 15, unit: g, spoon: "1 tablespoon" }
       - { id: lemon, ingredient: lemon-juice, name: lemon juice, quantity: 15, unit: ml }
       - { id: vinegar, ingredient: white-wine-vinegar, name: white wine vinegar, quantity: 15, unit: ml }
       - { id: oil, ingredient: sunflower-oil, name: sunflower oil, quantity: 200, unit: ml }
@@ -27,6 +27,7 @@ sources:
 issues:
   - The yield is estimated from the volume of oil.
 adaptations:
+  - "Small dry amounts converted from ml to grams using each ingredient's own weight, with spoon hints where useful."
   - Translated from Croatian.
   - "Volume measures converted to ml (15 ml and 5 ml per spoon)."
 legacyPath: sauces/mayonnaise/

@@ -4,7 +4,7 @@ description: Béchamel-based mustard sauce for chicken, fish or toasted sandwich
 category: Sauces & dips
 tags: [french, vegetarian]
 status: needs-review
-yield: { label: Yield not recorded, scalable: false }
+yield: { label: about 300 ml, amount: 300, unit: ml, scalable: true }
 groups:
   - name: Ingredients
     items:
@@ -18,8 +18,8 @@ groups:
       - { id: salt, ingredient: salt, name: salt, note: To taste }
       - { id: pepper, ingredient: black-pepper, name: black pepper, note: To taste }
       - { id: cream, ingredient: cooking-cream, name: cream, quantity: 45, max: 60, unit: ml, note: Plus extra to adjust }
-      - { id: grain-mustard, ingredient: wholegrain-mustard, name: wholegrain mustard, quantity: 15, unit: ml }
-      - { id: dijon, ingredient: dijon-mustard, name: Dijon mustard, quantity: 15, unit: ml, note: At the end, optional: true }
+      - { id: grain-mustard, ingredient: wholegrain-mustard, name: wholegrain mustard, quantity: 15, unit: g, spoon: "1 tablespoon" }
+      - { id: dijon, ingredient: dijon-mustard, name: Dijon mustard, quantity: 15, unit: g, note: At the end, optional: true, spoon: "1 tablespoon" }
       - { id: vinegar, ingredient: white-vinegar, name: white vinegar, quantity: 5, unit: ml }
 steps:
   - { id: roux, title: Make the roux, duration: 2 min, text: "Melt the butter in a pan, reduce the heat and stir in the flour to make a paste; cook for 2 minutes. Turn off the heat and let it cool completely (the fridge helps)." }
@@ -32,9 +32,10 @@ steps:
 sources:
   - { title: The French Cooking Academy, url: "https://www.thefrenchcookingacademy.com/recipes/mustard-sauce" }
   - { title: Saved video, url: "https://www.youtube.com/watch?v=WdSzne_T9Uo" }
-issues:
-  - Yield is not recorded.
+issues: []
 adaptations:
+  - "Yield estimated from the amounts; the source doesn't state it."
+  - "Small dry amounts converted from ml to grams using each ingredient's own weight, with spoon hints where useful."
   - "Volume measures converted to ml (15 ml and 5 ml per spoon)."
 legacyPath: sauces/mustard_sauce/
 ---

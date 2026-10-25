@@ -10,11 +10,11 @@ time: { total: about 25 min, rest: soak the raisins in rum beforehand }
 groups:
   - name: Batter
     items:
-      - { id: raisins, ingredient: raisins, name: raisins, quantity: 30, unit: ml }
+      - { id: raisins, ingredient: raisins, name: raisins, quantity: 18, unit: g }
       - { id: rum, ingredient: rum, name: rum, quantity: 30, unit: ml, note: For soaking the raisins }
       - { id: flour, ingredient: plain-flour, name: plain flour, quantity: 80, unit: g }
       - { id: salt, ingredient: salt, name: salt, quantity: 1, unit: pinch, scalable: false }
-      - { id: sugar, ingredient: sugar, name: granulated sugar, quantity: 15, unit: ml }
+      - { id: sugar, ingredient: sugar, name: granulated sugar, quantity: 12, unit: g, spoon: "1 tablespoon" }
       - { id: milk, ingredient: milk, name: milk, quantity: 150, unit: ml }
       - { id: eggs, ingredient: egg, name: eggs, quantity: 2, unit: piece, prep: Separated }
   - name: For frying
@@ -35,6 +35,7 @@ sources:
   - { title: "Croatian cookbook, 'Lazy Morning' chapter — Shredded Pancake (Kaiserschmarrn); supplied book photographs" }
 issues: []
 adaptations:
+  - "Small dry amounts converted from ml to grams using each ingredient's own weight, with spoon hints where useful."
   - "Converted to metric: spoons to ml (15 ml per spoon); butter from 4 spoons to 56 g (14 g per 15 ml)."
   - "Rewrote the method concisely in my own words."
   - "Page numbers weren't visible in the photos, so the source has none."

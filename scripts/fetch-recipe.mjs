@@ -50,7 +50,10 @@ if (out.video?.captions && !Array.isArray(out.video.captions.lines)) {
     const text = vtt ? fs.readFileSync(path.join(dir, vtt), 'utf8') : '';
     const lines = [...new Set(text.split('\n').filter(l => l && !/-->|^WEBVTT|^Kind:|^Language:|^\d+$/.test(l)).map(l => decode(l)))];
     if (lines.length) out.video.captions = { source: 'yt-dlp', lines };
-  } catch { out.video.captions.hint = 'Install yt-dlp (brew install yt-dlp) or ask the user to paste the transcript (YouTube: … → Show transcript).'; }
+  } catch {
+    const hint = 'Install yt-dlp (brew install yt-dlp) or ask the user to paste the transcript (YouTube: … → Show transcript).';
+    if (typeof out.video.captions === 'string') out.video.captions = { lines: out.video.captions, hint }; else out.video.captions.hint = hint;
+  }
   finally { fs.rmSync(dir, { recursive: true, force: true }); }
 }
 if (!out.recipe && !out.video) out.note = 'No structured recipe data found; read the page text or ask the user to paste the recipe.';

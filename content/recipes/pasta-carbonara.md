@@ -16,7 +16,7 @@ groups:
       - { id: pecorino, ingredient: pecorino, name: pecorino romano, quantity: 50, unit: g, prep: Finely shredded }
       - { id: eggs, ingredient: egg, name: eggs, quantity: 4, unit: piece, note: "1 whole egg plus 3 yolks" }
       - { id: pepper, ingredient: black-pepper, name: ground black pepper, quantity: 2, unit: g, note: Plus extra to serve }
-      - { id: water, ingredient: water, name: pasta water, quantity: 300, unit: ml, note: See the note on quantity }
+      - { id: water, ingredient: water, name: pasta water, quantity: 500, unit: ml, note: "300 ml to deglaze, then 100 ml into the eggs and 100 ml with the pasta" }
       - { id: salt, ingredient: salt, name: salt, note: For the pasta water }
 steps:
   - { id: pasta, title: Cook the pasta, duration: about 8 min, text: "Bring water to a boil (a 30 cm sauté pan boils faster), salt it and add the spaghetti. Simmer on high until it still has a little crunch in the middle." }
@@ -35,7 +35,6 @@ steps:
       Top with a pinch of parmesan and black pepper and serve.
 sources:
   - { title: Saved video, url: "https://www.youtube.com/watch?v=4nAfxzE02Gw", timestamp: 346s }
-issues:
-  - "The ingredient list says 300 ml pasta water, but the method uses 300 ml + 100 ml + 100 ml. Verify the intended amount."
+issues: []
 legacyPath: main_dishes/pasta_carbonara/
 ---

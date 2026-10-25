@@ -39,5 +39,7 @@ steps:
   - { id: bake, title: Finish and bake, duration: 40–50 min, text: "Brush the exposed crust with egg wash and sprinkle it with raw sugar. Drizzle a little of the cinnamon and cornflour juices from the apple bowl over the fruit, add a pinch of flaky salt and the butter slices. Slide the galette, on its paper, onto a baking sheet and bake at 190 °C, rotating halfway." }
 sources:
   - { title: Saved video, url: "https://www.youtube.com/watch?v=sSkjBodTzGU" }
+adaptations:
+  - "Oven temperatures are for conventional (top and bottom) heat, since the source doesn't say; with fan, set about 20 °C lower."
 legacyPath: desserts/apple_galette/
 ---

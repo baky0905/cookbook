@@ -6,6 +6,7 @@ category: Snacks & starters
 tags: [croatian, cheese, yeast-dough, oven-baked, make-ahead, vegetarian]
 status: reviewed
 yield: { label: 32 rolls (8 portions), amount: 32, unit: rolls, scalable: false }
+cover: { src: kiflice/cover.webp, alt: "Two rows of golden crescent rolls on a cooling rack, one topped with sesame and one with caraway seeds" }
 time: { total: about 2 h 30 min, active: 30 min, rest: 1 h 20 min, cook: 18 min per tray }
 groups:
   - name: To start the yeast
@@ -47,6 +48,7 @@ sources:
   - { title: "Croatian savoury baking, pp. 220–225 — Crescent rolls with cheese (kiflice sa sirom); supplied book photographs" }
 issues: []
 adaptations:
+  - "Oven temperatures are for conventional (top and bottom) heat, since the source doesn't say; with fan, set about 20 °C lower."
   - "Added a 10-minute yeast prestart in the recipe's own liquid, so you can see the yeast is alive before mixing."
   - "Kept the book's metric quantities; the filling per roll is given as about 5 g, which uses the 180 g across 32 rolls."
   - "Rewrote the method concisely in my own words."

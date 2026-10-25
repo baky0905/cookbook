@@ -4,7 +4,7 @@ description: Cherry tomatoes, peppers, onion and garlic roasted until caramelise
 category: Soups & stews
 tags: [oven-baked, make-ahead]
 status: needs-review
-yield: { label: 1 pot (servings not stated), scalable: false }
+yield: { label: about 4 portions, amount: 4, unit: portions, scalable: true }
 time: { total: about 1 h 20 min, cook: about 1 h 10 min }
 groups:
   - name: Roasted vegetables
@@ -14,20 +14,20 @@ groups:
       - { id: peppers, ingredient: mini-sweet-pepper, name: small snack peppers, quantity: 3, unit: piece, note: Any kind of pepper works }
       - { id: garlic, ingredient: garlic, name: garlic, quantity: 8, max: 12, unit: clove, prep: Peeled, note: A whole head }
       - { id: rosemary, ingredient: rosemary, name: fresh rosemary, quantity: 2, unit: sprig }
-      - { id: thyme, ingredient: thyme, name: fresh thyme leaves, quantity: 22, max: 30, unit: ml }
+      - { id: thyme, ingredient: thyme, name: fresh thyme leaves, quantity: 4, max: 5, unit: g, spoon: "1½–2 tablespoons" }
       - { id: olive-oil, ingredient: olive-oil, name: olive oil, note: A generous amount }
   - name: Soup
     items:
       - { id: onion, ingredient: onion, name: white onion, quantity: 1, unit: piece, prep: Chopped, note: "1 large or 2 smaller" }
       - { id: butter, ingredient: butter, name: butter, quantity: 30, unit: g }
-      - { id: tomato-paste, ingredient: tomato-paste, name: tomato paste, quantity: 15, unit: ml }
+      - { id: tomato-paste, ingredient: tomato-paste, name: tomato paste, quantity: 16, unit: g }
       - { id: stock, ingredient: vegetable-stock, name: vegetable stock, quantity: 660, unit: ml, note: Chicken stock also works }
-      - { id: oregano, ingredient: dried-oregano, name: dried oregano, quantity: 15, unit: ml }
+      - { id: oregano, ingredient: dried-oregano, name: dried oregano, quantity: 3, unit: g, spoon: "1 tablespoon" }
       - { id: cayenne, ingredient: cayenne-pepper, name: cayenne pepper or chilli, note: To taste }
-      - { id: paprika, ingredient: smoked-paprika, name: smoked paprika, quantity: 5, unit: ml, note: Or sweet paprika }
+      - { id: paprika, ingredient: smoked-paprika, name: smoked paprika, quantity: 2, unit: g, note: Or sweet paprika, spoon: "1 teaspoon" }
       - { id: balsamic, ingredient: balsamic-vinegar, name: balsamic vinegar, quantity: 7.5, unit: ml }
       - { id: worcestershire, ingredient: worcestershire-sauce, name: Worcestershire sauce, quantity: 15, unit: ml }
-      - { id: sugar, ingredient: sugar, name: sugar, quantity: 2.5, unit: ml }
+      - { id: sugar, ingredient: sugar, name: sugar, quantity: 2, unit: g, spoon: "½ teaspoon" }
       - { id: basil, ingredient: basil, name: fresh basil leaves, quantity: 1, unit: handful }
       - { id: cream, ingredient: heavy-cream, name: heavy cream, quantity: 120, unit: ml, optional: true }
       - { id: salt, ingredient: salt, name: salt, note: To taste }
@@ -41,10 +41,11 @@ steps:
 sources:
   - { title: "Roasted Tomato Soup · Delicious (YouTube)", url: "https://www.youtube.com/watch?v=qK15KwDBNBU", accessed: "2026-10-10" }
 issues:
-  - "The source doesn't say how many servings it makes."
   - "Dried oregano and sugar are in the ingredient list but not the method. Here they go in with the other seasonings."
   - "Worcestershire sauce usually contains anchovies, so the soup isn't vegetarian as written."
 adaptations:
+  - "Yield estimated from the amounts; the source doesn't state it."
+  - "Small dry amounts converted from ml to grams using each ingredient's own weight, with spoon hints where useful."
   - "Converted to metric: spoons to ml (15 ml and 5 ml per spoon); oven set to the source's 190 °C fan figure."
   - "Cutting the red onion into wedges and peeling the garlic is my addition. The source doesn't say how to prepare them."
   - "Easy version: the optional sieving step is left out. Keep the cream optional."

@@ -4,7 +4,7 @@ description: Rich beef and pork ragù with roasted meat, slowly finished in the 
 category: Mains
 tags: [italian, beef, pork, pasta, slow-cooked, oven-baked, food-processor, make-ahead]
 status: needs-review
-yield: { label: Yield not recorded, scalable: false }
+yield: { label: 8–10 portions, scalable: false }
 time: { cook: about 2½ h }
 groups:
   - name: Sauce
@@ -37,14 +37,16 @@ steps:
   - { id: meat, title: Roast the meat, text: "Meanwhile, spread the meat on a baking tray and roast at 230 °C until well browned and cooked through. The grill works well too and caramelises more." }
   - { id: sauce, title: Build the sauce, text: "Add the tomato paste to the vegetables and fry for 1 minute, then deglaze with the wine and reduce by at least half. Add the tomatoes, bring to a simmer and add the milk." }
   - { id: combine, title: Add the meat and stock, text: "Crumble the roasted meat by hand until very fine and add it to the sauce. Add the stock, bring to a simmer and add 2 pinches of salt." }
-  - { id: oven, title: Finish in the oven, duration: 1 h 45 min, text: "Cook in a 150 °C oven, partially covered, for 1 hour. Remove the lid and cook at 162 °C for another 45 minutes, stirring once or twice." }
+  - { id: oven, title: Finish in the oven, duration: 1 h 45 min, text: "Cook in a 150 °C oven, partially covered, for 1 hour. Remove the lid and cook at 160 °C for another 45 minutes, stirring once or twice." }
   - { id: season, title: Season and serve, text: "Skim off excess fat, then stir in the balsamic, sugar and salt. Adjust until balanced and bright. Serve with al dente tagliatelle or spaghetti and plenty of parmesan." }
 sources:
   - { title: Saved video, url: "https://www.youtube.com/watch?v=d8Gq5SyZI34" }
 issues:
-  - Yield is not recorded.
   - "The source gives the meat-roasting temperature as “450 degrees” without a unit; 230 °C assumes an American oven setting."
 adaptations:
+  - "Oven temperatures are for conventional (top and bottom) heat, since the source doesn't say; with fan, set about 20 °C lower."
+  - "Oven rounded from 162 °C to 160 °C."
+  - "Yield estimated from the amounts; the source doesn't state it."
   - "Converted to metric: olive oil 45 ml (15 ml per spoon); pot size about 5 l; roasting temperature 230 °C."
 legacyPath: main_dishes/pasta_bolognese/
 ---

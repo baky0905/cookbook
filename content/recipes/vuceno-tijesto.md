@@ -12,7 +12,7 @@ groups:
     items:
       - { id: flour, ingredient: bread-flour, name: bread (strong) flour, quantity: 500, unit: g, note: "At least 11% protein" }
       - { id: salt, ingredient: salt, name: salt, quantity: 4, unit: g }
-      - { id: water, ingredient: water, name: lukewarm water, quantity: 280, unit: ml }
+      - { id: water, ingredient: water, name: water, quantity: 280, unit: ml, prep: Heated to 30 °C }
       - { id: oil, ingredient: sunflower-oil, name: sunflower oil, quantity: 20, unit: ml, note: "Or canola oil, plus more to coat and spread over the dough" }
       - { id: vinegar, ingredient: apple-cider-vinegar, name: apple cider vinegar, quantity: 10, unit: ml }
   - name: For stretching
@@ -35,6 +35,7 @@ sources:
 issues:
   - "The baking time (50 min) comes from the book's timing box and depends on the filling. The individual pie recipes give the actual bake."
 adaptations:
+  - "The book's “lukewarm water” given as 30 °C."
   - "Kept the book's metric quantities."
   - "Rewrote the method concisely in my own words."
 ---

@@ -27,7 +27,7 @@ steps:
   - { id: cold, title: Ferment overnight, duration: about 12 h, text: Cover tightly and ferment in the fridge overnight. }
   - { id: pan, title: Pan and rise, duration: 2 h, text: "Grease a 28 × 33 cm baking pan with about 15 ml olive oil and stretch the dough gently into the corners (wet your fingers if it sticks; if it resists, cover and try again after 10 minutes). Cover and rise for an hour; it rises but doesn't quite double. Dimple the dough with wet fingers all the way to the bottom of the pan, cover and rest another hour, until it fills about half to two-thirds of the pan, is bubbly and jiggles." }
   - { id: top, title: Top, text: "Scatter over rosemary leaves and garlic confit, drizzle generously with the garlic oil and press the cloves in slightly so they don't burn. Finish with a few fat pinches of flaky salt." }
-  - { id: bake, title: Bake, duration: 15–20 min, text: "Bake in an oven preheated to 232 °C until the internal temperature reaches 88 °C. Cool on a wire rack for a few minutes before cutting." }
+  - { id: bake, title: Bake, duration: 15–20 min, text: "Bake in an oven preheated to 230 °C until the internal temperature reaches 88 °C. Cool on a wire rack for a few minutes before cutting." }
 sources:
   - { title: Kitchencraft Food, url: "https://kitchencraftfood.com/recipes/no-knead-focaccia-bread/" }
   - { title: Saved video, url: "https://www.youtube.com/watch?v=-DmVedGWAnU" }
@@ -35,6 +35,8 @@ issues:
   - Rosemary, garlic confit and finishing salt have no quantities.
   - The saved summary said 35 minutes cooking, but the method bakes for 15–20 minutes; the overnight ferment and two rises come on top.
 adaptations:
+  - "Oven temperatures are for conventional (top and bottom) heat, since the source doesn't say; with fan, set about 20 °C lower."
+  - "Oven rounded from 232 °C to 230 °C."
   - "Added a 10-minute yeast prestart in the recipe's own liquid, so you can see the yeast is alive before mixing."
   - "Pan oil converted to about 15 ml."
 legacyPath: snacks/foccacia/

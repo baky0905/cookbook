@@ -11,13 +11,13 @@ groups:
   - name: Paprikash
     items:
       - { id: onion, ingredient: onion, name: large onion, quantity: 1, unit: piece, prep: Chopped }
-      - { id: lard, ingredient: lard, name: lard, quantity: 15, unit: ml, note: Or butter }
+      - { id: lard, ingredient: lard, name: lard, quantity: 14, unit: g, note: Or butter, spoon: "1 tablespoon" }
       - { id: chicken, ingredient: chicken-pieces, name: bone-in chicken pieces, quantity: 800, unit: g, note: "Leg, thigh, wing and breast; free-range if you can" }
       - { id: salt, ingredient: salt, name: salt, note: To taste }
       - { id: pepper, ingredient: black-pepper, name: black pepper, note: To taste }
       - { id: water, ingredient: water, name: water, note: "A splash, plus more as needed; chicken stock also works" }
-      - { id: flour, ingredient: plain-flour, name: plain flour, quantity: 15, unit: ml }
-      - { id: paprika, ingredient: sweet-paprika, name: sweet paprika, quantity: 5, unit: ml }
+      - { id: flour, ingredient: plain-flour, name: plain flour, quantity: 8, unit: g, spoon: "1 tablespoon" }
+      - { id: paprika, ingredient: sweet-paprika, name: sweet paprika, quantity: 2, unit: g, spoon: "1 teaspoon" }
       - { id: sour-cream, ingredient: sour-cream, name: sour cream, quantity: 30, unit: ml }
       - { id: bay, ingredient: bay-leaf, name: bay leaves, quantity: 2, max: 3, unit: piece, scalable: false }
   - name: To serve
@@ -35,6 +35,7 @@ sources:
 issues:
   - "The homemade egg pasta recipe makes about 485 g of dough, less than the 600 g of pasta listed here."
 adaptations:
+  - "Small dry amounts converted from ml to grams using each ingredient's own weight, with spoon hints where useful."
   - "Converted to metric: spoons to ml (15 ml and 5 ml per spoon); kept the book's gram weights."
   - "Used lard as the first fat listed; butter also works."
   - "Rewrote the method concisely in my own words."

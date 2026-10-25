@@ -24,7 +24,7 @@ groups:
       - { id: sauce-salt, ingredient: salt, name: salt, quantity: 7, unit: g }
   - name: Chilli oil
     items:
-      - { id: chillies, ingredient: calabrian-chillies, name: Calabrian chillies, quantity: 15, unit: ml }
+      - { id: chillies, ingredient: calabrian-chillies, name: Calabrian chillies, quantity: 15, unit: g, spoon: "1 tablespoon" }
       - { id: chilli-oil, ingredient: olive-oil, name: olive oil, quantity: 60, unit: ml, note: Roughly }
 steps:
   - { id: start-yeast, title: Start the yeast, duration: 10 min, text: "Heat the {{water}} to 40 °C, measured with a thermometer. Stir in the {{yeast}} and {{sugar}} and leave until foamy. No foam means the yeast is dead: start again with fresh yeast." }
@@ -38,6 +38,7 @@ sources:
   - { title: "1 DOUGH 3 PIZZAS · Brian Lagerstrom (YouTube)", url: "https://www.youtube.com/watch?v=QZksuLWRYOY" }
 issues: []
 adaptations:
+  - "Small dry amounts converted from ml to grams using each ingredient's own weight, with spoon hints where useful."
   - "Yeast prestart at 40 °C instead of the source's 30 °C water, which suits fridge-cold dry yeast."
   - "Added a 10-minute yeast prestart in the recipe's own liquid, so you can see the yeast is alive before mixing."
   - "Converted to metric: the source's own gram figures, other volumes to ml; oven given as the source's 287 °C."

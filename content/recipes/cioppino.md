@@ -5,7 +5,7 @@ category: Soups & stews
 tags: [american, italian, seafood, fish, one-pot]
 aliases: [ciopinno]
 status: needs-review
-yield: { label: Yield not recorded, scalable: false }
+yield: { label: about 6 portions, amount: 6, unit: portions, scalable: false }
 groups:
   - name: Broth
     items:
@@ -49,8 +49,9 @@ steps:
 sources:
   - { title: Saved video, url: "https://www.youtube.com/watch?v=73dE97btUQo" }
 issues:
-  - Yield and total time are not recorded.
+  - Total time is not recorded.
 adaptations:
+  - "Yield estimated from the amounts; the source doesn't state it."
   - "Shrimp-shell quantity given as 500 g (the source measures the shells by weight of whole shrimp)."
 legacyPath: main_dishes/ciopinno/
 ---

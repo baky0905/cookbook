@@ -16,15 +16,15 @@ groups:
       - { id: milk, ingredient: milk, name: tepid milk, quantity: 200, unit: ml }
       - { id: water, ingredient: water, name: water, quantity: 200, unit: ml }
       - { id: eggs, ingredient: egg, name: eggs, quantity: 2, unit: piece, prep: Beaten }
-      - { id: butter, ingredient: butter, name: butter, quantity: 15, unit: ml, prep: Melted }
+      - { id: butter, ingredient: butter, name: butter, quantity: 14, unit: g, prep: Melted, spoon: "1 tablespoon" }
       - { id: rum, ingredient: rum, name: rum, quantity: 5, unit: ml }
       - { id: oil, ingredient: sunflower-oil, name: sunflower oil, note: "A few drops per pancake, for frying" }
   - name: Cheese filling
     items:
       - { id: cheese, ingredient: cottage-cheese, name: cottage cheese, quantity: 500, unit: g }
       - { id: filling-egg, ingredient: egg, name: egg, quantity: 1, unit: piece }
-      - { id: sugar, ingredient: sugar, name: granulated sugar, quantity: 60, unit: ml, note: More if you like it sweeter }
-      - { id: vanilla-sugar, ingredient: vanilla-sugar, name: vanilla sugar, quantity: 15, unit: ml }
+      - { id: sugar, ingredient: sugar, name: granulated sugar, quantity: 50, unit: g, note: More if you like it sweeter }
+      - { id: vanilla-sugar, ingredient: vanilla-sugar, name: vanilla sugar, quantity: 12, unit: g, spoon: "1 tablespoon" }
       - { id: filling-lemon, ingredient: lemon, name: lemon, quantity: 1, unit: piece, prep: Zest only }
   - name: Topping
     items:
@@ -41,6 +41,7 @@ sources:
 issues:
   - "The book doesn't give a baking dish size."
 adaptations:
+  - "Small dry amounts converted from ml to grams using each ingredient's own weight, with spoon hints where useful."
   - "Converted to metric: spoons to ml (15 ml and 5 ml per spoon); kept the book's gram and ml amounts."
   - "Rewrote the method concisely in my own words."
 ---

@@ -21,7 +21,7 @@ groups:
       - { id: salt, ingredient: salt, name: salt, note: To taste }
       - { id: pepper, ingredient: black-pepper, name: black pepper, note: To taste }
       - { id: paprika, ingredient: sweet-paprika, name: sweet paprika, note: To taste }
-      - { id: herbs, ingredient: dried-mediterranean-herbs, name: "dried Mediterranean herbs (rosemary, thyme, sage)", quantity: 15, unit: ml }
+      - { id: herbs, ingredient: dried-mediterranean-herbs, name: "dried Mediterranean herbs (rosemary, thyme, sage)", quantity: 3, unit: g, spoon: "1 tablespoon" }
   - name: Topping
     items:
       - { id: eggs, ingredient: egg, name: eggs, quantity: 2, unit: piece }
@@ -40,6 +40,7 @@ sources:
 issues:
   - "The book doesn't give a baking dish size."
 adaptations:
+  - "Small dry amounts converted from ml to grams using each ingredient's own weight, with spoon hints where useful."
   - "Converted to metric: spoons to ml (15 ml per spoon); slices 'as thick as your pinky finger' given as about 1 cm."
   - "Rewrote the method concisely in my own words."
   - "The oven is assumed conventional at 200 °C, since the book suggests turning the fan on only at the end."

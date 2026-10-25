@@ -16,9 +16,9 @@ groups:
       - { id: oats, ingredient: rolled-oats, name: quick-cooking or rolled oats, quantity: 224, unit: g }
       - { id: flour, ingredient: plain-flour, name: plain flour, quantity: 210, unit: g }
       - { id: brown-sugar, ingredient: brown-sugar, name: light brown sugar, quantity: 165, unit: g, prep: Firmly packed }
-      - { id: cinnamon, ingredient: cinnamon, name: ground cinnamon, quantity: 2.5, unit: ml }
-      - { id: baking-soda, ingredient: baking-soda, name: baking soda, quantity: 2.5, unit: ml }
-      - { id: salt, ingredient: salt, name: salt, quantity: 2.5, unit: ml }
+      - { id: cinnamon, ingredient: cinnamon, name: ground cinnamon, quantity: 1, unit: g, spoon: "½ teaspoon" }
+      - { id: baking-soda, ingredient: baking-soda, name: baking soda, quantity: 2.5, unit: g, spoon: "½ teaspoon" }
+      - { id: salt, ingredient: salt, name: salt, quantity: 3, unit: g }
       - { id: butter, ingredient: unsalted-butter, name: unsalted butter, quantity: 226, unit: g, prep: Melted }
   - name: Filling
     items:
@@ -37,6 +37,7 @@ sources:
 issues:
   - "The book doesn't say fan or conventional oven. 175 °C conventional is assumed."
 adaptations:
+  - "Small dry amounts converted from ml to grams using each ingredient's own weight, with spoon hints where useful."
   - "Converted to metric: kept the book's gram weights; spoons to ml (5 ml per spoon); the reserved topping volume to 360 ml; pan size to 20 cm."
   - "Method rewritten in my own words from the book."
 ---

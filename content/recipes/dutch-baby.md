@@ -13,7 +13,7 @@ groups:
       - { id: eggs, ingredient: egg, name: large eggs, quantity: 3, unit: piece, prep: At room temperature, note: 5 min in warm water does it }
       - { id: flour, ingredient: plain-flour, name: plain flour, quantity: 62, unit: g }
       - { id: milk, ingredient: milk, name: whole milk, quantity: 118, unit: g, prep: At room temperature }
-      - { id: sugar, ingredient: sugar, name: sugar, quantity: 15, unit: ml }
+      - { id: sugar, ingredient: sugar, name: sugar, quantity: 12, unit: g, spoon: "1 tablespoon" }
       - { id: vanilla, ingredient: vanilla, name: vanilla extract, quantity: 5, unit: ml }
       - { id: salt, ingredient: salt, name: salt, quantity: 1, unit: pinch, scalable: false }
       - { id: nutmeg, ingredient: nutmeg, name: nutmeg, quantity: 1, unit: pinch, optional: true, scalable: false }
@@ -32,6 +32,7 @@ sources:
   - { title: "Easy Dutch Baby Pancake Recipe · Natasha's Kitchen (YouTube)", url: "https://www.youtube.com/watch?v=r9EVFue5emM" }
 issues: []
 adaptations:
+  - "Small dry amounts converted from ml to grams using each ingredient's own weight, with spoon hints where useful."
   - "Converted to metric: oven to 220 °C; spoons to ml (15 ml and 5 ml per spoon); butter from 3 spoons to 42 g (14 g per 15 ml); skillet size to 25 cm; flour rounded from 62.5 g."
   - "Pared down to 4 steps; method in my own words."
 ---

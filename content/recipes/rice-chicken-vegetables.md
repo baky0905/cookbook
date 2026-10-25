@@ -10,10 +10,10 @@ groups:
   - name: Marinade
     items:
       - { id: oil, ingredient: olive-oil, name: olive oil, quantity: 30, max: 45, unit: ml, note: Plus extra for frying }
-      - { id: salt, ingredient: salt, name: salt, quantity: 10, unit: ml }
-      - { id: vegeta, ingredient: vegeta, name: Vegeta seasoning, quantity: 5, unit: ml, optional: true }
-      - { id: paprika, ingredient: sweet-paprika, name: sweet paprika, quantity: 5, max: 10, unit: ml }
-      - { id: pepper, ingredient: black-pepper, name: black pepper, quantity: 2.5, unit: ml }
+      - { id: salt, ingredient: salt, name: salt, quantity: 12, unit: g }
+      - { id: vegeta, ingredient: vegeta, name: Vegeta seasoning, quantity: 4, unit: g, optional: true, spoon: "1 teaspoon" }
+      - { id: paprika, ingredient: sweet-paprika, name: sweet paprika, quantity: 2, max: 5, unit: g, spoon: "1–2 teaspoons" }
+      - { id: pepper, ingredient: black-pepper, name: black pepper, quantity: 1, unit: g, spoon: "½ teaspoon" }
       - { id: extras, ingredient: chicken-seasoning, name: "garlic powder, chicken seasoning or turmeric", note: If you like, optional: true }
   - name: Rice and vegetables
     items:
@@ -24,7 +24,7 @@ groups:
       - { id: vegetables, ingredient: frozen-mixed-vegetables, name: frozen mixed vegetables or peas, quantity: 150, unit: g }
       - { id: onion, ingredient: red-onion, name: small red onion, quantity: 1, unit: piece }
       - { id: garlic, ingredient: garlic, name: garlic, quantity: 2, max: 3, unit: clove }
-      - { id: cream, ingredient: cooking-cream, name: cooking cream, note: "“1 glass” in the saved recipe; volume unspecified", optional: true }
+      - { id: cream, ingredient: cooking-cream, name: cooking cream, quantity: 200, unit: ml, optional: true }
 steps:
   - { id: marinate, title: Marinate the chicken, duration: 30 min, text: "Mix the salt, pepper, Vegeta, paprika, oil and any extra spices in a bowl. Rub the marinade well into each drumstick. Cover and refrigerate for at least 30 minutes (or use straight away if you're in a hurry)." }
   - { id: dish, title: Prepare the rice, text: "Heat the oven to 200 °C (top and bottom heat). Rinse and drain the rice and put it in a medium ovenproof dish of about 33 × 23 cm (double everything for a large oven tray)." }
@@ -37,9 +37,10 @@ sources:
   - { title: Hanuma kocht, url: "https://www.hanumakocht.at/2015/02/13/saftiger-gem%C3%BCsereis-mit-gebratenen-h%C3%BChnchenschenkeln-pirjan-sa-piletinom/" }
   - { title: Saved video, url: "https://www.youtube.com/watch?v=5mGl0hCjoJY" }
 issues:
-  - "The cream is measured as “1 glass”; its volume is unspecified."
   - "The source's method also mentions a white onion, which is not in its ingredient list; it is left out here."
 adaptations:
+  - "Cream from “1 glass” to 200 ml (a 2 dl glass)."
+  - "Small dry amounts converted from ml to grams using each ingredient's own weight, with spoon hints where useful."
   - "Volume measures converted to ml (15 ml and 5 ml per spoon)."
   - "The source's “vegetables” in the marinade step is a translation slip for Vegeta seasoning."
 legacyPath: main_dishes/rice_chicken_vegetables/

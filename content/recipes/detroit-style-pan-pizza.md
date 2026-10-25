@@ -44,6 +44,7 @@ sources:
 issues:
   - The original article link was a placeholder; only the video link is saved.
 adaptations:
+  - "Oven temperatures are for conventional (top and bottom) heat, since the source doesn't say; with fan, set about 20 °C lower."
   - "Yeast prestart at 40 °C instead of the source's 32 °C water, which suits fridge-cold dry yeast."
   - "Added a 10-minute yeast prestart in the recipe's own liquid, so you can see the yeast is alive before mixing."
   - "Pan size given in cm (the source names Lloyd Detroit-style pans)."

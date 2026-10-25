@@ -16,7 +16,7 @@ groups:
       - { id: milk, ingredient: milk, name: tepid milk, quantity: 200, unit: ml }
       - { id: water, ingredient: water, name: water, quantity: 200, unit: ml }
       - { id: eggs, ingredient: egg, name: eggs, quantity: 2, unit: piece, prep: Beaten }
-      - { id: butter, ingredient: butter, name: butter, quantity: 15, unit: ml, prep: Melted }
+      - { id: butter, ingredient: butter, name: butter, quantity: 14, unit: g, prep: Melted, spoon: "1 tablespoon" }
       - { id: rum, ingredient: rum, name: rum, quantity: 5, unit: ml }
       - { id: oil, ingredient: sunflower-oil, name: sunflower oil, note: "A few drops per pancake, for frying" }
   - name: Filling
@@ -31,6 +31,7 @@ sources:
   - { title: "Croatian cookbook, 'Lazy Morning' chapter, pp. 23–25 — Pancakes (palačinke); supplied book photographs" }
 issues: []
 adaptations:
+  - "Small dry amounts converted from ml to grams using each ingredient's own weight, with spoon hints where useful."
   - "Converted to metric: spoons to ml (15 ml and 5 ml per spoon); kept the book's gram and ml amounts."
   - "Rewrote the method concisely in my own words."
   - "The book's baked cheese version is a separate recipe here, so each has its own shopping list."

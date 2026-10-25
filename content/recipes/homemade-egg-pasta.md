@@ -11,7 +11,7 @@ groups:
   - name: Dry ingredients
     items:
       - { id: flour, ingredient: pasta-flour, name: "\"00\" pasta flour", quantity: 300, unit: g, note: Or plain flour }
-      - { id: salt, ingredient: salt, name: salt, quantity: 5, unit: ml }
+      - { id: salt, ingredient: salt, name: salt, quantity: 6, unit: g }
   - name: Wet ingredients
     items:
       - { id: eggs, ingredient: egg, name: large eggs, quantity: 2, unit: piece }
@@ -20,7 +20,7 @@ groups:
   - name: Rolling and cooking
     items:
       - { id: dust-flour, ingredient: pasta-flour, name: flour, note: For dusting }
-      - { id: cooking-salt, ingredient: salt, name: salt, quantity: 15, unit: ml, note: For the cooking water, scalable: false }
+      - { id: cooking-salt, ingredient: salt, name: salt, quantity: 18, unit: g, note: For the cooking water, scalable: false }
 steps:
   - { id: dry, title: Mix the dry ingredients, text: "Sift the {{flour}} into a wide bowl and whisk in the {{salt}}. Weigh everything: precision is what makes this work the first time." }
   - { id: wet, title: Weigh the wet ingredients, text: "Whisk the {{eggs}} and {{yolks}} together, weigh them, and add {{water}} to reach exactly 185 g. Make a well in the flour and pour them in." }
@@ -34,6 +34,7 @@ sources:
   - { title: "Croatian Classics, pp. 292–295 — Homemade Egg Pasta (široki rezanci); supplied book photographs" }
 issues: []
 adaptations:
+  - "Small dry amounts converted from ml to grams using each ingredient's own weight, with spoon hints where useful."
   - "Converted to metric: spoons to ml (15 ml and 5 ml per spoon); ribbon width 'from your pinky to your index finger' given as about 1–2 cm."
   - "Rewrote the method concisely in my own words."
 ---
