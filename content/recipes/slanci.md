@@ -31,7 +31,7 @@ groups:
 steps:
   - { id: start-yeast, title: Start the yeast, duration: 10 min, text: "Heat the {{milk}} to 40 °C, measured with a thermometer. Stir in the {{yeast}} and {{sugar}} and leave until foamy. No foam means the yeast is dead: start again with fresh yeast." }
   - { id: mix, title: Mix and knead, duration: 8 min, text: "Sift the {{flour}} into a bowl and whisk in the {{salt}}. Stir the {{sour-cream}} (not fridge-cold), {{oil}} and {{vinegar}} into the yeast milk. Combine and knead in a stand mixer with a dough hook, 3 minutes on medium-low, then 5 minutes on medium." }
-  - { id: proof, title: Proof, duration: 45 min, text: "Put the dough in a clean bowl, dust with a little flour, cover with a tea towel and leave somewhere warm." }
+  - { id: proof, title: Proof, duration: 45 min, text: "Put the dough in a clean bowl, dust with a little flour, cover with a tea towel and proof in the oven at 30 °C (use the proof setting or the oven light, and check with the thermometer). Take it out before heating the oven for baking." }
   - { id: divide, title: Divide and shape, text: "Turn the dough onto a clean, unfloured counter and weigh it into 10 pieces of about 115 g. Fold the ends of each piece to the middle, turn seam-down and roll under a cupped hand until smooth. Press into a cylinder and roll a little more." }
   - { id: rest, title: Rest, duration: 10 min, text: "Cover the cylinders with a tea towel." }
   - { id: ropes, title: Roll into ropes, text: "Line a baking tray with baking paper. Roll each cylinder into a thin rope as long as the tray's long side (about 33 cm), pressing out any air. Damp hands help with grip. Lay them on the tray with gaps of about a third of their width; they should touch once baked." }

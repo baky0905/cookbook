@@ -19,7 +19,7 @@ groups:
 steps:
   - { id: start-yeast, title: Start the yeast, duration: 10 min, text: "Heat the {{water}} to 40 °C, measured with a thermometer. Stir in the {{yeast}} and leave until bubbles appear (without sugar the foam is light). No foam means the yeast is dead: start again with fresh yeast." }
   - { id: mix, title: Mix the dough, text: "Mix the flour and salt in a large bowl. Add the yeast water and stir with the handle of a wooden spoon until all the flour is incorporated. The dough should be wet and sloppy: not kneadable, but not runny like cake batter. Adjust with a little water or flour if needed (video at 17 seconds)." }
-  - { id: rise, title: Rise, duration: 2–3 h, text: "Cover and leave on the counter until doubled, wobbly like jelly and bubbly on top (video at 24 seconds). If it isn't rising after 1 hour, move it somewhere warmer." }
+  - { id: rise, title: Rise, duration: 2–3 h, text: "Cover and leave on the counter until doubled, wobbly like jelly and bubbly on top (video at 24 seconds). If it isn't rising after 1 hour, move it to the oven at 30 °C (use the proof setting or the oven light, and check with the thermometer)." }
   - { id: chill, title: Refrigerate (optional), text: "For more flavour, refrigerate the dough for up to 3 days at this stage, or bake straight away." }
   - { id: warm, title: Take the chill off (if refrigerated), duration: 45–60 min, text: Leave refrigerated dough on the counter while the oven preheats; cold dough doesn't rise as well. }
   - { id: preheat, title: Preheat, duration: 30 min, text: "Put a Dutch oven of 26 cm or larger, with its lid, in the oven and preheat to 230 °C (220 °C fan). No Dutch oven? See the notes." }
@@ -46,7 +46,7 @@ legacyPath: snacks/easy_bread/
 
 **Water temperature.** Too hot to bathe in will kill the yeast; pleasant bath temperature is right.
 
-**Rising.** Timing varies with room temperature, humidity and flour; aim for the result (doubled, bubbly, wobbly), not the clock. In a kitchen at 22 °C or cooler, put the bowl somewhere warmer: in a sink of warm water on a ramekin, or in shade near a sunny window (not in direct sun). On hot days it can rise in 45 minutes; refrigerate it to pause while the oven heats.
+**Rising.** Timing varies with room temperature, humidity and flour; aim for the result (doubled, bubbly, wobbly), not the clock. In a kitchen at 22 °C or cooler, proof it in the oven at 30 °C instead (use the proof setting or the oven light, and check with the thermometer). On hot days it can rise in 45 minutes; refrigerate it to pause while the oven heats.
 
 **Preheating.** Start preheating when the dough is clearly rising (around 1½ hours). You can also shape the dough onto the paper and let it sit for 30 minutes while the oven heats.
 
