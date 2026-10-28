@@ -1,39 +1,57 @@
 ---
-title: Finnish Salmon Soup
+title: Salmon and Dill Soup
 originalName: { name: Lohikeitto, lang: fi }
-description: Finnish salmon soup with leeks, potatoes, cream and dill.
+description: A lighter take on Finnish salmon soup. Leeks, potatoes and allspice in a herb-infused broth, a little cream, and salmon poached off the heat until just set.
 category: Soups & stews
 tags: [finnish, fish, potato, one-pot, weeknight]
 status: needs-review
-yield: { label: 4–6 portions, scalable: false }
+yield: { label: 4 portions, amount: 4, unit: portions, scalable: true }
 cover: { src: lohikeitto/cover.webp, alt: "A bowl of creamy salmon soup with dill", caption: "An example of the dish, not from this recipe", credit: "Marty B · CC BY-SA 2.0 · Wikimedia Commons", source: "https://commons.wikimedia.org/wiki/File:Salmon_soup_at_L%C3%B6yly,_Helsinki_(52890138067).jpg" }
-time: { total: 45 min }
+time: { total: about 45 min, active: 20 min }
 groups:
-  - name: Ingredients
+  - name: Salmon
     items:
-      - { id: leeks, ingredient: leek, name: small leeks, quantity: 2, unit: piece, prep: "White and light green parts only, cleaned and thinly sliced" }
-      - { id: butter, ingredient: butter, name: butter, quantity: 28, unit: g, note: "The original uses Finlandia butter" }
-      - { id: stock, ingredient: fish-stock, name: fish stock, quantity: 1.2, unit: l, note: "Chicken or vegetable stock also works" }
-      - { id: potatoes, ingredient: potato, name: fingerling potatoes, quantity: 450, unit: g, prep: "Sliced crosswise, 6 mm thick" }
-      - { id: carrots, ingredient: carrot, name: small carrots, quantity: 3, unit: piece, prep: "Sliced crosswise, 6 mm thick" }
-      - { id: salmon, ingredient: salmon, name: fresh salmon, quantity: 450, unit: g, prep: "Skinless and boneless, in bite-size pieces" }
-      - { id: cream, ingredient: whipping-cream, name: whipping cream, quantity: 200, unit: g }
-      - { id: dill, ingredient: dill, name: fresh dill, quantity: 20, unit: g, prep: Finely chopped, note: A large bunch }
-      - { id: salt, ingredient: salt, name: salt, note: To taste }
-      - { id: pepper, ingredient: black-pepper, name: freshly ground black pepper, note: To taste }
+      - { id: salmon, ingredient: salmon, name: skinless salmon, quantity: 450, unit: g, prep: In 3–4 cm pieces }
+      - { id: salmon-salt, ingredient: salt, name: salt, quantity: 5, unit: g, note: 1% of the salmon's weight }
+  - name: Base
+    items:
+      - { id: butter, ingredient: butter, name: butter, quantity: 20, unit: g }
+      - { id: leeks, ingredient: leek, name: small leeks, quantity: 2, unit: piece, prep: "White and light green parts thinly sliced; keep the dark green tops" }
+      - { id: fennel, ingredient: fennel, name: fennel bulb, quantity: 0.5, unit: piece, prep: "Thinly sliced; keep the stalks", optional: true }
+      - { id: wine, ingredient: white-wine, name: dry white wine, quantity: 100, unit: ml, optional: true }
+  - name: Broth
+    items:
+      - { id: water, ingredient: water, name: water, quantity: 1.2, unit: l }
+      - { id: fond, ingredient: chicken-stock, name: chicken fond (gel stock pot), quantity: 1, unit: package, scalable: false, note: "Never beef: it overpowers the salmon" }
+      - { id: trimmings, ingredient: dill, name: "leek tops, fennel stalks and dill stems", prep: Tied together, note: "From the leeks, fennel and dill below" }
+      - { id: bay, ingredient: bay-leaf, name: bay leaf, quantity: 1, unit: piece, scalable: false }
+      - { id: allspice, ingredient: allspice, name: ground allspice, quantity: 0.5, unit: g, spoon: ¼ teaspoon }
+      - { id: fish-sauce, ingredient: fish-sauce, name: fish sauce, quantity: 3, max: 5, unit: ml, optional: true, note: Adds a fish-stock depth without tasting fishy }
+      - { id: potatoes, ingredient: potato, name: all-purpose potatoes, quantity: 450, unit: g, prep: In 2 cm cubes, note: Yukon Gold type }
+      - { id: carrots, ingredient: carrot, name: small carrots, quantity: 3, unit: piece, prep: Sliced 6 mm thick }
+  - name: To finish
+    items:
+      - { id: cream, ingredient: heavy-cream, name: heavy cream, quantity: 100, unit: ml }
+      - { id: dill, ingredient: dill, name: fresh dill, quantity: 20, unit: g, prep: Fronds finely chopped; stems for the broth }
+      - { id: lemon, ingredient: lemon-juice, name: lemon juice, quantity: 10, max: 15, unit: ml }
+      - { id: salt, ingredient: salt, name: salt, note: "To taste; the fond is already salty" }
+      - { id: pepper, ingredient: black-pepper, name: black pepper, note: To taste }
 steps:
-  - { id: leeks, title: Soften the leeks, duration: 5 min, text: Cook the leeks in the butter in a pot over medium heat until just softened. }
-  - { id: boil, title: Add stock and vegetables, text: "Add the stock, potatoes and carrots and bring to a boil." }
-  - { id: simmer, title: Cook until tender, duration: 10–12 min, text: Simmer until the vegetables have softened. }
-  - { id: salmon, title: Add cream and salmon, duration: about 5 min, text: Add the cream and salmon and cook until the salmon is firm. Try not to let it boil. }
-  - { id: dill, title: Finish with dill, text: "Turn off the heat, add the dill, stir well and season with salt and pepper." }
-  - { id: rest, title: Rest and serve, duration: about 5 min, text: "Cover with a lid and leave to stand. Serve with dark bread, as they would in Finland." }
+  - { id: salt-salmon, title: Salt the salmon, duration: 10–15 min, text: "Toss the {{salmon}} with the {{salmon-salt}} and set aside while you start the soup. It firms the pieces so they stay whole." }
+  - { id: base, title: Soften the base, duration: 8–10 min, text: "Melt the {{butter}} over medium-low heat and cook the {{leeks}} and {{fennel}} gently, without browning, until soft and sweet. If using the {{wine}}, add it and let it bubble away for about 2 minutes." }
+  - { id: simmer, title: Simmer the broth and vegetables, duration: 12–15 min, text: "Add the {{water}}, {{fond}}, {{trimmings}}, {{bay}}, {{allspice}} and {{fish-sauce}}, then the {{potatoes}} and {{carrots}}. Simmer gently, not a rolling boil, until a knife slides into the potatoes with no resistance but the cubes keep their shape." }
+  - { id: aromatics, title: Remove the aromatics, text: "Lift out the bundle of trimmings and the bay leaf." }
+  - { id: cream, title: Add the cream, text: "Stir in the {{cream}} and bring the soup just back to a simmer. Don't let it boil hard." }
+  - { id: poach, title: Poach the salmon off the heat, duration: 3–8 min, text: "Slide in the salmon, turn off the heat and cover. Thin slices (about 1.5 cm) need 3–4 minutes, thick pieces (2.5–3 cm) 6–8 minutes. It's done when the centre of the thickest piece reads 50 °C; if it's under 45 °C, cover for 2 more minutes." }
+  - { id: finish, title: Finish and serve, text: "Gently stir in half the {{dill}} and the {{lemon}}, moving the spoon along the side of the pot so the salmon stays whole. Taste, then season with {{salt}} and {{pepper}}. Serve with the rest of the dill on top." }
 sources:
   - { title: Saved video, url: "https://www.youtube.com/watch?v=MvwZ8x-k8Uk" }
   - { title: The Cooking Guy, url: "https://www.thecookingguy.com/cookbook/2016/10/12/salmon-soup-finland-finlandia-butter-recipe" }
 issues: []
 adaptations:
-  - "Dill set to 20 g; the saved “150 g (??)” was far too much for 4–6 portions."
-  - "Converted to metric: butter given in grams (14 g per spoon); slice thickness in mm."
+  - "Reworked on 2026-10-28 into a lighter version: cream halved to 100 ml with lemon to finish; chicken fond infused with leek, fennel and dill trimmings instead of fish stock; allspice and bay leaf added (traditional in lohikeitto); salmon salted first and poached off the heat to 50 °C; fennel, white wine and fish sauce optional."
+  - "The previous version is in git history (commit b81a741)."
 legacyPath: main_dishes/lohikeitto/
 ---
+
+**To elevate:** a little salmon roe on each bowl, and dark rye bread with salted butter on the side.

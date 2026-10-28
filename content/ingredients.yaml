@@ -9,6 +9,7 @@
 ingredients:
   - { id: active-dry-yeast, name: active dry yeast, aisle: Dry goods, kcal: 325 }
   - { id: aioli, name: aioli, aisle: "Oils & condiments", kcal: 680 }
+  - { id: allspice, name: ground allspice, aisle: "Herbs & spices" }
   - { id: apple, name: apple, aisle: Produce, kcal: 52, weights: { piece: 180 } }
   - { id: apple-cider-vinegar, name: apple cider vinegar, aisle: "Oils & condiments", kcal: 21, density: 1.01 }
   - { id: avocado-oil, name: avocado oil, aisle: "Oils & condiments", kcal: 884, density: 0.92 }
@@ -76,6 +77,7 @@ ingredients:
   - { id: egg, name: eggs, aisle: "Dairy & eggs", kcal: 143, weights: { piece: 50 } }
   - { id: fennel, name: fennel, aisle: Produce, kcal: 31, weights: { piece: 250 } }
   - { id: feta, name: feta, aisle: "Dairy & eggs", kcal: 264 }
+  - { id: fish-sauce, name: fish sauce, aisle: "Oils & condiments", kcal: 35, density: 1.2 }
   - { id: fish-stock, name: fish stock, aisle: "Tins & jars", kcal: 5, density: 1 }
   - { id: flaky-salt, name: flaky salt, aisle: "Herbs & spices" }
   - { id: food-colouring, name: food colouring, aisle: Dry goods, kcal: 0 }
