@@ -6,6 +6,7 @@ tags: [quick, vegetarian]
 originalLanguage: hr
 status: needs-review
 yield: { label: About 300 ml, amount: 300, unit: ml, scalable: true }
+cover: { src: mayonnaise/cover.webp, alt: "Homemade mayonnaise in a glass jar", caption: "An example of the dish, not from this recipe", credit: "jules · CC BY 2.0 · Wikimedia Commons", source: "https://commons.wikimedia.org/wiki/File:Mayonnaise_(1).jpg" }
 time: { total: 2 min }
 groups:
   - name: Ingredients

@@ -56,7 +56,7 @@ const portionStep = r.yield.amount ? (r.yield.amount <= 12 ? 1 : r.yield.amount 
           <button class="cover" type="button" data-full={cover.full} data-caption={[r.cover!.caption || r.cover!.alt, r.cover!.credit && `Photo: ${r.cover!.credit}`].filter(Boolean).join(' · ')} aria-label={`Enlarge photo: ${r.cover!.alt}`}>
             <img src={cover.src} width={cover.width} height={cover.height} alt={r.cover!.alt}>
           </button>
-          {r.cover!.credit && <figcaption>Photo: {r.cover!.source ? <a href={r.cover!.source} rel="noopener">{r.cover!.credit}</a> : r.cover!.credit}</figcaption>}
+          {(r.cover!.caption || r.cover!.credit) && <figcaption>{r.cover!.caption && <>{r.cover!.caption}{r.cover!.credit && ' · '}</>}{r.cover!.credit && <>Photo: {r.cover!.source ? <a href={r.cover!.source} rel="noopener">{r.cover!.credit}</a> : r.cover!.credit}</>}</figcaption>}
         </figure>
     )}
     <div class="meta">

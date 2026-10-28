@@ -5,6 +5,7 @@ category: Mains
 tags: [american, beef, slow-cooked, oven-baked, one-pot]
 status: needs-review
 yield: { label: about 6 portions, amount: 6, unit: portions, scalable: false }
+cover: { src: beef-pot-roast/cover.webp, alt: "A pot roast on a platter with glazed carrots and parsley potatoes", caption: "An example of the dish, not from this recipe", credit: "Mark Miller · CC BY-SA 4.0 · Wikimedia Commons", source: "https://commons.wikimedia.org/wiki/File:American_pot_roast_and_parsley_potatoes.jpg" }
 time: { cook: 4–5 h, rest: 30 min }
 groups:
   - name: Ingredients

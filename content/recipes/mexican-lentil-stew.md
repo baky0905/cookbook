@@ -5,6 +5,7 @@ category: Soups & stews
 tags: [mexican, legumes, vegetarian, one-pot, quick, weeknight, meal-kit]
 status: needs-review
 yield: { label: 4 portions, amount: 4, unit: portions, scalable: true }
+cover: { src: mexican-lentil-stew/cover.webp, alt: "A bowl of Mexican-style chili stew with cornbread and peppers", caption: "An example of the dish, not from this recipe", credit: "Len Rizzi (Photographer) · Public domain · Wikimedia Commons", source: "https://commons.wikimedia.org/wiki/File:Vegetable_chili_with_cornbread.jpg" }
 time: { total: 20 min }
 groups:
   - name: Stew

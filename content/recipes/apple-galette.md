@@ -5,6 +5,7 @@ category: Desserts & baking
 tags: [french, apple, oven-baked, food-processor, vegetarian]
 status: needs-review
 yield: { label: 4 portions, amount: 4, unit: portions, scalable: false }
+cover: { src: apple-galette/cover.webp, alt: "A rustic free-form tart with sliced apples folded into a pale crust", caption: "An example of the dish, not from this recipe", credit: "Karen and Brad Emerson · CC BY 2.0 · Wikimedia Commons", source: "https://commons.wikimedia.org/wiki/File:Apple_galette_(3926990412).jpg" }
 time: { rest: at least 1 h, cook: 40–50 min }
 groups:
   - name: Crust

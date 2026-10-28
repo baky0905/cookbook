@@ -6,6 +6,7 @@ category: Desserts & baking
 tags: [austrian, croatian, vegetarian, quick]
 status: reviewed
 yield: { label: "2 portions (28 cm pan)", amount: 2, unit: portions, scalable: false }
+cover: { src: kaiserschmarrn/cover.webp, alt: "Torn caramelised pancake pieces dusted with icing sugar, with stewed plums", caption: "An example of the dish, not from this recipe", credit: "Geolina163 · CC BY-SA 4.0 · Wikimedia Commons", source: "https://commons.wikimedia.org/wiki/File:Hofzuckerb%C3%A4cker_Demel_Kaiserschmarrn_2.jpg" }
 time: { total: about 25 min, rest: soak the raisins in rum beforehand }
 groups:
   - name: Batter

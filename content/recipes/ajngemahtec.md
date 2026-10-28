@@ -6,6 +6,7 @@ category: Soups & stews
 tags: [croatian, chicken, one-pot]
 status: needs-review
 yield: { label: 4 portions, amount: 4, unit: portions, scalable: false }
+cover: { src: ajngemahtec/cover.webp, alt: "A glass bowl of clear vegetable soup with carrots, peas and leek", caption: "An example of the dish, not from this recipe", credit: "Scott Teresi · CC BY-SA 2.0 · Wikimedia Commons", source: "https://commons.wikimedia.org/wiki/File:Simple_vegetable_soup_2009.jpg" }
 time: { total: about 1 h 15 min, cook: about 1 h }
 groups:
   - name: Broth

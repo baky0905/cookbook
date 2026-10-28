@@ -6,6 +6,7 @@ tags: [potato, oven-baked]
 aliases: [roasted-potatos]
 status: needs-review
 yield: { label: about 6 portions, amount: 6, unit: portions, scalable: false }
+cover: { src: roasted-potatoes/cover.webp, alt: "Roasted potato chunks with rosemary and garlic on a tray", caption: "An example of the dish, not from this recipe", credit: "白洛嘉 · CC BY-SA 4.0 · Wikimedia Commons", source: "https://commons.wikimedia.org/wiki/File:Roasted_potatoes_with_rosemary_and_gralic_and_black_pepper.jpg" }
 time: { cook: about 1¼ h }
 groups:
   - name: Ingredients

@@ -6,6 +6,7 @@ category: Mains
 tags: [croatian, beef, potato, oven-baked]
 status: reviewed
 yield: { label: 4 portions, amount: 4, unit: portions, scalable: false }
+cover: { src: potato-moussaka/cover.webp, alt: "A round dish of golden layered sliced potatoes", caption: "An example of the dish, not from this recipe", credit: "Cuklev · CC BY-SA 4.0 · Wikimedia Commons", source: "https://commons.wikimedia.org/wiki/File:%D0%9C%D1%83%D1%81%D0%B0%D0%BA%D0%B0_%D0%BE%D0%B4_%D0%BA%D0%BE%D0%BC%D0%BF%D0%B8%D1%80%D0%B8.jpg" }
 time: { total: about 1 h 50 min, cook: 35 min boiling + 45–50 min baking }
 groups:
   - name: Potatoes

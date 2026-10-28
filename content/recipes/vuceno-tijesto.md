@@ -6,6 +6,7 @@ category: Breads & doughs
 tags: [croatian, vegetarian]
 status: reviewed
 yield: { label: 1 baking tray (4–6 portions), scalable: false }
+cover: { src: vuceno-tijesto/cover.webp, alt: "A slice of spiral phyllo pie with spinach filling, showing the thin layers", caption: "An example of the dish, not from this recipe", credit: "Popo le Chien · CC0 · Wikimedia Commons", source: "https://commons.wikimedia.org/wiki/File:Burek.png" }
 time: { total: "about 2 h 45 min, including baking", active: 40 min, rest: 1 h 15 min, cook: 50 min }
 groups:
   - name: Dough

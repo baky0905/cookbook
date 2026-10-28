@@ -5,6 +5,7 @@ category: Breads & doughs
 tags: [indian, lamb, yeast-dough]
 status: needs-review
 yield: { label: Yield not recorded, scalable: false }
+cover: { src: keema-naan/cover.webp, alt: "Spiced minced meat in a bowl with naan bread in a basket", caption: "An example of the dish, not from this recipe", credit: "Kyu3a · CC BY-SA 4.0 · Wikimedia Commons", source: "https://commons.wikimedia.org/wiki/File:Keema_Curry_and_Naan_in_Aichi_Halal_Bazaar.jpg" }
 groups:
   - name: Naan
     items:

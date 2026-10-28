@@ -5,6 +5,7 @@ category: Mains
 tags: [squash, cheese, vegetarian, pan-fried, quick]
 status: reviewed
 yield: { label: 6 fritters, amount: 6, unit: fritters, scalable: true }
+cover: { src: squash-patties/cover.webp, alt: "Zucchini fritters frying in a pan", caption: "An example of the dish, not from this recipe", credit: "Nicole Bratt from Seattle, WA, USA · CC BY-SA 2.0 · Wikimedia Commons", source: "https://commons.wikimedia.org/wiki/File:Zucchini_%26_feta_fritters_(7804257920).jpg" }
 time: { total: about 30 min, active: 15 min, cook: 12 min }
 groups:
   - name: Zucchini

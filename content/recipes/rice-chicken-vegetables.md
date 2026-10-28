@@ -5,6 +5,7 @@ category: Mains
 tags: [chicken, rice, oven-baked]
 status: needs-review
 yield: { label: 4 portions, amount: 4, unit: portions, scalable: false }
+cover: { src: rice-chicken-vegetables/cover.webp, alt: "Rice with chicken and vegetables in a pan, with a plateful beside it", caption: "An example of the dish, not from this recipe", credit: "Len Rizzi (Photographer) · Public domain · Wikimedia Commons", source: "https://commons.wikimedia.org/wiki/File:Chicken_and_rice_casserole.jpg" }
 time: { cook: about 45 min, rest: "30 min marinating (optional)" }
 groups:
   - name: Marinade

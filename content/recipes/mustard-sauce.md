@@ -5,6 +5,7 @@ category: Sauces & dips
 tags: [french, vegetarian]
 status: needs-review
 yield: { label: about 300 ml, amount: 300, unit: ml, scalable: true }
+cover: { src: mustard-sauce/cover.webp, alt: "Fried fish and boiled potatoes in a creamy mustard sauce", caption: "An example of the dish, not from this recipe", credit: "Gerda Arendt · CC BY-SA 4.0 · Wikimedia Commons", source: "https://commons.wikimedia.org/wiki/File:Fried_fish_in_mustard_sauce,_Walsdorf.jpg" }
 groups:
   - name: Ingredients
     items:

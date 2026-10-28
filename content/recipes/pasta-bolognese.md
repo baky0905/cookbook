@@ -5,6 +5,7 @@ category: Mains
 tags: [italian, beef, pork, pasta, slow-cooked, oven-baked, food-processor, make-ahead]
 status: needs-review
 yield: { label: 8–10 portions, scalable: false }
+cover: { src: pasta-bolognese/cover.webp, alt: "Tagliatelle with meat ragù and grated parmesan", caption: "An example of the dish, not from this recipe", credit: "wordridden (Flickr) · CC BY 2.0 · Wikimedia Commons", source: "https://commons.wikimedia.org/wiki/File:Tagliatelle_rag%C3%B9_bolognese_01.jpg" }
 time: { cook: about 2½ h }
 groups:
   - name: Sauce

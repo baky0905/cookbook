@@ -5,6 +5,7 @@ category: Mains
 tags: [chicken, potato, quick, weeknight, meal-kit]
 status: needs-review
 yield: { label: 4 portions, amount: 4, unit: portions, scalable: true }
+cover: { src: honey-soya-marinated-chicken/cover.webp, alt: "Sliced soy-glazed chicken on a plate with spring onion", caption: "An example of the dish, not from this recipe", credit: "Flickr.com user 'Blue Lotus' · CC BY 2.0 · Wikimedia Commons", source: "https://commons.wikimedia.org/wiki/File:Chicken_teriyaki.jpg" }
 time: { total: 35 min }
 groups:
   - name: Ingredients

@@ -5,6 +5,7 @@ category: Soups & stews
 tags: [oven-baked, make-ahead]
 status: needs-review
 yield: { label: about 4 portions, amount: 4, unit: portions, scalable: true }
+cover: { src: roasted-tomato-soup/cover.webp, alt: "A bowl of smooth tomato soup", caption: "An example of the dish, not from this recipe", credit: "Unknown author · CC BY-SA 2.0 · Wikimedia Commons", source: "https://commons.wikimedia.org/wiki/File:Tomato_soup.jpg" }
 time: { total: about 1 h 20 min, cook: about 1 h 10 min }
 groups:
   - name: Roasted vegetables

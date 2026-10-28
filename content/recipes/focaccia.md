@@ -6,6 +6,7 @@ tags: [italian, yeast-dough, no-knead, overnight, oven-baked, vegetarian]
 aliases: [foccacia]
 status: needs-review
 yield: { label: One 28 × 33 cm pan, scalable: false }
+cover: { src: focaccia/cover.webp, alt: "A dimpled focaccia with rosemary and flaky salt", caption: "An example of the dish, not from this recipe", credit: "Parkerman & Christie from San Diego, USA · CC BY 2.0 · Wikimedia Commons", source: "https://commons.wikimedia.org/wiki/File:Rosemary_Focaccia.jpg" }
 time: { rest: "about 12 h in the fridge, plus 3–4 h", cook: 15–20 min }
 groups:
   - name: Dough

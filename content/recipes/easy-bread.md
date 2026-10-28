@@ -5,6 +5,7 @@ category: Breads & doughs
 tags: [yeast-dough, no-knead, oven-baked, make-ahead, vegetarian]
 status: needs-review
 yield: { label: 1 loaf, amount: 1, unit: loaves, scalable: false }
+cover: { src: easy-bread/cover.webp, alt: "A round crusty loaf of bread", caption: "An example of the dish, not from this recipe", credit: "daisybush · CC BY 2.0 · Wikimedia Commons", source: "https://commons.wikimedia.org/wiki/File:No-Knead_Bread_-_Finished_Loaf_(294068096).jpg" }
 time: { rest: "2–3 h (or up to 3 days in the fridge)", cook: 42 min }
 groups:
   - name: Dough

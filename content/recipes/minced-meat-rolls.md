@@ -6,6 +6,7 @@ tags: [beef, cheese, pan-fried]
 aliases: [minced-meat-roles]
 status: needs-review
 yield: { label: 4–6 portions, scalable: false }
+cover: { src: minced-meat-rolls/cover.webp, alt: "Slices of pastry rolled around a minced meat filling", caption: "An example of the dish, not from this recipe", credit: "Geolina163 · CC BY-SA 4.0 · Wikimedia Commons", source: "https://commons.wikimedia.org/wiki/File:Heuriger_Zum_Renner_Rindsuppe_Fleischstrudel.jpg" }
 time: { total: 45 min }
 groups:
   - name: Dough

@@ -6,6 +6,7 @@ category: Mains
 tags: [croatian, chicken, pasta, one-pot]
 status: needs-review
 yield: { label: 4 portions, amount: 4, unit: portions, scalable: false }
+cover: { src: chicken-paprikash/cover.webp, alt: "A chicken leg in creamy paprika sauce with small dumplings", caption: "An example of the dish, not from this recipe", credit: "Kobako · CC BY-SA 2.5 · Wikimedia Commons", source: "https://commons.wikimedia.org/wiki/File:Paprikahuhn.jpg" }
 time: { total: about 50 min, cook: about 45 min }
 groups:
   - name: Paprikash

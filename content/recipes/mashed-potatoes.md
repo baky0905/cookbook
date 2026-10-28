@@ -6,6 +6,7 @@ tags: [potato, vegetarian, quick, weeknight]
 aliases: [mashed-potatos]
 status: reviewed
 yield: { label: 6 portions, amount: 6, unit: portions, scalable: true }
+cover: { src: mashed-potatoes/cover.webp, alt: "A bowl of creamy mashed potatoes", caption: "An example of the dish, not from this recipe", credit: "Famartin · CC BY-SA 4.0 · Wikimedia Commons", source: "https://commons.wikimedia.org/wiki/File:2019-11-28_14_29_27_A_bowl_of_mashed_potatoes_laid_out_for_Thanksgiving_Dinner_in_the_Parkway_Village_section_of_Ewing_Township,_Mercer_County,_New_Jersey.jpg" }
 time: { total: 30 min, active: 10 min, cook: 20 min }
 groups:
   - name: Potatoes

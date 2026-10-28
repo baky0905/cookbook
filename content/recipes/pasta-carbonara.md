@@ -5,6 +5,7 @@ category: Mains
 tags: [italian, pasta, pork, quick, weeknight]
 status: needs-review
 yield: { label: 2 portions, amount: 2, unit: portions, scalable: true }
+cover: { src: pasta-carbonara/cover.webp, alt: "Spaghetti carbonara with bacon and black pepper on a dark plate", caption: "An example of the dish, not from this recipe", credit: "Javier Somoza · CC BY-SA 4.0 · Wikimedia Commons", source: "https://commons.wikimedia.org/wiki/File:Espaguetis_carbonara.jpg" }
 time: { total: 15 min }
 groups:
   - name: Ingredients

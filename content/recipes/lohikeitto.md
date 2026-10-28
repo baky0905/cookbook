@@ -6,6 +6,7 @@ category: Soups & stews
 tags: [finnish, fish, potato, one-pot, weeknight]
 status: needs-review
 yield: { label: 4–6 portions, scalable: false }
+cover: { src: lohikeitto/cover.webp, alt: "A bowl of creamy salmon soup with dill", caption: "An example of the dish, not from this recipe", credit: "Marty B · CC BY-SA 2.0 · Wikimedia Commons", source: "https://commons.wikimedia.org/wiki/File:Salmon_soup_at_L%C3%B6yly,_Helsinki_(52890138067).jpg" }
 time: { total: 45 min }
 groups:
   - name: Ingredients

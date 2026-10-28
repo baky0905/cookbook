@@ -5,6 +5,7 @@ category: Breads & doughs
 tags: [american, cheese, yeast-dough, overnight, oven-baked, vegetarian]
 status: needs-review
 yield: { label: 2 pizzas, amount: 2, unit: pizzas, scalable: false }
+cover: { src: detroit-style-pan-pizza/cover.webp, alt: "A square pan pizza with stripes of red sauce over cheese", caption: "An example of the dish, not from this recipe", credit: "Kurt Kaiser · CC0 · Wikimedia Commons", source: "https://commons.wikimedia.org/wiki/File:Detroit_style_pizza_in_DC.jpg" }
 time: { rest: "2 h, plus 8–24 h in the fridge", cook: 13–19 min }
 groups:
   - name: Dough

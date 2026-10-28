@@ -6,6 +6,7 @@ category: Desserts & baking
 tags: [croatian, cheese, vegetarian, oven-baked]
 status: reviewed
 yield: { label: 10 filled pancakes, amount: 10, unit: pancakes, scalable: false }
+cover: { src: baked-cheese-palacinke/cover.webp, alt: "Folded cheese-filled pancakes dusted with icing sugar", caption: "An example of the dish, not from this recipe", credit: "Xocolatl · CC BY-SA 3.0 · Wikimedia Commons", source: "https://commons.wikimedia.org/wiki/File:Topfenpalatschinken.jpg" }
 time: { total: about 1 h 30 min, rest: 30 min, cook: about 20 min baking }
 groups:
   - name: Batter

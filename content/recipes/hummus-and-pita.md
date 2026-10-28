@@ -5,6 +5,7 @@ category: Snacks & starters
 tags: [middle-eastern, legumes, yeast-dough, overnight, food-processor, vegetarian]
 status: needs-review
 yield: { label: 6 pitas, amount: 6, unit: pitas, scalable: false }
+cover: { src: hummus-and-pita/cover.webp, alt: "A plate of hummus with olive oil, parsley and a sprinkle of spice", caption: "An example of the dish, not from this recipe", credit: "Vyacheslav Argenberg · CC BY 4.0 · Wikimedia Commons", source: "https://commons.wikimedia.org/wiki/File:Lebanon,_Baalbek,_Lebanese_Hummus.jpg" }
 time: { rest: 4–24 h cold ferment }
 groups:
   - name: Pita

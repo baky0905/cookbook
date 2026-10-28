@@ -6,6 +6,7 @@ category: Desserts & baking
 tags: [croatian, vegetarian, quick]
 status: reviewed
 yield: { label: "about 10 pancakes (22 cm pan)", amount: 10, unit: pancakes, scalable: true }
+cover: { src: palacinke/cover.webp, alt: "A tall stack of thin pancakes", caption: "An example of the dish, not from this recipe", credit: "David Monniaux · CC BY-SA 3.0 · Wikimedia Commons", source: "https://commons.wikimedia.org/wiki/File:Crepes_dsc07085.jpg" }
 time: { total: about 1 h, active: 30 min, rest: 30 min }
 groups:
   - name: Batter

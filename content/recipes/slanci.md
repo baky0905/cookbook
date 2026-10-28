@@ -6,6 +6,7 @@ category: Breads & doughs
 tags: [croatian, yeast-dough, oven-baked, vegetarian]
 status: reviewed
 yield: { label: 10 sticks (5 portions), amount: 10, unit: sticks, scalable: false }
+cover: { src: slanci/cover.webp, alt: "A pile of soft, pale breadsticks", caption: "An example of the dish, not from this recipe", credit: "SarKaLay · CC0 · Wikimedia Commons", source: "https://commons.wikimedia.org/wiki/File:Grissini_Sticks.jpg" }
 time: { total: about 2 h 5 min, active: 30 min, rest: 1 h 15 min, cook: 21 min }
 groups:
   - name: Dough

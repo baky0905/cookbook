@@ -31,7 +31,8 @@ for (const file of fs.readdirSync('content/recipes').filter(f => f.endsWith('.md
   if (!recipe) continue;
   recipes.push({ id, ...recipe });
   fs.readFileSync(where, 'utf8').split('\n').forEach((line, n) => {
-    const hit = withoutSpoonHints(line).match(imperial);
+    // Web addresses are never measurements (an encoded "%9C" would read as 9 C).
+    const hit = withoutSpoonHints(line).replace(/https?:\/\/[^\s"]+/g, '').match(imperial);
     if (hit && !/^\s*(url|source):/.test(line)) fail(`${where}:${n + 1}`, `non-metric measure "${hit[0].trim()}"; use g, ml, °C or cm`);
   });
   for (const tag of recipe.data.tags) if (!allowedTags.has(tag)) fail(where, `unknown tag "${tag}"; add it to content/taxonomy.yaml first`);

@@ -6,6 +6,7 @@ category: Breads & doughs
 tags: [croatian, pasta]
 status: reviewed
 yield: { label: 4 portions, amount: 4, unit: portions, scalable: false }
+cover: { src: homemade-egg-pasta/cover.webp, alt: "Nests of fresh egg tagliatelle beside an egg and a rolling pin", caption: "An example of the dish, not from this recipe", credit: "ZsoltHubicska · CC0 · Wikimedia Commons", source: "https://commons.wikimedia.org/wiki/File:Cooking-cuisine-delicious-egg-327143.jpg" }
 time: { total: about 2 h, active: about 45 min, rest: 1 h + 15 min drying, cook: 3–4 min }
 groups:
   - name: Dry ingredients

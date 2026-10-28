@@ -6,6 +6,7 @@ tags: [austrian, croatian, plum, oven-baked, make-ahead, vegetarian]
 aliases: [mini-strudle]
 status: needs-review
 yield: { label: About 60 mini strudels, amount: 60, unit: mini strudels, scalable: false }
+cover: { src: mini-strudel/cover.webp, alt: "A lattice-topped fruit strudel dusted with icing sugar", caption: "An example of the dish, not from this recipe", credit: "Ximeg · CC BY-SA 3.0 · Wikimedia Commons", source: "https://commons.wikimedia.org/wiki/File:Apfelstrudel_close-up.JPG" }
 time: { cook: 15–18 min }
 groups:
   - name: Pastry

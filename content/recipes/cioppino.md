@@ -6,6 +6,7 @@ tags: [american, italian, seafood, fish, one-pot]
 aliases: [ciopinno]
 status: needs-review
 yield: { label: about 6 portions, amount: 6, unit: portions, scalable: false }
+cover: { src: cioppino/cover.webp, alt: "A bowl of seafood stew with mussels, squid and shrimp in tomato broth", caption: "An example of the dish, not from this recipe", credit: "Benoît Prieur · CC0 · Wikimedia Commons", source: "https://commons.wikimedia.org/wiki/File:Cioppino_from_Della_Terra_(Los_Angeles),_July_2022_(2).jpg" }
 groups:
   - name: Broth
     items:
