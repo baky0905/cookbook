@@ -1,7 +1,7 @@
 ---
 title: Salmon and Dill Soup
 originalName: { name: Lohikeitto, lang: fi }
-description: A lighter take on Finnish salmon soup. Leeks, potatoes and allspice in a herb-infused broth, a little cream, and salmon poached off the heat until just set.
+description: A lighter take on Finnish salmon soup. Leeks, potatoes and allspice in a herb-infused broth, a little cream, and salmon gently poached until just cooked through.
 category: Soups & stews
 tags: [finnish, fish, potato, one-pot, weeknight]
 status: needs-review
@@ -11,13 +11,13 @@ time: { total: about 45 min, active: 20 min }
 groups:
   - name: Salmon
     items:
-      - { id: salmon, ingredient: salmon, name: skinless salmon, quantity: 450, unit: g, prep: In 3–4 cm pieces }
+      - { id: salmon, ingredient: salmon, name: skinless salmon, quantity: 450, unit: g, prep: In 4 cm pieces }
       - { id: salmon-salt, ingredient: salt, name: salt, quantity: 5, unit: g, note: 1% of the salmon's weight }
   - name: Base
     items:
       - { id: butter, ingredient: butter, name: butter, quantity: 20, unit: g }
       - { id: leeks, ingredient: leek, name: small leeks, quantity: 2, unit: piece, prep: "White and light green parts thinly sliced; keep the dark green tops" }
-      - { id: fennel, ingredient: fennel, name: fennel bulb, quantity: 0.5, unit: piece, prep: "Thinly sliced; keep the stalks", optional: true }
+      - { id: fennel, ingredient: fennel, name: fennel bulb, quantity: 100, unit: g, note: No more than this or it takes over, prep: "Thinly sliced; keep the stalks", optional: true }
       - { id: wine, ingredient: white-wine, name: dry white wine, quantity: 100, unit: ml, optional: true }
   - name: Broth
     items:
@@ -26,14 +26,14 @@ groups:
       - { id: trimmings, ingredient: dill, name: "leek tops, fennel stalks and dill stems", prep: Tied together, note: "From the leeks, fennel and dill below" }
       - { id: bay, ingredient: bay-leaf, name: bay leaf, quantity: 1, unit: piece, scalable: false }
       - { id: allspice, ingredient: allspice, name: ground allspice, quantity: 0.5, unit: g, spoon: ¼ teaspoon }
-      - { id: fish-sauce, ingredient: fish-sauce, name: fish sauce, quantity: 3, max: 5, unit: ml, optional: true, note: Adds a fish-stock depth without tasting fishy }
+      - { id: fish-sauce, ingredient: fish-sauce, name: fish sauce, quantity: 3, max: 5, unit: ml, optional: true, note: "Adds a fish-stock depth without tasting fishy. Or use 2.5 ml Worcestershire sauce" }
       - { id: potatoes, ingredient: potato, name: all-purpose potatoes, quantity: 450, unit: g, prep: In 2 cm cubes, note: Yukon Gold type }
       - { id: carrots, ingredient: carrot, name: small carrots, quantity: 3, unit: piece, prep: Sliced 6 mm thick }
   - name: To finish
     items:
       - { id: cream, ingredient: heavy-cream, name: heavy cream, quantity: 100, unit: ml }
       - { id: dill, ingredient: dill, name: fresh dill, quantity: 20, unit: g, prep: Fronds finely chopped; stems for the broth }
-      - { id: lemon, ingredient: lemon-juice, name: lemon juice, quantity: 10, max: 15, unit: ml }
+      - { id: lemon, ingredient: lemon-juice, name: lemon juice, quantity: 5, unit: ml }
       - { id: salt, ingredient: salt, name: salt, note: "To taste; the fond is already salty" }
       - { id: pepper, ingredient: black-pepper, name: black pepper, note: To taste }
 steps:
@@ -42,7 +42,7 @@ steps:
   - { id: simmer, title: Simmer the broth and vegetables, duration: 12–15 min, text: "Add the {{water}}, {{fond}}, {{trimmings}}, {{bay}}, {{allspice}} and {{fish-sauce}}, then the {{potatoes}} and {{carrots}}. Simmer gently, not a rolling boil, until a knife slides into the potatoes with no resistance but the cubes keep their shape." }
   - { id: aromatics, title: Remove the aromatics, text: "Lift out the bundle of trimmings and the bay leaf." }
   - { id: cream, title: Add the cream, text: "Stir in the {{cream}} and bring the soup just back to a simmer. Don't let it boil hard." }
-  - { id: poach, title: Poach the salmon off the heat, duration: 3–8 min, text: "Slide in the salmon, turn off the heat and cover. Thin slices (about 1.5 cm) need 3–4 minutes, thick pieces (2.5–3 cm) 6–8 minutes. It's done when the centre of the thickest piece reads 50 °C; if it's under 45 °C, cover for 2 more minutes." }
+  - { id: poach, title: Poach the salmon, duration: about 10 min, text: "Slide in the salmon, cover and keep the pot on the lowest heat so the soup stays just below a simmer, with no bubbles. Poach for about 10 minutes, until the centre of the thickest piece reads 63 °C. If it's not there yet, give it 2 more minutes and check again." }
   - { id: finish, title: Finish and serve, text: "Gently stir in half the {{dill}} and the {{lemon}}, moving the spoon along the side of the pot so the salmon stays whole. Taste, then season with {{salt}} and {{pepper}}. Serve with the rest of the dill on top." }
 sources:
   - { title: Saved video, url: "https://www.youtube.com/watch?v=MvwZ8x-k8Uk" }
@@ -50,6 +50,7 @@ sources:
 issues: []
 adaptations:
   - "Reworked on 2026-10-28 into a lighter version: cream halved to 100 ml with lemon to finish; chicken fond infused with leek, fennel and dill trimmings instead of fish stock; allspice and bay leaf added (traditional in lohikeitto); salmon salted first and poached off the heat to 50 °C; fennel, white wine and fish sauce optional."
+  - "Adjusted on 2026-10-29 after cooking it: fennel capped at 100 g, lemon juice set to 10 ml, Worcestershire added as an alternative to fish sauce, salmon in 4 cm pieces poached about 10 minutes to 63 °C instead of off the heat to 50 °C."
   - "The previous version is in git history (commit b81a741)."
 legacyPath: main_dishes/lohikeitto/
 ---
