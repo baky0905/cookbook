@@ -18,7 +18,7 @@ Every saved change goes to GitHub, which checks the content and republishes the 
 - `content/recipes/*.md`: one recipe per file (YAML frontmatter + personal notes). Drafts are not published.
 - `content/plans/*.yaml`: weekly plans with meals, notes and extra shopping items. “This week” follows the current calendar week in Europe/Oslo, even without a new deploy. Both Week and Shopping have a week selector and shareable `?week=<id>` links.
 - `content/history/*.json`: frozen past weeks (meals, amounts, calories, shopping list), saved after the week ends, on a subsequent deploy or the Monday scheduled run. Preparing future plans never archives them early. Download them all from `/history.json` or `/history-meals.csv`.
-- `content/ingredients.yaml`: every ingredient once, with shopping name, aisle, staple flag and calorie data.
+- `content/ingredients.yaml`: every ingredient once, with shopping name, aisle, staple flag, calorie data and a `norway` buying tip (Norwegian name, what to pick, swaps). Recipe-specific choices go in the recipe item's `note`.
 - `content/taxonomy.yaml`: categories, tags, aisles, units and meal slots. Validation rejects anything not listed.
 - `content/pantry.yaml`: pantry snapshot, subtracted from shopping lists.
 - `content/reference/*.yaml`: reference pages (conversions, cutting, temperatures, storage, seasons), with sources.

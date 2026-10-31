@@ -131,3 +131,9 @@ test('meal IDs default to date and meal', () => {
   const p = planSchema.parse({ id: 'w', title: 'W', meals: [{ date: '2026-10-12', meal: 'Lunch', recipe: 'soup' }] });
   assert.equal(p.meals[0].id, '2026-10-12-lunch');
 });
+test('Norwegian buying tips from the catalogue reach the shopping list', () => {
+  const tips = catalog.map(c => (c.id === 'salmon' ? { ...c, norway: 'laks' } : c));
+  const rows = shoppingList(plan([{ date: '2026-10-12', recipe: 'soup' }]), [soup], pantry([]), tips).rows;
+  assert.equal(rows.find(r => r.ingredient === 'salmon').norway, 'laks');
+  assert.equal(rows.find(r => r.ingredient === 'onions').norway, undefined);
+});

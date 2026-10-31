@@ -31,7 +31,10 @@ const archive = r.legacyPath ? url(`archive/${r.legacyPath.replace(/\/$/, '')}.m
 const hostname = (u: string) => new URL(u).hostname.replace(/^www\./, '');
 const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
 // Calories: an entered value wins; otherwise a catalogue estimate, shown only when it covers most of the recipe.
-const estimate = estimateCalories(r, readCatalog());
+const catalog = readCatalog();
+const estimate = estimateCalories(r, catalog);
+// Norwegian buying tips, written once per ingredient in the catalogue.
+const norway = new Map(catalog.map(c => [c.id, c.norway]));
 const kcal = r.nutrition?.kcalPerPortion
   ? { text: `${r.nutrition.kcalPerPortion} kcal per portion`, title: r.nutrition.source ? `Source: ${r.nutrition.source}` : 'Entered value' }
   : estimate.reliable && (estimate.perPortion || estimate.kcal)
@@ -92,7 +95,7 @@ const portionStep = r.yield.amount ? (r.yield.amount <= 12 ? 1 : r.yield.amount 
             {group.items.map(item => (
               <label class="ingredient">
                 <input type="checkbox" data-check={`i:${item.id}`}>
-                <span set:html={`${item.quantity != null ? `<b class="qty"${quantityAttrs(item)}>${amount(item)}</b>${item.spoon ? ` <span class="spoon">(${escape(item.spoon)})</span>` : ''} ` : ''}${escape(item.name)}${item.prep ? `, <span class="prep">${prepHtml(item.prep[0].toLowerCase() + item.prep.slice(1), base)}</span>` : ''}${item.optional ? ' <small>Optional</small>' : ''}${item.note ? `<small>${escape(item.note)}</small>` : ''}${item.quantity == null && !item.note ? '<small>Amount not specified</small>' : ''}`} />
+                <span set:html={`${item.quantity != null ? `<b class="qty"${quantityAttrs(item)}>${amount(item)}</b>${item.spoon ? ` <span class="spoon">(${escape(item.spoon)})</span>` : ''} ` : ''}${escape(item.name)}${item.prep ? `, <span class="prep">${prepHtml(item.prep[0].toLowerCase() + item.prep.slice(1), base)}</span>` : ''}${item.optional ? ' <small>Optional</small>' : ''}${item.note ? `<small>${escape(item.note)}</small>` : ''}${norway.get(item.ingredient) ? `<small class="norway">In Norway: ${escape(norway.get(item.ingredient))}</small>` : ''}${item.quantity == null && !item.note ? '<small>Amount not specified</small>' : ''}`} />
               </label>
             ))}
           </>

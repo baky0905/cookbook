@@ -101,6 +101,7 @@ export function GET() {
             num('kcal', 'kcal per 100 g'), num('density', 'Grams per ml'),
             { name: 'weights', label: 'Typical weights (g)', widget: 'object', ...opt, collapsed: true, fields: taxonomy.units.filter((u: any) => !['g', 'kg', 'ml', 'l'].includes(u.id)).map((u: any) => num(u.id, `per ${u.id}`)) },
             bool('staple', 'Usually in the cupboard', false), bool('shop', 'Appears on shopping lists', true),
+            str('norway', 'Buying in Norway', { ...opt, hint: 'Norwegian name and what to pick; shown on recipes and shopping lists' }),
           ] },
         ] },
         { name: 'taxonomy', label: 'Categories, tags, aisles and units', file: 'content/taxonomy.yaml', fields: [

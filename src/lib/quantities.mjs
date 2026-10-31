@@ -35,7 +35,7 @@ export function shoppingList(plan, recipes, pantry, catalog) {
     const unit = q?.unit || item.unit;
     const key = [item.ingredient || item.name, unit, q ? 'known' : 'unknown', item.optional ? 'optional' : 'required'].join('|');
     const row = rows.get(key) || { key, ingredient: item.ingredient, name: known?.name || item.name, quantity: q ? 0 : null, max: q ? 0 : null, unit,
-      category: known?.aisle || 'Other', optional: !!item.optional, staple: !!known?.staple, recipes: [], notes: [] };
+      category: known?.aisle || 'Other', optional: !!item.optional, staple: !!known?.staple, norway: known?.norway, recipes: [], notes: [] };
     if (q) { row.quantity = round(row.quantity + q.quantity); row.max = round(row.max + (max ?? q.quantity)); }
     if (!row.recipes.includes(source)) row.recipes.push(source);
     if (item.note && !row.notes.includes(item.note)) row.notes.push(item.note);

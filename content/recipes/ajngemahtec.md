@@ -17,7 +17,7 @@ groups:
       - { id: carrots, ingredient: carrot, name: medium carrots, quantity: 2, max: 3, unit: piece, prep: Chopped }
       - { id: celeriac, ingredient: celeriac, name: small celeriac, quantity: 0.25, unit: piece, prep: Diced }
       - { id: parsley-root, ingredient: parsley-root, name: small parsley roots, quantity: 2, unit: piece, prep: Chopped }
-      - { id: potatoes, ingredient: potato, name: small potatoes, quantity: 2, unit: piece, prep: Cubed }
+      - { id: potatoes, ingredient: potato, name: small potatoes, quantity: 2, unit: piece, prep: Cubed, note: "A firm type such as Folva or Asterix holds its shape in the soup" }
       - { id: kohlrabi, ingredient: kohlrabi, name: kohlrabi, quantity: 0.5, unit: piece, prep: Chopped }
       - { id: garlic, ingredient: garlic, name: garlic, quantity: 2, unit: clove, prep: Minced }
       - { id: celery-leaves, ingredient: celery, name: celery leaves, quantity: 1, unit: sprig }

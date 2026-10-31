@@ -25,6 +25,7 @@ export const ingredientCatalogSchema = z.object({
     id, name: z.string().min(1), aisle: z.enum(shoppingCategories),
     kcal: opt(z.number().nonnegative()), density: opt(positive),
     weights: opt(z.record(z.string(), positive)), staple: z.boolean().default(false), shop: z.boolean().default(true),
+    norway: opt(z.string().min(1)),
   })),
 });
 export const readCatalog = () => ingredientCatalogSchema.parse(read('ingredients.yaml')).ingredients;

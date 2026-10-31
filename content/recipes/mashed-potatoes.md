@@ -4,14 +4,14 @@ description: "Simple, buttery mash: boiled until falling apart, dried off in the
 category: Sides
 tags: [potato, vegetarian, quick, weeknight]
 aliases: [mashed-potatos]
-status: reviewed
+status: cooked
 yield: { label: 6 portions, amount: 6, unit: portions, scalable: true }
 cover: { src: mashed-potatoes/cover.webp, alt: "A bowl of creamy mashed potatoes", caption: "An example of the dish, not from this recipe", credit: "Famartin · CC BY-SA 4.0 · Wikimedia Commons", source: "https://commons.wikimedia.org/wiki/File:2019-11-28_14_29_27_A_bowl_of_mashed_potatoes_laid_out_for_Thanksgiving_Dinner_in_the_Parkway_Village_section_of_Ewing_Township,_Mercer_County,_New_Jersey.jpg" }
 time: { total: 35 min, active: 10 min, cook: 25 min }
 groups:
   - name: Potatoes
     items:
-      - { id: potatoes, ingredient: potato, name: floury potatoes, quantity: 1.5, unit: kg, prep: "Peeled, in even 5 cm chunks (halve medium ones, quarter big ones)", note: "Kerr's Pink is best in Norway; Beate or Pimpernel also work. Any size, but avoid firm ones like Asterix, Folva or mandelpotet" }
+      - { id: potatoes, ingredient: potato, name: floury potatoes, quantity: 1.5, unit: kg, prep: "Peeled, in even 5 cm chunks (halve medium ones, quarter big ones)", note: "Kerr's Pink is best; Beate or Pimpernel also work. Bakepotet made really good mash too: just quarter the big ones" }
       - { id: cooking-salt, ingredient: salt, name: salt, quantity: 18, unit: g, note: For the cooking water }
   - name: To mash
     items:
@@ -19,7 +19,7 @@ groups:
       - { id: milk, ingredient: milk, name: whole milk, quantity: 160, unit: ml }
       - { id: garlic, ingredient: garlic, name: garlic, quantity: 1, unit: clove, prep: Lightly crushed, note: For flavouring the milk, optional: true }
       - { id: bay-leaf, ingredient: bay-leaf, name: bay leaf, quantity: 1, note: For flavouring the milk, optional: true }
-      - { id: salt, ingredient: salt, name: salt, quantity: 3, unit: g, spoon: ½ teaspoon }
+      - { id: salt, ingredient: salt, name: salt, quantity: 7, unit: g, note: Tested amount }
   - name: To serve
     items:
       - { id: pepper, ingredient: black-pepper, name: black pepper, note: To taste, optional: true }
@@ -37,9 +37,12 @@ adaptations:
   - "Converted to grams: cooking salt to 18 g, seasoning salt to 3 g; milk to 120 ml (since raised to 160 ml)."
   - "Kept the butter moderate (60 g, about 10 g per portion) for everyday eating. More milk (160 ml whole milk), optional garlic and bay leaf in the milk, and proper seasoning add flavour instead of extra fat. Dropped the melted-butter drizzle."
   - "Bigger 5 cm chunks and a gentle simmer (instead of 2.5 cm cubes at a brisk boil) so the potatoes take on less water; drying on low heat."
+  - "Cooked and tested: mash salt raised from 3 g to 7 g; bakepotet, quartered, worked really well."
   - "Cold-water start, butter before milk, Norwegian potato advice (Kerr's Pink)."
   - "Method rewritten in my own words. Replaces an unfinished entry that only had a video link (Epicurious 101)."
 legacyPath: side_dishes/mashed_potatos/
 ---
+
+**Goes well with** [crispy skin chicken breast](../crispy-skin-chicken-breast/) and [simple chicken gravy](../simple-chicken-gravy/).
 
 **Keeping warm:** cover tightly and keep near the stove for up to 30 minutes, or set the bowl over a pan of barely simmering water (not touching it) for up to 2 hours.

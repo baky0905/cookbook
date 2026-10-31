@@ -52,6 +52,7 @@ const key = plan ? `cookbook:shopping:${plan.id}:${crypto.createHash('sha256').u
                     {row.needed == null && <small>Amount not specified in the recipe; check it.</small>}
                     {row.have > 0 && <small>Pantry covers {number(row.have)}{unit(row.unit, row.have)}.</small>}
                     {row.usuallyStocked && <small>Usually in the cupboard; check before buying.</small>}
+                    {row.norway && <small>In Norway: {row.norway}</small>}
                     <small>{row.recipes.join(', ')}{row.notes.length > 0 && ` · ${row.notes.join('; ')}`}</small>
                   </span>
                 </label></li>

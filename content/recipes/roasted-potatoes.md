@@ -14,7 +14,7 @@ groups:
       - { id: water, ingredient: water, name: water, quantity: 2, unit: l }
       - { id: salt, ingredient: salt, name: kosher salt, quantity: 25, unit: g, note: "For the water, plus extra to season" }
       - { id: soda, ingredient: baking-soda, name: baking soda, quantity: 4, unit: g }
-      - { id: potatoes, ingredient: potato, name: russet or Yukon Gold potatoes, quantity: 2, unit: kg, prep: "Peeled; cut into quarters, sixths or eighths depending on size" }
+      - { id: potatoes, ingredient: potato, name: floury potatoes, quantity: 2, unit: kg, prep: "Peeled; cut into quarters, sixths or eighths depending on size", note: "Kerr's Pink gives the craggiest edges (russet or Yukon Gold outside Norway)" }
       - { id: fat, ingredient: olive-oil, name: "extra virgin olive oil, duck, goose or beef fat", quantity: 75, unit: ml }
       - { id: rosemary, ingredient: rosemary, name: fresh rosemary leaves, quantity: 1, unit: handful, prep: Finely chopped, note: A small handful }
       - { id: garlic, ingredient: garlic, name: medium garlic cloves, quantity: 3, unit: clove, prep: Minced }

@@ -11,7 +11,7 @@ time: { total: about 1 h 50 min, cook: 35 min boiling + 45–50 min baking }
 groups:
   - name: Potatoes
     items:
-      - { id: potatoes, ingredient: potato, name: potatoes, quantity: 1, unit: kg, note: Boiled whole in their skins }
+      - { id: potatoes, ingredient: potato, name: potatoes, quantity: 1, unit: kg, note: "Boiled whole in their skins. A firm type such as Folva or Asterix slices cleanly" }
       - { id: potato-salt, ingredient: salt, name: salt, quantity: 1, unit: pinch, note: For the cooking water, scalable: false }
   - name: Meat
     items:

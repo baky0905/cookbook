@@ -6,202 +6,203 @@
 # weights: typical grams per counted unit (piece, clove, can…), for calorie estimates
 # staple: usually in the cupboard, so the shopping list asks you to check
 # shop: false for things you never buy (water, ice)
+# norway: buying tip for Norwegian shops (Norwegian name, which product to pick, swaps); shown on recipes and shopping lists
 ingredients:
-  - { id: active-dry-yeast, name: active dry yeast, aisle: Dry goods, kcal: 325 }
-  - { id: aioli, name: aioli, aisle: "Oils & condiments", kcal: 680 }
-  - { id: allspice, name: ground allspice, aisle: "Herbs & spices" }
-  - { id: apple, name: apple, aisle: Produce, kcal: 52, weights: { piece: 180 } }
-  - { id: apple-cider-vinegar, name: apple cider vinegar, aisle: "Oils & condiments", kcal: 21, density: 1.01 }
-  - { id: avocado-oil, name: avocado oil, aisle: "Oils & condiments", kcal: 884, density: 0.92 }
+  - { id: active-dry-yeast, name: active dry yeast, aisle: Dry goods, kcal: 325, norway: "Tørrgjær original (Idun) in the baking aisle; it can go straight into the flour, but start it anyway as the method says. Fresh gjær (50 g, Idun) is in the dairy fridge" }
+  - { id: aioli, name: aioli, aisle: "Oils & condiments", kcal: 680, norway: "Ready-made aioli near the mayonnaise, or make it from the mayonnaise recipe with garlic" }
+  - { id: allspice, name: ground allspice, aisle: "Herbs & spices", norway: "Allehånde, spice shelf (Hindu or Santa Maria)" }
+  - { id: apple, name: apple, aisle: Produce, kcal: 52, weights: { piece: 180 }, norway: "Norwegian apples in autumn. For baking pick a firm, tart one such as Aroma or Granny Smith" }
+  - { id: apple-cider-vinegar, name: apple cider vinegar, aisle: "Oils & condiments", kcal: 21, density: 1.01, norway: "Eplecidereddik, vinegar shelf" }
+  - { id: avocado-oil, name: avocado oil, aisle: "Oils & condiments", kcal: 884, density: 0.92, norway: "Avokadoolje, oil shelf in bigger shops; rapsolje is a cheaper swap" }
   - { id: baking-chocolate, name: baking chocolate, aisle: Dry goods, kcal: 500 }
-  - { id: baking-powder, name: baking powder, aisle: Dry goods, kcal: 53 }
-  - { id: baking-soda, name: baking soda, aisle: Dry goods, kcal: 0 }
-  - { id: baking-spray, name: baking spray, aisle: "Oils & condiments" }
-  - { id: balsamic-vinegar, name: balsamic vinegar, aisle: "Oils & condiments", kcal: 88, density: 1.06 }
-  - { id: basil, name: fresh basil, aisle: Produce, kcal: 23, weights: { handful: 10 } }
-  - { id: bay-leaf, name: bay leaf, aisle: "Herbs & spices" }
-  - { id: beef-bouillon, name: beef bouillon, aisle: Dry goods, kcal: 200, weights: { piece: 10 } }
-  - { id: beef-chuck-roast, name: beef chuck roast, aisle: "Meat & fish", kcal: 250 }
-  - { id: beef-stock, name: beef stock, aisle: "Tins & jars", kcal: 7, density: 1 }
-  - { id: black-pepper, name: black pepper, aisle: "Herbs & spices", staple: true }
-  - { id: blueberries, name: blueberries, aisle: Produce, kcal: 57 }
-  - { id: bread-flour, name: bread flour, aisle: Dry goods, kcal: 361, density: 0.53 }
-  - { id: brick-cheese, name: brick cheese, aisle: "Dairy & eggs", kcal: 371 }
+  - { id: baking-powder, name: baking powder, aisle: Dry goods, kcal: 53, norway: "Bakepulver (Idun), baking aisle" }
+  - { id: baking-soda, name: baking soda, aisle: Dry goods, kcal: 0, norway: "Natron (Idun), baking aisle. Not the same as bakepulver" }
+  - { id: baking-spray, name: baking spray, aisle: "Oils & condiments", norway: "Rarely sold; brush the tin with melted butter or line it with bakepapir" }
+  - { id: balsamic-vinegar, name: balsamic vinegar, aisle: "Oils & condiments", kcal: 88, density: 1.06, norway: "Balsamicoeddik, vinegar shelf" }
+  - { id: basil, name: fresh basil, aisle: Produce, kcal: 23, weights: { handful: 10 }, norway: "Basilikum in a pot keeps longer and costs less than cut bunches" }
+  - { id: bay-leaf, name: bay leaf, aisle: "Herbs & spices", norway: "Laurbærblad, dried, spice shelf" }
+  - { id: beef-bouillon, name: beef bouillon, aisle: Dry goods, kcal: 200, weights: { piece: 10 }, norway: "Kjøttbuljong cubes (Toro, Maggi or Knorr)" }
+  - { id: beef-chuck-roast, name: beef chuck roast, aisle: "Meat & fish", kcal: 250, norway: "Høyrygg is the Norwegian chuck; storfebog also works. Ask at the meat counter if it isn't packed" }
+  - { id: beef-stock, name: beef stock, aisle: "Tins & jars", kcal: 7, density: 1, norway: "Klar oksekraft (Maggi) in bottles, or Touch of Taste oksefond concentrate" }
+  - { id: black-pepper, name: black pepper, aisle: "Herbs & spices", staple: true, norway: "Sort pepper; whole peppercorns in a grinder taste much better than ground" }
+  - { id: blueberries, name: blueberries, aisle: Produce, kcal: 57, norway: "Blåbær; frozen Norwegian skogsblåbær are great for baking all year" }
+  - { id: bread-flour, name: bread flour, aisle: Dry goods, kcal: 361, density: 0.53, norway: "Siktet hvetemel (about 12% protein, Regal or Norgesmøllene) works as bread flour; for a stronger dough use Caputo Manitoba" }
+  - { id: brick-cheese, name: brick cheese, aisle: "Dairy & eggs", kcal: 371, norway: "Not sold; use a block of low-moisture mozzarella, or half mozzarella and half Norvegia" }
   - { id: brioche-buns, name: brioche buns, aisle: Bakery, kcal: 350, weights: { piece: 70 } }
   - { id: broccoli, name: broccoli, aisle: Produce, kcal: 34 }
-  - { id: brown-sugar, name: brown sugar, aisle: Dry goods, kcal: 380, density: 0.9 }
-  - { id: butter, name: butter, aisle: "Dairy & eggs", kcal: 717, density: 0.91 }
-  - { id: cajun-spice, name: Cajun spice mix, aisle: "Herbs & spices" }
-  - { id: cake-flour, name: cake flour, aisle: Dry goods, kcal: 362, density: 0.53 }
-  - { id: calabrian-chillies, name: Calabrian chillies in oil, aisle: "Tins & jars" }
+  - { id: brown-sugar, name: brown sugar, aisle: Dry goods, kcal: 380, density: 0.9, norway: "Brunt sukker or farin (light brown), Dan Sukker" }
+  - { id: butter, name: butter, aisle: "Dairy & eggs", kcal: 717, density: 0.91, norway: "Smør (Tine Meierismør is lightly salted)" }
+  - { id: cajun-spice, name: Cajun spice mix, aisle: "Herbs & spices", norway: "Cajun krydder, spice shelf (e.g. Santa Maria)" }
+  - { id: cake-flour, name: cake flour, aisle: Dry goods, kcal: 362, density: 0.53, norway: "Not sold; use siktet hvetemel and swap 10% of the weight for potetmel" }
+  - { id: calabrian-chillies, name: Calabrian chillies in oil, aisle: "Tins & jars", norway: "Hard to find; try Meny or an Italian deli. Swap: chilli flakes soaked in olive oil" }
   - { id: campanelle, name: campanelle, aisle: Dry goods, kcal: 371 }
-  - { id: carrot, name: carrots, aisle: Produce, kcal: 41, weights: { piece: 60 } }
-  - { id: cauliflower, name: cauliflower, aisle: Produce }
-  - { id: cayenne-pepper, name: cayenne pepper, aisle: "Herbs & spices" }
-  - { id: celeriac, name: celeriac, aisle: Produce, kcal: 42, weights: { piece: 500 } }
-  - { id: celery, name: celery, aisle: Produce, kcal: 16, weights: { piece: 40 } }
-  - { id: cheddar, name: cheddar, aisle: "Dairy & eggs", kcal: 403 }
-  - { id: cherry-tomatoes, name: cherry tomatoes, aisle: Produce, kcal: 18 }
-  - { id: chicken-breast, name: chicken breast, aisle: "Meat & fish", kcal: 120 }
-  - { id: chicken-drumsticks, name: chicken drumsticks, aisle: "Meat & fish", kcal: 120, weights: { piece: 110 } }
-  - { id: chicken-pieces, name: chicken pieces (bone-in), aisle: "Meat & fish", kcal: 160 }
-  - { id: chicken-seasoning, name: chicken seasoning, aisle: "Herbs & spices" }
-  - { id: chicken-stock, name: chicken stock, aisle: "Tins & jars", kcal: 5, density: 1 }
-  - { id: chicken-thigh, name: chicken thigh fillets, aisle: "Meat & fish", kcal: 177 }
-  - { id: chilli-flakes, name: chilli flakes, aisle: "Herbs & spices" }
-  - { id: chilli-powder, name: chilli powder, aisle: "Herbs & spices" }
-  - { id: chives, name: fresh chives, aisle: Produce, kcal: 30 }
+  - { id: carrot, name: carrots, aisle: Produce, kcal: 41, weights: { piece: 60 }, norway: "Gulrøtter; Norwegian carrots are sweet and cheap from late summer through winter" }
+  - { id: cauliflower, name: cauliflower, aisle: Produce, norway: "Blomkål; Norwegian in season from July to October" }
+  - { id: cayenne-pepper, name: cayenne pepper, aisle: "Herbs & spices", norway: "Kajennepepper, spice shelf" }
+  - { id: celeriac, name: celeriac, aisle: Produce, kcal: 42, weights: { piece: 500 }, norway: "Sellerirot (knollselleri)" }
+  - { id: celery, name: celery, aisle: Produce, kcal: 16, weights: { piece: 40 }, norway: "Stangselleri" }
+  - { id: cheddar, name: cheddar, aisle: "Dairy & eggs", kcal: 403, norway: "Sold in most shops; lagret (mature) cheddar has more flavour, and Norvegia works at a pinch" }
+  - { id: cherry-tomatoes, name: cherry tomatoes, aisle: Produce, kcal: 18, norway: "Cherrytomater; Norwegian ones in summer, otherwise the most flavourful option in winter" }
+  - { id: chicken-breast, name: chicken breast, aisle: "Meat & fish", kcal: 120, norway: "Kyllingbryst or kyllingfilet; skin-on breasts (med skinn) from Lerstang or Den Stolte Hane" }
+  - { id: chicken-drumsticks, name: chicken drumsticks, aisle: "Meat & fish", kcal: 120, weights: { piece: 110 }, norway: "Kyllingklubber (Prior, Solvinge or Den Stolte Hane)" }
+  - { id: chicken-pieces, name: chicken pieces (bone-in), aisle: "Meat & fish", kcal: 160, norway: "Buy a hel kylling and joint it, or mix kyllinglår (whole legs) with vinger; Solvinge or Den Stolte Hane taste more of chicken" }
+  - { id: chicken-seasoning, name: chicken seasoning, aisle: "Herbs & spices", norway: "Kyllingkrydder, spice shelf (Hindu or Santa Maria)" }
+  - { id: chicken-stock, name: chicken stock, aisle: "Tins & jars", kcal: 5, density: 1, norway: "Kyllingkraft in cartons or bottles (Jacobs Utvalgte, Maggi or Stange), or Touch of Taste kyllingfond concentrate" }
+  - { id: chicken-thigh, name: chicken thigh fillets, aisle: "Meat & fish", kcal: 177, norway: "Kyllinglårfilet, boneless thigh (Prior, Solvinge or Den Stolte Hane)" }
+  - { id: chilli-flakes, name: chilli flakes, aisle: "Herbs & spices", norway: "Chiliflak, spice shelf" }
+  - { id: chilli-powder, name: chilli powder, aisle: "Herbs & spices", norway: "Chilipulver; for Indian dishes Kashmiri chilli from an innvandrerbutikk is milder and redder" }
+  - { id: chives, name: fresh chives, aisle: Produce, kcal: 30, norway: "Gressløk; a pot keeps for weeks on the windowsill" }
   - { id: chocolate-spread, name: chocolate spread, aisle: "Tins & jars", kcal: 540 }
-  - { id: cinnamon, name: ground cinnamon, aisle: "Herbs & spices" }
-  - { id: citric-acid, name: citric acid, aisle: Dry goods, kcal: 0 }
-  - { id: clam-juice, name: clam juice, aisle: "Tins & jars", kcal: 2, density: 1 }
-  - { id: cod, name: cod, aisle: "Meat & fish", kcal: 82 }
-  - { id: cooked-chickpeas, name: cooked chickpeas, aisle: "Tins & jars", kcal: 164 }
-  - { id: cooked-green-lentils, name: cooked green lentils, aisle: "Tins & jars", kcal: 116 }
-  - { id: cooking-cream, name: cooking cream, aisle: "Dairy & eggs", kcal: 200, density: 1 }
-  - { id: coriander, name: fresh coriander, aisle: Produce, kcal: 23 }
-  - { id: coriander-seed, name: coriander seed, aisle: "Herbs & spices" }
-  - { id: cornstarch, name: cornflour, aisle: Dry goods, kcal: 381 }
-  - { id: cottage-cheese, name: cottage cheese, aisle: "Dairy & eggs", kcal: 98 }
-  - { id: cream-cheese, name: cream cheese, aisle: "Dairy & eggs", kcal: 342 }
-  - { id: crushed-tomatoes, name: canned crushed tomatoes, aisle: "Tins & jars", kcal: 32 }
-  - { id: crusty-bread, name: crusty bread, aisle: Bakery, kcal: 270 }
-  - { id: cucumber, name: cucumber, aisle: Produce, kcal: 15, weights: { piece: 300 } }
-  - { id: cumin-seed, name: cumin seed, aisle: "Herbs & spices" }
+  - { id: cinnamon, name: ground cinnamon, aisle: "Herbs & spices", norway: "Kanel (malt), spice shelf" }
+  - { id: citric-acid, name: citric acid, aisle: Dry goods, kcal: 0, norway: "Sitronsyre, baking or preserving shelf" }
+  - { id: clam-juice, name: clam juice, aisle: "Tins & jars", kcal: 2, density: 1, norway: "Not sold; use fiskekraft or the liquid from steaming the mussels" }
+  - { id: cod, name: cod, aisle: "Meat & fish", kcal: 82, norway: "Torsk; fresh skrei from January to April is the best of the year" }
+  - { id: cooked-chickpeas, name: cooked chickpeas, aisle: "Tins & jars", kcal: 164, norway: "Kikerter in cans or cartons (e.g. Eldorado), canned goods shelf" }
+  - { id: cooked-green-lentils, name: cooked green lentils, aisle: "Tins & jars", kcal: 116, norway: "Canned grønne or brune linser; or dried, which cook in 20 to 25 minutes" }
+  - { id: cooking-cream, name: cooking cream, aisle: "Dairy & eggs", kcal: 200, density: 1, norway: "Matfløte (Tine, 18%) or lett matfløte (10%); doesn't split when boiled" }
+  - { id: coriander, name: fresh coriander, aisle: Produce, kcal: 23, norway: "Koriander, fresh herbs; bigger, cheaper bunches at innvandrerbutikker" }
+  - { id: coriander-seed, name: coriander seed, aisle: "Herbs & spices", norway: "Korianderfrø (hel), spice shelf" }
+  - { id: cornstarch, name: cornflour, aisle: Dry goods, kcal: 381, norway: "Maisstivelse (Maizena); potetmel thickens too but goes stringy if boiled long" }
+  - { id: cottage-cheese, name: cottage cheese, aisle: "Dairy & eggs", kcal: 98, norway: "Tine Cottage cheese is wetter and lumpier than Balkan svježi sir; Kesam mager (Tine), or half Kesam and half cottage cheese, is closer" }
+  - { id: cream-cheese, name: cream cheese, aisle: "Dairy & eggs", kcal: 342, norway: "Kremost naturell (Philadelphia or store brands)" }
+  - { id: crushed-tomatoes, name: canned crushed tomatoes, aisle: "Tins & jars", kcal: 32, norway: "Hakkede tomater; Mutti is the best for pizza sauce" }
+  - { id: crusty-bread, name: crusty bread, aisle: Bakery, kcal: 270, norway: "Steinovnsbakt or surdeigsbrød from the bakery counter" }
+  - { id: cucumber, name: cucumber, aisle: Produce, kcal: 15, weights: { piece: 300 }, norway: "Agurk; Norwegian from spring to autumn" }
+  - { id: cumin-seed, name: cumin seed, aisle: "Herbs & spices", norway: "Spisskummen (hel). Not karve, which is caraway" }
   - { id: desiccated-coconut, name: desiccated coconut, aisle: Dry goods, kcal: 660 }
-  - { id: dijon-mustard, name: Dijon mustard, aisle: "Oils & condiments", kcal: 150, density: 1.05 }
-  - { id: dill, name: fresh dill, aisle: Produce, kcal: 43 }
-  - { id: dried-basil, name: dried basil, aisle: "Herbs & spices" }
-  - { id: dried-mediterranean-herbs, name: dried Mediterranean herbs, aisle: "Herbs & spices" }
-  - { id: dried-oregano, name: dried oregano, aisle: "Herbs & spices" }
-  - { id: egg, name: eggs, aisle: "Dairy & eggs", kcal: 143, weights: { piece: 50 } }
-  - { id: fennel, name: fennel, aisle: Produce, kcal: 31, weights: { piece: 250 } }
-  - { id: feta, name: feta, aisle: "Dairy & eggs", kcal: 264 }
-  - { id: fish-sauce, name: fish sauce, aisle: "Oils & condiments", kcal: 35, density: 1.2 }
+  - { id: dijon-mustard, name: Dijon mustard, aisle: "Oils & condiments", kcal: 150, density: 1.05, norway: "Dijonsennep (Maille or Idun)" }
+  - { id: dill, name: fresh dill, aisle: Produce, kcal: 43, norway: "Dill; Norwegian summer dill has the most flavour" }
+  - { id: dried-basil, name: dried basil, aisle: "Herbs & spices", norway: "Basilikum (tørket), spice shelf" }
+  - { id: dried-mediterranean-herbs, name: dried Mediterranean herbs, aisle: "Herbs & spices", norway: "Provencekrydder or italiensk urteblanding, spice shelf" }
+  - { id: dried-oregano, name: dried oregano, aisle: "Herbs & spices", norway: "Oregano (tørket), spice shelf" }
+  - { id: egg, name: eggs, aisle: "Dairy & eggs", kcal: 143, weights: { piece: 50 }, norway: "Egg; frittgående if you can" }
+  - { id: fennel, name: fennel, aisle: Produce, kcal: 31, weights: { piece: 250 }, norway: "Fennikel" }
+  - { id: feta, name: feta, aisle: "Dairy & eggs", kcal: 264, norway: "Look for real Greek fetaost; salatost and kvitost are softer, milder cow's milk cheeses" }
+  - { id: fish-sauce, name: fish sauce, aisle: "Oils & condiments", kcal: 35, density: 1.2, norway: "Fiskesaus, Asian shelf" }
   - { id: fish-stock, name: fish stock, aisle: "Tins & jars", kcal: 5, density: 1 }
-  - { id: flaky-salt, name: flaky salt, aisle: "Herbs & spices" }
+  - { id: flaky-salt, name: flaky salt, aisle: "Herbs & spices", norway: "Flaksalt; Maldon is in most shops" }
   - { id: food-colouring, name: food colouring, aisle: Dry goods, kcal: 0 }
-  - { id: fresh-chilli, name: fresh chilli, aisle: Produce, kcal: 40, weights: { piece: 15 } }
-  - { id: fresh-egg-pasta, name: fresh egg pasta, aisle: "Dairy & eggs", kcal: 288 }
-  - { id: fresh-mozzarella, name: fresh mozzarella, aisle: "Dairy & eggs", kcal: 254 }
+  - { id: fresh-chilli, name: fresh chilli, aisle: Produce, kcal: 40, weights: { piece: 15 }, norway: "Rød chili, fresh herbs and vegetables" }
+  - { id: fresh-egg-pasta, name: fresh egg pasta, aisle: "Dairy & eggs", kcal: 288, norway: "Fersk pasta in the fridge (e.g. Rana), or dried egg tagliatelle" }
+  - { id: fresh-mozzarella, name: fresh mozzarella, aisle: "Dairy & eggs", kcal: 254, norway: "Mozzarella balls in water (e.g. Galbani); fior di latte or burrata at Meny" }
   - { id: fresh-yeast, name: fresh yeast, aisle: "Dairy & eggs", kcal: 105, weights: { package: 42 } }
-  - { id: frozen-mixed-vegetables, name: frozen mixed vegetables, aisle: Frozen, kcal: 65 }
-  - { id: garam-masala, name: garam masala, aisle: "Herbs & spices" }
-  - { id: garlic, name: garlic, aisle: Produce, kcal: 149, weights: { clove: 5 } }
+  - { id: frozen-mixed-vegetables, name: frozen mixed vegetables, aisle: Frozen, kcal: 65, norway: "Frosne grønnsaksblandinger (e.g. Findus), freezer" }
+  - { id: garam-masala, name: garam masala, aisle: "Herbs & spices", norway: "Garam masala, spice shelf; fresher and cheaper at innvandrerbutikker" }
+  - { id: garlic, name: garlic, aisle: Produce, kcal: 149, weights: { clove: 5 }, norway: "Hvitløk; buy firm whole heads, not peeled garlic in jars" }
   - { id: garlic-powder, name: garlic powder, aisle: "Herbs & spices" }
-  - { id: ginger, name: fresh ginger, aisle: Produce, kcal: 80, weights: { piece: 15 } }
-  - { id: grated-cheese, name: grated cheese, aisle: "Dairy & eggs", kcal: 380 }
+  - { id: ginger, name: fresh ginger, aisle: Produce, kcal: 80, weights: { piece: 15 }, norway: "Ingefær; frozen fresh ginger grates easily" }
+  - { id: grated-cheese, name: grated cheese, aisle: "Dairy & eggs", kcal: 380, norway: "Revet Norvegia, or Jarlsberg for more flavour" }
   - { id: ground-almonds, name: ground almonds, aisle: Dry goods, kcal: 579 }
   - { id: ground-walnuts, name: ground walnuts, aisle: Dry goods, kcal: 654 }
-  - { id: heavy-cream, name: heavy cream, aisle: "Dairy & eggs", kcal: 340, density: 1 }
-  - { id: honey, name: honey, aisle: "Oils & condiments", kcal: 304, density: 1.42 }
+  - { id: heavy-cream, name: heavy cream, aisle: "Dairy & eggs", kcal: 340, density: 1, norway: "Kremfløte (Tine, 37% fat)" }
+  - { id: honey, name: honey, aisle: "Oils & condiments", kcal: 304, density: 1.42, norway: "Honning; Norwegian honey from Honningcentralen or local producers" }
   - { id: hungarian-paprika, name: Hungarian paprika, aisle: "Herbs & spices" }
   - { id: ice, name: ice, aisle: Other, kcal: 0, shop: false }
-  - { id: icing-sugar, name: icing sugar, aisle: Dry goods, kcal: 389 }
-  - { id: instant-yeast, name: instant yeast, aisle: Dry goods, kcal: 325 }
-  - { id: jam, name: jam, aisle: "Tins & jars", kcal: 250 }
-  - { id: jasmine-rice, name: jasmine rice, aisle: Dry goods, kcal: 360, staple: true }
+  - { id: icing-sugar, name: icing sugar, aisle: Dry goods, kcal: 389, norway: "Melis (Dan Sukker). Melis is icing sugar; farin is brown sugar" }
+  - { id: instant-yeast, name: instant yeast, aisle: Dry goods, kcal: 325, norway: "Tørrgjær original (Idun) in the baking aisle. Fresh gjær (50 g, Idun, dairy fridge) also works: use about 3 times the weight of dry yeast" }
+  - { id: jam, name: jam, aisle: "Tins & jars", kcal: 250, norway: "Syltetøy; Nora or Den Gamle Fabrikk" }
+  - { id: jasmine-rice, name: jasmine rice, aisle: Dry goods, kcal: 360, staple: true, norway: "Jasminris (e.g. Tilda or store brand); big bags are cheaper at innvandrerbutikker" }
   - { id: ketchup, name: ketchup, aisle: "Oils & condiments", kcal: 112, density: 1.15 }
-  - { id: kohlrabi, name: kohlrabi, aisle: Produce, kcal: 27, weights: { piece: 300 } }
+  - { id: kohlrabi, name: kohlrabi, aisle: Produce, kcal: 27, weights: { piece: 300 }, norway: "Knutekål. Careful: in western Norway kålrabi usually means swede (kålrot)" }
   - { id: kranjska-sausage, name: Kranjska sausages, aisle: "Meat & fish", kcal: 300, weights: { piece: 180 } }
-  - { id: lard, name: lard, aisle: "Meat & fish", kcal: 902, density: 0.92 }
-  - { id: leek, name: leeks, aisle: Produce, kcal: 61, weights: { piece: 100 } }
-  - { id: lemon, name: lemons, aisle: Produce, kcal: 29, weights: { piece: 100 } }
-  - { id: lemon-juice, name: lemon juice, aisle: Produce, kcal: 22, density: 1.03 }
-  - { id: lime, name: limes, aisle: Produce, kcal: 30, weights: { piece: 65 } }
-  - { id: long-grain-rice, name: long-grain rice, aisle: Dry goods, kcal: 365 }
-  - { id: milk, name: milk, aisle: "Dairy & eggs", kcal: 64, density: 1.03 }
-  - { id: minced-beef, name: minced beef, aisle: "Meat & fish", kcal: 254 }
-  - { id: minced-lamb, name: minced lamb, aisle: "Meat & fish", kcal: 282 }
-  - { id: minced-pork, name: minced pork, aisle: "Meat & fish", kcal: 263 }
-  - { id: mini-sweet-pepper, name: mini sweet peppers, aisle: Produce, kcal: 31, weights: { piece: 40 } }
-  - { id: mixed-berries, name: fresh berries, aisle: Produce, kcal: 45 }
-  - { id: mozzarella, name: mozzarella, aisle: "Dairy & eggs", kcal: 280 }
+  - { id: lard, name: lard, aisle: "Meat & fish", kcal: 902, density: 0.92, norway: "Smult is hard to find in supermarkets; ask a butcher, or use butter" }
+  - { id: leek, name: leeks, aisle: Produce, kcal: 61, weights: { piece: 100 }, norway: "Purre" }
+  - { id: lemon, name: lemons, aisle: Produce, kcal: 29, weights: { piece: 100 }, norway: "Sitroner; buy unwaxed (usprøytet) when using the zest" }
+  - { id: lemon-juice, name: lemon juice, aisle: Produce, kcal: 22, density: 1.03, norway: "Squeeze fresh sitroner; bottled sitronsaft is fine for mayonnaise" }
+  - { id: lime, name: limes, aisle: Produce, kcal: 30, weights: { piece: 65 }, norway: "Lime" }
+  - { id: long-grain-rice, name: long-grain rice, aisle: Dry goods, kcal: 365, norway: "Langkornet ris or basmati (e.g. Ben's Original or Tilda)" }
+  - { id: milk, name: milk, aisle: "Dairy & eggs", kcal: 64, density: 1.03, norway: "Helmelk (Tine or Q, about 3.5% fat) when a recipe says whole milk; lettmelk (1%) works for most everyday cooking" }
+  - { id: minced-beef, name: minced beef, aisle: "Meat & fish", kcal: 254, norway: "Kjøttdeig av storfe; standard kjøttdeig is about 14% fat, karbonadedeig is lean (about 5%)" }
+  - { id: minced-lamb, name: minced lamb, aisle: "Meat & fish", kcal: 282, norway: "Lammekjøttdeig (Gilde), fresh in the meat fridge" }
+  - { id: minced-pork, name: minced pork, aisle: "Meat & fish", kcal: 263, norway: "Svinekjøttdeig" }
+  - { id: mini-sweet-pepper, name: mini sweet peppers, aisle: Produce, kcal: 31, weights: { piece: 40 }, norway: "Snackpaprika" }
+  - { id: mixed-berries, name: fresh berries, aisle: Produce, kcal: 45, norway: "Norwegian strawberries and raspberries in summer; frozen bærblanding the rest of the year" }
+  - { id: mozzarella, name: mozzarella, aisle: "Dairy & eggs", kcal: 280, norway: "For pizza, revet mozzarella or a block of low-moisture mozzarella, not the balls in water" }
   - { id: mushrooms, name: mushrooms, aisle: Produce, kcal: 22 }
-  - { id: mussels, name: mussels (in shell), aisle: "Meat & fish", kcal: 35 }
-  - { id: mustard-seed, name: mustard seed, aisle: "Herbs & spices" }
-  - { id: neutral-oil, name: neutral oil, aisle: "Oils & condiments", kcal: 884, density: 0.92 }
-  - { id: nutmeg, name: nutmeg, aisle: "Herbs & spices" }
-  - { id: olive-oil, name: olive oil, aisle: "Oils & condiments", kcal: 884, density: 0.91 }
-  - { id: onion, name: onions, aisle: Produce, kcal: 40, weights: { piece: 150 } }
+  - { id: mussels, name: mussels (in shell), aisle: "Meat & fish", kcal: 35, norway: "Levende blåskjell, sold live in 1 kg nets" }
+  - { id: mustard-seed, name: mustard seed, aisle: "Herbs & spices", norway: "Sennepsfrø; brown or black at innvandrerbutikker" }
+  - { id: neutral-oil, name: neutral oil, aisle: "Oils & condiments", kcal: 884, density: 0.92, norway: "Rapsolje, the standard Norwegian cooking oil" }
+  - { id: nutmeg, name: nutmeg, aisle: "Herbs & spices", norway: "Muskatnøtt; buy whole and grate it" }
+  - { id: olive-oil, name: olive oil, aisle: "Oils & condiments", kcal: 884, density: 0.91, norway: "Olivenolje; ekstra virgin for finishing and dressing, a cheaper mild one for frying" }
+  - { id: onion, name: onions, aisle: Produce, kcal: 40, weights: { piece: 150 }, norway: "Gul løk" }
   - { id: onion-powder, name: onion powder, aisle: "Herbs & spices" }
-  - { id: pancetta, name: pancetta, aisle: "Meat & fish", kcal: 450 }
-  - { id: parmesan, name: parmesan, aisle: "Dairy & eggs", kcal: 392 }
-  - { id: parsley, name: fresh parsley, aisle: Produce, kcal: 36, weights: { handful: 15 } }
-  - { id: parsley-root, name: parsley root, aisle: Produce, kcal: 55, weights: { piece: 50 } }
-  - { id: pasta-flour, name: "\"00\" pasta flour", aisle: Dry goods, kcal: 350, density: 0.53 }
-  - { id: peanuts, name: peanuts, aisle: Dry goods, kcal: 567 }
+  - { id: pancetta, name: pancetta, aisle: "Meat & fish", kcal: 450, norway: "Pancetta (Felloni) in bigger shops; otherwise ternet bacon" }
+  - { id: parmesan, name: parmesan, aisle: "Dairy & eggs", kcal: 392, norway: "Parmigiano Reggiano in a piece; the pre-grated shaker kind isn't the same" }
+  - { id: parsley, name: fresh parsley, aisle: Produce, kcal: 36, weights: { handful: 15 }, norway: "Bladpersille (flat-leaf); kruspersille is the curly kind" }
+  - { id: parsley-root, name: parsley root, aisle: Produce, kcal: 55, weights: { piece: 50 }, norway: "Persillerot, autumn and winter" }
+  - { id: pasta-flour, name: "\"00\" pasta flour", aisle: Dry goods, kcal: 350, density: 0.53, norway: "Pizzamel Tipo 00 (Norgesmøllene, Regal or Caputo); siktet hvetemel works too" }
+  - { id: peanuts, name: peanuts, aisle: Dry goods, kcal: 567, norway: "Peanøtter, unsalted if you can find them" }
   - { id: pearl-barley, name: pearl barley, aisle: Dry goods, kcal: 352 }
-  - { id: peas, name: fresh peas, aisle: Produce, kcal: 81 }
-  - { id: pecorino, name: pecorino romano, aisle: "Dairy & eggs", kcal: 387 }
-  - { id: pepperoncini, name: pepperoncini, aisle: "Tins & jars", kcal: 27 }
-  - { id: pepperoni, name: pepperoni, aisle: "Meat & fish", kcal: 504 }
-  - { id: plain-flour, name: plain flour, aisle: Dry goods, kcal: 364, density: 0.53, staple: true }
-  - { id: plain-yoghurt, name: plain yoghurt, aisle: "Dairy & eggs", kcal: 61, density: 1.03 }
-  - { id: plum-jam, name: plum jam, aisle: "Tins & jars", kcal: 250 }
+  - { id: peas, name: fresh peas, aisle: Produce, kcal: 81, norway: "Erter; frozen (e.g. Findus) when fresh aren't in season" }
+  - { id: pecorino, name: pecorino romano, aisle: "Dairy & eggs", kcal: 387, norway: "Pecorino Romano at Meny and bigger shops; more parmesan works instead" }
+  - { id: pepperoncini, name: pepperoncini, aisle: "Tins & jars", kcal: 27, norway: "Rarely sold; use pickled peperoni or jalapeños from a jar" }
+  - { id: pepperoni, name: pepperoni, aisle: "Meat & fish", kcal: 504, norway: "Pepperoni slices, cold cuts fridge" }
+  - { id: plain-flour, name: plain flour, aisle: Dry goods, kcal: 364, density: 0.53, staple: true, norway: "Siktet hvetemel, the everyday flour (Norgesmøllene, Regal or store brand)" }
+  - { id: plain-yoghurt, name: plain yoghurt, aisle: "Dairy & eggs", kcal: 61, density: 1.03, norway: "Yoghurt naturell (Tine) or gresk yoghurt" }
+  - { id: plum-jam, name: plum jam, aisle: "Tins & jars", kcal: 250, norway: "Plommesyltetøy; Balkan pekmez (plum butter) from an innvandrerbutikk is closer to the original" }
   - { id: poblano-pepper, name: poblano peppers, aisle: Produce, kcal: 20 }
   - { id: poolish, name: poolish (made earlier), aisle: Other, kcal: 0, shop: false }
-  - { id: potato, name: potatoes, aisle: Produce, kcal: 77, weights: { piece: 170 } }
-  - { id: raisins, name: raisins, aisle: Dry goods, kcal: 299 }
-  - { id: raw-sugar, name: raw sugar, aisle: Dry goods, kcal: 387 }
-  - { id: red-bell-pepper, name: red bell peppers, aisle: Produce, kcal: 31, weights: { piece: 150 } }
+  - { id: potato, name: potatoes, aisle: Produce, kcal: 77, weights: { piece: 170 }, norway: "Floury (melen) for mash and roasting: Kerr's Pink, Beate or Pimpernel. Firm (fast) for soups, slices and stews: Folva, Asterix or Innova. Bakepotet means large, not a type" }
+  - { id: raisins, name: raisins, aisle: Dry goods, kcal: 299, norway: "Rosiner" }
+  - { id: raw-sugar, name: raw sugar, aisle: Dry goods, kcal: 387, norway: "Råsukker (Dan Sukker)" }
+  - { id: red-bell-pepper, name: red bell peppers, aisle: Produce, kcal: 31, weights: { piece: 150 }, norway: "Rød paprika. In Norwegian paprika means the vegetable; the spice is paprikapulver" }
   - { id: red-kidney-beans, name: red kidney beans (canned), aisle: "Tins & jars", kcal: 80, weights: { can: 400 } }
-  - { id: red-onion, name: red onions, aisle: Produce, kcal: 40, weights: { piece: 120 } }
-  - { id: red-wine, name: red wine, aisle: Drinks, kcal: 85 }
+  - { id: red-onion, name: red onions, aisle: Produce, kcal: 40, weights: { piece: 120 }, norway: "Rødløk" }
+  - { id: red-wine, name: red wine, aisle: Drinks, kcal: 85, norway: "Only sold at Vinmonopolet. Swap: more stock with a little red wine vinegar" }
   - { id: red-wine-vinegar, name: red wine vinegar, aisle: "Oils & condiments", kcal: 19 }
-  - { id: rolled-oats, name: rolled oats, aisle: Dry goods, kcal: 379, staple: true }
-  - { id: rosemary, name: fresh rosemary, aisle: Produce, kcal: 131, weights: { handful: 5 } }
-  - { id: rum, name: rum, aisle: Drinks, kcal: 231, density: 0.94 }
-  - { id: salad-leaves, name: salad leaves, aisle: Produce, kcal: 17 }
-  - { id: salmon, name: salmon, aisle: "Meat & fish", kcal: 208 }
+  - { id: rolled-oats, name: rolled oats, aisle: Dry goods, kcal: 379, staple: true, norway: "Store havregryn (Møllerens or AXA)" }
+  - { id: rosemary, name: fresh rosemary, aisle: Produce, kcal: 131, weights: { handful: 5 }, norway: "Rosmarin in a pot" }
+  - { id: rum, name: rum, aisle: Drinks, kcal: 231, density: 0.94, norway: "Only sold at Vinmonopolet; in desserts leave it out or use a little vanilla instead" }
+  - { id: salad-leaves, name: salad leaves, aisle: Produce, kcal: 17, norway: "Salatblanding or hjertesalat" }
+  - { id: salmon, name: salmon, aisle: "Meat & fish", kcal: 208, norway: "Laks; laksefilet or loin without skin and bones" }
   - { id: salt, name: salt, aisle: "Herbs & spices", staple: true }
   - { id: sauerkraut, name: sauerkraut, aisle: "Tins & jars", kcal: 19 }
   - { id: sausages, name: sausages, aisle: "Meat & fish", kcal: 300 }
-  - { id: semolina, name: semolina, aisle: Dry goods, kcal: 360 }
-  - { id: sesame-oil, name: sesame oil, aisle: "Oils & condiments", kcal: 884, density: 0.92 }
-  - { id: sesame-seeds, name: sesame seeds, aisle: Dry goods, kcal: 573 }
-  - { id: shallot, name: shallots, aisle: Produce, kcal: 72, weights: { piece: 40 } }
-  - { id: shrimp, name: shell-on shrimp, aisle: "Meat & fish", kcal: 70 }
+  - { id: semolina, name: semolina, aisle: Dry goods, kcal: 360, norway: "Semulegryn works for dusting; semola rimacinata at Meny is the Italian one" }
+  - { id: sesame-oil, name: sesame oil, aisle: "Oils & condiments", kcal: 884, density: 0.92, norway: "Sesamolje, Asian shelf" }
+  - { id: sesame-seeds, name: sesame seeds, aisle: Dry goods, kcal: 573, norway: "Sesamfrø" }
+  - { id: shallot, name: shallots, aisle: Produce, kcal: 72, weights: { piece: 40 }, norway: "Sjalottløk" }
+  - { id: shrimp, name: shell-on shrimp, aisle: "Meat & fish", kcal: 70, norway: "Norwegian reker are sold cooked; for raw shell-on prawns buy frozen rå scampi with shell (e.g. Sea King)" }
   - { id: sirloin-steak, name: sirloin steak, aisle: "Meat & fish", kcal: 180 }
   - { id: smoked-bacon, name: smoked bacon, aisle: "Meat & fish", kcal: 450 }
-  - { id: smoked-paprika, name: smoked paprika, aisle: "Herbs & spices" }
-  - { id: sour-cream, name: sour cream, aisle: "Dairy & eggs", kcal: 193 }
-  - { id: soy-sauce, name: soy sauce, aisle: "Oils & condiments", kcal: 53, density: 1.17 }
-  - { id: spaghetti, name: spaghetti, aisle: Dry goods, kcal: 371 }
-  - { id: spring-onion, name: spring onions, aisle: Produce, kcal: 32, weights: { piece: 15 } }
+  - { id: smoked-paprika, name: smoked paprika, aisle: "Herbs & spices", norway: "Røkt paprikapulver, spice shelf" }
+  - { id: sour-cream, name: sour cream, aisle: "Dairy & eggs", kcal: 193, norway: "Lettrømme (17%) is closest to Balkan kiselo vrhnje; seterrømme (35%) is richer and splits less when heated" }
+  - { id: soy-sauce, name: soy sauce, aisle: "Oils & condiments", kcal: 53, density: 1.17, norway: "Soyasaus (e.g. Kikkoman), Asian shelf" }
+  - { id: spaghetti, name: spaghetti, aisle: Dry goods, kcal: 371, norway: "Spaghetti; Italian brands (Barilla, Rummo) at most shops" }
+  - { id: spring-onion, name: spring onions, aisle: Produce, kcal: 32, weights: { piece: 15 }, norway: "Vårløk" }
   - { id: squash, name: squash, aisle: Produce, kcal: 30 }
-  - { id: squid, name: squid, aisle: "Meat & fish", kcal: 92 }
-  - { id: sugar, name: sugar, aisle: Dry goods, kcal: 387, density: 0.85, staple: true }
-  - { id: sumac, name: sumac, aisle: "Herbs & spices" }
-  - { id: sunflower-oil, name: sunflower oil, aisle: "Oils & condiments", kcal: 884, density: 0.92 }
-  - { id: sweet-paprika, name: sweet paprika, aisle: "Herbs & spices" }
-  - { id: sweetcorn, name: canned sweetcorn, aisle: "Tins & jars", kcal: 80 }
-  - { id: tagliatelle, name: tagliatelle, aisle: Dry goods, kcal: 371 }
-  - { id: tahini, name: tahini, aisle: "Tins & jars", kcal: 595 }
-  - { id: tex-mex-spice, name: Tex-Mex spice mix, aisle: "Herbs & spices" }
-  - { id: thick-cut-bacon, name: thick-cut bacon, aisle: "Meat & fish", kcal: 420 }
-  - { id: thyme, name: fresh thyme, aisle: Produce, kcal: 101, weights: { sprig: 1 } }
-  - { id: tomato, name: tomatoes, aisle: Produce, kcal: 18, weights: { piece: 120 } }
-  - { id: tomato-paste, name: tomato paste, aisle: "Tins & jars", kcal: 82, density: 1.1 }
-  - { id: tomato-puree, name: tomato purée, aisle: "Tins & jars", kcal: 82 }
-  - { id: tortilla-chips, name: tortilla chips, aisle: Dry goods, kcal: 490 }
-  - { id: turmeric, name: turmeric, aisle: "Herbs & spices" }
-  - { id: unsalted-butter, name: unsalted butter, aisle: "Dairy & eggs", kcal: 717, density: 0.91 }
-  - { id: vanilla, name: vanilla, aisle: Dry goods, kcal: 0 }
-  - { id: vanilla-sugar, name: vanilla sugar, aisle: Dry goods, kcal: 390, weights: { package: 10 } }
-  - { id: vegeta, name: Vegeta seasoning, aisle: "Herbs & spices" }
-  - { id: vegetable-oil, name: vegetable oil, aisle: "Oils & condiments", kcal: 884, density: 0.92 }
-  - { id: vegetable-stock, name: vegetable stock, aisle: "Tins & jars", kcal: 5, density: 1 }
-  - { id: vegetable-stock-powder, name: vegetable stock powder, aisle: Dry goods, kcal: 250 }
+  - { id: squid, name: squid, aisle: "Meat & fish", kcal: 92, norway: "Blekksprut; frozen whole or rings, or at a fish counter" }
+  - { id: sugar, name: sugar, aisle: Dry goods, kcal: 387, density: 0.85, staple: true, norway: "Strøsukker (Dan Sukker or store brand)" }
+  - { id: sumac, name: sumac, aisle: "Herbs & spices", norway: "Sumak (Sevan) in bigger shops or innvandrerbutikker" }
+  - { id: sunflower-oil, name: sunflower oil, aisle: "Oils & condiments", kcal: 884, density: 0.92, norway: "Solsikkeolje; rapsolje works the same" }
+  - { id: sweet-paprika, name: sweet paprika, aisle: "Herbs & spices", norway: "Paprikapulver (søt or mild), spice shelf; Hungarian paprika at innvandrerbutikker for paprikash" }
+  - { id: sweetcorn, name: canned sweetcorn, aisle: "Tins & jars", kcal: 80, norway: "Mais in cans (e.g. Bonduelle)" }
+  - { id: tagliatelle, name: tagliatelle, aisle: Dry goods, kcal: 371, norway: "Eggtagliatelle, dried or fresh" }
+  - { id: tahini, name: tahini, aisle: "Tins & jars", kcal: 595, norway: "Tahini or tahin sesampaste (Sevan, Helios or Sebahat)" }
+  - { id: tex-mex-spice, name: Tex-Mex spice mix, aisle: "Herbs & spices", norway: "Tacokrydder (e.g. Old El Paso or Santa Maria), taco shelf" }
+  - { id: thick-cut-bacon, name: thick-cut bacon, aisle: "Meat & fish", kcal: 420, norway: "Bacon i skiver is too thin; buy ternet bacon (Nordfjord) or a piece of røkt sideflesk and cut it yourself" }
+  - { id: thyme, name: fresh thyme, aisle: Produce, kcal: 101, weights: { sprig: 1 }, norway: "Timian in a pot" }
+  - { id: tomato, name: tomatoes, aisle: Produce, kcal: 18, weights: { piece: 120 }, norway: "Tomater; in winter plommetomater or cherrytomater have more flavour" }
+  - { id: tomato-paste, name: tomato paste, aisle: "Tins & jars", kcal: 82, density: 1.1, norway: "Tomatpuré (in tubes or tins)" }
+  - { id: tomato-puree, name: tomato purée, aisle: "Tins & jars", kcal: 82, norway: "Tomatpuré, the concentrated paste" }
+  - { id: tortilla-chips, name: tortilla chips, aisle: Dry goods, kcal: 490, norway: "Tortillachips, taco shelf" }
+  - { id: turmeric, name: turmeric, aisle: "Herbs & spices", norway: "Gurkemeie, spice shelf" }
+  - { id: unsalted-butter, name: unsalted butter, aisle: "Dairy & eggs", kcal: 717, density: 0.91, norway: "Usaltet smør (Tine), next to the ordinary butter" }
+  - { id: vanilla, name: vanilla, aisle: Dry goods, kcal: 0, norway: "Vaniljestang or vaniljeekstrakt, baking aisle" }
+  - { id: vanilla-sugar, name: vanilla sugar, aisle: Dry goods, kcal: 390, weights: { package: 10 }, norway: "Vaniljesukker (Idun or Dr. Oetker), baking aisle" }
+  - { id: vegeta, name: Vegeta seasoning, aisle: "Herbs & spices", norway: "Vegeta (Podravka) at innvandrerbutikker; a mild grønnsaksbuljong works instead" }
+  - { id: vegetable-oil, name: vegetable oil, aisle: "Oils & condiments", kcal: 884, density: 0.92, norway: "Rapsolje, the standard Norwegian cooking oil" }
+  - { id: vegetable-stock, name: vegetable stock, aisle: "Tins & jars", kcal: 5, density: 1, norway: "Grønnsakskraft, or grønnsaksbuljong (Maggi, Knorr or Toro) dissolved in water" }
+  - { id: vegetable-stock-powder, name: vegetable stock powder, aisle: Dry goods, kcal: 250, norway: "Grønnsaksbuljong as powder or cubes (Maggi, Knorr or Toro)" }
   - { id: water, name: water, aisle: Other, kcal: 0, shop: false }
   - { id: whipping-cream, name: whipping cream, aisle: "Dairy & eggs", kcal: 330, density: 1 }
   - { id: white-chocolate, name: white chocolate, aisle: Dry goods, kcal: 539 }
-  - { id: white-vinegar, name: white vinegar, aisle: "Oils & condiments", kcal: 18, density: 1 }
-  - { id: white-wine, name: white wine, aisle: Drinks, kcal: 82 }
-  - { id: white-wine-vinegar, name: white wine vinegar, aisle: "Oils & condiments", kcal: 19, density: 1 }
-  - { id: whole-cloves, name: whole cloves, aisle: "Herbs & spices" }
+  - { id: white-vinegar, name: white vinegar, aisle: "Oils & condiments", kcal: 18, density: 1, norway: "Eddik 7% klar (Idun). If you see eddiksyre (35%), never use it undiluted" }
+  - { id: white-wine, name: white wine, aisle: Drinks, kcal: 82, norway: "Only sold at Vinmonopolet. Swap: more stock with a little white wine vinegar or lemon juice" }
+  - { id: white-wine-vinegar, name: white wine vinegar, aisle: "Oils & condiments", kcal: 19, density: 1, norway: "Hvitvinseddik, vinegar shelf" }
+  - { id: whole-cloves, name: whole cloves, aisle: "Herbs & spices", norway: "Nellik (hel), spice shelf" }
   - { id: whole-peeled-tomatoes, name: canned whole tomatoes, aisle: "Tins & jars", kcal: 21 }
-  - { id: wholegrain-mustard, name: wholegrain mustard, aisle: "Oils & condiments", kcal: 140, density: 1.05 }
-  - { id: worcestershire-sauce, name: Worcestershire sauce, aisle: "Oils & condiments", kcal: 78, density: 1.1 }
+  - { id: wholegrain-mustard, name: wholegrain mustard, aisle: "Oils & condiments", kcal: 140, density: 1.05, norway: "Grov sennep" }
+  - { id: worcestershire-sauce, name: Worcestershire sauce, aisle: "Oils & condiments", kcal: 78, density: 1.1, norway: "Worcestershiresaus (Lea & Perrins)" }
   - { id: yellow-mustard, name: yellow mustard, aisle: "Oils & condiments", kcal: 60 }
-  - { id: zucchini, name: zucchini, aisle: Produce, kcal: 17, weights: { piece: 250 } }
+  - { id: zucchini, name: zucchini, aisle: Produce, kcal: 17, weights: { piece: 250 }, norway: "Called squash in Norway" }

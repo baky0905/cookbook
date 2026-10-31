@@ -27,7 +27,7 @@ groups:
       - { id: bay, ingredient: bay-leaf, name: bay leaf, quantity: 1, unit: piece, scalable: false }
       - { id: allspice, ingredient: allspice, name: ground allspice, quantity: 0.5, unit: g, spoon: ¼ teaspoon }
       - { id: fish-sauce, ingredient: fish-sauce, name: fish sauce, quantity: 3, max: 5, unit: ml, optional: true, note: "Adds a fish-stock depth without tasting fishy. Or use 2.5 ml Worcestershire sauce" }
-      - { id: potatoes, ingredient: potato, name: all-purpose potatoes, quantity: 450, unit: g, prep: In 2 cm cubes, note: Yukon Gold type }
+      - { id: potatoes, ingredient: potato, name: firm potatoes, quantity: 450, unit: g, prep: In 2 cm cubes, note: "Folva, Asterix or Innova, so the cubes hold their shape (Yukon Gold outside Norway)" }
       - { id: carrots, ingredient: carrot, name: carrots, quantity: 180, unit: g, prep: Sliced 6 mm thick, note: About 3 small }
   - name: To finish
     items:
