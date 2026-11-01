@@ -43,6 +43,7 @@ ingredients:
   - { id: celery, name: celery, aisle: Produce, kcal: 16, weights: { piece: 40 }, norway: "Stangselleri" }
   - { id: cheddar, name: cheddar, aisle: "Dairy & eggs", kcal: 403, norway: "Sold in most shops; lagret (mature) cheddar has more flavour, and Norvegia works at a pinch" }
   - { id: cherry-tomatoes, name: cherry tomatoes, aisle: Produce, kcal: 18, norway: "Cherrytomater; Norwegian ones in summer, otherwise the most flavourful option in winter" }
+  - { id: chicken-bouillon-paste, name: chicken bouillon paste, aisle: "Tins & jars", norway: "Better Than Bouillon is rarely sold here. Use a chicken fond concentrate (Touch of Taste kyllingfond) or a crumbled kyllingbuljong cube instead, and salt less: both are salty" }
   - { id: chicken-breast, name: chicken breast, aisle: "Meat & fish", kcal: 120, norway: "Kyllingbryst or kyllingfilet; skin-on breasts (med skinn) from Lerstang or Den Stolte Hane" }
   - { id: chicken-drumsticks, name: chicken drumsticks, aisle: "Meat & fish", kcal: 120, weights: { piece: 110 }, norway: "Kyllingklubber (Prior, Solvinge or Den Stolte Hane)" }
   - { id: chicken-pieces, name: chicken pieces (bone-in), aisle: "Meat & fish", kcal: 160, norway: "Buy a hel kylling and joint it, or mix kyllinglår (whole legs) with vinger; Solvinge or Den Stolte Hane taste more of chicken" }
@@ -93,11 +94,14 @@ ingredients:
   - { id: ginger, name: fresh ginger, aisle: Produce, kcal: 80, weights: { piece: 15 }, norway: "Ingefær; frozen fresh ginger grates easily" }
   - { id: grated-cheese, name: grated cheese, aisle: "Dairy & eggs", kcal: 380, norway: "Revet Norvegia, or Jarlsberg for more flavour" }
   - { id: ground-almonds, name: ground almonds, aisle: Dry goods, kcal: 579 }
+  - { id: ground-coriander, name: ground coriander, aisle: "Herbs & spices", norway: "Koriander (malt), spice shelf. Not fresh koriander" }
+  - { id: ground-cumin, name: ground cumin, aisle: "Herbs & spices", norway: "Spisskummen (malt), spice shelf. Not karve, which is caraway" }
   - { id: ground-walnuts, name: ground walnuts, aisle: Dry goods, kcal: 654 }
   - { id: heavy-cream, name: heavy cream, aisle: "Dairy & eggs", kcal: 340, density: 1, norway: "Kremfløte (Tine, 37% fat)" }
   - { id: honey, name: honey, aisle: "Oils & condiments", kcal: 304, density: 1.42, norway: "Honning; Norwegian honey from Honningcentralen or local producers" }
   - { id: hungarian-paprika, name: Hungarian paprika, aisle: "Herbs & spices" }
   - { id: ice, name: ice, aisle: Other, kcal: 0, shop: false }
+  - { id: iceberg-lettuce, name: iceberg lettuce, aisle: Produce, kcal: 14, weights: { piece: 500 }, norway: "Isbergsalat; romanosalat or hjertesalat also work" }
   - { id: icing-sugar, name: icing sugar, aisle: Dry goods, kcal: 389, norway: "Melis (Dan Sukker). Melis is icing sugar; farin is brown sugar" }
   - { id: instant-yeast, name: instant yeast, aisle: Dry goods, kcal: 325, norway: "Tørrgjær original (Idun) in the baking aisle. Fresh gjær (50 g, Idun, dairy fridge) also works: use about 3 times the weight of dry yeast" }
   - { id: jam, name: jam, aisle: "Tins & jars", kcal: 250, norway: "Syltetøy; Nora or Den Gamle Fabrikk" }
@@ -111,6 +115,8 @@ ingredients:
   - { id: lemon-juice, name: lemon juice, aisle: Produce, kcal: 22, density: 1.03, norway: "Squeeze fresh sitroner; bottled sitronsaft is fine for mayonnaise" }
   - { id: lime, name: limes, aisle: Produce, kcal: 30, weights: { piece: 65 }, norway: "Lime" }
   - { id: long-grain-rice, name: long-grain rice, aisle: Dry goods, kcal: 365, norway: "Langkornet ris or basmati (e.g. Ben's Original or Tilda)" }
+  - { id: louisiana-hot-sauce, name: Louisiana-style hot sauce, aisle: "Oils & condiments", kcal: 10, density: 1.05, norway: "A thin cayenne-and-vinegar hot sauce from the hot-sauce shelf. Tabasco is much hotter and sharper; use about a third as much, topped up with water" }
+  - { id: mayonnaise, name: mayonnaise, aisle: "Oils & condiments", kcal: 700, density: 0.95, norway: "Majones (Mills or Idun) in tubes or jars, not remulade" }
   - { id: milk, name: milk, aisle: "Dairy & eggs", kcal: 64, density: 1.03, norway: "Helmelk (Tine or Q, about 3.5% fat) when a recipe says whole milk; lettmelk (1%) works for most everyday cooking" }
   - { id: minced-beef, name: minced beef, aisle: "Meat & fish", kcal: 254, norway: "Kjøttdeig av storfe; standard kjøttdeig is about 14% fat, karbonadedeig is lean (about 5%)" }
   - { id: minced-lamb, name: minced lamb, aisle: "Meat & fish", kcal: 282, norway: "Lammekjøttdeig (Gilde), fresh in the meat fridge" }
@@ -172,6 +178,7 @@ ingredients:
   - { id: spring-onion, name: spring onions, aisle: Produce, kcal: 32, weights: { piece: 15 }, norway: "Vårløk" }
   - { id: squash, name: squash, aisle: Produce, kcal: 30 }
   - { id: squid, name: squid, aisle: "Meat & fish", kcal: 92, norway: "Blekksprut; frozen whole or rings, or at a fish counter" }
+  - { id: sriracha, name: Sriracha, aisle: "Oils & condiments", kcal: 93, density: 1.1, norway: "Sriracha chilisaus, Asian shelf in most chains" }
   - { id: sugar, name: sugar, aisle: Dry goods, kcal: 387, density: 0.85, staple: true, norway: "Strøsukker (Dan Sukker or store brand)" }
   - { id: sumac, name: sumac, aisle: "Herbs & spices", norway: "Sumak (Sevan) in bigger shops or innvandrerbutikker" }
   - { id: sunflower-oil, name: sunflower oil, aisle: "Oils & condiments", kcal: 884, density: 0.92, norway: "Solsikkeolje; rapsolje works the same" }

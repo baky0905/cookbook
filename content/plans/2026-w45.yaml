@@ -1,0 +1,13 @@
+id: 2026-w45
+title: Week 45
+start: '2026-11-02'
+notes: 'Two days per dish: cook once, eat leftovers the next day.'
+meals:
+  - { date: '2026-11-02', meal: Dinner, recipe: baked-cauliflower, servings: 8, note: "Using the 800 g cauliflower at home; double batch, so use a bigger dish or two dishes" }
+  - { date: '2026-11-03', meal: Dinner, leftoversFrom: 2026-11-02-dinner }
+  - { date: '2026-11-04', meal: Dinner, recipe: roasted-tomato-soup }
+  - { date: '2026-11-05', meal: Dinner, leftoversFrom: 2026-11-04-dinner }
+  - { date: '2026-11-06', meal: Dinner, recipe: halal-cart-chicken-and-rice, note: "First time cooking it. Keep sauces, rice and chicken separate for tomorrow" }
+  - { date: '2026-11-07', meal: Dinner, leftoversFrom: 2026-11-06-dinner }
+# Extra shopping items: { ingredient: milk, quantity: 1, unit: l } or { name: dish soap }
+extras: []
