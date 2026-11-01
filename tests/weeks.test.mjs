@@ -14,6 +14,12 @@ test('preparing next week does not replace this week', () => {
   assert.equal(currentPlan([past, future, example], '2026-10-14'), null);
   assert.equal(currentPlan([example], '2026-10-14'), example);
 });
+test('on Sunday the coming week shows once it is planned', () => {
+  assert.equal(currentPlan([current, future], '2026-10-17'), current);
+  assert.equal(currentPlan([current, future], '2026-10-18'), future);
+  assert.equal(currentPlan([current], '2026-10-18'), current);
+  assert.equal(currentPlan([past, future], '2026-10-18'), future);
+});
 test('archival only includes finished real weeks, never current or future plans', () => {
   assert.equal(isFinishedPlan(past, '2026-10-18'), true);
   assert.equal(isFinishedPlan(current, '2026-10-18'), false);

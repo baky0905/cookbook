@@ -8,9 +8,13 @@ export function weekStart(date) {
   d.setUTCDate(d.getUTCDate() - (d.getUTCDay() + 6) % 7);
   return d.toISOString().slice(0, 10);
 }
+const forWeek = (plans, monday) => plans.find(p => !p.example && planStart(p) && weekStart(planStart(p)) === monday);
+// Sunday is shopping day, so it shows the coming week once that week is planned.
 export function currentPlan(plans, date = today()) {
   const monday = weekStart(date);
-  return plans.find(p => !p.example && planStart(p) && weekStart(planStart(p)) === monday)
+  const sunday = new Date(date + 'T12:00:00Z').getUTCDay() === 0;
+  const coming = sunday && forWeek(plans, new Date(Date.parse(monday + 'T12:00:00Z') + 7 * 864e5).toISOString().slice(0, 10));
+  return coming || forWeek(plans, monday)
     || (!plans.some(p => !p.example) ? plans.find(p => p.example) : null) || null;
 }
 export const isFinishedPlan = (plan, date = today()) => !plan.example && !!planStart(plan)
