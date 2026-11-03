@@ -76,6 +76,8 @@ ingredients:
   - { id: dried-basil, name: dried basil, aisle: "Herbs & spices", norway: "Basilikum (tørket), spice shelf" }
   - { id: dried-mediterranean-herbs, name: dried Mediterranean herbs, aisle: "Herbs & spices", norway: "Provencekrydder or italiensk urteblanding, spice shelf" }
   - { id: dried-oregano, name: dried oregano, aisle: "Herbs & spices", norway: "Oregano (tørket), spice shelf" }
+  - { id: dried-rosemary, name: dried rosemary, aisle: "Herbs & spices", norway: "Rosmarin (tørket)" }
+  - { id: dried-thyme, name: dried thyme, aisle: "Herbs & spices", norway: "Timian (tørket)" }
   - { id: egg, name: eggs, aisle: "Dairy & eggs", kcal: 143, weights: { piece: 50 }, norway: "Egg; frittgående if you can" }
   - { id: fennel, name: fennel, aisle: Produce, kcal: 31, weights: { piece: 250 }, norway: "Fennikel" }
   - { id: feta, name: feta, aisle: "Dairy & eggs", kcal: 264, norway: "Look for real Greek fetaost; salatost and kvitost are softer, milder cow's milk cheeses" }
