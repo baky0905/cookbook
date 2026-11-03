@@ -18,7 +18,7 @@ groups:
       - { id: rosemary, ingredient: dried-rosemary, name: dried rosemary, quantity: null, note: A light sprinkle }
       - { id: thyme, ingredient: dried-thyme, name: dried thyme, quantity: null, note: A light sprinkle }
       - { id: olive-oil, ingredient: olive-oil, name: olive oil, quantity: 25, unit: ml, note: Estimated }
-      - { id: salt, ingredient: salt, name: salt, quantity: null }
+      - { id: salt, ingredient: salt, name: salt for roasting, quantity: 2.5, unit: ml }
       - { id: pepper, ingredient: black-pepper, name: black pepper, quantity: null }
   - name: Soup
     items:
@@ -33,13 +33,14 @@ groups:
       - { id: balsamic, ingredient: balsamic-vinegar, name: balsamic vinegar, quantity: 7.5, unit: ml }
       - { id: worcestershire, ingredient: worcestershire-sauce, name: Worcestershire sauce, quantity: 15, unit: ml }
       - { id: sugar, ingredient: sugar, name: sugar, quantity: 2, unit: g, spoon: "½ teaspoon" }
+      - { id: finishing-salt, ingredient: salt, name: salt to finish, quantity: null, note: To taste }
       - { id: cream, ingredient: heavy-cream, name: heavy cream, quantity: 120, unit: ml, optional: true }
 steps:
-  - { id: roast, title: Roast the vegetables, duration: 45–50 min, text: "Heat the oven to 190 °C fan. Toss the {{cherry-tomatoes}}, {{beef-tomatoes}}, {{garlic}}, {{peppers}} and {{red-onion}} on a large tray with the {{rosemary}}, {{thyme}} and {{olive-oil}}. Season with some {{salt}} and {{pepper}}. Roast until caramelised." }
-  - { id: onion, title: Soften the onion, text: "Cook the {{onion}} in the {{butter}} in a large pot until soft, then stir in the {{tomato-paste}}." }
+  - { id: roast, title: Roast the vegetables, duration: 45–50 min, text: "Heat the oven to 190 °C fan. Toss the {{cherry-tomatoes}}, {{beef-tomatoes}}, {{garlic}}, {{peppers}} and {{red-onion}} on a large tray with the {{rosemary}}, {{thyme}} and {{olive-oil}}. Season with the {{salt}} and {{pepper}}. Roast until caramelised." }
+  - { id: onion, title: Soften the onion, duration: 5 min, text: "Cook the {{onion}} in the {{butter}} in a large pot for about 5 minutes until soft, then stir in the {{tomato-paste}}." }
   - { id: simmer, title: Simmer, duration: 8–10 min, text: "Add the roasted vegetables and all their tray juices, then the {{stock}}, {{water}}, {{oregano}}, {{cayenne}}, {{paprika}}, {{balsamic}}, {{worcestershire}} and {{sugar}}. Simmer for 8–10 minutes." }
   - { id: blend, title: Blend without straining, text: "Take the pot off the heat and blend thoroughly until as smooth as you like. Leave the tomato skins in and skip the sieve, as in this batch.", images: [{ src: roasted-tomato-soup/blended-soup.webp, alt: "Orange roasted tomato soup blended in a stainless steel pot", caption: "The blended soup, with the tomato skins left in and no sieving." }] }
-  - { id: finish, title: Finish and season, text: "Return to the heat and stir in the {{cream}}, if using. Turn off the heat as soon as it starts to simmer. Taste before adding more salt and pepper." }
+  - { id: finish, title: Finish and season, text: "Return to the heat and stir in the {{cream}}, if using. Turn off the heat as soon as it starts to simmer. Taste before adding {{finishing-salt}} and more {{pepper}}." }
 sources:
   - { title: "Roasted Tomato Soup · Delicious (YouTube)", url: "https://www.youtube.com/watch?v=qK15KwDBNBU", accessed: "2026-10-10" }
   - { title: "Owner's cooked batch notes, 3 November 2026" }
@@ -59,7 +60,7 @@ adaptations:
 
 The oil was drizzled over the vegetables in two squeezes. It was not measured; 25 ml is a working estimate for next time, not a conversion from the squeezes. Use enough to lightly coat the vegetables and measure it next time if you want a repeatable amount.
 
-Salt was just under 5 ml over the vegetables before roasting, then roughly another 3.75 ml after blending. These are approximate volume measurements, not gram weights; the weight depends on the salt's grain size. Taste before repeating the finishing amount, because the stock and Worcestershire sauce also add salt.
+Salt was 2.5 ml over the vegetables before roasting, then roughly another 3.75 ml after blending. These are approximate volume measurements, not gram weights; the weight depends on the salt's grain size. Taste before repeating the finishing amount, because the stock and Worcestershire sauce also add salt.
 
 This batch was blended without sieving or peeling the tomatoes. Keep that as the default. If the skin texture bothers you next time, blend more thoroughly or pass the finished soup through a sieve; peeling first is optional. Removing loose skins after roasting is another option, though fiddly with whole cherry tomatoes.
 

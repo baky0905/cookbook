@@ -10,7 +10,7 @@ export function stepHtml(text, items) {
   const marked_ = text.replace(/\{\{([a-z0-9-]+)\}\}/g, (_, id) => `REF${refs.push(id) - 1}REF`);
   return marked.parse(marked_, { breaks: true }).replace(/REF(\d+)REF/g, (_, n) => {
     const item = items.find(i => i.id === refs[n]);
-    return `<span class="ref"${quantityAttrs(item)}><b class="qty">${escape(amount(item))}</b> ${escape(item.name)}</span>`;
+    return `<span class="ref"${quantityAttrs(item)}><b class="qty">${escape(amount(item))}</b> <b class="ingredient-name">${escape(item.name)}</b></span>`;
   });
 }
 export function quantityAttrs(item) {
