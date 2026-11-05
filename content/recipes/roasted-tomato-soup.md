@@ -30,17 +30,21 @@ groups:
       - { id: oregano, ingredient: dried-oregano, name: dried oregano, quantity: 3, unit: g, spoon: "1 tablespoon" }
       - { id: cayenne, ingredient: cayenne-pepper, name: cayenne pepper, quantity: null, note: To taste }
       - { id: paprika, ingredient: smoked-paprika, name: smoked paprika, quantity: 2, unit: g, spoon: "1 teaspoon" }
-      - { id: balsamic, ingredient: balsamic-vinegar, name: balsamic vinegar, quantity: 7.5, unit: ml }
       - { id: worcestershire, ingredient: worcestershire-sauce, name: Worcestershire sauce, quantity: 15, unit: ml }
       - { id: sugar, ingredient: sugar, name: sugar, quantity: 2, unit: g, spoon: "½ teaspoon" }
       - { id: finishing-salt, ingredient: salt, name: salt to finish, quantity: null, note: To taste }
       - { id: cream, ingredient: heavy-cream, name: heavy cream, quantity: 120, unit: ml, optional: true }
+  - name: Optional flavour adjustments
+    items:
+      - { id: extra-sugar, ingredient: sugar, name: extra sugar, quantity: 1, max: 2, unit: g, optional: true, note: "Only if sour; additional to the 2 g already in the soup" }
+      - { id: balsamic, ingredient: balsamic-vinegar, name: balsamic vinegar, quantity: null, optional: true, note: "Omit by default; add a few drops at the end only if the soup needs acidity" }
 steps:
   - { id: roast, title: Roast the vegetables, duration: 45–50 min, text: "Heat the oven to 190 °C fan. Toss the {{cherry-tomatoes}}, {{beef-tomatoes}}, {{garlic}}, {{peppers}} and {{red-onion}} on a large tray with the {{rosemary}}, {{thyme}} and {{olive-oil}}. Season with the {{salt}} and {{pepper}}. Roast until caramelised." }
   - { id: onion, title: Soften the onion, duration: 5 min, text: "Cook the {{onion}} in the {{butter}} in a large pot for about 5 minutes until soft, then stir in the {{tomato-paste}}." }
-  - { id: simmer, title: Simmer, duration: 8–10 min, text: "Add the roasted vegetables and all their tray juices, then the {{stock}}, {{water}}, {{oregano}}, {{cayenne}}, {{paprika}}, {{balsamic}}, {{worcestershire}} and {{sugar}}. Simmer for 8–10 minutes." }
+  - { id: simmer, title: Simmer, duration: 8–10 min, text: "Add the roasted vegetables and all their tray juices, then the {{stock}}, {{water}}, {{oregano}}, {{cayenne}}, {{paprika}}, {{worcestershire}} and {{sugar}}. Leave out the vinegar. Simmer for 8–10 minutes." }
   - { id: blend, title: Blend without straining, text: "Take the pot off the heat and blend thoroughly until as smooth as you like. Leave the tomato skins in and skip the sieve, as in this batch.", images: [{ src: roasted-tomato-soup/blended-soup.webp, alt: "Orange roasted tomato soup blended in a stainless steel pot", caption: "The blended soup, with the tomato skins left in and no sieving." }] }
   - { id: finish, title: Finish and season, text: "Return to the heat and stir in the {{cream}}, if using. Turn off the heat as soon as it starts to simmer. Taste before adding {{finishing-salt}} and more {{pepper}}." }
+  - { id: balance, title: Balance the flavour, text: "Taste the finished soup. If it is still sour, stir in the {{extra-sugar}} a little at a time, tasting between additions. This is extra sugar beyond the 2 g already added, bringing the original batch to 3–4 g total if used. Skip the {{balsamic}} by default; add only a few drops if the finished soup needs more acidity." }
 sources:
   - { title: "Roasted Tomato Soup · Delicious (YouTube)", url: "https://www.youtube.com/watch?v=qK15KwDBNBU", accessed: "2026-10-10" }
   - { title: "Owner's cooked batch notes, 3 November 2026" }
@@ -48,6 +52,7 @@ issues:
   - "Oil and dried-herb amounts were not measured. The 25 ml oil amount is a working estimate."
   - "Water inferred as 160 ml to keep the saved recipe's 660 ml total liquid; the cooked batch's water amount was not measured."
 adaptations:
+  - "After the batch tasted sour, removed balsamic vinegar from the simmering ingredients. It is optional at the end only if acidity is needed; an extra 1–2 g sugar is an optional correction, not a required increase."
   - "Updated to the cooked batch: 500 g whole cherry tomatoes, 1000 g quartered beef tomatoes, 2 snack peppers, dried thyme and rosemary, no fresh basil, and 45–50 minutes roasting."
   - "Used 500 ml Jacobs vegetable stock with water for the remaining liquid."
   - "Kept the other saved ingredient quantities where the cooking notes did not specify a change; cream remains optional."
