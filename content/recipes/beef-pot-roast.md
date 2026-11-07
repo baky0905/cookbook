@@ -3,9 +3,9 @@ title: Beef pot roast
 description: Chuck roast seared, then braised low and slow in red wine and stock with vegetables.
 category: Mains
 tags: [american, beef, slow-cooked, oven-baked, one-pot]
-status: needs-review
+status: cooked
 yield: { label: about 6 portions, amount: 6, unit: portions, scalable: false }
-cover: { src: beef-pot-roast/cover.webp, alt: "A pot roast on a platter with glazed carrots and parsley potatoes", caption: "An example of the dish, not from this recipe", credit: "Mark Miller · CC BY-SA 4.0 · Wikimedia Commons", source: "https://commons.wikimedia.org/wiki/File:American_pot_roast_and_parsley_potatoes.jpg" }
+cover: { src: beef-pot-roast/cover.webp, alt: "Dark, braised pieces of beef with carrots, celery and shallots in rust-coloured liquid in a red enamelled Dutch oven", caption: "Out of the oven after 4 hours, succulent and ready to chill overnight." }
 time: { cook: 4–5 h, rest: 30 min }
 groups:
   - name: Ingredients
@@ -50,4 +50,4 @@ adaptations:
 legacyPath: main_dishes/beef_pot_roast/
 ---
 
-**7 November 2026:** Using 2 kg of høyrigg, cut into three smaller pieces about 13–15 cm thick. Seasoned the meat with about 25 g of kosher salt.
+**7 November 2026:** Using 2 kg of høyrigg, cut into three smaller pieces about 13–15 cm thick. Seasoned the meat with about 25 g of kosher salt. Braised at 135 °C and stopped after 4 hours, when the meat was succulent. The meat and saltiness were both good. Leaving it overnight, then reheating it to serve the next day with mashed potatoes.
