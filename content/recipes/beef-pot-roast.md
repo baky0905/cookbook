@@ -28,8 +28,8 @@ groups:
       - { id: thyme, ingredient: thyme, name: fresh thyme, quantity: 3, max: 4, unit: sprig }
 steps:
   - { id: salt, title: Salt the beef, duration: 20 min, text: "Rub the roast on all sides with salt, 1% of its weight (15–20 g), and leave it at room temperature." }
-  - { id: prep, title: Prepare the vegetables, text: "Meanwhile, chunky dice the shallots, cut the celery into 3–5 cm pieces and the carrots into obliques (video at 1:26) or large chunks. Mince the garlic." }
-  - { id: sear, title: Sear, duration: 11–13 min, text: "Dry the beef very well. Heat a Dutch oven or large heavy pot over high heat, add the oil and press the roast into the pan. Sear 6–7 minutes until a brown crust forms, flip and sear 5–6 minutes more. Transfer to a plate." }
+  - { id: prep, title: Prepare the vegetables, text: "Meanwhile, chunky dice the shallots, cut the celery into 3–5 cm pieces and the carrots into obliques (video at 1:26) or large chunks. Mince the garlic.", images: [{ src: beef-pot-roast/prep.webp, alt: "Bowls of celery pieces, halved shallots and carrot obliques, with minced garlic in a small mug beside a chef's knife and chopping board", caption: "The prepared vegetables and garlic, cut large so they hold up through the long braise." }] }
+  - { id: sear, title: Sear, duration: 11–13 min, text: "Dry the beef very well. Heat a Dutch oven or large heavy pot over high heat, add the oil and press the roast into the pan. Sear 6–7 minutes until a brown crust forms, flip and sear 5–6 minutes more. Transfer to a plate.", images: [{ src: beef-pot-roast/sear.webp, alt: "Three large pieces of raw-looking beef searing in oil in a red enamelled Dutch oven on an induction hob", caption: "Three pieces of høyrigg early in the sear, with room around them in the pot." }] }
   - { id: vegetables, title: Cook the vegetables, duration: about 6 min, text: "Return the pot to medium heat. Add the butter, vegetables, garlic and a large pinch of salt and cook for about 3 minutes to caramelise slightly. Add the tomato paste and fry for about 2 minutes until it turns a darker rust colour. Stir in the flour for 30–60 seconds." }
   - { id: liquid, title: Deglaze and simmer, text: "Add the wine and Worcestershire and stir to lift the browned bits from the bottom. When slightly thickened, add the bouillon and stock and bring to a simmer. Nestle the beef into the pot so it touches the bottom, and add the bay and thyme." }
   - id: braise
@@ -49,3 +49,5 @@ adaptations:
   - "Oven temperature given in °C only."
 legacyPath: main_dishes/beef_pot_roast/
 ---
+
+**7 November 2026:** Using 2 kg of høyrigg, cut into three smaller pieces about 13–15 cm thick. Seasoned the meat with about 25 g of kosher salt.

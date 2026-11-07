@@ -4,12 +4,13 @@ description: NYC street-cart style plates. Spiced yoghurt-marinated chicken thig
 category: Mains
 tags: [american, middle-eastern, chicken, rice, pan-fried, oven-baked]
 language: en
-status: reviewed
+status: cooked
 yield:
   label: 4 portions
   amount: 4
   unit: portions
   scalable: false
+cover: { src: halal-cart-chicken-and-rice/cover.webp, alt: "Plate of diced seared chicken and yellow rice with white sauce, next to lettuce and cherry tomatoes", caption: "A finished plate with white sauce over everything." }
 time: { total: about 1 h, active: 15 min, cook: 45 min, rest: "30–60 min marinating (optional)" }
 groups:
   - name: Chicken
@@ -64,7 +65,7 @@ steps:
   - { id: red-sauce, title: Mix the red sauce, text: "Stir the {{sriracha}} and {{hot-sauce}} together. Have the {{lettuce}} and {{tomatoes}} ready." }
   - { id: rest, title: Rest the chicken and make the jus, duration: about 10 min, text: "Rest the thighs on a plate. Meanwhile, add the {{water}} to the hot pan (careful, the handle is hot) and scrape up the browned bits into a little jus." }
   - { id: dice, title: Dice the chicken, text: "Turn the rested thighs through the pan jus, then dice into 2 cm chunks. Pour any juices from the resting plate over the chicken if you like." }
-  - { id: assemble, title: Assemble, text: "Spoon rice into bowls and top with the chicken, lettuce and tomatoes, then drizzle with white sauce and red sauce." }
+  - { id: assemble, title: Assemble, text: "Spoon rice into bowls and top with the chicken, lettuce and tomatoes, then drizzle with white sauce and red sauce.", images: [{ src: halal-cart-chicken-and-rice/assemble.webp, alt: "Bowls of lettuce and halved cherry tomatoes, diced chicken and white sauce on a table beside a pot of yellow rice", caption: "Everything ready to serve: fluffy yellow rice, browned diced chicken, pourable white sauce and the salad." }] }
 sources:
   - { title: Brian Lagerstrom, url: "https://brianlagerstrom.com/recipes/halal-cart-chicken-and-rice/" }
   - { title: Video, url: "https://www.youtube.com/watch?v=VsyM8UbF4D0" }
@@ -78,3 +79,7 @@ adaptations:
   - "Rinsing the rice moved to the ingredient prep; the method starts at cooking."
   - "Added a note on searing a double batch in two goes, for planning 8 portions."
 ---
+
+The rice was a little too salty, possibly because I added an extra gelatinous stock cube to 250 ml of prepared stock. Next time, try either prepared stock on its own or one gelatinous cube per 500 ml of water. Other than that, it was really good.
+
+For simplicity, I cooked the rice in a rice cooker instead of a saucepan, which made it quite simple.
