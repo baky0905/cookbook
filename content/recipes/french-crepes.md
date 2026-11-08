@@ -1,5 +1,6 @@
 ---
 title: French Crêpes
+aliases: [palacinke]
 description: Thin, soft French crêpes with lightly golden edges, made with milk, water and oil.
 category: Desserts & baking
 tags: [french, vegetarian, pan-fried]
