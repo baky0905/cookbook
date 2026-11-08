@@ -47,4 +47,4 @@ adaptations:
   - "Rewrote the method concisely in my own words."
 ---
 
-The baked, cheese-filled version of [Croatian Pancakes](../palacinke/). It's the one time they're eaten with a knife and fork at home.
+These baked, cheese-filled Croatian pancakes keep the original batter and are eaten with a knife and fork. For a separate French crêpe recipe, see [French Crêpes](../palacinke/).

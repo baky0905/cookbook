@@ -1,43 +1,35 @@
 ---
-title: Croatian Pancakes
-originalName: { name: Palačinke, lang: hr }
-description: Croatian pancakes, thin as crêpes, spread with jam or chocolate and rolled up to eat by hand.
+title: French Crêpes
+description: Thin, soft French crêpes with lightly golden edges, made with milk, water and oil.
 category: Desserts & baking
-tags: [croatian, vegetarian, quick]
+tags: [french, vegetarian, pan-fried]
 status: reviewed
-yield: { label: "about 10 pancakes (22 cm pan)", amount: 10, unit: pancakes, scalable: true }
-cover: { src: palacinke/cover.webp, alt: "A tall stack of thin pancakes", caption: "An example of the dish, not from this recipe", credit: "David Monniaux · CC BY-SA 3.0 · Wikimedia Commons", source: "https://commons.wikimedia.org/wiki/File:Crepes_dsc07085.jpg" }
-time: { total: about 1 h, active: 30 min, rest: 30 min }
+yield: { label: about 15 crêpes, amount: 15, unit: crêpes, scalable: false }
+cover: { src: palacinke/cover.webp, alt: "A tall stack of thin pancakes", caption: "An example of crêpes, not from this recipe", credit: "David Monniaux · CC BY-SA 3.0 · Wikimedia Commons", source: "https://commons.wikimedia.org/wiki/File:Crepes_dsc07085.jpg" }
+time: { total: about 1 h 35 min, active: 35 min, rest: 1 h }
 groups:
   - name: Batter
     items:
-      - { id: flour, ingredient: plain-flour, name: plain flour, quantity: 200, unit: g }
-      - { id: salt, ingredient: salt, name: salt, quantity: 1, unit: pinch, scalable: false }
-      - { id: lemon, ingredient: lemon, name: lemon, quantity: 0.5, unit: piece, prep: Zest only }
-      - { id: milk, ingredient: milk, name: tepid milk, quantity: 200, unit: ml }
-      - { id: water, ingredient: water, name: water, quantity: 200, unit: ml }
-      - { id: eggs, ingredient: egg, name: eggs, quantity: 2, unit: piece, prep: Beaten }
-      - { id: butter, ingredient: butter, name: butter, quantity: 14, unit: g, prep: Melted, spoon: "1 tablespoon" }
-      - { id: rum, ingredient: rum, name: rum, quantity: 5, unit: ml }
-      - { id: oil, ingredient: sunflower-oil, name: sunflower oil, note: "A few drops per pancake, for frying" }
-  - name: Filling
+      - { id: flour, ingredient: plain-flour, name: plain flour, quantity: 250, unit: g, prep: Sifted }
+      - { id: sugar, ingredient: sugar, name: caster sugar, quantity: 40, unit: g, note: Regular white sugar also works }
+      - { id: salt, ingredient: salt, name: salt, quantity: 1.25, unit: ml }
+      - { id: eggs, ingredient: egg, name: large eggs, quantity: 3, unit: piece }
+      - { id: milk, ingredient: milk, name: whole milk, quantity: 500, unit: ml }
+      - { id: water, ingredient: water, name: water, quantity: 80, unit: ml }
+      - { id: oil, ingredient: neutral-oil, name: neutral oil, quantity: 30, unit: ml }
+  - name: For the pan
     items:
-      - { id: jam, ingredient: jam, name: jam or marmalade, note: Or chocolate spread }
+      - { id: butter, ingredient: unsalted-butter, name: unsalted butter, quantity: 45, unit: g, prep: Cut into small cubes }
 steps:
-  - { id: batter, title: Make the batter, text: "Use a hand whisk; a mixer adds air bubbles (if you use one, let the bubbles settle). Whisk the {{salt}} and {{lemon}} zest into the {{flour}}. Mix the {{milk}} and {{water}}. Whisk a little of the flour into the {{eggs}} until smooth, then add the liquid and the rest of the flour in turns so it doesn't go lumpy. Whisk in the {{butter}} and {{rum}} last." }
-  - { id: rest, title: Rest, duration: 30 min, text: "Leave the batter at room temperature." }
-  - { id: fry, title: Fry, text: "Wipe a 22 cm frying pan with a few drops of {{oil}} and get it really hot. Too soon and the first pancake comes out thick and ragged. Pour in just enough batter for a thin layer and swirl to spread it. After 1–2 minutes loosen the edges with a rubber spatula; when it comes free all round, flip it and cook the second side a little less. Repeat with the rest of the batter." }
-  - { id: serve, title: Serve, text: "Serve straight away, stacked on a plate with the {{jam}} alongside. Everyone spreads their own and rolls it up to eat by hand." }
+  - { id: batter, title: Make the batter, text: "Whisk the {{flour}}, {{sugar}} and {{salt}} together. Make a well, add the {{eggs}} and whisk in a little flour to make a thick paste. Gradually whisk in the {{milk}} until smooth, then whisk in the {{water}} and {{oil}}. The batter should be glossy and pourable." }
+  - { id: rest, title: Rest the batter, duration: 1 h, text: "Cover and leave at room temperature for 1 hour. If it becomes too thick to pour easily, whisk in a splash of milk or water." }
+  - { id: fry, title: Cook the crêpes, text: "Heat a 24 cm non-stick pan over medium-high heat, or medium if the stove runs hot. Melt a little {{butter}} and wipe away the excess, leaving a thin film. Lift the pan off the heat, pour in about 60 ml batter and immediately swirl to coat the base thinly, filling gaps with the last of the batter. Cook for 45–60 seconds until lightly golden underneath, flip and cook for about 30 seconds more. Stack on a plate and repeat, adding a little butter for each crêpe." }
+  - { id: serve, title: Serve, text: "Serve warm, rolled or folded, with your favourite sweet topping." }
 sources:
-  - { title: "Croatian cookbook, 'Lazy Morning' chapter, pp. 23–25 — Pancakes (palačinke); supplied book photographs" }
+  - { title: "JB's Crêpes · RecipeTin Eats", url: "https://www.recipetineats.com/crepes/" }
 issues: []
 adaptations:
-  - "Small dry amounts converted from ml to grams using each ingredient's own weight, with spoon hints where useful."
-  - "Converted to metric: spoons to ml (15 ml and 5 ml per spoon); kept the book's gram and ml amounts."
-  - "Rewrote the method concisely in my own words."
-  - "The book's baked cheese version is a separate recipe here, so each has its own shopping list."
+  - "Converted the source's volume measures to metric; dry ingredient weights are approximate."
 ---
 
-Close cousins of French crêpes. They should be very thin, never thick or chewy.
-
-For an oven-baked version with a sweet cottage cheese filling, see [Baked Cheese Pancakes](../baked-cheese-palacinke/).
+The separate [Baked Cheese Pancakes](../baked-cheese-palacinke/) recipe keeps its original Croatian batter, filling and baking method.

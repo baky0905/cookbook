@@ -11,6 +11,7 @@ ingredients:
   - { id: active-dry-yeast, name: active dry yeast, aisle: Dry goods, kcal: 325, norway: "Tørrgjær original (Idun) in the baking aisle; it can go straight into the flour, but start it anyway as the method says. Fresh gjær (50 g, Idun) is in the dairy fridge" }
   - { id: aioli, name: aioli, aisle: "Oils & condiments", kcal: 680, norway: "Ready-made aioli near the mayonnaise, or make it from the mayonnaise recipe with garlic" }
   - { id: allspice, name: ground allspice, aisle: "Herbs & spices", norway: "Allehånde, spice shelf (Hindu or Santa Maria)" }
+  - { id: ammonium-bicarbonate, name: baker's ammonia, aisle: Dry goods, norway: "Hornsalt, in the baking aisle" }
   - { id: apple, name: apple, aisle: Produce, kcal: 52, weights: { piece: 180 }, norway: "Norwegian apples in autumn. For baking pick a firm, tart one such as Aroma or Granny Smith" }
   - { id: apple-cider-vinegar, name: apple cider vinegar, aisle: "Oils & condiments", kcal: 21, density: 1.01, norway: "Eplecidereddik, vinegar shelf" }
   - { id: avocado-oil, name: avocado oil, aisle: "Oils & condiments", kcal: 884, density: 0.92, norway: "Avokadoolje, oil shelf in bigger shops; rapsolje is a cheaper swap" }
@@ -108,6 +109,7 @@ ingredients:
   - { id: instant-yeast, name: instant yeast, aisle: Dry goods, kcal: 325, norway: "Tørrgjær original (Idun) in the baking aisle. Fresh gjær (50 g, Idun, dairy fridge) also works: use about 3 times the weight of dry yeast" }
   - { id: jam, name: jam, aisle: "Tins & jars", kcal: 250, norway: "Syltetøy; Nora or Den Gamle Fabrikk" }
   - { id: jasmine-rice, name: jasmine rice, aisle: Dry goods, kcal: 360, staple: true, norway: "Jasminris (e.g. Tilda or store brand); big bags are cheaper at innvandrerbutikker" }
+  - { id: kefir, name: kefir, aisle: "Dairy & eggs", norway: "Kefir, in the dairy fridge" }
   - { id: ketchup, name: ketchup, aisle: "Oils & condiments", kcal: 112, density: 1.15 }
   - { id: kohlrabi, name: kohlrabi, aisle: Produce, kcal: 27, weights: { piece: 300 }, norway: "Knutekål. Careful: in western Norway kålrabi usually means swede (kålrot)" }
   - { id: kranjska-sausage, name: Kranjska sausages, aisle: "Meat & fish", kcal: 300, weights: { piece: 180 } }
