@@ -1,0 +1,1075 @@
+{
+  "plan": {
+    "id": "2026-w45",
+    "title": "Week 45",
+    "start": "2026-11-02",
+    "notes": "Two days per dish: cook once, eat leftovers the next day."
+  },
+  "takenAt": "2026-11-09T11:32:26.093Z",
+  "meals": [
+    {
+      "date": "2026-11-02",
+      "meal": "Dinner",
+      "title": "Baked cauliflower",
+      "note": "Using the 800 g cauliflower at home; double batch, so use a bigger dish or two dishes",
+      "leftoversFrom": null,
+      "servings": 8,
+      "batches": null,
+      "factor": 2,
+      "recipe": {
+        "id": "baked-cauliflower",
+        "title": "Baked cauliflower",
+        "category": "Mains",
+        "tags": [
+          "croatian",
+          "cauliflower",
+          "cheese",
+          "vegetarian",
+          "oven-baked"
+        ],
+        "status": "reviewed",
+        "yield": "4 portions",
+        "kcalPerPortion": 86,
+        "version": "1240d57b19"
+      }
+    },
+    {
+      "date": "2026-11-03",
+      "meal": "Dinner",
+      "title": null,
+      "note": null,
+      "leftoversFrom": "2026-11-02-dinner",
+      "servings": null,
+      "batches": null,
+      "factor": null,
+      "recipe": null
+    },
+    {
+      "date": "2026-11-04",
+      "meal": "Dinner",
+      "title": "Roasted Tomato Soup",
+      "note": null,
+      "leftoversFrom": null,
+      "servings": null,
+      "batches": null,
+      "factor": 1,
+      "recipe": {
+        "id": "roasted-tomato-soup",
+        "title": "Roasted Tomato Soup",
+        "category": "Soups & stews",
+        "tags": [
+          "oven-baked",
+          "make-ahead"
+        ],
+        "status": "cooked",
+        "yield": "about 4 portions",
+        "kcalPerPortion": 238,
+        "version": "d1649862e6"
+      }
+    },
+    {
+      "date": "2026-11-05",
+      "meal": "Dinner",
+      "title": null,
+      "note": null,
+      "leftoversFrom": "2026-11-04-dinner",
+      "servings": null,
+      "batches": null,
+      "factor": null,
+      "recipe": null
+    },
+    {
+      "date": "2026-11-06",
+      "meal": "Dinner",
+      "title": "Halal Cart Chicken and Rice",
+      "note": "First time cooking it. Keep sauces, rice and chicken separate for tomorrow",
+      "leftoversFrom": null,
+      "servings": null,
+      "batches": null,
+      "factor": 1,
+      "recipe": {
+        "id": "halal-cart-chicken-and-rice",
+        "title": "Halal Cart Chicken and Rice",
+        "category": "Mains",
+        "tags": [
+          "american",
+          "middle-eastern",
+          "chicken",
+          "rice",
+          "pan-fried",
+          "oven-baked"
+        ],
+        "status": "cooked",
+        "yield": "4 portions",
+        "kcalPerPortion": 891,
+        "version": "45c68b8ea8"
+      }
+    },
+    {
+      "date": "2026-11-07",
+      "meal": "Dinner",
+      "title": null,
+      "note": null,
+      "leftoversFrom": "2026-11-06-dinner",
+      "servings": null,
+      "batches": null,
+      "factor": null,
+      "recipe": null
+    }
+  ],
+  "extras": [],
+  "warnings": [
+    "Baked cauliflower: scaled ×2; check pan size and baking time.",
+    "Roasted Tomato Soup: check recipe notes before shopping.",
+    "Halal Cart Chicken and Rice: check recipe notes before shopping."
+  ],
+  "shopping": [
+    {
+      "ingredient": "cauliflower",
+      "name": "cauliflower",
+      "quantity": 800,
+      "max": 800,
+      "unit": "g",
+      "category": "Produce",
+      "optional": false,
+      "staple": false,
+      "norway": "Blomkål; Norwegian in season from July to October",
+      "recipes": [
+        "Baked cauliflower"
+      ],
+      "notes": [
+        "The book describes this as one medium head; use the stated mass for shopping and scaling."
+      ],
+      "have": 0,
+      "needed": 800,
+      "neededMax": 800,
+      "usuallyStocked": false
+    },
+    {
+      "ingredient": "cherry-tomatoes",
+      "name": "cherry tomatoes",
+      "quantity": 500,
+      "max": 500,
+      "unit": "g",
+      "category": "Produce",
+      "optional": false,
+      "staple": false,
+      "norway": "Cherrytomater; Norwegian ones in summer, otherwise the most flavourful option in winter",
+      "recipes": [
+        "Roasted Tomato Soup"
+      ],
+      "notes": [],
+      "have": 0,
+      "needed": 500,
+      "neededMax": 500,
+      "usuallyStocked": false
+    },
+    {
+      "ingredient": "garlic",
+      "name": "garlic",
+      "quantity": 9,
+      "max": 13,
+      "unit": "clove",
+      "category": "Produce",
+      "optional": false,
+      "staple": false,
+      "norway": "Hvitløk; buy firm whole heads, not peeled garlic in jars",
+      "recipes": [
+        "Roasted Tomato Soup",
+        "Halal Cart Chicken and Rice"
+      ],
+      "notes": [],
+      "have": 0,
+      "needed": 9,
+      "neededMax": 13,
+      "usuallyStocked": false
+    },
+    {
+      "ingredient": "iceberg-lettuce",
+      "name": "iceberg lettuce",
+      "quantity": null,
+      "max": null,
+      "unit": "",
+      "category": "Produce",
+      "optional": false,
+      "staple": false,
+      "norway": "Isbergsalat; romanosalat or hjertesalat also work",
+      "recipes": [
+        "Halal Cart Chicken and Rice"
+      ],
+      "notes": [
+        "Iceberg, romaine or little gem. The source gives no amount"
+      ],
+      "have": 0,
+      "needed": null,
+      "neededMax": null,
+      "usuallyStocked": false
+    },
+    {
+      "ingredient": "lemon-juice",
+      "name": "lemon juice",
+      "quantity": 25,
+      "max": 25,
+      "unit": "ml",
+      "category": "Produce",
+      "optional": false,
+      "staple": false,
+      "norway": "Squeeze fresh sitroner; bottled sitronsaft is fine for mayonnaise",
+      "recipes": [
+        "Halal Cart Chicken and Rice"
+      ],
+      "notes": [],
+      "have": 0,
+      "needed": 25,
+      "neededMax": 25,
+      "usuallyStocked": false
+    },
+    {
+      "ingredient": "mini-sweet-pepper",
+      "name": "mini sweet peppers",
+      "quantity": 2,
+      "max": 2,
+      "unit": "piece",
+      "category": "Produce",
+      "optional": false,
+      "staple": false,
+      "norway": "Snackpaprika",
+      "recipes": [
+        "Roasted Tomato Soup"
+      ],
+      "notes": [],
+      "have": 0,
+      "needed": 2,
+      "neededMax": 2,
+      "usuallyStocked": false
+    },
+    {
+      "ingredient": "onion",
+      "name": "onions",
+      "quantity": 1,
+      "max": 1,
+      "unit": "piece",
+      "category": "Produce",
+      "optional": false,
+      "staple": false,
+      "norway": "Gul løk",
+      "recipes": [
+        "Roasted Tomato Soup"
+      ],
+      "notes": [],
+      "have": 0,
+      "needed": 1,
+      "neededMax": 1,
+      "usuallyStocked": false
+    },
+    {
+      "ingredient": "red-onion",
+      "name": "red onions",
+      "quantity": 1,
+      "max": 1,
+      "unit": "piece",
+      "category": "Produce",
+      "optional": false,
+      "staple": false,
+      "norway": "Rødløk",
+      "recipes": [
+        "Roasted Tomato Soup"
+      ],
+      "notes": [],
+      "have": 0,
+      "needed": 1,
+      "neededMax": 1,
+      "usuallyStocked": false
+    },
+    {
+      "ingredient": "tomato",
+      "name": "tomatoes",
+      "quantity": 1000,
+      "max": 1000,
+      "unit": "g",
+      "category": "Produce",
+      "optional": false,
+      "staple": false,
+      "norway": "Tomater; in winter plommetomater or cherrytomater have more flavour",
+      "recipes": [
+        "Roasted Tomato Soup"
+      ],
+      "notes": [],
+      "have": 0,
+      "needed": 1000,
+      "neededMax": 1000,
+      "usuallyStocked": false
+    },
+    {
+      "ingredient": "tomato",
+      "name": "tomatoes",
+      "quantity": null,
+      "max": null,
+      "unit": "",
+      "category": "Produce",
+      "optional": false,
+      "staple": false,
+      "norway": "Tomater; in winter plommetomater or cherrytomater have more flavour",
+      "recipes": [
+        "Halal Cart Chicken and Rice"
+      ],
+      "notes": [
+        "The source gives no amount"
+      ],
+      "have": 0,
+      "needed": null,
+      "neededMax": null,
+      "usuallyStocked": false
+    },
+    {
+      "ingredient": "chicken-thigh",
+      "name": "chicken thigh fillets",
+      "quantity": 600,
+      "max": 600,
+      "unit": "g",
+      "category": "Meat & fish",
+      "optional": false,
+      "staple": false,
+      "norway": "Kyllinglårfilet, boneless thigh (Prior, Solvinge or Den Stolte Hane)",
+      "recipes": [
+        "Halal Cart Chicken and Rice"
+      ],
+      "notes": [],
+      "have": 0,
+      "needed": 600,
+      "neededMax": 600,
+      "usuallyStocked": false
+    },
+    {
+      "ingredient": "butter",
+      "name": "butter",
+      "quantity": null,
+      "max": null,
+      "unit": "",
+      "category": "Dairy & eggs",
+      "optional": false,
+      "staple": false,
+      "norway": "Smør (Tine Meierismør is lightly salted)",
+      "recipes": [
+        "Baked cauliflower"
+      ],
+      "notes": [
+        "Enough to grease the baking dish."
+      ],
+      "have": 0,
+      "needed": null,
+      "neededMax": null,
+      "usuallyStocked": false
+    },
+    {
+      "ingredient": "butter",
+      "name": "butter",
+      "quantity": 30,
+      "max": 30,
+      "unit": "g",
+      "category": "Dairy & eggs",
+      "optional": false,
+      "staple": false,
+      "norway": "Smør (Tine Meierismør is lightly salted)",
+      "recipes": [
+        "Roasted Tomato Soup"
+      ],
+      "notes": [],
+      "have": 0,
+      "needed": 30,
+      "neededMax": 30,
+      "usuallyStocked": false
+    },
+    {
+      "ingredient": "cheddar",
+      "name": "cheddar",
+      "quantity": 100,
+      "max": 100,
+      "unit": "g",
+      "category": "Dairy & eggs",
+      "optional": false,
+      "staple": false,
+      "norway": "Sold in most shops; lagret (mature) cheddar has more flavour, and Norvegia works at a pinch",
+      "recipes": [
+        "Baked cauliflower"
+      ],
+      "notes": [
+        "Use vegetarian cheese if needed."
+      ],
+      "have": 0,
+      "needed": 100,
+      "neededMax": 100,
+      "usuallyStocked": false
+    },
+    {
+      "ingredient": "egg",
+      "name": "eggs",
+      "quantity": 4,
+      "max": 4,
+      "unit": "piece",
+      "category": "Dairy & eggs",
+      "optional": false,
+      "staple": false,
+      "norway": "Egg; frittgående if you can",
+      "recipes": [
+        "Baked cauliflower"
+      ],
+      "notes": [],
+      "have": 0,
+      "needed": 4,
+      "neededMax": 4,
+      "usuallyStocked": false
+    },
+    {
+      "ingredient": "heavy-cream",
+      "name": "heavy cream",
+      "quantity": 120,
+      "max": 120,
+      "unit": "ml",
+      "category": "Dairy & eggs",
+      "optional": true,
+      "staple": false,
+      "norway": "Kremfløte (Tine, 37% fat)",
+      "recipes": [
+        "Roasted Tomato Soup"
+      ],
+      "notes": [],
+      "have": 0,
+      "needed": 120,
+      "neededMax": 120,
+      "usuallyStocked": false
+    },
+    {
+      "ingredient": "plain-yoghurt",
+      "name": "plain yoghurt",
+      "quantity": 150,
+      "max": 150,
+      "unit": "g",
+      "category": "Dairy & eggs",
+      "optional": false,
+      "staple": false,
+      "norway": "Yoghurt naturell (Tine) or gresk yoghurt",
+      "recipes": [
+        "Halal Cart Chicken and Rice"
+      ],
+      "notes": [
+        "Not Greek yoghurt"
+      ],
+      "have": 0,
+      "needed": 150,
+      "neededMax": 150,
+      "usuallyStocked": false
+    },
+    {
+      "ingredient": "sour-cream",
+      "name": "sour cream",
+      "quantity": 400,
+      "max": 400,
+      "unit": "ml",
+      "category": "Dairy & eggs",
+      "optional": false,
+      "staple": false,
+      "norway": "Lettrømme (17%) is closest to Balkan kiselo vrhnje; seterrømme (35%) is richer and splits less when heated",
+      "recipes": [
+        "Baked cauliflower"
+      ],
+      "notes": [
+        "Crème fraîche is an alternative."
+      ],
+      "have": 0,
+      "needed": 400,
+      "neededMax": 400,
+      "usuallyStocked": false
+    },
+    {
+      "ingredient": "unsalted-butter",
+      "name": "unsalted butter",
+      "quantity": 15,
+      "max": 15,
+      "unit": "g",
+      "category": "Dairy & eggs",
+      "optional": false,
+      "staple": false,
+      "norway": "Usaltet smør (Tine), next to the ordinary butter",
+      "recipes": [
+        "Halal Cart Chicken and Rice"
+      ],
+      "notes": [],
+      "have": 0,
+      "needed": 15,
+      "neededMax": 15,
+      "usuallyStocked": false
+    },
+    {
+      "ingredient": "long-grain-rice",
+      "name": "long-grain rice",
+      "quantity": 200,
+      "max": 200,
+      "unit": "g",
+      "category": "Dry goods",
+      "optional": false,
+      "staple": false,
+      "norway": "Langkornet ris or basmati (e.g. Ben's Original or Tilda)",
+      "recipes": [
+        "Halal Cart Chicken and Rice"
+      ],
+      "notes": [],
+      "have": 0,
+      "needed": 200,
+      "neededMax": 200,
+      "usuallyStocked": false
+    },
+    {
+      "ingredient": "sugar",
+      "name": "sugar",
+      "quantity": 2,
+      "max": 2,
+      "unit": "g",
+      "category": "Dry goods",
+      "optional": false,
+      "staple": true,
+      "norway": "Strøsukker (Dan Sukker or store brand)",
+      "recipes": [
+        "Roasted Tomato Soup"
+      ],
+      "notes": [],
+      "have": 0,
+      "needed": 2,
+      "neededMax": 2,
+      "usuallyStocked": true
+    },
+    {
+      "ingredient": "sugar",
+      "name": "sugar",
+      "quantity": 1,
+      "max": 2,
+      "unit": "g",
+      "category": "Dry goods",
+      "optional": true,
+      "staple": true,
+      "norway": "Strøsukker (Dan Sukker or store brand)",
+      "recipes": [
+        "Roasted Tomato Soup"
+      ],
+      "notes": [
+        "Only if sour; additional to the 2 g already in the soup"
+      ],
+      "have": 0,
+      "needed": 1,
+      "neededMax": 2,
+      "usuallyStocked": true
+    },
+    {
+      "ingredient": "chicken-bouillon-paste",
+      "name": "chicken bouillon paste",
+      "quantity": 25,
+      "max": 25,
+      "unit": "g",
+      "category": "Tins & jars",
+      "optional": false,
+      "staple": false,
+      "norway": "Better Than Bouillon is rarely sold here. Use a chicken fond concentrate (Touch of Taste kyllingfond) or a crumbled kyllingbuljong cube instead, and salt less: both are salty",
+      "recipes": [
+        "Halal Cart Chicken and Rice"
+      ],
+      "notes": [
+        "Better Than Bouillon in the source. With a fond concentrate or cube instead, start with less and taste the liquid: it should be well seasoned"
+      ],
+      "have": 0,
+      "needed": 25,
+      "neededMax": 25,
+      "usuallyStocked": false
+    },
+    {
+      "ingredient": "chicken-stock",
+      "name": "chicken stock",
+      "quantity": 400,
+      "max": 400,
+      "unit": "ml",
+      "category": "Tins & jars",
+      "optional": false,
+      "staple": false,
+      "norway": "Kyllingkraft in cartons or bottles (Jacobs Utvalgte, Maggi or Stange), or Touch of Taste kyllingfond concentrate",
+      "recipes": [
+        "Halal Cart Chicken and Rice"
+      ],
+      "notes": [],
+      "have": 0,
+      "needed": 400,
+      "neededMax": 400,
+      "usuallyStocked": false
+    },
+    {
+      "ingredient": "tomato-paste",
+      "name": "tomato paste",
+      "quantity": 16,
+      "max": 16,
+      "unit": "g",
+      "category": "Tins & jars",
+      "optional": false,
+      "staple": false,
+      "norway": "Tomatpuré (in tubes or tins)",
+      "recipes": [
+        "Roasted Tomato Soup"
+      ],
+      "notes": [],
+      "have": 0,
+      "needed": 16,
+      "neededMax": 16,
+      "usuallyStocked": false
+    },
+    {
+      "ingredient": "vegetable-stock",
+      "name": "vegetable stock",
+      "quantity": 500,
+      "max": 500,
+      "unit": "ml",
+      "category": "Tins & jars",
+      "optional": false,
+      "staple": false,
+      "norway": "Grønnsakskraft, or grønnsaksbuljong (Maggi, Knorr or Toro) dissolved in water",
+      "recipes": [
+        "Roasted Tomato Soup"
+      ],
+      "notes": [],
+      "have": 0,
+      "needed": 500,
+      "neededMax": 500,
+      "usuallyStocked": false
+    },
+    {
+      "ingredient": "balsamic-vinegar",
+      "name": "balsamic vinegar",
+      "quantity": null,
+      "max": null,
+      "unit": "",
+      "category": "Oils & condiments",
+      "optional": true,
+      "staple": false,
+      "norway": "Balsamicoeddik, vinegar shelf",
+      "recipes": [
+        "Roasted Tomato Soup"
+      ],
+      "notes": [
+        "Omit by default; add a few drops at the end only if the soup needs acidity"
+      ],
+      "have": 0,
+      "needed": null,
+      "neededMax": null,
+      "usuallyStocked": false
+    },
+    {
+      "ingredient": "louisiana-hot-sauce",
+      "name": "Louisiana-style hot sauce",
+      "quantity": 60,
+      "max": 60,
+      "unit": "g",
+      "category": "Oils & condiments",
+      "optional": false,
+      "staple": false,
+      "norway": "A thin cayenne-and-vinegar hot sauce from the hot-sauce shelf. Tabasco is much hotter and sharper; use about a third as much, topped up with water",
+      "recipes": [
+        "Halal Cart Chicken and Rice"
+      ],
+      "notes": [],
+      "have": 0,
+      "needed": 60,
+      "neededMax": 60,
+      "usuallyStocked": false
+    },
+    {
+      "ingredient": "mayonnaise",
+      "name": "mayonnaise",
+      "quantity": 125,
+      "max": 125,
+      "unit": "g",
+      "category": "Oils & condiments",
+      "optional": false,
+      "staple": false,
+      "norway": "Majones (Mills or Idun) in tubes or jars, not remulade",
+      "recipes": [
+        "Halal Cart Chicken and Rice"
+      ],
+      "notes": [],
+      "have": 0,
+      "needed": 125,
+      "neededMax": 125,
+      "usuallyStocked": false
+    },
+    {
+      "ingredient": "neutral-oil",
+      "name": "neutral oil",
+      "quantity": 45,
+      "max": 60,
+      "unit": "ml",
+      "category": "Oils & condiments",
+      "optional": false,
+      "staple": false,
+      "norway": "Rapsolje, the standard Norwegian cooking oil",
+      "recipes": [
+        "Halal Cart Chicken and Rice"
+      ],
+      "notes": [],
+      "have": 0,
+      "needed": 45,
+      "neededMax": 60,
+      "usuallyStocked": false
+    },
+    {
+      "ingredient": "olive-oil",
+      "name": "olive oil",
+      "quantity": 40,
+      "max": 40,
+      "unit": "ml",
+      "category": "Oils & condiments",
+      "optional": false,
+      "staple": false,
+      "norway": "Olivenolje; ekstra virgin for finishing and dressing, a cheaper mild one for frying",
+      "recipes": [
+        "Roasted Tomato Soup",
+        "Halal Cart Chicken and Rice"
+      ],
+      "notes": [
+        "Estimated"
+      ],
+      "have": 0,
+      "needed": 40,
+      "neededMax": 40,
+      "usuallyStocked": false
+    },
+    {
+      "ingredient": "sriracha",
+      "name": "Sriracha",
+      "quantity": 120,
+      "max": 120,
+      "unit": "g",
+      "category": "Oils & condiments",
+      "optional": false,
+      "staple": false,
+      "norway": "Sriracha chilisaus, Asian shelf in most chains",
+      "recipes": [
+        "Halal Cart Chicken and Rice"
+      ],
+      "notes": [],
+      "have": 0,
+      "needed": 120,
+      "neededMax": 120,
+      "usuallyStocked": false
+    },
+    {
+      "ingredient": "worcestershire-sauce",
+      "name": "Worcestershire sauce",
+      "quantity": 15,
+      "max": 15,
+      "unit": "ml",
+      "category": "Oils & condiments",
+      "optional": false,
+      "staple": false,
+      "norway": "Worcestershiresaus (Lea & Perrins)",
+      "recipes": [
+        "Roasted Tomato Soup"
+      ],
+      "notes": [],
+      "have": 0,
+      "needed": 15,
+      "neededMax": 15,
+      "usuallyStocked": false
+    },
+    {
+      "ingredient": "black-pepper",
+      "name": "black pepper",
+      "quantity": null,
+      "max": null,
+      "unit": "",
+      "category": "Herbs & spices",
+      "optional": false,
+      "staple": true,
+      "norway": "Sort pepper; whole peppercorns in a grinder taste much better than ground",
+      "recipes": [
+        "Baked cauliflower",
+        "Roasted Tomato Soup"
+      ],
+      "notes": [
+        "To taste, for the top of the bake."
+      ],
+      "have": 0,
+      "needed": null,
+      "neededMax": null,
+      "usuallyStocked": true
+    },
+    {
+      "ingredient": "black-pepper",
+      "name": "black pepper",
+      "quantity": 3,
+      "max": 3,
+      "unit": "g",
+      "category": "Herbs & spices",
+      "optional": false,
+      "staple": true,
+      "norway": "Sort pepper; whole peppercorns in a grinder taste much better than ground",
+      "recipes": [
+        "Halal Cart Chicken and Rice"
+      ],
+      "notes": [],
+      "have": 0,
+      "needed": 3,
+      "neededMax": 3,
+      "usuallyStocked": true
+    },
+    {
+      "ingredient": "cayenne-pepper",
+      "name": "cayenne pepper",
+      "quantity": null,
+      "max": null,
+      "unit": "",
+      "category": "Herbs & spices",
+      "optional": false,
+      "staple": false,
+      "norway": "Kajennepepper, spice shelf",
+      "recipes": [
+        "Roasted Tomato Soup"
+      ],
+      "notes": [
+        "To taste"
+      ],
+      "have": 0,
+      "needed": null,
+      "neededMax": null,
+      "usuallyStocked": false
+    },
+    {
+      "ingredient": "dried-oregano",
+      "name": "dried oregano",
+      "quantity": 5,
+      "max": 5,
+      "unit": "g",
+      "category": "Herbs & spices",
+      "optional": false,
+      "staple": false,
+      "norway": "Oregano (tørket), spice shelf",
+      "recipes": [
+        "Roasted Tomato Soup",
+        "Halal Cart Chicken and Rice"
+      ],
+      "notes": [],
+      "have": 0,
+      "needed": 5,
+      "neededMax": 5,
+      "usuallyStocked": false
+    },
+    {
+      "ingredient": "dried-rosemary",
+      "name": "dried rosemary",
+      "quantity": null,
+      "max": null,
+      "unit": "",
+      "category": "Herbs & spices",
+      "optional": false,
+      "staple": false,
+      "norway": "Rosmarin (tørket)",
+      "recipes": [
+        "Roasted Tomato Soup"
+      ],
+      "notes": [
+        "A light sprinkle"
+      ],
+      "have": 0,
+      "needed": null,
+      "neededMax": null,
+      "usuallyStocked": false
+    },
+    {
+      "ingredient": "dried-thyme",
+      "name": "dried thyme",
+      "quantity": null,
+      "max": null,
+      "unit": "",
+      "category": "Herbs & spices",
+      "optional": false,
+      "staple": false,
+      "norway": "Timian (tørket)",
+      "recipes": [
+        "Roasted Tomato Soup"
+      ],
+      "notes": [
+        "A light sprinkle"
+      ],
+      "have": 0,
+      "needed": null,
+      "neededMax": null,
+      "usuallyStocked": false
+    },
+    {
+      "ingredient": "garlic-powder",
+      "name": "garlic powder",
+      "quantity": 8,
+      "max": 8,
+      "unit": "g",
+      "category": "Herbs & spices",
+      "optional": false,
+      "staple": false,
+      "recipes": [
+        "Halal Cart Chicken and Rice"
+      ],
+      "notes": [],
+      "have": 0,
+      "needed": 8,
+      "neededMax": 8,
+      "usuallyStocked": false
+    },
+    {
+      "ingredient": "ground-coriander",
+      "name": "ground coriander",
+      "quantity": 3,
+      "max": 3,
+      "unit": "g",
+      "category": "Herbs & spices",
+      "optional": false,
+      "staple": false,
+      "norway": "Koriander (malt), spice shelf. Not fresh koriander",
+      "recipes": [
+        "Halal Cart Chicken and Rice"
+      ],
+      "notes": [],
+      "have": 0,
+      "needed": 3,
+      "neededMax": 3,
+      "usuallyStocked": false
+    },
+    {
+      "ingredient": "ground-cumin",
+      "name": "ground cumin",
+      "quantity": 5,
+      "max": 5,
+      "unit": "g",
+      "category": "Herbs & spices",
+      "optional": false,
+      "staple": false,
+      "norway": "Spisskummen (malt), spice shelf. Not karve, which is caraway",
+      "recipes": [
+        "Halal Cart Chicken and Rice"
+      ],
+      "notes": [],
+      "have": 0,
+      "needed": 5,
+      "neededMax": 5,
+      "usuallyStocked": false
+    },
+    {
+      "ingredient": "onion-powder",
+      "name": "onion powder",
+      "quantity": 8,
+      "max": 8,
+      "unit": "g",
+      "category": "Herbs & spices",
+      "optional": false,
+      "staple": false,
+      "recipes": [
+        "Halal Cart Chicken and Rice"
+      ],
+      "notes": [],
+      "have": 0,
+      "needed": 8,
+      "neededMax": 8,
+      "usuallyStocked": false
+    },
+    {
+      "ingredient": "salt",
+      "name": "salt",
+      "quantity": null,
+      "max": null,
+      "unit": "",
+      "category": "Herbs & spices",
+      "optional": false,
+      "staple": true,
+      "recipes": [
+        "Baked cauliflower",
+        "Roasted Tomato Soup"
+      ],
+      "notes": [
+        "To taste, for the cooking water and egg mixture",
+        "To taste"
+      ],
+      "have": 0,
+      "needed": null,
+      "neededMax": null,
+      "usuallyStocked": true
+    },
+    {
+      "ingredient": "salt",
+      "name": "salt",
+      "quantity": 2.5,
+      "max": 2.5,
+      "unit": "ml",
+      "category": "Herbs & spices",
+      "optional": false,
+      "staple": true,
+      "recipes": [
+        "Roasted Tomato Soup"
+      ],
+      "notes": [],
+      "have": 0,
+      "needed": 2.5,
+      "neededMax": 2.5,
+      "usuallyStocked": true
+    },
+    {
+      "ingredient": "salt",
+      "name": "salt",
+      "quantity": 13,
+      "max": 13,
+      "unit": "g",
+      "category": "Herbs & spices",
+      "optional": false,
+      "staple": true,
+      "recipes": [
+        "Halal Cart Chicken and Rice"
+      ],
+      "notes": [
+        "Kosher salt in the source"
+      ],
+      "have": 0,
+      "needed": 13,
+      "neededMax": 13,
+      "usuallyStocked": true
+    },
+    {
+      "ingredient": "smoked-paprika",
+      "name": "smoked paprika",
+      "quantity": 2,
+      "max": 2,
+      "unit": "g",
+      "category": "Herbs & spices",
+      "optional": false,
+      "staple": false,
+      "norway": "Røkt paprikapulver, spice shelf",
+      "recipes": [
+        "Roasted Tomato Soup"
+      ],
+      "notes": [],
+      "have": 0,
+      "needed": 2,
+      "neededMax": 2,
+      "usuallyStocked": false
+    },
+    {
+      "ingredient": "turmeric",
+      "name": "turmeric",
+      "quantity": 2,
+      "max": 2,
+      "unit": "g",
+      "category": "Herbs & spices",
+      "optional": false,
+      "staple": false,
+      "norway": "Gurkemeie, spice shelf",
+      "recipes": [
+        "Halal Cart Chicken and Rice"
+      ],
+      "notes": [],
+      "have": 0,
+      "needed": 2,
+      "neededMax": 2,
+      "usuallyStocked": false
+    }
+  ]
+}
