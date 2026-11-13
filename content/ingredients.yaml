@@ -8,6 +8,7 @@
 # shop: false for things you never buy (water, ice)
 # norway: buying tip for Norwegian shops (Norwegian name, which product to pick, swaps); shown on recipes and shopping lists
 ingredients:
+  - { id: petit-beurre, name: petit beurre biscuits, aisle: Dry goods, norway: "Marie biscuits or similar plain tea biscuits" }
   - { id: active-dry-yeast, name: active dry yeast, aisle: Dry goods, kcal: 325, norway: "Tørrgjær original (Idun) in the baking aisle; it can go straight into the flour, but start it anyway as the method says. Fresh gjær (50 g, Idun) is in the dairy fridge" }
   - { id: aioli, name: aioli, aisle: "Oils & condiments", kcal: 680, norway: "Ready-made aioli near the mayonnaise, or make it from the mayonnaise recipe with garlic" }
   - { id: allspice, name: ground allspice, aisle: "Herbs & spices", norway: "Allehånde, spice shelf (Hindu or Santa Maria)" }
