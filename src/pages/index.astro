@@ -17,7 +17,7 @@ const categories = recipeCategories.filter(c => recipes.some(r => r.data.categor
 const used = new Set(recipes.flatMap(r => r.data.tags));
 const tagGroups = vocabulary.map(({ name, tags }: { name: string; tags: string[] }) => ({ group: name, tags: tags.filter(t => used.has(t)).sort() })).filter(g => g.tags.length);
 const info = (r: any) => [r.time.total && `${r.time.total} total`, r.time.active && `${r.time.active} active`,
-  !/not recorded/.test(r.yield.label) && r.yield.label, r.status === 'needs-review' && 'needs review', r.status === 'cooked' && '✓ cooked'].filter(Boolean).join(' · ');
+  !/not recorded/.test(r.yield.label) && r.yield.label].filter(Boolean).join(' · ');
 ---
 <Base title="Recipes" active="recipes">
   <h1>Recipes</h1>
@@ -45,18 +45,30 @@ const info = (r: any) => [r.time.total && `${r.time.total} total`, r.time.active
     <p class="count" aria-live="polite" id="count">{recipes.length} recipes</p>
     <button class="btn" type="button" id="surprise" hidden data-js>🎲 What should I cook?</button>
   </div>
-  <ul class="results cards">
-    {recipes.map(r => (
-      <li data-search={r.search} data-category={r.data.category} data-tags={r.data.tags.join('|')} data-cat={categorySlug(r.data.category)}>
-        <a href={url(`recipes/${r.id}/`)}>
-          {r.thumb
-            ? <img class="card-img" src={r.thumb.src} width={r.thumb.width} height={r.thumb.height} alt="" loading="lazy" decoding="async">
-            : <span class="card-img placeholder" aria-hidden="true">{r.data.title[0]}</span>}
-          <span class="card-body"><span class="card-cat">{r.data.category}</span><span class="name">{r.data.title}{r.data.originalName && <span class="original-name" lang={r.data.originalName.lang}>{r.data.originalName.name}</span>}</span>{info(r.data) && <span class="info">{info(r.data)}</span>}</span>
-        </a>
-      </li>
-    ))}
-  </ul>
+  {/* One section per category, in course order, so the page reads as groups while scrolling. */}
+  {categories.map(c => {
+    const group = recipes.filter(r => r.data.category === c);
+    return (
+      <section class="cat-section" data-cat={categorySlug(c)} data-section={c} aria-labelledby={`cat-${categorySlug(c)}`}>
+        <h2 class="cat-heading" id={`cat-${categorySlug(c)}`}>{c} <span class="cat-count">{group.length}</span></h2>
+        <ul class="results cards">
+          {group.map(r => (
+            <li data-search={r.search} data-category={r.data.category} data-tags={r.data.tags.join('|')} data-cat={categorySlug(r.data.category)}>
+              <a href={url(`recipes/${r.id}/`)}>
+                {r.thumb
+                  ? <img class="card-img" src={r.thumb.src} width={r.thumb.width} height={r.thumb.height} alt="" loading="lazy" decoding="async">
+                  : <span class="card-img placeholder" aria-hidden="true">{r.data.title[0]}</span>}
+                {r.data.status === 'cooked'
+                  ? <span class="badge tested">✓ Tested</span>
+                  : <span class="badge untested">Untested</span>}
+                <span class="card-body"><span class="name">{r.data.title}{r.data.originalName && <span class="original-name" lang={r.data.originalName.lang}>{r.data.originalName.name}</span>}</span>{info(r.data) && <span class="info">{info(r.data)}</span>}</span>
+              </a>
+            </li>
+          ))}
+        </ul>
+      </section>
+    );
+  })}
   <p class="empty" id="empty" hidden>No recipes match. Try a single ingredient.</p>
 </Base>
 
@@ -82,6 +94,12 @@ const info = (r: any) => [r.time.total && `${r.time.total} total`, r.time.active
       row.hidden = !match;
       if (match) shown++;
     }
+    // Hide a category section when nothing in it matches; keep its count in step with the filter.
+    document.querySelectorAll<HTMLElement>('.cat-section').forEach(section => {
+      const visible = section.querySelectorAll('li:not([hidden])').length;
+      section.hidden = visible === 0;
+      section.querySelector('.cat-count')!.textContent = String(visible);
+    });
     document.getElementById('count')!.textContent = `${shown} ${shown === 1 ? 'recipe' : 'recipes'}`;
     document.getElementById('empty')!.hidden = shown > 0;
     document.querySelectorAll<HTMLElement>('[data-category]').forEach(b => b.tagName === 'BUTTON' && b.setAttribute('aria-pressed', String(b.dataset.category === category)));

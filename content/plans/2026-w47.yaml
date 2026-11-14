@@ -1,0 +1,12 @@
+id: 2026-w47
+title: Week 47
+start: '2026-11-16'
+notes: 'Two days per dish: cook once, eat leftovers the next day. All new recipes from the books.'
+meals:
+  - { date: '2026-11-16', meal: Dinner, recipe: shrimp-pasta-salad, servings: 4, note: "Doubled to cover Tuesday. Keep the sauce and avocado separate and add them fresh each day" }
+  - { date: '2026-11-17', meal: Dinner, leftoversFrom: 2026-11-16-dinner, note: "Maybe; if not, halve Monday's amounts" }
+  - { date: '2026-11-18', meal: Dinner, recipe: potato-leek-soup, servings: 4, note: "Doubled to cover Thursday. Make the salmon roses fresh each day" }
+  - { date: '2026-11-19', meal: Dinner, leftoversFrom: 2026-11-18-dinner }
+  - { date: '2026-11-20', meal: Dinner, recipe: spicy-carrot-soup, batches: 1, note: "Original is spicy; use sweet paprika instead of chilli powder for a mild soup" }
+# Extra shopping items: { ingredient: milk, quantity: 1, unit: l } or { name: dish soap }
+extras: []

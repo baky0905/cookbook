@@ -1,0 +1,8 @@
+id: 2026-w46
+title: Week 46
+start: '2026-11-09'
+notes: ''
+meals:
+  - { date: '2026-11-15', meal: Dinner, recipe: tagliatelle-ham-peas, batches: 1, note: "First time cooking it. The book doesn't give servings; 500 g fresh pasta is about 4 portions" }
+# Extra shopping items: { ingredient: milk, quantity: 1, unit: l } or { name: dish soap }
+extras: []

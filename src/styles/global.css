@@ -161,16 +161,23 @@ dialog.lightbox .close{position:fixed;top:12px;right:12px;background:var(--surfa
 .count{font-size:13px;color:var(--muted);margin:0 0 8px}
 .count-row{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:0 0 12px}
 .count-row .count{margin:0}
+/* Home page category sections; the heading stays visible while scrolling its group. */
+.cat-section{margin:0 0 28px}
+.cat-heading{position:sticky;top:env(safe-area-inset-top,0px);z-index:2;display:flex;align-items:baseline;gap:10px;margin:0 0 12px;padding:10px 0 8px;background:var(--paper);color:var(--accent);border-bottom:2px solid var(--accent)}
+.cat-count{font:600 12px/1 system-ui,sans-serif;color:var(--accent);background:var(--tint);padding:3px 8px;border-radius:999px}
 /* Recipe cards */
 .cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:16px;border-top:0}
 .cards>li{border:1px solid var(--line);border-top:4px solid var(--accent);border-radius:12px;overflow:hidden;background:var(--surface);transition:transform .15s,box-shadow .15s}
 .cards>li:hover{transform:translateY(-2px);box-shadow:var(--shadow)}
-.cards a{display:flex;flex-direction:column;align-items:stretch;gap:0;padding:0;height:100%}
+.cards a{display:flex;flex-direction:column;align-items:stretch;gap:0;padding:0;height:100%;position:relative}
+/* Tested (status: cooked) vs untested, readable at a glance over the photo. */
+.cards .badge{position:absolute;top:8px;left:8px;font-size:11px;font-weight:700;letter-spacing:.3px;padding:3px 9px;border-radius:999px;box-shadow:0 1px 4px rgba(0,0,0,.25)}
+.cards .badge.tested{background:var(--green);color:#fff}
+.cards .badge.untested{background:var(--amber-bg);color:var(--amber);border:1px solid var(--amber-line)}
 .cards a:hover{background:none}
 .cards .card-img{display:block;width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;border-radius:0}
 .cards .placeholder{display:grid;place-items:center;background:var(--tint);color:var(--accent);font:400 64px/1 Georgia,serif}
 .card-body{display:block;padding:10px 13px 13px}
-.card-cat{display:block;font-size:11px;letter-spacing:1px;text-transform:uppercase;font-weight:700;color:var(--accent);margin-bottom:2px}
 .cards .name{font:normal 19px/1.2 Georgia,serif;letter-spacing:-.2px}
 .cards .original-name{font-size:15px}
 .cards .original-name::before{content:" · "}
