@@ -37,6 +37,7 @@ steps:
   - { id: sweat, title: Sweat the vegetables, duration: 4–5 min, text: "Heat a large heavy pot over medium heat. Add a very generous amount of olive oil (it should almost coat the bottom), then the onion, fennel, garlic and a large pinch of salt. Stir and sweat." }
   - id: base
     title: Build the base
+    duration: 3–4 min
     text: |-
       Add a pinch of chilli flakes and let them infuse the oil for about a minute, then add the wine. Simmer for 2–3 minutes until the wine has mostly evaporated.
       Strain in all the shrimp broth (discard the shells); you should be adding about 1.2 l. Top up with stock or water if needed. Stir in the puréed tomatoes, bring to a boil over medium-high heat and simmer for about 15 minutes, until reduced by 15–20%.

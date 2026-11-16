@@ -36,7 +36,7 @@ steps:
   - { id: chop, title: Chop the vegetables, text: "Cut the vegetables and garlic into large chunks, then pulse in a food processor until finely chopped." }
   - { id: sweat, title: Sweat the vegetables, duration: 4–5 min, text: "Heat a heavy pot of about 5 l. Add the olive oil and sauté the vegetables with 2 pinches of salt until they release their liquid and start to colour." }
   - { id: meat, title: Roast the meat, text: "Meanwhile, spread the meat on a baking tray and roast at 230 °C until well browned and cooked through. The grill works well too and caramelises more." }
-  - { id: sauce, title: Build the sauce, text: "Add the tomato paste to the vegetables and fry for 1 minute, then deglaze with the wine and reduce by at least half. Add the tomatoes, bring to a simmer and add the milk." }
+  - { id: sauce, title: Build the sauce, duration: "1 min, then reduce", text: "Add the tomato paste to the vegetables and fry for 1 minute, then deglaze with the wine and reduce by at least half. Add the tomatoes, bring to a simmer and add the milk." }
   - { id: combine, title: Add the meat and stock, text: "Crumble the roasted meat by hand until very fine and add it to the sauce. Add the stock, bring to a simmer and add 2 pinches of salt." }
   - { id: oven, title: Finish in the oven, duration: 1 h 45 min, text: "Cook in a 150 °C oven, partially covered, for 1 hour. Remove the lid and cook at 160 °C for another 45 minutes, stirring once or twice." }
   - { id: season, title: Season and serve, text: "Skim off excess fat, then stir in the balsamic, sugar and salt. Adjust until balanced and bright. Serve with al dente tagliatelle or spaghetti and plenty of parmesan." }

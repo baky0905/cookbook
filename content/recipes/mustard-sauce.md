@@ -27,6 +27,7 @@ steps:
   - { id: infuse, title: Infuse the milk, text: "Halve the shallot and push a clove into each half. Put the milk in a pan with the shallot, thyme, bay leaf, salt and pepper and bring to a simmer over medium heat. Take off the heat and strain half the milk into the pan with the roux." }
   - id: thicken
     title: Thicken and finish
+    duration: 1–2 min after boiling
     text: |-
       Off the heat, whisk until smooth, then whisk in the rest of the milk. Thicken over medium-low heat, whisking constantly. After it comes to a light boil, keep whisking for a minute or two, then reduce the heat to very low and stir in the cream.
       Stir in the vinegar and wholegrain mustard; from now on the sauce must not boil. Adjust the consistency with more cream, and add Dijon mustard for a yellower colour and stronger mustard flavour.

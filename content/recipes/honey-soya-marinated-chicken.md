@@ -25,7 +25,7 @@ groups:
       - { id: pepper, ingredient: black-pepper, name: black pepper, note: To taste }
 steps:
   - { id: fries, title: Bake the fries, duration: 20–25 min, text: "Heat the oven to 240 °C (220 °C fan). Cut the unpeeled potatoes into 1 cm fries and spread them on a tray lined with baking paper. Drizzle with olive oil, season with salt and pepper, mix and bake until golden." }
-  - { id: marinade, title: Marinate the chicken, text: "Press or finely chop the garlic. Mix it with the soy sauce, honey, sesame seeds and 30 ml olive oil, then mix the chicken into the marinade and leave it while the fries bake, about 15 minutes." }
+  - { id: marinade, title: Marinate the chicken, duration: about 15 min, text: "Press or finely chop the garlic. Mix it with the soy sauce, honey, sesame seeds and 30 ml olive oil, then mix the chicken into the marinade and leave it while the fries bake, about 15 minutes." }
   - { id: prep, title: Prepare the salad, text: "Rinse the salad mix under cold water and drain. Slice the tomatoes thinly. Coarsely chop the peanuts." }
   - { id: fry, title: Fry the chicken, duration: 4–5 min, text: "When the fries have 5 minutes left, heat a splash of olive oil in a frying pan over medium-high heat. Fry the chicken with its marinade, stirring, until cooked through (white inside with no trace of pink)." }
   - { id: salad, title: Toss the salad, text: "Mix the tomato, peanuts and salad leaves. Drizzle with olive oil and season with a pinch of salt and pepper." }

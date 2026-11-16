@@ -30,6 +30,7 @@ steps:
       Ladle about 300 ml pasta water into the bacon pot to deglaze. Transfer the spaghetti to the bacon pot, keeping the remaining pasta water for adjusting the sauce.
   - id: finish
     title: Finish the sauce
+    duration: about 90 sec
     text: |-
       Stir 100 ml pasta water into the egg and cheese mixture. Add another 100 ml pasta water to the spaghetti and simmer in the shallow water for about 90 seconds, until al dente.
       Take off the heat and stir in the bacon. Add the egg and cheese mixture and stir very well until the cheese melts. If needed, return to low heat, stirring constantly, until the sauce is velvety; don't overheat or it turns gloppy.

@@ -5,13 +5,13 @@ originalLanguage: nb
 description: Tagliatelle in a creamy ham and pea sauce with thyme and lemon, finished with egg yolks and lots of parmesan.
 category: Mains
 tags: [pasta, pork, quick, weeknight]
-status: needs-review
+status: cooked
 yield: { label: 1 batch, scalable: false }
-cover: { src: tagliatelle-ham-peas/cover.webp, alt: "Tagliatelle with diced ham, green peas and thyme in a creamy sauce on a glass plate", caption: "Photo from the book, a temporary reference until we cook it", credit: "Christian Brun · Bent Stiansen, Tid til hverdags" }
+cover: { src: tagliatelle-ham-peas/cover.webp, alt: "Tagliatelle with ham cubes, green peas and grated parmesan in a creamy sauce, in a grey stoneware bowl on a wooden table", caption: "Our first cook, Sunday 15 November 2026. It was amazing" }
 groups:
   - name: Pasta
     items:
-      - { id: tagliatelle, ingredient: tagliatelle, name: fresh tagliatelle, quantity: 500, unit: g, note: "Or 300 g dried tagliatelle" }
+      - { id: tagliatelle, ingredient: tagliatelle, name: fresh tagliatelle, quantity: 500, unit: g, note: "Or 300 g dried tagliatelle. We used 500 g of our Homemade Egg Pasta (Široki rezanci) from this cookbook" }
       - { id: butter, ingredient: butter, name: butter, quantity: 28, unit: g }
       - { id: salt, ingredient: salt, name: salt, note: "For the pasta water and to taste" }
   - name: Ham sauce

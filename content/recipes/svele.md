@@ -21,7 +21,7 @@ steps:
   - { id: dry, title: Mix the dry ingredients, text: "In a separate bowl, mix the {{flour}}, {{baking-soda}}, {{vanilla-sugar}} and {{hornsalt}} thoroughly so the raising agents are evenly distributed." }
   - { id: batter, title: Combine, text: "Stir the {{kefir}} into the egg and sugar mixture. Add the dry mixture in batches, stirring after each addition, just until the batter is smooth and no dry flour remains." }
   - { id: rest, title: Rest the batter, duration: 5–10 min, text: "Let the batter rest for 5–10 minutes." }
-  - { id: cook, title: Cook the svele, text: "Heat a griddle or non-stick frying pan over low heat. Pour about 50 ml batter per svele, leaving room between them. Cook for about 2–3 minutes, until bubbles appear on top, the edges begin to set and the underside is golden. Flip and cook for about 1½–2 minutes more, until golden underneath and cooked through. Repeat with the remaining batter; adjust the heat and timing if they brown too quickly or stay pale." }
+  - { id: cook, title: Cook the svele, duration: 3½–5 min each, text: "Heat a griddle or non-stick frying pan over low heat. Pour about 50 ml batter per svele, leaving room between them. Cook for about 2–3 minutes, until bubbles appear on top, the edges begin to set and the underside is golden. Flip and cook for about 1½–2 minutes more, until golden underneath and cooked through. Repeat with the remaining batter; adjust the heat and timing if they brown too quickly or stay pale." }
 sources:
   - { title: Svele video, url: "https://www.youtube.com/watch?v=Q6Ai8FNxVNU" }
   - { title: "Sveler med kefir · Godtnoe (frying guidance)", url: "https://godtnoe.no/sveler/" }

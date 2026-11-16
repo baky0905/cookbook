@@ -28,8 +28,8 @@ groups:
 steps:
   - { id: soak, title: Soak the raisins, text: "Soak the {{raisins}} in the {{rum}} ahead of time so they plump up." }
   - { id: batter, title: Make the batter, text: "Whisk the {{salt}} into the {{flour}}, then whisk in the {{sugar}} and {{milk}} until smooth. Separate the {{eggs}} and whisk the yolks into the batter. Beat the whites to firm peaks in another bowl and fold them in gently, then stir in the raisins with any unabsorbed rum, keeping the batter light and airy." }
-  - { id: fry, title: Fry the pancake, text: "Melt half the {{butter}} in a 28 cm non-stick frying pan and pour in the batter. Tuck the edges in with a flat wooden spoon so it forms a neat round. After a few minutes, when it starts to set, mark it into quarters with a spoon." }
-  - { id: flip, title: Flip the quarters, text: "Flip each quarter: the underside should be golden brown with darker caramelised patches. Fry a couple of minutes, then flip the quarters back again." }
+  - { id: fry, title: Fry the pancake, duration: a few min, text: "Melt half the {{butter}} in a 28 cm non-stick frying pan and pour in the batter. Tuck the edges in with a flat wooden spoon so it forms a neat round. After a few minutes, when it starts to set, mark it into quarters with a spoon." }
+  - { id: flip, title: Flip the quarters, duration: a couple of min, text: "Flip each quarter: the underside should be golden brown with darker caramelised patches. Fry a couple of minutes, then flip the quarters back again." }
   - { id: shred, title: Shred and caramelise, duration: about 1 min, text: "Add the rest of the butter and, as it melts, tear the pancake into uneven pieces with a wooden spoon and a fork. Keep stirring until most of the pieces have a caramelised crust." }
   - { id: serve, title: Serve, text: "Dust with {{icing-sugar}} and serve warm with the {{plum-jam}}." }
 sources:

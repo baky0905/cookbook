@@ -23,7 +23,7 @@ groups:
 steps:
   - { id: boil, title: Parboil, duration: about 10 min, text: "Put the oven rack in the centre and preheat to 230 °C (200 °C fan). Bring the water to a boil in a large pot, add the 25 g salt, the baking soda and the potatoes and stir. Return to a boil, then simmer until a knife meets little resistance." }
   - { id: oil, title: Infuse the oil, duration: about 3 min, text: "Meanwhile, heat the fat with the rosemary, garlic and a few grinds of pepper in a small saucepan over medium heat, stirring and shaking, until the garlic just turns golden. Strain the oil straight into a large bowl and keep the garlic and rosemary aside." }
-  - { id: rough, title: Rough up, text: "Drain the potatoes and let them steam in the pot for about 30 seconds. Tip them into the bowl of oil, season with a little salt and pepper and toss, shaking roughly, until a thick mashed-potato-like paste coats them." }
+  - { id: rough, title: Rough up, duration: about 30 sec, text: "Drain the potatoes and let them steam in the pot for about 30 seconds. Tip them into the bowl of oil, season with a little salt and pepper and toss, shaking roughly, until a thick mashed-potato-like paste coats them." }
   - { id: roast, title: Roast, duration: 50–60 min, text: "Spread the potatoes out on a large rimmed tray and roast without moving for 20 minutes. Release any stuck ones with a thin metal spatula, shake and turn them, then roast 30–40 minutes more, turning a few times, until deep brown and crisp." }
   - { id: finish, title: Finish, text: "Toss with the fried garlic and rosemary and the parsley, season and serve straight away." }
 sources:
