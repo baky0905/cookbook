@@ -1,0 +1,317 @@
+{
+  "plan": {
+    "id": "2026-w46",
+    "title": "Week 46",
+    "start": "2026-11-09",
+    "notes": null
+  },
+  "takenAt": "2026-11-16T11:18:12.535Z",
+  "meals": [
+    {
+      "date": "2026-11-15",
+      "meal": "Dinner",
+      "title": "Tagliatelle with ham, peas and cream sauce",
+      "note": "First time cooking it. The book doesn't give servings; 500 g fresh pasta is about 4 portions",
+      "leftoversFrom": null,
+      "servings": null,
+      "batches": 1,
+      "factor": 1,
+      "recipe": {
+        "id": "tagliatelle-ham-peas",
+        "title": "Tagliatelle with ham, peas and cream sauce",
+        "category": "Mains",
+        "tags": [
+          "pasta",
+          "pork",
+          "quick",
+          "weeknight"
+        ],
+        "status": "needs-review",
+        "yield": "1 batch",
+        "kcalPerPortion": null,
+        "version": "77c5082f83"
+      }
+    }
+  ],
+  "extras": [],
+  "warnings": [
+    "Tagliatelle with ham, peas and cream sauce: check recipe notes before shopping."
+  ],
+  "shopping": [
+    {
+      "ingredient": "peas",
+      "name": "fresh peas",
+      "quantity": 200,
+      "max": 200,
+      "unit": "g",
+      "category": "Produce",
+      "optional": false,
+      "staple": false,
+      "norway": "Erter; frozen (e.g. Findus) when fresh aren't in season",
+      "recipes": [
+        "Tagliatelle with ham, peas and cream sauce"
+      ],
+      "notes": [],
+      "have": 0,
+      "needed": 200,
+      "neededMax": 200,
+      "usuallyStocked": false
+    },
+    {
+      "ingredient": "garlic",
+      "name": "garlic",
+      "quantity": 3,
+      "max": 3,
+      "unit": "clove",
+      "category": "Produce",
+      "optional": false,
+      "staple": false,
+      "norway": "Hvitløk; buy firm whole heads, not peeled garlic in jars",
+      "recipes": [
+        "Tagliatelle with ham, peas and cream sauce"
+      ],
+      "notes": [],
+      "have": 0,
+      "needed": 3,
+      "neededMax": 3,
+      "usuallyStocked": false
+    },
+    {
+      "ingredient": "lemon-juice",
+      "name": "lemon juice",
+      "quantity": 15,
+      "max": 15,
+      "unit": "ml",
+      "category": "Produce",
+      "optional": false,
+      "staple": false,
+      "norway": "Squeeze fresh sitroner; bottled sitronsaft is fine for mayonnaise",
+      "recipes": [
+        "Tagliatelle with ham, peas and cream sauce"
+      ],
+      "notes": [],
+      "have": 0,
+      "needed": 15,
+      "neededMax": 15,
+      "usuallyStocked": false
+    },
+    {
+      "ingredient": "onion",
+      "name": "onions",
+      "quantity": 1,
+      "max": 1,
+      "unit": "piece",
+      "category": "Produce",
+      "optional": false,
+      "staple": false,
+      "norway": "Gul løk",
+      "recipes": [
+        "Tagliatelle with ham, peas and cream sauce"
+      ],
+      "notes": [],
+      "have": 0,
+      "needed": 1,
+      "neededMax": 1,
+      "usuallyStocked": false
+    },
+    {
+      "ingredient": "cooked-ham",
+      "name": "cooked ham",
+      "quantity": 1,
+      "max": 1,
+      "unit": "can",
+      "category": "Meat & fish",
+      "optional": false,
+      "staple": false,
+      "norway": "Kokt skinke in a tin or a thick piece from the deli counter, not thin sandwich slices",
+      "recipes": [
+        "Tagliatelle with ham, peas and cream sauce"
+      ],
+      "notes": [
+        "Can size not given in the book"
+      ],
+      "have": 0,
+      "needed": 1,
+      "neededMax": 1,
+      "usuallyStocked": false
+    },
+    {
+      "ingredient": "butter",
+      "name": "butter",
+      "quantity": 28,
+      "max": 28,
+      "unit": "g",
+      "category": "Dairy & eggs",
+      "optional": false,
+      "staple": false,
+      "norway": "Smør (Tine Meierismør is lightly salted)",
+      "recipes": [
+        "Tagliatelle with ham, peas and cream sauce"
+      ],
+      "notes": [],
+      "have": 0,
+      "needed": 28,
+      "neededMax": 28,
+      "usuallyStocked": false
+    },
+    {
+      "ingredient": "egg",
+      "name": "eggs",
+      "quantity": 2,
+      "max": 2,
+      "unit": "piece",
+      "category": "Dairy & eggs",
+      "optional": false,
+      "staple": false,
+      "norway": "Egg; frittgående if you can",
+      "recipes": [
+        "Tagliatelle with ham, peas and cream sauce"
+      ],
+      "notes": [],
+      "have": 0,
+      "needed": 2,
+      "neededMax": 2,
+      "usuallyStocked": false
+    },
+    {
+      "ingredient": "heavy-cream",
+      "name": "heavy cream",
+      "quantity": 300,
+      "max": 300,
+      "unit": "ml",
+      "category": "Dairy & eggs",
+      "optional": false,
+      "staple": false,
+      "norway": "Kremfløte (Tine, 37% fat)",
+      "recipes": [
+        "Tagliatelle with ham, peas and cream sauce"
+      ],
+      "notes": [
+        "200 ml for the sauce, 100 ml with the egg yolks"
+      ],
+      "have": 0,
+      "needed": 300,
+      "neededMax": 300,
+      "usuallyStocked": false
+    },
+    {
+      "ingredient": "parmesan",
+      "name": "parmesan",
+      "quantity": null,
+      "max": null,
+      "unit": "",
+      "category": "Dairy & eggs",
+      "optional": false,
+      "staple": false,
+      "norway": "Parmigiano Reggiano in a piece; the pre-grated shaker kind isn't the same",
+      "recipes": [
+        "Tagliatelle with ham, peas and cream sauce"
+      ],
+      "notes": [
+        "Lots, to serve"
+      ],
+      "have": 0,
+      "needed": null,
+      "neededMax": null,
+      "usuallyStocked": false
+    },
+    {
+      "ingredient": "tagliatelle",
+      "name": "tagliatelle",
+      "quantity": 500,
+      "max": 500,
+      "unit": "g",
+      "category": "Dry goods",
+      "optional": false,
+      "staple": false,
+      "norway": "Eggtagliatelle, dried or fresh",
+      "recipes": [
+        "Tagliatelle with ham, peas and cream sauce"
+      ],
+      "notes": [
+        "Or 300 g dried tagliatelle"
+      ],
+      "have": 0,
+      "needed": 500,
+      "neededMax": 500,
+      "usuallyStocked": false
+    },
+    {
+      "ingredient": "olive-oil",
+      "name": "olive oil",
+      "quantity": 50,
+      "max": 50,
+      "unit": "ml",
+      "category": "Oils & condiments",
+      "optional": false,
+      "staple": false,
+      "norway": "Olivenolje; ekstra virgin for finishing and dressing, a cheaper mild one for frying",
+      "recipes": [
+        "Tagliatelle with ham, peas and cream sauce"
+      ],
+      "notes": [],
+      "have": 0,
+      "needed": 50,
+      "neededMax": 50,
+      "usuallyStocked": false
+    },
+    {
+      "ingredient": "black-pepper",
+      "name": "black pepper",
+      "quantity": 4,
+      "max": 4,
+      "unit": "g",
+      "category": "Herbs & spices",
+      "optional": false,
+      "staple": true,
+      "norway": "Sort pepper; whole peppercorns in a grinder taste much better than ground",
+      "recipes": [
+        "Tagliatelle with ham, peas and cream sauce"
+      ],
+      "notes": [],
+      "have": 0,
+      "needed": 4,
+      "neededMax": 4,
+      "usuallyStocked": true
+    },
+    {
+      "ingredient": "dried-thyme",
+      "name": "dried thyme",
+      "quantity": 1,
+      "max": 1,
+      "unit": "g",
+      "category": "Herbs & spices",
+      "optional": false,
+      "staple": false,
+      "norway": "Timian (tørket)",
+      "recipes": [
+        "Tagliatelle with ham, peas and cream sauce"
+      ],
+      "notes": [],
+      "have": 0,
+      "needed": 1,
+      "neededMax": 1,
+      "usuallyStocked": false
+    },
+    {
+      "ingredient": "salt",
+      "name": "salt",
+      "quantity": null,
+      "max": null,
+      "unit": "",
+      "category": "Herbs & spices",
+      "optional": false,
+      "staple": true,
+      "recipes": [
+        "Tagliatelle with ham, peas and cream sauce"
+      ],
+      "notes": [
+        "For the pasta water and to taste"
+      ],
+      "have": 0,
+      "needed": null,
+      "neededMax": null,
+      "usuallyStocked": true
+    }
+  ]
+}
